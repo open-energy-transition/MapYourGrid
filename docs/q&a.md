@@ -6,7 +6,7 @@
 
 ### <div class="tools-header">Who are you ? What is Oh My Grid?</div>
 
-OMG is an open, collaborative project that aims to map the electricity grid around the world, with a focus on power plants, high-voltage transmission lines, substations and major energy consumers, by contributing to OpenStreetMap.
+Oh My Grid (OMG) is an open, collaborative project that aims to map the electricity grid around the world, with a focus on power plants, high-voltage transmission lines, substations and major energy consumers, by contributing to [OpenStreetMap](https://www.openstreetmap.org/).
 
 ### <div class="tools-header">What is included in the scope of the project ?</div>
 
@@ -20,11 +20,11 @@ We are developers, data scientists, power grid experts, cartographers and OpenSt
 
 ### <div class="tools-header"> What is the business model of the project ? </div>
 
-OMG is a non-profit initiative. 
+OMG is a non-profit initiative.
 
 ### <div class="tools-header"> What is the governance of OMG ? </div>
 
-Oh My Grid is led by Open Energy Transition, a non-profit, and supported by Datactivist, Jungle Bus, Dynartio and Infogeomatics. We are aligned with the values of OpenStreetMap's ecosystem and we act for a shared governance of the project within the community. 
+Oh My Grid is led by [Open Energy Transition](https://openenergytransition.org/), a non-profit, and supported by [Datactivist](https://datactivist.coop/en/), [Jungle Bus](https://junglebus.io/en), [Dynartio](https://dynartio.com/) and [Infogeomatics](https://www.infrageomatics.com/). We are aligned with the values of OpenStreetMap's ecosystem and we act for a shared governance of the project within the community. 
 
 ### <div class="tools-header"> Why do we prioritize transmission line ?  </div>
 
@@ -32,7 +32,7 @@ The fastest way to broaden our impact right now is to map transmission power gri
 
 ### <div class="tools-header"> Why do you do this ? Why does this matter?  </div>
 
-Transparent, accurate data on energy infrastructure is essential for climate resilience, energy planning and equity. In low- and middle-income countries, most of this data is locked or missing. We aim to change that. 
+Transparent, accurate data on energy infrastructure is essential for climate resilience, energy planning and equity. In low and middle-income countries, most of this data is locked or missing. We aim to change that. 
 
 ### <div class="tools-header"> What countries are covered by the project?  </div>
 
@@ -82,11 +82,11 @@ Yes, as long as you credit OSM properly. Note that if you improve OSM data, you 
 
 These are tools for editing and validating data in OSM :
 
-iD : browser-based and beginner-friendly editor. It is the editor available when you click on "edit" on the website https://openstreetmap.org
+iD : browser-based and beginner-friendly editor. It is the editor available when you click on "edit" on the [OSM website](https://openstreetmap.org)
 
-JOSM : advanced OpenStreetMap editor. Desktop software available at https://josm.openstreetmap.de 
+JOSM : advanced OpenStreetMap editor. Desktop software available at [https://josm.openstreetmap.de](https://josm.openstreetmap.de )
 
-Osmose : quality assurance tool that detects data issues. Free tool available at https://osmose.openstreetmap.fr
+[Osmose](https://osmose.openstreetmap.fr) : quality assurance tool that detects OpenStreetMap data issues.
 
 ### <div class="tools-header"> What is a changeset? </div>
 
@@ -104,7 +104,7 @@ OpenStreetMap relies on community editing and review. Not every edit is systemat
 
 Before uploading your edits in JOSM, you may get validation errors and warnings, with a short explanation on what is the problem. You should resolve most (if not all) issues before finishing your upload to OSM. 
 
-OSM tools like Osmose flag potential errors. You might receive suggestions to fix or review them afterwards.
+OSM tools like [Osmose](https://osmose.openstreetmap.fr/) flag potential errors. You might receive suggestions to fix or review them afterwards.
 
 ## <div class="stradegy-header">Power grid mapping </div></h3>
 
@@ -138,4 +138,4 @@ No, never approach high-voltage infrastructure like substations, lines, power to
 
 ### <div class="tools-header"> Are there apps I can use while surveying in the field? </div>
 
-Yes, try Vespucci (Android), GoMap (iOS), Panoramax or Baba for capturing geolocated photos. StreetComplete offers simple mapping quests on the field. While it doesn't include energy-related tasks, you can still use it to leave notes on the map. For example, you can flag a power tower or a substation for later editing from a desktop tool. Organic Maps or CoMaps mobile apps can also be used to leave notes on the map. Don't forget to add #ohmygrid in your text note.
+Yes, try [Vespucci](https://vespucci.io/) (Android), [GoMap](https://apps.apple.com/us/app/go-map/id592990211) (iOS), [Panoramax](https://gitlab.com/panoramax/clients/mobile-app/) or [Baba](https://gitlab.com/ravenfeld/baba) for capturing geolocated photos. [StreetComplete](https://streetcomplete.app/) offers simple mapping quests on the field. While it doesn't include energy-related tasks, you can still use it to leave notes on the map. For example, you can flag a power tower or a substation for later editing from a desktop tool. [Organic Maps](https://organicmaps.app/) or [CoMaps](https://www.comaps.app/) mobile apps can also be used to leave notes on the map. Don't forget to add #ohmygrid in your text note.
