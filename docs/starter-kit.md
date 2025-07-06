@@ -34,8 +34,7 @@ JOSM is a more advanced desktop OpenStreetMap editor which is more suitable for 
 2. Install [JOSM](https://josm.openstreetmap.de/) on your device (if needed, further instructions on how to install and use JOSM on your device can be found at [learnOSM](https://learnosm.org/en/josm/start-josm/)).<br>
 3. (Optional) If you want preconfigured preferences, download this preferences.xml [file](https://github.com/open-energy-transition/grid-mapping-starter-kit/blob/main/josm-config/preferences.xml) and paste it in the correct folder on your device. The [JOSM wiki](https://josm.openstreetmap.de/wiki/Help/Preferences) provides details on where to place it.<!-- No space here --> 
 4. Download this <a href="https://github.com/open-energy-transition/grid-mapping-starter-kit/blob/main/josm-config/transmission_grid_mapping_template.joz" target="_blank">template</a> session, and in JOSM go to File>Open and open the .joz file. <br>
-5. Create an OSM [account](https://www.openstreetmap.org/user/new?cookie_test=true) if you don't have one. Once you do, go to `Preferences → OSM Server` and press authorise now. Login with your OSM account, and authorise. Your account is now linked to JOSM on your device. 
-:exclamation: Be aware that your token will be stored in your local preferences.xml file. Do not share your preferences file with anyone. <br>
+5. Create an OSM [account](https://www.openstreetmap.org/user/new?cookie_test=true) if you don't have one. Once you do, go to `Preferences → OSM Server` and press authorise now. Login with your OSM account, and authorise. Your account is now linked to JOSM on your device. Be aware that your token will be stored in your local preferences.xml file. Do not share your preferences file with anyone. <br>
 6. Finally, activate "expert mode" in `View → Expert mode`. This will enable using Overpass API. <br>
 7. Make sure remote control is enabled in `Preferences → Remote Control`. This must be activated for the grid data to be loaded automatically.
 
@@ -89,8 +88,8 @@ Mapping is an iterative process, so you will make mistakes at first. However, th
 
 1. Download the [Unfinished Power Transmission lines (Class 2) via Osmose](https://ohmygrid.org/map-it/) for your country.
 1. Drag and drop the downloaded geojson file into JSOM.
-1. Download the todo plugin for JSOM. Edit --> Preferences. Search for todo, mark it and press OK. Press Windows --> todo list to show the Todo list window. 
-1. Press STRG+A (CTRL + A or COMMAND + A)  to select all issues in the new layer. Press the Add in the todo plugin window (`Windows → Todo list`)
+1. Download the todo plugin for JSOM. `Edit → Preferences`. Search for todo, mark it and press OK. Press `Windows → todo list` to show the Todo list window. 
+1. Press `CTRL + A`  to select all issues in the new layer. Press the Add in the todo plugin window (`Windows → Todo list`)
 1. Switch back to the OSM data layer.
 1. You can now systematically step through all the issues by pressing Mark.  
 

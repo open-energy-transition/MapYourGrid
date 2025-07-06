@@ -743,11 +743,7 @@ fetch('../data/regionsv2.geojson')
   }
 </script>
 
-!!! note
-    **⚠️By follwing our [Code of Mappers](./code-of-mappers.md), we collectively protect the integrity of the OpenStreetMap platform, foster trust with communities, and unlock the power of open data for a more resilient and just energy future. Please do NOT copy any data from **hint layer** directly into your OpenStreetMap data layer. Every data point in your OpenStreetMap data layer must be manually set and [verified](https://wiki.openstreetmap.org/wiki/Verifiability). The metadata must also be verified against compatible licensed sources or by people on the ground. If you cannot verify the data using satellite images or any other compatible source, please do not add this information from hint layers. This may seem like a high burden at first, but it ensures the high quality of OpenStreetMap. Before you start mapping, please find out about the mapping restrictions in the respective country. In some countries, the mapping of transmission lines is not permitted. Get in touch with local users by finding out about [local projects](https://wiki.openstreetmap.org/wiki/Power_networks).⚠️**
-
-
-## <div class="tools-header">Mapping Guidelines</div>
+## <div class="tools-header">Mapping Guidelines and Code of Mappers</div>
 The following list provides the main good practices for mapping different power infrastructure in OpenStreetMap:
 
 * [Power networks](https://wiki.openstreetmap.org/wiki/Power_networks)
@@ -757,6 +753,9 @@ The following list provides the main good practices for mapping different power 
 * [Power generation/Guidelines/Hydropower](https://wiki.openstreetmap.org/wiki/Power_generation/Guidelines/Hydropower)
 * [Power generation/Guidelines/Solar plants](https://wiki.openstreetmap.org/wiki/Power_generation/Guidelines/Solar_plants)
 * [Power networks/Guidelines/Interconnector](https://wiki.openstreetmap.org/wiki/Power_networks/Guidelines/Interconnector)
+
+!!! note
+    **⚠️By follwing our [Code of Mappers](./code-of-mappers.md), we collectively protect the integrity of the OpenStreetMap platform, foster trust with communities, and unlock the power of open data for a more resilient and just energy future. Please do NOT copy any data from **hint layer** directly into your OpenStreetMap data layer. Every data point in your OpenStreetMap data layer must be manually set and [verified](https://wiki.openstreetmap.org/wiki/Verifiability). The metadata must also be verified against compatible licensed sources or by people on the ground. If you cannot verify the data using satellite images or any other compatible source, please do not add this information from hint layers. This may seem like a high burden at first, but it ensures the high quality of OpenStreetMap. Before you start mapping, please find out about the mapping restrictions in the respective country. In some countries, the mapping of transmission lines is not permitted. Get in touch with local users by finding out about [local projects](https://wiki.openstreetmap.org/wiki/Power_networks).⚠️**
 
 
 ## Join the Chat <img src="/icons/discord.svg" alt="Discord" class="social-icon" style="width:1.2em; vertical-align:middle; margin-left:0.5ch;"> {.tools-header style="font-weight:700"}
