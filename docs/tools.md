@@ -137,7 +137,7 @@ OpenStreetMap allows mappers to quickly mark an object that seems to be wrong an
 #### OpenData Plugin
 The OpenData plugin will allow you to load all kinds of GIS formats directly into JOSM.
 
-1. Download the `OpenData` plugin for JSOM. Go to Edit > Preferences. Search for `OpenData`, select it and press OK.
+1. Download the `OpenData` plugin for JOSM. Go to Edit > Preferences. Search for `OpenData`, select it and press OK.
 1. You should now be able to import much more data formats like (csv, xls, ods, kml, kmz, shp, mif) as another hint layer into JOSM.
 
 ### <div class="tools-header">Open Infrastructure Map - Nighttime Lights and Osmose </div></h3>

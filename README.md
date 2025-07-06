@@ -27,7 +27,7 @@ When you make an edit, please use the **#ohmygrid** in the changeset to help the
 
 1. Install mkdocs material on your machine:
 ```bash
-pip install mkdocs-material
+pip install mkdocs-material mkdocs-glightbox
 ```
 
 2. Clone this repository our your fork of this repository:
