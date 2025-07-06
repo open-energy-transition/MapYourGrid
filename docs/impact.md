@@ -55,8 +55,8 @@ Reliable and open infrastructure data directly supports the **adoption and succe
 
 To understand the influence of OpenStreetMap electrical grid data in research, our team conducted an impact analysis using Google Scholar. We searched for publications combining **“OpenStreetMap”** with power-related terms such as **“power grid”**, **“electrical grid”**, **“renewable”**, and **“energy model.”**
 
-* **10,700 publications** since 2005 included combinations of these keywords.
-* **7,520 publications**—**70% of the total**—were published in just the last **five years**, demonstrating a rapid increase in academic engagement and recognition of OpenStreetMap power data.
+* 10,700 publications since 2005 included combinations of these keywords.
+* A total of **2,460 publications** were released in the last year alone, demonstrating a rapid increase in academic engagement with, and recognition of, the power of OpenStreetMap data.
 
 
 ## **<div class="tools-header">Why is it important that this data is open?</div>**
