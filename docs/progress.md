@@ -14,20 +14,20 @@ OhMyGrid measures its progress at user, hashtag and country level. If you use ou
 
 
   <div class="progress-item">
-    <label>Contributors for <code>#ohmygrid</code>:</label>
+    <label>Contributors mapping with <code>#ohmygrid</code> hashtag:</label>
     <div class="progress"> <div class="progress-bar" id="contributors-bar" style="background-color: #28a745;"></div> </div>
     <span id="contributors-count">Loading…</span>
   </div>
 
   <div class="progress-item">
-    <label>Total Edits for <code>#ohmygrid</code>:</label>
+    <label>Total Edits for <code>#ohmygrid</code> hashtag:</label>
     <div class="progress">
       <div class="progress-bar" id="edits-bar" style="background-color: #28a745;"></div> </div>
     <span id="edits-count">Loading…</span>
   </div>
 
   <div class="progress-item">
-    <label>Towers mapped by our team:</label>
+    <label>Total estimated power towers added by mappers of the OhMyGrid funding organisations:</label>
     <div class="progress">
       <div class="progress-bar" id="tower-bar" style="background-color: #17a2b8;"></div>
     </div>
@@ -37,7 +37,7 @@ OhMyGrid measures its progress at user, hashtag and country level. If you use ou
   </div>
 
   <div class="progress-item">
-    <label>Total estimated power line length added by our team (in km):</label>
+    <label>Total estimated length of power lines added by mappers of the OhMyGrid funding organisations:</label>
     <div class="progress">
       <div class="progress-bar" id="line-length-bar" style="background-color: #17a2b8;"></div>
     </div>
