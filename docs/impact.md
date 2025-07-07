@@ -244,6 +244,12 @@ Disclaimer: These organisations are not affiliated with OhMyGrid nor endorse it.
     === "[DataArena intends to inform and provide information about the status of the Norway electrical grid capacity.](https://etap.com/product/gis-for-electric)"
         ![map](images/impact/data-area-norway.jpg){: .img-border } 
 
+**MAPOG** ![mapog](images/impact/MAPOG-logo.png){width=40px}
+??? "How GIS Enhances Power Grid Mapping and Energy Infrastructure Planning." 
+    
+    === "[How GIS Enhances Power Grid Mapping and Energy Infrastructure Planning.](https://www.mapog.com/power-grid-and-infrastructure-mapping-and-planning-using-gis/)"
+        ![map](images/impact/MAPOG.jpg){: .img-border } 
+
 
 
 
