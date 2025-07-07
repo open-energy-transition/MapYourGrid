@@ -257,6 +257,12 @@ Disclaimer: These organisations are not affiliated with OhMyGrid nor endorse it.
     === "[](https://www.dvlp.energy/en)"
         ![map](images/impact/dvlp-energy.jpg){: .img-border } 
 
+**Roseau Technologies** ![Roseau Technologies](images/impact/roseau.svg){width=40px}
+??? "Modern and ergonomic software solutions for straightforward electricity distribution grid design." 
+    
+    === "[](https://www.roseautechnologies.com/en/home/)"
+        ![map](images/impact/roseau.jpg){: .img-border } 
+
 
 
 
