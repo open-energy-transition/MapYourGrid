@@ -400,8 +400,8 @@ body.landing-page header.md-header {
   }
 
   .hero-logo {
-    width: 120% !important; /* Scale logo down for mobile */
-    max-width: 800px !important; /* Cap its size for slightly larger mobile screens */
+    width: 90% !important; /* Scale logo down for mobile */
+    max-width: 500px !important; /* Cap its size for slightly larger mobile screens */
   }
 
   .mission-statement {
