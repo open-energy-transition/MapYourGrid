@@ -118,7 +118,7 @@ In contrast, some developed countries publish detailed open datasets outside of 
 
 * [**ENTSO-E**](https://www.entsoe.eu/data/map/) provides a Europe-wide **Transmission System Map** with geo-referenced infrastructure data.
 * The French grid operator **RTE** publishes its grid topology, including **5-minute resolution time-series data** on network operations ([RTE on GitHub](https://github.com/rte-france/structural-french-grid-data-with-detailed-topology-time-series)).
-* The French distribution system operato Enedis committed to Open Data since 2015, Enedis is [joining forces with OpenStreetMap France](https://www.enedis.fr/presse/open-data-enedis-participe-un-projet-collaboratif-mondial-dechange-de-donnees) to make its grid data available and promote crowdsourcing
+* Enedis, the French distribution system operator committed to Open Data since 2015, is [joining forces with OpenStreetMap France](https://www.enedis.fr/presse/open-data-enedis-participe-un-projet-collaboratif-mondial-dechange-de-donnees) to make its grid data available and encourage crowdsourcing.
 
 <div style="float: right; margin: -25px 0 5px 50px; width: 350px;">
   <a href="../images/homeland-osm.png" target="_blank">
