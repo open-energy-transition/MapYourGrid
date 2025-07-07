@@ -257,10 +257,7 @@ Disclaimer: These organisations are not affiliated with OhMyGrid nor endorse it.
     === "[](https://www.dvlp.energy/en)"
         ![map](images/impact/dvlp-energy.jpg){: .img-border } 
 
+## <div class="tools-header">Still got questions?</div>
 
-
-
-
-
-
+Check out our [Q&A page](q&a.md).
 
