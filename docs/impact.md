@@ -251,6 +251,12 @@ Disclaimer: These organisations are not affiliated with OhMyGrid nor endorse it.
     === "[How GIS Enhances Power Grid Mapping and Energy Infrastructure Planning.](https://www.mapog.com/power-grid-and-infrastructure-mapping-and-planning-using-gis/)"
         ![map](images/impact/MAPOG.jpg){: .img-border } 
 
+**dvlp.energy** ![dvlp.energy](images/impact/dvlp-logo-purple.svg){width=40px}
+??? "With dvlp.energy, you can quickly and easily find the right space for your solar, wind or storage projects — and keep track of your entire project pipeline at all times." 
+    
+    === "[](https://www.dvlp.energy/en)"
+        ![map](images/impact/dvlp-energy.jpg){: .img-border } 
+
 
 
 
