@@ -9,8 +9,7 @@ hide:
 <h1>Map It 📍</h1>
 </div>
 Welcome to our interactive launchpad and hub for contributing to power grid mapping via OpenStreetMap! Click on a country or state below to start mapping power infrastructure directly in JOSM. :rocket:
-If this is your first time grid mapping, please go through the [Starter-Kit](/starter-kit/). You can use the **#ohmygrid** hashtag in your changeset to show your support for our initiative when you make an edit! <br>
-To start mapping, please open JOSM and load your data: 
+If this is your first time grid mapping, please go through the [Starter-Kit](/starter-kit/). You can use the **#ohmygrid** hashtag in your changeset to show your support for our initiative when you make an edit! To start mapping, please open [JOSM](https://josm.openstreetmap.de/), ensure that remote control is activated in `Preferences` and load your data: 
 
 1. The **Default Transmission (90 kV+)** pulls all power infrastructure relevant for the **transmission grid**. For more details about which data is pulled via Overpass please read our [OpenStreetMap Grid Definitions](https://github.com/open-energy-transition/osm-grid-definition). Distribution grids are barely visible in satellite data and should therefore only be mapped in individual cases.
 2. The Osmose, Global Energy Monitor, and Wikidata buttons provide **hint layer** data, which you can read about in our [Tools and Strategies](/tools/) page. Please note that this hint layers only work at a national level. 
@@ -764,7 +763,3 @@ We welcome everyone to join our [community chat](https://discord.gg/a5znpdFWfD) 
 ## <div class="tools-header">Join the Community  :calendar: </div>
 We welcome everyone to join our community calls and tutorials, to learn more about the mapping process and the initiative.
 <iframe src="https://calendar.google.com/calendar/embed?height=600&wkst=1&ctz=Europe%2FBerlin&showPrint=0&title=Community%20live%20sessions&src=Y182ODE3NjE1MGIzMjY4MGRkZmUzMGM1ZTE1MDU0YTc5MTVhMzY2NmY1OGY5NjkxOGVjOTZhNDJjZWQwODQ2ZGVmQGdyb3VwLmNhbGVuZGFyLmdvb2dsZS5jb20&color=%23AD1457" style="border:solid 1px #777" width="800" height="600" frameborder="0" scrolling="no"></iframe>
-
-## <div class="tools-header">Still got questions?</div>
-
-Check out our [Q&A page](q&a.md).

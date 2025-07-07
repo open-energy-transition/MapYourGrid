@@ -4,35 +4,38 @@
 
 ## <div class="stradegy-header">General questions </div></h3>
 
-### <div class="tools-header">Who are you ? What is Oh My Grid?</div>
+### <div class="tools-header">Who are you? What is OhMyGrid?</div>
 
-Oh My Grid (OMG) is an open, collaborative project that aims to map the electricity grid around the world, with a focus on power plants, high-voltage transmission lines, substations and major energy consumers, by contributing to [OpenStreetMap](https://www.openstreetmap.org/).
+OhMyGrid is an open, collaborative initiative that aims to map electricity grids around the world, focusing on high-voltage transmission lines, substations, power plants, and major energy consumers. The initiative is contributing all its data to [OpenStreetMap](https://www.openstreetmap.org/) to make it globally accessible and verifiable.
 
-### <div class="tools-header">What is included in the scope of the project ?</div>
+### <div class="tools-header">What is included in the scope of the project?</div>
 
 Our main focus is to map transmission power grids, mostly power lines and cables and connect them to substations perimeters. We map lines that link cities, usually transmission lines.
 
 If you're local and/or have local knowledge, you're free to map every line you know.
 
+### <div class="tools-header">Won't all of this be solved by AI soon?</div>
+ However, to ensure data quality, each data point in OpenStreetMap must be set and validated by a human. This prevents OpenStreetMap from becoming flooded with synthetic, unvalidated data that would not be suitable as ground truth in the long term. Furthermore, there are currently no detection methods that can accurately identify power towers and the course of transmission lines using classic RGB satellites alone. Grid mapping is a task that requires a high degree of expertise and contextual understanding. Due to the high relevance of this data, stochastic generation of the grid by AI is also not recommended. To validate this data, specialists must perform active grid mapping. However, we are currently evaluating the use of [open-source substation detection based on Sentinel 2 data](https://github.com/Lindsay-Lab/substation-seg) to provide another hint layer of substations for the mappers.
+
 ### <div class="tools-header"> What are the roles of the team members? </div>
 
-We are developers, data scientists, power grid experts, cartographers and OpenStreetMap contributors. Our roles range from software development and data modeling to community coordination and field knowledge.
+We are developers, data scientists, power grid experts, cartographers and OpenStreetMap contributors. Our roles range from software development and data modeling to community coordination and field knowledge. The core OhMyGrid team sees itself as a fertiliser for the community. We build bridges between individuals and organisations, create mapping tools, document strategies and good practices, and develop training materials. In order to test our own material and gather experience, we map all around the world in order to understand the needs of the diverse community.
 
-### <div class="tools-header"> What is the business model of the project ? </div>
+### <div class="tools-header"> What is the business model of the project? </div>
 
-OMG is a non-profit initiative.
+OhMyGrid is a non-profit initiative funded by several smaller organisations that use this data for their own open-source products.
 
-### <div class="tools-header"> What is the governance of OMG ? </div>
+### <div class="tools-header"> What is the governance of OhMyGrid? </div>
 
-Oh My Grid is led by [Open Energy Transition](https://openenergytransition.org/), a non-profit, and supported by [Datactivist](https://datactivist.coop/en/), [Jungle Bus](https://junglebus.io/en), [Dynartio](https://dynartio.com/) and [Infogeomatics](https://www.infrageomatics.com/). We are aligned with the values of OpenStreetMap's ecosystem and we act for a shared governance of the project within the community. 
+OhMyGrid is led by [Open Energy Transition](https://openenergytransition.org/), a non-profit, and supported by [Datactivist](https://datactivist.coop/en/), [Jungle Bus](https://junglebus.io/en), [Dynartio](https://dynartio.com/) and [Infogeomatics](https://www.infrageomatics.com/). We are aligned with the values of OpenStreetMap's ecosystem and we act for a shared governance of the project within the community. The establishment of an official OhMyGrid governance board is planned for late 2025. Would you like to join or support us? Contact <a href="mailto:ohmygrid@openenergytransition.org" target="_blank" rel="noopener">us via email</a>. 
 
 ### <div class="tools-header"> Why do we prioritize transmission line ?  </div>
 
-The fastest way to broaden our impact right now is to map transmission power grids. Many details could be added later, allowing a more detailed, actionnable data to be available.
+The fastest way to broaden our impact right now is to map transmission power grids. Many aspects like the distribution grid substations will be added later to make the data more detailed and actionable.
 
-### <div class="tools-header"> Why do you do this ? Why does this matter?  </div>
+### <div class="tools-header"> Why do you do this? Why does this matter?  </div>
 
-Transparent, accurate data on energy infrastructure is essential for climate resilience, energy planning and equity. In low and middle-income countries, most of this data is locked or missing. We aim to change that. 
+Transparent, accurate data on energy infrastructure is essential for climate resilience, energy planning and equity. In low and middle-income countries, most of this data is locked or missing. We aim to change that. Read more about the impact we are creating on our [impact page](/impact/). 
 
 ### <div class="tools-header"> What countries are covered by the project?  </div>
 
@@ -40,13 +43,13 @@ Our project is global. Currently, we mainly focus on low and middle-income count
 
 ### <div class="tools-header"> How do you map all those power grids? </div>
 
-We use a mix of sources, ranging from satellite imagery, open data, academic articles, crowdsourcing through OpenStreetMap. 
+We use a variety of sources, primarily satellite imagery, as well as other open data, academic articles and crowdsourced information from OpenStreetMap, to enhance our knowledge.
 
 ## <div class="stradegy-header">Contribution in OpenStreetMap </div></h3>
 
 ### <div class="tools-header"> How can I join the project? </div>
 
-Start by contributing to OpenStreetMap (OSM). Additionally, you can get involved in local OSM communities, join our free mapping workshops and connect with us on Discord.  
+Start by contributing to OpenStreetMap (OSM). Additionally, you can get involved in local OSM communities, join our free mapping workshops and connect with us on [Discord](https://discord.gg/a5znpdFWfD).  
 
 ### <div class="tools-header"> What skills do I need to contribute? </div>
 

@@ -80,7 +80,7 @@
 /* -------------------------Navigation bar css-------------------------------------------------------------------------------------*/
 .md-tabs__link {
   font-weight: bold;
-  padding: 0rem 1rem;
+  padding: 0rem 0.6rem;
   font-size: 0.75rem; /* I think default is 0.7 rem for mkdocs material, but I made it slightly bigger */
 }
 
