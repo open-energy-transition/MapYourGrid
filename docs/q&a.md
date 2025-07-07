@@ -59,7 +59,7 @@ For tech contributors, you may need Python, Data viz, community workflows, OSM m
 
 An understanding of the energy context and power grid composition is a strong asset, that can be acquired. 
 
-### <div class="tools-header"> I have information about my country's power grid, but I'm not sure if it's Open Data. Can I share it ? </div>
+### <div class="tools-header"> I have information about my country's power grid, but I'm not sure if it's Open Data. Can I share it? </div>
 
 Make sure to check the source credibility and the licensing terms before using any data in OpenStreetMap. Some sources may be inaccurate, outdated, or incompatible with OSM’s licensing. Whenever possible, it's best to ask the data provider for explicit permission to use or reference their data, especially if the licensing is unclear. When in doubt, discuss with the local OSM community before using or referencing external data. 
 
@@ -69,7 +69,7 @@ Visit the relevant Country page on the OSM Wiki : https://wiki.openstreetmap.org
 
 Help enrich or verify existing information there. 
 
-### <div class="tools-header"> Is open data always reliable ? </div>
+### <div class="tools-header"> Is open data always reliable? </div>
 
 Open data quality varies. Cross-check it when possible. If you're local, field verification can be a great way to do so.
 
