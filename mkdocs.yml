@@ -21,7 +21,7 @@ copyright:    <a href="https://creativecommons.org/licenses/by/4.0/" target="_bl
 theme:
   name: material
   custom_dir: docs/overrides
-  favicon: images/logos/ohmygrid-logo.png
+  favicon: images/logos/ohmygrid-favicon.png
   logo: images/logos/ohmygrid-logo.png
   palette:
     # Light Mode
@@ -56,6 +56,7 @@ extra:
     link: https://github.com/open-energy-transition/OhMyGrid
   - icon: fontawesome/brands/discord
     link: https://discord.gg/a5znpdFWfD
+  image: images/ohmygrid.ico
 
 extra_javascript:
   - js/umami.js
@@ -87,3 +88,4 @@ markdown_extensions:
 
 plugins:
   - glightbox
+  

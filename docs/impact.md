@@ -38,11 +38,12 @@ One of the major global challenges in the clean energy transition is the moderni
 
 ### Energy Grids Shape Our Future
 
-<div style="float: right; margin: 5px 0 20px 20px; width: 550px;">
+<div style="float: right; margin: 5px 0 20px 20px; width: 350px;">
   <a href="https://iea.blob.core.windows.net/assets/a688d0f5-a100-447f-91a1-50b7b0d8eaa1/BuildingtheFutureTransmissionGrid.pdf" target="_blank">
   <img src="../images/impact/expected-grid-growth.jpg" class="img-border" style="width: 100%;"> </a>
   <figcaption class="image-caption">Expanding and modernising grids is a key component of electricity security in each of the IEA scenarios. Adequate electricity transmission networks have strategic significance in outlooks that meet national and global climate goals.</figcaption>
 </div> 
+
 
 Reliable and open infrastructure data directly supports the **adoption and success of clean energy projects** globally. These projects are being accelerated for several critical reasons:
 
