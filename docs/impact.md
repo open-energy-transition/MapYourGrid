@@ -232,11 +232,18 @@ Disclaimer: These organisations are not affiliated with OhMyGrid nor endorse it.
     === "[windPRO is an industry standard for designing, planning, and evaluating wind and solar energy projects](https://help.emd.dk/mediawiki/index.php/EMD_Electrical_Grid_Map)"
         ![map](images/impact/WindPro.jpg){: .img-border } 
 
-**ETAP** ![ETAP](images/impact/etap.jpg){width=15px}
+**ETAP** ![etap](images/impact/etap.jpg){width=25px}
 ??? "ETAP® provides market-leading software and hardware solutions serving all stages of the electrical system lifecycle for utilities, infrastructure, industries and buildings."
     
     === "[ETAP® provides market-leading software and hardware solutions serving all stages of the electrical system lifecycle for utilities, infrastructure, industries and buildings](https://etap.com/product/gis-for-electric)"
         ![map](images/impact/etap-osm.jpg){: .img-border } 
+
+**GlitreNett** ![glitrenett](images/impact/GlitreNett.svg){width=40px}
+??? "DataArena intends to inform and provide information about the status of the Norway electrical grid capacity." 
+    
+    === "[DataArena intends to inform and provide information about the status of the Norway electrical grid capacity.](https://etap.com/product/gis-for-electric)"
+        ![map](images/impact/data-area-norway.jpg){: .img-border } 
+
 
 
 
