@@ -192,7 +192,9 @@ Interconnectors between countries are essential to the functioning of the transm
 2. Draw a small bounding box in the slippy map, then run the query to download.
 3. <p><strong>Explanation:</strong> The query finds nodes in your bounding box, detects their admin area (level 4 by default), and fetches all power infrastructure within it. You can adjust the “admin level” in the query (e.g. level 2 for national, level 6 for province) by editing the <code>admin_level</code> parameter in the download tab. A smaller bounding box is better (faster execution).</p>
 
+## <div class="tools-header">Still got questions?</div>
 
+Check out our [Q&A page](q&a.md).
 
 
 

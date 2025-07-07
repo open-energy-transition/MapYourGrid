@@ -135,4 +135,6 @@ The following image is take from the report Key technology components of electri
   <figcaption class="image-caption">Key technology components of electricity grids Source: IEA - Electricity Grids and Secure Energy Transitions.</figcaption>
 </div>
 
+## <div class="tools-header">Still got questions?</div>
 
+Check out our [Q&A page](q&a.md).
