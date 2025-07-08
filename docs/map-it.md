@@ -634,6 +634,37 @@ async function fetchWikidataAndDownload(sovName) {
   URL.revokeObjectURL(a.href);
 }
 
+async function fetchPPMAndDownload(sovName) {
+  const type = document.getElementById('ppmType').value;
+
+  const foldertypes = {
+    'Rejected power plants': '/ppm_rejected_geojson_by_country'
+  };
+
+  const folder = foldertypes[type];
+  if (!folder) {
+    return alert(`Unknown data type: ${type}`);
+  }
+
+  const fileName = sovName.replace(/\s+/g, '_') + '.geojson';
+  const url = `https://raw.githubusercontent.com/open-energy-transition/mapit-osm/main${folder}/${fileName}`;
+
+  const resp = await fetch(url);
+  if (!resp.ok) {
+    return alert(`No PPM file found for ${sovName}.`);
+  }
+
+  const geojson = await resp.json();
+  const blob = new Blob([JSON.stringify(geojson, null, 2)], { type: 'application/json' });
+  const a = document.createElement('a');
+  a.href = URL.createObjectURL(blob);
+  a.download = `${sovName.replace(/\s+/g, '_')}_ppm_${type}.geojson`;
+  a.click();
+  URL.revokeObjectURL(a.href);
+}
+
+
+
 // JOSM integration function
 function sendToJosm(query) {
   // Encode only the query part
