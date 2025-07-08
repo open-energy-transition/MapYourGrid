@@ -95,6 +95,14 @@ If this is your first time grid mapping, please go through the [Starter-Kit](/st
   </select>
 </div>
 
+<!-- PPM button -->
+<div id="ppm-panel" style="display:none; margin-bottom:1em;">
+  <label for="ppmType">Data type:</label>
+  <select id="ppmType">
+    <option value="Rejected power plants" selected>Rejected power plants</option>
+  </select>
+</div>
+
 
 <div id="map"></div>
 
@@ -195,7 +203,7 @@ async function initQueryUI() {
   });
 
   // inject our special modes:
-  modes.splice(2, 0, 'Osmose_issues', 'GEM_powerplants', 'Wikidata');
+  modes.splice(2, 0, 'Osmose_issues', 'GEM_powerplants', 'Wikidata', 'PPM');
 
   currentMode = modes.includes('Default') ? 'Default' : modes[0];
 
@@ -231,12 +239,16 @@ async function initQueryUI() {
       group = renderGEMButtonGroup();
     } else if (mode === 'Wikidata') {
       group = renderWikidataButtonGroup();
-    } else {
+    } 
+    else if (mode === 'PPM') {
+    group = renderPPMButtonGroup();
+    }
+    else {
       group = await renderModeButtonGroup(mode);
     }
 
     // Tools go in the second row, everything else in the first
-    if (['Osmose_issues', 'GEM_powerplants', 'Wikidata'].includes(mode)) {
+    if (['Osmose_issues', 'GEM_powerplants', 'Wikidata', 'PPM'].includes(mode)) {
       toolContainer.appendChild(group);
     } else {
       overpassContainer.appendChild(group);
@@ -250,10 +262,12 @@ async function initQueryUI() {
   // grab (and remove) the existing panels from their old position
   const osmose   = document.getElementById('osmose-panel');
   const wikidata = document.getElementById('wikidata-panel');
+  const ppm      = document.getElementById('ppm-panel');
 
   // append them into our wrapper
   panelWrapper.appendChild(osmose);
   panelWrapper.appendChild(wikidata);
+  panelWrapper.appendChild(ppm);
 
   // finally, drop that wrapper just before the map div
   mapEl.parentNode.insertBefore(panelWrapper, mapEl);
@@ -334,6 +348,27 @@ function renderWikidataButtonGroup() {
   return group;
 }
 
+function renderPPMButtonGroup() {
+  const btn = document.createElement('button');
+  btn.textContent = 'PPM';
+  btn.classList.add('query-btn');
+  if (currentMode === 'PPM') btn.classList.add('active');
+  btn.onclick = () => selectMode('PPM', btn);
+
+  const info = document.createElement('div');
+  info.classList.add('query-version');
+  info.style.marginTop = '0.2rem';
+  info.innerHTML =
+   '<a href="https://github.com/open-energy-transition/mapit-osm/tree/main" target="_blank">Repository</a>';
+
+  const group = document.createElement('div');
+  group.classList.add('query-group');
+  group.appendChild(btn);
+  group.appendChild(info);
+  return group;
+}
+
+
 async function renderModeButtonGroup(mode) {
   const btn = document.createElement('button');
   // I overrided the button name for Default, but the file in github is still Default
@@ -381,7 +416,13 @@ function selectMode(mode, btn) {
   // Wikidata
   document.getElementById('wikidata-panel').style.display =
     mode === 'Wikidata' ? 'block' : 'none';
+
+  // PPM    
+  document.getElementById('ppm-panel').style.display =
+  mode === 'PPM' ? 'block' : 'none';
 }
+
+
 
 
 // 2c) fetch the correct OverpassQL file on demand
@@ -425,6 +466,9 @@ async function handleAreaClick(iso, level, layer) {
     }
     else if (currentMode === 'Wikidata') {
       await fetchWikidataAndDownload(usedSovName);
+    }
+    else if (currentMode === 'PPM') {
+    await fetchPPMAndDownload(sovName);
     }
     else {
        let tpl = await fetchQuery(currentMode, level);
