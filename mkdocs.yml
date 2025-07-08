@@ -11,7 +11,7 @@ nav:
   - MAP IT📍: map-it.md
   - TOOLS AND STRATEGIES: tools.md
   - OUR PROGRESS : progress.md
-  - QUESTIONS? : q&a.md
+  - QUESTIONS? : questions.md
   - BLOG:
       2025:
         - "Liberate the Grid": blog/firstrename.md
@@ -89,4 +89,5 @@ markdown_extensions:
 
 plugins:
   - glightbox
+  - search
   
