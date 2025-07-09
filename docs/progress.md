@@ -80,7 +80,7 @@ OhMyGrid measures its progress at user, hashtag and country level. If you use ou
   const LINE_LENGTH_GOAL = 5000;
   const COMMUNITY_TOWER_GOAL = 5000;
   const COMMUNITY_LINE_LENGTH_GOAL = 2500;
-   // —— UPDATE Ohsome (#ohmygrid) —— 
+   // —— UPDATE Ohsome (#ohmygrid) ——
   async function updateOhsome() {
     const contribCountEl = document.getElementById('contributors-count');
     const editsCountEl   = document.getElementById('edits-count');
@@ -172,7 +172,7 @@ async function loadLineLength() {
     if (percentageOfMediumHigh !== null && percentageOfMediumHigh !== undefined && mediumHighVoltageKm) {
       displayText += `<br><small style="color: #666; font-size: 0.85em;">${percentageOfMediumHigh}% of all high-voltage lines in OpenStreetMap (source: openinframap.org)</small>`;
     }
-    
+
     lengthEl.innerHTML = displayText;
     lengthBar.style.width  = Math.min(100, lengthKm / LINE_LENGTH_GOAL * 100) + '%';
     updatedEl.textContent  = `Last updated: ${new Date(updated).toLocaleString()}`;
@@ -186,29 +186,56 @@ async function loadLineLength() {
 async function loadCommunityStats() {
   const towerCountEl = document.getElementById('community-tower-count');
   const towerBar = document.getElementById('community-tower-bar');
+  const communityTowerUpdatedEl = document.getElementById('community-tower-updated'); // Correct ID for tower updated
+
   const lengthEl = document.getElementById('community-line-length-count');
   const lengthBar = document.getElementById('community-line-length-bar');
-  const updatedEl = document.getElementById('community-updated');
+  const communityLineLengthUpdatedEl = document.getElementById('community-line-length-updated'); // Correct ID for line length updated
+
+  // Set initial loading states
+  towerCountEl.textContent = 'Loading…';
+  towerBar.style.width = '0%';
+  communityTowerUpdatedEl.textContent = 'Last updated: —';
+
+  lengthEl.textContent = 'Loading…';
+  lengthBar.style.width = '0%';
+  communityLineLengthUpdatedEl.textContent = 'Last updated: —';
 
   try {
     const resp = await fetch('/data/community-stats.json');
     if (!resp.ok) throw new Error(resp.statusText);
-    const { towerCount, lengthKm, updated } = await resp.json();
+    const data = await resp.json();
+
+    // Correctly extract data based on your provided JSON structure
+    const towerCount = data.towerCount ?? 0;
+    const lengthKm = data.lengthKm ?? 0;
+    const updated = data.updated;
 
     // Update Community Towers
     towerCountEl.textContent = towerCount.toLocaleString();
     towerBar.style.width = Math.min(100, towerCount / COMMUNITY_TOWER_GOAL * 100) + '%';
-    
+    communityTowerUpdatedEl.textContent = `Last updated: ${new Date(updated).toLocaleString()}`;
+
     // Update Community Line Length
     lengthEl.textContent = `${lengthKm.toLocaleString()} km`;
     lengthBar.style.width = Math.min(100, lengthKm / COMMUNITY_LINE_LENGTH_GOAL * 100) + '%';
-    
-    updatedEl.textContent = `Last updated: ${new Date(updated).toLocaleString()}`;
+    communityLineLengthUpdatedEl.textContent = `Last updated: ${new Date(updated).toLocaleString()}`;
+
+    // Cache community stats
+    localStorage.setItem('ohmygrid-community-stats', JSON.stringify({
+      communityTowerCount: towerCount,
+      communityLineLengthKm: lengthKm,
+      updated: updated, // Store the actual updated timestamp from JSON
+      ts: Date.now() // Store current time for cache age
+    }));
+
   } catch (err) {
     console.error('Error loading community stats', err);
-    // Handle errors for all new elements
-    towerCountEl.textContent = 'In progress';
-    lengthEl.textContent = 'In progress';
+    // Change to 'Error' for clarity when something goes wrong fetching data
+    towerCountEl.textContent = 'Error';
+    lengthEl.textContent = 'Error';
+    communityTowerUpdatedEl.textContent = ''; // Clear timestamp on error
+    communityLineLengthUpdatedEl.textContent = ''; // Clear timestamp on error
   }
 }
 
@@ -246,12 +273,27 @@ async function loadCommunityStats() {
     if (tCache) {
       document.getElementById('tower-count').textContent = tCache.count.toLocaleString();
       document.getElementById('tower-bar').style.width   = Math.min(100, tCache.count / TOWER_GOAL * 100) + '%';
+      document.getElementById('tower-updated').textContent = `Last updated: ${new Date(tCache.updated).toLocaleString()}`; // Populate updated from cache
     } else {
       loadTowerCount();
     }
 
     loadLineLength();
-    loadCommunityStats();
+
+    // Try Community Stats cache
+    const csCache = attemptCacheLoad('ohmygrid-community-stats', oneHour);
+    if (csCache) {
+      document.getElementById('community-tower-count').textContent = csCache.communityTowerCount.toLocaleString();
+      document.getElementById('community-tower-bar').style.width = Math.min(100, csCache.communityTowerCount / COMMUNITY_TOWER_GOAL * 100) + '%';
+      document.getElementById('community-tower-updated').textContent = `Last updated: ${new Date(csCache.updated).toLocaleString()}`;
+
+      document.getElementById('community-line-length-count').textContent = `${csCache.communityLineLengthKm.toLocaleString()} km`;
+      document.getElementById('community-line-length-bar').style.width = Math.min(100, csCache.communityLineLengthKm / COMMUNITY_LINE_LENGTH_GOAL * 100) + '%';
+      document.getElementById('community-line-length-updated').textContent = `Last updated: ${new Date(csCache.updated).toLocaleString()}`;
+    } else {
+      loadCommunityStats();
+    }
+
 
     // refresh button now refreshes both
     const btn = document.getElementById('refresh-btn');
@@ -260,9 +302,11 @@ async function loadCommunityStats() {
         localStorage.removeItem('ohmygrid-ohsome');
         localStorage.removeItem('ohmygrid-towers');
         localStorage.removeItem('ohmygrid-line-length');
+        localStorage.removeItem('ohmygrid-community-stats'); // Clear community stats cache
         updateOhsome();
         loadTowerCount();
         loadLineLength();
+        loadCommunityStats(); // Also call community stats refresh
       });
     }
   });
