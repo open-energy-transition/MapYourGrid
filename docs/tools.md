@@ -224,7 +224,5 @@ Follow the steps below to help improve rejected power plants in OSM:
 3. Press CTRL+A and click 'Add' in the 'Todo' window.
 4. Switch to your OSM transmission or power layer.
 5. Step through the rejected entries by pressing 'Mark' in JOSM.
-6. Improve tagging so features are accepted by powerplantmatching and can support open energy modelling.
-
-This strategy is key to improve the quality of OSM data and build trust among energy system modellers.
+6. Improve tagging to enhance the quality of OSM data.
 
