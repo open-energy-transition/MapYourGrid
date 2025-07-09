@@ -264,5 +264,4 @@ Disclaimer: These organisations are not affiliated with OhMyGrid nor endorse it.
         ![map](images/impact/roseau.jpg){: .img-border } 
 
 
-Check out our [Q&A page](q&a.md).
 

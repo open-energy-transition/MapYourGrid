@@ -75,7 +75,7 @@ Can you see the power tower that's missing from the bottom Left corner?
 
 <div style="float: right; margin: 5px 0 20px 20px; width: 350px;">
   <img src="../images/industrial-area.jpg" class="img-border" alt="A car assembly plant in Nigeria which is connected directly to the grid.">
-  <figcaption class="image-caption">A substation in Malawi with an unmapped interconnector with the first tower in image center.</figcaption>
+  <figcaption class="image-caption">This industrial area in Nigeria is connected to the transmission grid via its own substation.</figcaption>
 </div>
 
 Large industrial facilities require huge amounts of energy and therefore have their own substations, and are sometimes even directly connected to the transmission grid. Stepping through all industrial areas can also reveal substations or power plants that are often tagged already as landuse=industrial. Try also to check the surrounding area too as substations are sometimes placed outside of the mapped industrial area. 
@@ -100,26 +100,42 @@ Large industrial facilities require huge amounts of energy and therefore have th
 WikiData provides access to Wikipedia articles about power infrastructure around the world. The [Map It📍](https://ohmygrid.org/map-it/) page provides you a simple interface to extract this data for the country you would like to map. The [osm-wikidata-comparison](https://github.com/open-energy-transition/osm-wikidata-comparison/) repository provides this data by identify missing or incomplete power infrastructure in OpenStreetMap by extracting structured data via the Wikidata API. It generates ready-to-use GeoJSON that can be opened in JOSM as a visual hint layer to guide new mapping work or improve existing tags.
 
 1. Use the [Map It📍](https://ohmygrid.org/map-it/) page to download the transmission grid data for your country.
-2. Download your country's WikiData into a new layer using the [Map It📍](https://ohmygrid.org/map-it/) page.
-3. Press CTRL+A and click 'Add' in the 'Todo' window.
-4. Switch back to your transmission grid layer.
-3. You can now step through all WikiData entries by pressing 'Mark'.
-3. If you spot any power plants or industrial areas missing from the map, please also include these in your mapping.
+1. Download your country's WikiData into a new layer using the [Map It📍](https://ohmygrid.org/map-it/) page.
+1. Press CTRL+A and click 'Add' in the 'Todo' window.
+1. Switch back to your transmission grid layer.
+1. You can now step through all WikiData entries by pressing 'Mark'.
+1. If you spot any power plants or industrial areas missing, please also include these in your mapping.
+
+<div style="float: right; margin: 5px 0 20px 20px; width: 250px;">
+    <img src="../images/WikiData-id.jpg" class="img-border" alt="Wikidata Comparison GeoJSON Output">
+    <figcaption class="image-caption">WikiData QID enables Open Infrastructure Map to link to databases like Global Energy Monitor.</figcaption>   
+</div>
+
+#### Linking OpenStreetMap to WikiData
+
+ Linking other datasets to OpenStreetMap objects, such as power plants, can significantly enrich the data and help to avoid licence issues. Often, other data catalogues provide more up-to-date information about objects than OpenStreetMap. WikiData provides an excellent means of linking all these different data sources together in a standardised way. The datasets we provide will also include the WikiData QID (https://wiki.openstreetmap.org/wiki/Key:Wikidata). Adding these QIDs to OpenStreetMap objects greatly improves the quality and usability of data relating to power plants, substations, and interconnectors.
 
 
 ## <div class="stradegy-header">Technical Mapping Strategies</div></h2>
 
 ### <div class="tools-header">Offical Data and Maps</div></h3>
 
-In order to map more effectively, it is recommended to use maps and datasets that can help you find missing power lines, substations and power plants. Most National transmission system operators provide publicly available maps, which can help you to estimate the coverage of the grid, and locate what is missing in OSM. Furthermore, having the names of substations can also help locate them. 
-    
+In order to map more effectively, it is recommended to use maps and datasets that can help you find missing power lines, substations and power plants. Most National transmission system operators provide publicly available maps, which can help you to estimate the coverage of the grid, and locate what is missing in OSM. Furthermore, having the names of substations can also help locate them. OhMyGrid provides a list of [Curated Grid Maps](https://github.com/open-energy-transition/Awesome-Electric-Grid-Mapping), which contains datasets, maps, and documents for electrical grid all around the world.
+
 <div style="float: right; margin: 5px 0 20px 20px; width: 350px;">
     <img src="../images/bangladeshawesome.jpg" class="img-border" alt="GEM Angola Data Example in JOSM">
     <figcaption class="image-caption">Offical transmission grid map of Power Grid Bangladesh PLC.</figcaption>
 </div>
 
-OhMyGrid provides a list of [Curated Grid Maps](https://github.com/open-energy-transition/Awesome-Electric-Grid-Mapping), which contains datasets, maps, and documents for electrical grid all around the world.
-⚠️ Please use these datasets as hint layers, and check licenses to see how/if you are allowed to use them. Do not copy/data from these maps directly into OpenStreetMap. Each data point of the transmission network must be set manually and <a href="https://wiki.openstreetmap.org/wiki/Verifiability">verified</a> with official satellite data provided by the OpenStreetMap community.
+
+#### OpenData Plugin
+The OpenData plugin will allow you to load all kinds of GIS formats directly into JOSM.
+
+1. Download the `OpenData` plugin for JOSM. Go to Edit > Preferences. Search for `OpenData`, select it and press OK.
+1. You should now be able to import much more data formats like (csv, xls, ods, kml, kmz, shp, mif) as another hint layer into JOSM.
+
+!!! note "OpenStreetMap and Verifiability"
+      ⚠️ Please use these datasets as hint layers. Do not copy/data from these maps directly into OpenStreetMap. Each data point of the transmission network must be set manually and <a href="https://wiki.openstreetmap.org/wiki/Verifiability">verified</a> with official satellite data provided by the OpenStreetMap community.
 
 ### <div class="tools-header"> Searching and solving fixme tags</div></h3>
 OpenStreetMap allows mappers to quickly mark an object that seems to be wrong and needs fixing using the [Key:fixme](https://wiki.openstreetmap.org/wiki/Key:fixme) tag. For example, you can write `fixme=wrong voltage` if you think the voltage on a line is incorrect, but you don't know the correct value. A small F will then be visible on the edge of the symbol to indicate the fixme tag. Stepping through all the `fixme` tags in a country is also a great way to search for errors in the grid that you can try to fix. We recommend using the `todo list` plugin for this.
@@ -133,12 +149,6 @@ OpenStreetMap allows mappers to quickly mark an object that seems to be wrong an
 2. Press `CTRL+F`and search for `fixme=*`.
 3. In the todo list window press `Add`.
 4. After you fixed and issues please remove the fixme tag.
-
-#### OpenData Plugin
-The OpenData plugin will allow you to load all kinds of GIS formats directly into JOSM.
-
-1. Download the `OpenData` plugin for JOSM. Go to Edit > Preferences. Search for `OpenData`, select it and press OK.
-1. You should now be able to import much more data formats like (csv, xls, ods, kml, kmz, shp, mif) as another hint layer into JOSM.
 
 ### <div class="tools-header">Open Infrastructure Map - Nighttime Lights and Osmose </div></h3>
 <div style="float: right; margin: 5px 0 20px 20px; width: 350px;">
@@ -192,9 +202,6 @@ Interconnectors between countries are essential to the functioning of the transm
 2. Draw a small bounding box in the slippy map, then run the query to download.
 3. <p><strong>Explanation:</strong> The query finds nodes in your bounding box, detects their admin area (level 4 by default), and fetches all power infrastructure within it. You can adjust the “admin level” in the query (e.g. level 2 for national, level 6 for province) by editing the <code>admin_level</code> parameter in the download tab. A smaller bounding box is better (faster execution).</p>
 
-## <div class="tools-header">Still got questions?</div>
-
-Check out our [Q&A page](q&a.md).
 
 
 
