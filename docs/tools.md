@@ -203,5 +203,28 @@ Interconnectors between countries are essential to the functioning of the transm
 3. <p><strong>Explanation:</strong> The query finds nodes in your bounding box, detects their admin area (level 4 by default), and fetches all power infrastructure within it. You can adjust the “admin level” in the query (e.g. level 2 for national, level 6 for province) by editing the <code>admin_level</code> parameter in the download tab. A smaller bounding box is better (faster execution).</p>
 
 
+### <div class="tools-header">Improve OSM tags with PPM </div></h3>
 
+<a href="https://github.com/PyPSA/powerplantmatching" target="_blank">Powerplantmatching (PPM)</a> is a python repository designed to harmonize and combine power plant datasets from sources like OpenStreetMap (OSM) and Global Energy Monitor. It is widely used to prepare validated generation data for energy system models such as PyPSA-EUR. A new feature now fetches power plant data  from OSM and flags all <strong>power plants and generators that are rejected</strong> due to incomplete or inconsistent metadata. These include elements missing a <code>name</code>, <code>output:electrical</code>, <code>plant:method</code>, incorrect unit formats, among others.
+
+<div style="float: right; margin: 5px 0 20px 20px; width: 350px;">
+    <img src="../images/ppm-hint-layer.jpg" class="img-border" alt="PPM Rejected Power Plants GeoJSON">
+    <figcaption class="image-caption">
+        Power plants rejected by powerplantmatching due to missing metadata, displayed in red as a JOSM hint layer. In black, the power infraestructure grid from OSM.
+    </figcaption>   
+</div>
+
+You can access this data through our [Map It📍](https://ohmygrid.org/map-it/) interface. Select the <strong>powerplantmatching</strong> button and click on any country to download a GeoJSON file listing rejected power plants. Once downloaded, the file can be opened in JOSM as a hint layer to help improve tagging. You can do this by reviewing the reason why the power plant was not considered and adding the missing data. For example, a common reason is the lack of a technology tag like <code>plant:method=run-of-river</code> or <code>plant:method=reservoir</code> on hydro power plants, or <code>plant:method=wind_turbine</code> on wind farms relations.
+
+
+Follow the steps below to help improve rejected power plants in OSM:
+
+1. Use the [Map It📍](https://ohmygrid.org/map-it/) page to download the rejected power plant layer for a given country.
+2. Open the GeoJSON file in JOSM as a new layer.
+3. Press CTRL+A and click 'Add' in the 'Todo' window.
+4. Switch to your OSM transmission or power layer.
+5. Step through the rejected entries by pressing 'Mark' in JOSM.
+6. Improve tagging so features are accepted by powerplantmatching and can support open energy modelling.
+
+This strategy is key to improve the quality of OSM data and build trust among energy system modellers.
 
