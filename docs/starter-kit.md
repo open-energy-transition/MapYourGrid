@@ -1,5 +1,5 @@
 <div class="page-headers">
-<h1>Starter Kit🌱</h1>
+<h1>Starter Kit🌱 - </h1>
 </div>
 This starter kit for mapping the electrical transmission grid in OpenStreetMap outlines the basic skills required. The tutorial for mapping using JOSM starts with "Install JOSM".
 
