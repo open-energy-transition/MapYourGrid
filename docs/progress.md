@@ -108,7 +108,7 @@ OhMyGrid measures its progress at user, hashtag and country level. If you use ou
 
       // write DOM
       contribCountEl.textContent = users.toLocaleString();
-      editsCountEl.textContent   = edits.toLocaleString();
+      editsCountEl.textContent   = edits.toLocaleString('en-US');
 
       contribBar.style.width = Math.min(100, users / CONTRIBUTORS_GOAL * 100) + '%';
       editsBar.style.width   = Math.min(100, edits / EDITS_GOAL        * 100) + '%';
@@ -139,7 +139,7 @@ OhMyGrid measures its progress at user, hashtag and country level. If you use ou
     if (!resp.ok) throw new Error(resp.statusText);
     const { towerCount: count, updated } = await resp.json();
 
-    towerCountEl.textContent   = count.toLocaleString();
+    towerCountEl.textContent   = count.toLocaleString('en-US');
     towerBar.style.width       = Math.min(100, count / TOWER_GOAL * 100) + '%';
     towerUpdatedEl.textContent = `Last updated: ${new Date(updated).toLocaleString()}`;
   }
@@ -166,7 +166,7 @@ async function loadLineLength() {
     const { lengthKm, mediumHighVoltageKm, percentageOfMediumHigh, updated } = data;
 
     // Always show the length, even if percentage calculation failed
-    let displayText = `${Math.round(lengthKm).toLocaleString()} km`;
+    let displayText = `${Math.round(lengthKm).toLocaleString('en-US')} km`;
 
    // Only add percentage if we have valid data
     if (percentageOfMediumHigh !== null && percentageOfMediumHigh !== undefined && mediumHighVoltageKm) {
@@ -212,12 +212,12 @@ async function loadCommunityStats() {
     const updated = data.updated;
 
     // Update Community Towers
-    towerCountEl.textContent = towerCount.toLocaleString();
+    towerCountEl.textContent = towerCount.toLocaleString('en-US');
     towerBar.style.width = Math.min(100, towerCount / COMMUNITY_TOWER_GOAL * 100) + '%';
     communityTowerUpdatedEl.textContent = `Last updated: ${new Date(updated).toLocaleString()}`;
 
     // Update Community Line Length
-    lengthEl.textContent = `${lengthKm.toLocaleString()} km`;
+    lengthEl.textContent = `${lengthKm.toLocaleString('en-US')} km`;
     lengthBar.style.width = Math.min(100, lengthKm / COMMUNITY_LINE_LENGTH_GOAL * 100) + '%';
     communityLineLengthUpdatedEl.textContent = `Last updated: ${new Date(updated).toLocaleString()}`;
 
@@ -260,8 +260,8 @@ async function loadCommunityStats() {
     const oCache = attemptCacheLoad('ohmygrid-ohsome', oneHour);
     if (oCache) {
       // populate from cache
-      document.getElementById('contributors-count').textContent = oCache.users.toLocaleString();
-      document.getElementById('edits-count').textContent       = oCache.edits.toLocaleString();
+      document.getElementById('contributors-count').textContent = oCache.users.toLocaleString('en-US');
+      document.getElementById('edits-count').textContent       = oCache.edits.toLocaleString('en-US');
       document.getElementById('contributors-bar').style.width = Math.min(100, oCache.users / CONTRIBUTORS_GOAL * 100) + '%';
       document.getElementById('edits-bar').style.width       = Math.min(100, oCache.edits / EDITS_GOAL * 100) + '%';
     } else {
@@ -271,7 +271,7 @@ async function loadCommunityStats() {
     // try Towers cache
     const tCache = attemptCacheLoad('ohmygrid-towers', oneHour);
     if (tCache) {
-      document.getElementById('tower-count').textContent = tCache.count.toLocaleString();
+      document.getElementById('tower-count').textContent = tCache.count.toLocaleString('en-US');
       document.getElementById('tower-bar').style.width   = Math.min(100, tCache.count / TOWER_GOAL * 100) + '%';
       document.getElementById('tower-updated').textContent = `Last updated: ${new Date(tCache.updated).toLocaleString()}`; // Populate updated from cache
     } else {
@@ -283,11 +283,11 @@ async function loadCommunityStats() {
     // Try Community Stats cache
     const csCache = attemptCacheLoad('ohmygrid-community-stats', oneHour);
     if (csCache) {
-      document.getElementById('community-tower-count').textContent = csCache.communityTowerCount.toLocaleString();
+      document.getElementById('community-tower-count').textContent = csCache.communityTowerCount.toLocaleString('en-US');
       document.getElementById('community-tower-bar').style.width = Math.min(100, csCache.communityTowerCount / COMMUNITY_TOWER_GOAL * 100) + '%';
       document.getElementById('community-tower-updated').textContent = `Last updated: ${new Date(csCache.updated).toLocaleString()}`;
 
-      document.getElementById('community-line-length-count').textContent = `${csCache.communityLineLengthKm.toLocaleString()} km`;
+      document.getElementById('community-line-length-count').textContent = `${csCache.communityLineLengthKm.toLocaleString('en-US')} km`;
       document.getElementById('community-line-length-bar').style.width = Math.min(100, csCache.communityLineLengthKm / COMMUNITY_LINE_LENGTH_GOAL * 100) + '%';
       document.getElementById('community-line-length-updated').textContent = `Last updated: ${new Date(csCache.updated).toLocaleString()}`;
     } else {
