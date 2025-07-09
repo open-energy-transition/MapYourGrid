@@ -1,0 +1,37 @@
+name: 📈 Update Community Stats
+
+on:
+  workflow_dispatch: {} # Allows manual triggering
+  schedule:
+    - cron: '0 4 * * 0' # Runs every Sunday at 4 UTC
+
+permissions:
+  contents: write
+
+jobs:
+  update-stats:
+    runs-on: ubuntu-latest
+    steps:
+      - name:  checkout repo
+        uses: actions/checkout@v4
+
+      - name: 🐍 Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+
+      - name: 📦 Install Python dependencies
+        run: pip install requests aiohttp
+
+      - name: 🚀 Run stats script for weekly update
+        env:
+          OSMCHA_TOKEN: ${{ secrets.OSMCHA_TOKEN }}
+        run: python docs/py-scripts/update_community_stats.py --mode weekly
+
+      - name: 💾 Commit & push if changed
+        uses: EndBug/add-and-commit@v9
+        with:
+          author_name: github-actions[bot]
+          author_email: github-actions[bot]@users.noreply.github.com
+          message: "chore: weekly community stats update 🤖"
+          add: 'docs/data/community-stats.json'

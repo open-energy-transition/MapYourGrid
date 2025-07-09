@@ -47,6 +47,27 @@ OhMyGrid measures its progress at user, hashtag and country level. If you use ou
     </span>
   </div>
 
+  <div class="progress-item">
+    <label>Total estimated power towers added by people using the #ohmygrid:</label>
+    <div class="progress">
+      <div class="progress-bar" id="community-tower-bar" style="background-color: #28a745;"></div>
+    </div>
+    <span id="community-tower-count">Loading…</span>
+    <br>
+    <span id="community-tower-updated" style="font-size:0.8em; color:#666">Last updated: —</span>
+  </div>
+
+  <div class="progress-item">
+    <label>Total estimated length of power lines added by people using the #ohmygrid:</label>
+    <div class="progress">
+      <div class="progress-bar" id="community-line-length-bar" style="background-color: #28a745;"></div>
+    </div>
+    <span id="community-line-length-count">Loading…</span><br>
+    <span id="community-line-length-updated" style="font-size:0.8em; color:#666">
+      Last updated: —
+    </span>
+  </div>
+
 </div>
 
 
@@ -57,6 +78,8 @@ OhMyGrid measures its progress at user, hashtag and country level. If you use ou
   const EDITS_GOAL        = 10000;
   const TOWER_GOAL        = 10000;
   const LINE_LENGTH_GOAL = 5000;
+  const COMMUNITY_TOWER_GOAL = 5000;
+  const COMMUNITY_LINE_LENGTH_GOAL = 2500;
    // —— UPDATE Ohsome (#ohmygrid) —— 
   async function updateOhsome() {
     const contribCountEl = document.getElementById('contributors-count');
@@ -160,6 +183,35 @@ async function loadLineLength() {
   }
 }
 
+async function loadCommunityStats() {
+  const towerCountEl = document.getElementById('community-tower-count');
+  const towerBar = document.getElementById('community-tower-bar');
+  const lengthEl = document.getElementById('community-line-length-count');
+  const lengthBar = document.getElementById('community-line-length-bar');
+  const updatedEl = document.getElementById('community-updated');
+
+  try {
+    const resp = await fetch('/data/community-stats.json');
+    if (!resp.ok) throw new Error(resp.statusText);
+    const { towerCount, lengthKm, updated } = await resp.json();
+
+    // Update Community Towers
+    towerCountEl.textContent = towerCount.toLocaleString();
+    towerBar.style.width = Math.min(100, towerCount / COMMUNITY_TOWER_GOAL * 100) + '%';
+    
+    // Update Community Line Length
+    lengthEl.textContent = `${lengthKm.toLocaleString()} km`;
+    lengthBar.style.width = Math.min(100, lengthKm / COMMUNITY_LINE_LENGTH_GOAL * 100) + '%';
+    
+    updatedEl.textContent = `Last updated: ${new Date(updated).toLocaleString()}`;
+  } catch (err) {
+    console.error('Error loading community stats', err);
+    // Handle errors for all new elements
+    towerCountEl.textContent = 'In progress';
+    lengthEl.textContent = 'In progress';
+  }
+}
+
 
     // —— MAIN & CACHE HANDLING ——
   function attemptCacheLoad(id, maxAgeMs) {
@@ -199,6 +251,7 @@ async function loadLineLength() {
     }
 
     loadLineLength();
+    loadCommunityStats();
 
     // refresh button now refreshes both
     const btn = document.getElementById('refresh-btn');
