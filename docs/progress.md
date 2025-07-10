@@ -282,7 +282,7 @@ async function loadPlantCapacity() {
       capacityUpdatedEl.textContent = `Last updated: ${new Date(updated).toLocaleString()}`;
     } catch (err) {
       console.error('Error loading plant capacity', err);
-      capacityCountEl.textContent = 'Error';
+      capacityCountEl.textContent = 'In Progress Feature';
       capacityUpdatedEl.textContent = '';
     }
   }
