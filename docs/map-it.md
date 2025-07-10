@@ -757,10 +757,10 @@ fetch('../data/regionsv2.geojson')
       style="display: block; margin-left: auto; margin-right: auto;"
       width="600">
 
-:mag: Below you can find "Starter powerlines" where we have found some lines which you can map if you are new. <br>
+:mag: Below you can find "Good First Lines" where we have found some lines which you can map if you are new. <br>
 **Please** check the box if you mapped this line, so as to not waste other people's time! Once part of the community, we can grant you access to this spreadsheet so you can add other lines if you want.
 
-??? success "Starter powerlines (Click Me)"
+??? success "Good First Lines" (Click Me)"
     <iframe
      src="https://docs.google.com/spreadsheets/d/13YZftK9xZ09t2oSvhwjE0Zb7P25nl9OaUAxIBVNH0js/edit?usp=sharing&rm=minimal"
      class="iframestyle"

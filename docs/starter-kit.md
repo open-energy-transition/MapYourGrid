@@ -1,7 +1,7 @@
 <div class="page-headers">
 <h1>Starter-Kit🌱</h1>
 </div>
-This starter kit for mapping the electrical transmission grid in OpenStreetMap outlines the basic skills required. If you ever get stuck with the Starter Kit or would like to provide feedback, please contact us via our [community chat](https://discord.gg/fBw7ARTUeR). A grid mapping expert will help you finish your first line and set up your environment.
+This starter kit for mapping the electrical transmission grid in OpenStreetMap outlines the basic skills required. If you ever get stuck with the Starter Kit or would like to provide feedback, please contact us via our [community chat](https://discord.gg/fBw7ARTUeR) or <a href="mailto:MapYourGrid@openenergytransition.org" target="_blank" rel="noopener"> via email</a>. A MapYourGrid member will help you finish your first line and set up your environment.
 
 ## **<div class="tools-header">1. Get started with OpenStreetMap and Open Infrastructure Map <img src="../images/starter-kit/osm-logo.svg" style="height: 1.2em; vertical-align: middle; margin-left: 10px;"> </div>**
 
@@ -59,7 +59,7 @@ To add our custom paint style to JOSM, go to `Preferences → Map Paint Styles` 
 ## **<div class="tools-header">5. Choose a Good First Line</div>**
 Our community is constantly investigating transmission lines that are suitable for beginner friendly mapping experiences. Simply select a 'Good First Lines' from the following spreadsheet, and tick it if you have started mapping it:
 
-??? success "Starter powerlines (Click Me)"
+??? success "Good First Lines (Click Me)"
     <iframe
      src="https://docs.google.com/spreadsheets/d/13YZftK9xZ09t2oSvhwjE0Zb7P25nl9OaUAxIBVNH0js/edit?usp=sharing&rm=minimal"
      class="iframestyle"
@@ -77,6 +77,8 @@ Make sure remote control is enabled and ad-blocker disabled, and then go to the 
 <div style="float: right; margin: 5px 0 20px 20px; width: 350px;">
   <img src="../images/starter-kit/josm_env.jpg" class="img-border" style="width: 100%;">
   <figcaption class="image-caption">Key JOSM elements for continuing a transmission line. Click to enlarge.</figcaption>
+  <img src="../images/starter-kit/validation.jpg" class="img-border" style="width: 100%;">
+  <figcaption class="image-caption">Before uploading, JOSM will test your edits for known issues and various rule sets. Try to resolve as many validation results as possible. Click to enlarge.</figcaption>
 </div>
 
  Mapping is an iterative process, so you will make mistakes at first. However, this should not stop you from mapping; simply map what you can see in the imagery. Those who are new to the field should avoid altering existing data at all costs. However, you cannot break anything by adding new data, as this is constantly validated by our quality assurance tools. Now Start Mapping.
@@ -87,10 +89,10 @@ Make sure remote control is enabled and ad-blocker disabled, and then go to the 
 2. Copy the Coordiantes of your `Good First Line` and press the `Add Node` presets button. Enter the coordiantes here and press Ok. You should now see power towers that are not mapped at the end of a transmission line.
 3. Now, press the last tower symbol at the end of the line. You should now be able to extend the line. 
 4. Search for the next power towers you can find and click on its footprint. 
-5. Continue the line to the best of your ability press CTRL+F while the line is still selected. Select all nodes you have created by Entering `child selected type:node AND untagged` as search string. Now Press `Search`. 
-6. With all the nodes select now, press the `Power Tower` preset followed by `Apply Preset`. 
-7. Whilst having the `Data Layer` activated, press the green Upload arrow. Avoid ignoring validation results. The only acceptable warning when uploading data is "Possible missing line support node within power line". To support our initiative, please use the #MapYourGrid hashtag in the comments you make in the changeset.
-
+5. Continue the line to the best of your ability press CTRL+F while the line is still selected. Select all nodes you have created by Entering `child selected type:node AND untagged` as search string. Now Press `Search` to select all nodes with any tag. 
+6. Now press the `Power Tower` preset followed by `Apply Preset`. 
+7. With having the `Data Layer` activated, press the green Upload arrow. Avoid ignoring validation results. The only acceptable warning when uploading data is `Possible missing line support node within power line`. To support our initiative, please use the #MapYourGrid hashtag in the comments you make in the changeset.
+8. You just mapped your First Good Line. Feel free to close more First Good Lines, but make sure you leave some for the others. Finding your own lines to map is when all the [tools and strategies](tools.md) we have provided for you come into play.
 
 
 ## <div class="tools-header">8. Still on Track and Motivated to Continue?</div>
