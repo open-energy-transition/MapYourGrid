@@ -314,9 +314,6 @@ async function loadCommunityStats() {
 
 You can find more stats for #ohmygrid at [OhsomeNowstats](https://stats.now.ohsome.org/dashboard#hashtag=ohmygrid&start=2025-03-12T22:00:00Z&end=2025-05-14T21:59:59Z&interval=P1M&countries=&topics=).
 
-<!-- LOGBOOK: Add your country below the last country. Some css (in extra.css at "Hide ### from logbook") is being used to remove the ### from the table of contents so please use the same name or tell me -->
-<!-- End of country logbook -->
-<br>
 ###Africa
 ![Flag Angola](http://commons.wikimedia.org/wiki/Special:FilePath/Flag%20of%20Angola.svg){width=20px} [Angola](countrypages/Angola.md) - 
 ![Flag Burkina Faso](http://commons.wikimedia.org/wiki/Special:FilePath/Flag%20of%20Burkina%20Faso.svg){width=20px} [Burkina Faso](countrypages/Burkina Faso.md) - 
