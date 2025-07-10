@@ -2,6 +2,7 @@ import requests
 import json
 import re
 from datetime import datetime
+import sys
 
 def convert_to_mw(value):
     """
@@ -54,10 +55,26 @@ def fetch_power_plant_capacity():
 
     try:
         print("Sending request to Overpass API...")
-        response = requests.post(overpass_url, data={"data": query})
+        print("This may take several minutes for large datasets...")
+        
+        # Add explicit timeout for requests (10 minutes max)
+        response = requests.post(
+            overpass_url, 
+            data={"data": query},
+            timeout=600  # 10 minutes timeout
+        )
+        
         print(f"Response status code: {response.status_code}")
+        print(f"Response headers: {dict(response.headers)}")
+        
+        if response.status_code != 200:
+            print(f"HTTP Error: {response.status_code}")
+            print(f"Response text: {response.text[:1000]}")
+            return None
         
         response.raise_for_status()
+        
+        print("Parsing JSON response...")
         data = response.json()
         
         print(f"Received {len(data.get('elements', []))} elements from API")
@@ -81,19 +98,29 @@ def fetch_power_plant_capacity():
             "updated": datetime.utcnow().isoformat()
         }
 
+    except requests.exceptions.Timeout:
+        print("ERROR: Request timed out after 10 minutes")
+        return None
+    except requests.exceptions.ConnectionError as e:
+        print(f"ERROR: Connection error: {e}")
+        return None
     except requests.exceptions.RequestException as e:
-        print(f"Request error: {e}")
+        print(f"ERROR: Request error: {e}")
         return None
     except json.JSONDecodeError as e:
-        print(f"JSON decode error: {e}")
-        print(f"Response content: {response.text[:500]}...")
+        print(f"ERROR: JSON decode error: {e}")
+        print(f"Response content (first 1000 chars): {response.text[:1000]}")
         return None
     except Exception as e:
-        print(f"Unexpected error: {e}")
+        print(f"ERROR: Unexpected error: {e}")
+        import traceback
+        traceback.print_exc()
         return None
 
 if __name__ == "__main__":
     print("Script starting...")
+    print(f"Python version: {sys.version}")
+    
     capacity_data = fetch_power_plant_capacity()
     print(f"Capacity data result: {capacity_data}")
     
@@ -112,4 +139,4 @@ if __name__ == "__main__":
         print(f"Plant Count: {capacity_data['plant_count']}")
     else:
         print("ERROR: No capacity data returned - check the logs above for errors")
-        exit(1)  # Exit with error code so GitHub Actions shows failure
+        sys.exit(1)  # Exit with error code so GitHub Actions shows failure
