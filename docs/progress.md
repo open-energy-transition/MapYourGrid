@@ -48,6 +48,16 @@ MapYourGrid measures its progress at user, hashtag and country level. If you use
   </div>
 
   <div class="progress-item">
+    <label>Total Estimated Global Power Capacity added by mappers of the MapYourGrid funding organisations:</label>
+    <div class="progress">
+      <div class="progress-bar" id="plant-capacity-bar" style="background-color: #17a2b8;"></div>
+    </div>
+    <span id="plant-capacity-count">Loading…</span>
+    <br>
+    <span id="plant-capacity-updated" style="font-size:0.8em; color:#666">Last updated: —</span>
+  </div>
+
+  <div class="progress-item">
     <label>Total estimated power towers added by people using the <code>#MapYourGrid</code>:</label>
     <div class="progress">
       <div class="progress-bar" id="community-tower-bar" style="background-color: #28a745;"></div>
@@ -68,6 +78,7 @@ MapYourGrid measures its progress at user, hashtag and country level. If you use
     </span>
   </div>
 
+
 </div>
 
 
@@ -80,6 +91,7 @@ MapYourGrid measures its progress at user, hashtag and country level. If you use
   const LINE_LENGTH_GOAL = 5000;
   const COMMUNITY_TOWER_GOAL = 5000;
   const COMMUNITY_LINE_LENGTH_GOAL = 2500;
+  const PLANT_CAPACITY_GOAL = 5000
 
    // —— UPDATE Ohsome (#MapYourGrid) ——
   async function updateOhsome() {
@@ -251,8 +263,31 @@ async function loadCommunityStats() {
   }
 }
 
+async function loadPlantCapacity() {
+    const capacityCountEl = document.getElementById('plant-capacity-count');
+    const capacityBar = document.getElementById('plant-capacity-bar');
+    const capacityUpdatedEl = document.getElementById('plant-capacity-updated');
 
-    // —— MAIN & CACHE HANDLING ——
+    capacityCountEl.textContent = 'Loading…';
+    capacityBar.style.width = '0%';
+    capacityUpdatedEl.textContent = 'Last updated: —';
+
+    try {
+      const resp = await fetch('/data/plant-capacity.json');
+      if (!resp.ok) throw new Error(resp.statusText);
+      const { total_capacity_mw, updated } = await resp.json();
+
+      capacityCountEl.textContent = `${total_capacity_mw.toLocaleString('en-US')} MW`;
+      capacityBar.style.width = Math.min(100, total_capacity_mw / PLANT_CAPACITY_GOAL * 100) + '%';
+      capacityUpdatedEl.textContent = `Last updated: ${new Date(updated).toLocaleString()}`;
+    } catch (err) {
+      console.error('Error loading plant capacity', err);
+      capacityCountEl.textContent = 'Error';
+      capacityUpdatedEl.textContent = '';
+    }
+  }
+
+// —— MAIN & CACHE HANDLING ——
   function attemptCacheLoad(id, maxAgeMs) {
     try {
       const raw = localStorage.getItem(id);
@@ -291,6 +326,7 @@ async function loadCommunityStats() {
     }
 
     loadLineLength();
+    loadPlantCapacity();
 
     // Try Community Stats cache
     const csCache = attemptCacheLoad('MapYourGrid-community-stats', oneHour);
@@ -318,7 +354,8 @@ async function loadCommunityStats() {
         updateOhsome();
         loadTowerCount();
         loadLineLength();
-        loadCommunityStats(); // Also call community stats refresh
+        loadCommunityStats(); 
+        loadPlantCapacity();
       });
     }
   });
