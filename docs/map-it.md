@@ -134,7 +134,7 @@ const worldBounds = L.latLngBounds(southWest, northEast);
 // Create the map with maxBounds & disable world wrapping
 const map = L.map('map', {
   worldCopyJump: false,      // disable dragging to duplicate worlds
-  minZoom: 2,               
+  minZoom: 2.2,               
   maxZoom: 18,
   maxBounds: worldBounds,    // restrict the view
   maxBoundsViscosity: 0.3    // “sticky” at the edges

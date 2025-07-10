@@ -14,13 +14,13 @@ MapYourGrid measures its progress at user, hashtag and country level. If you use
 
 
   <div class="progress-item">
-    <label>Contributors mapping with <code>#MapYourGrid</code> hashtag:</label>
+    <label>Contributors mapping with <code>#mapyourgrid</code> and <code>#ohmygrid</code> hashtag:</label>
     <div class="progress"> <div class="progress-bar" id="contributors-bar" style="background-color: #28a745;"></div> </div>
     <span id="contributors-count">Loading…</span>
   </div>
 
   <div class="progress-item">
-    <label>Total Edits for <code>#MapYourGrid</code> hashtag:</label>
+    <label>Total Edits for <code>#mapyourgrid</code> hashtag:</label>
     <div class="progress">
       <div class="progress-bar" id="edits-bar" style="background-color: #28a745;"></div> </div>
     <span id="edits-count">Loading…</span>
@@ -80,6 +80,7 @@ MapYourGrid measures its progress at user, hashtag and country level. If you use
   const LINE_LENGTH_GOAL = 5000;
   const COMMUNITY_TOWER_GOAL = 5000;
   const COMMUNITY_LINE_LENGTH_GOAL = 2500;
+
    // —— UPDATE Ohsome (#MapYourGrid) ——
   async function updateOhsome() {
     const contribCountEl = document.getElementById('contributors-count');
@@ -96,15 +97,25 @@ MapYourGrid measures its progress at user, hashtag and country level. If you use
     try {
       const startDate = '2025-03-12T22:00:00Z';
       const endDate   = new Date().toISOString();
+      const hashtags = ['mapyourgrid', 'ohmygrid'];
       const url       = `https://stats.now.ohsome.org/api/stats/MapYourGrid?startdate=${startDate}&enddate=${endDate}`;
+      const urls = hashtags.map(tag => `https://stats.now.ohsome.org/api/stats/${tag}?startdate=${startDate}&enddate=${endDate}`);
 
-      const resp = await fetch(url);
-      if (!resp.ok) throw new Error(resp.statusText);
-      const data = await resp.json();
+      const responses = await Promise.all(urls.map(url => fetch(url)));
+      for (const resp of responses) {
+        if (!resp.ok) throw new Error(`HTTP error! status: ${resp.status}`);
+      }
 
-      // your payload is in data.result
-      const users = data.result.users  ?? 0;
-      const edits = data.result.edits  ?? 0;
+      const dataArray = await Promise.all(responses.map(resp => resp.json()));
+
+      // Aggregate the results (sum of users and edits)
+      const total = dataArray.reduce((acc, data) => {
+        acc.users += data.result.users ?? 0;
+        acc.edits += data.result.edits ?? 0;
+        return acc;
+      }, { users: 0, edits: 0 });
+
+      const { users, edits } = total;
 
       // write DOM
       contribCountEl.textContent = users.toLocaleString();
@@ -114,14 +125,15 @@ MapYourGrid measures its progress at user, hashtag and country level. If you use
       editsBar.style.width   = Math.min(100, edits / EDITS_GOAL        * 100) + '%';
 
       // cache
-      localStorage.setItem('MapYourGrid-ohsome', JSON.stringify({
-        users, edits, ts: Date.now()
+      localStorage.setItem('Combined-ohsome', JSON.stringify({
+        users,
+        edits,
+        ts: Date.now()
       }));
-    }
-    catch(err) {
+    } catch (err) {
       console.error('Ohsome error', err);
       contribCountEl.textContent = 'Error';
-      editsCountEl.textContent   = 'Error';
+      editsCountEl.textContent = 'Error';
     }
   }
 
@@ -312,7 +324,7 @@ async function loadCommunityStats() {
   });
 </script>
 
-You can find more stats for #MapYourGrid at [OhsomeNowstats](https://stats.now.ohsome.org/dashboard#hashtag=MapYourGrid&start=2025-03-12T22:00:00Z&end=2025-05-14T21:59:59Z&interval=P1M&countries=&topics=).
+You can find more stats for #mapyourgrid at [OhsomeNowstats](https://stats.now.ohsome.org/dashboard#hashtag=MapYourGrid&start=2025-03-12T22:00:00Z&end=2025-05-14T21:59:59Z&interval=P1M&countries=&topics=).
 
 ###Africa
 ![Flag Angola](http://commons.wikimedia.org/wiki/Special:FilePath/Flag%20of%20Angola.svg){width=20px} [Angola](countrypages/Angola.md) - 
