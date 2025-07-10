@@ -36,11 +36,11 @@ def fetch_power_plant_capacity():
     print("Starting Overpass API request...")
     overpass_url = "https://overpass-api.de/api/interpreter"
     
-    query = f"""
+    query = """
     [out:json][timeout:900];
                 
     nwr["power"="plant"](user_touched:"Andreas Hernandez","Tobias Augspurger","davidtt92","Mwiche","relaxxe")->.plants;
-    nwr["power"="plant"](user_touched: "Russ","map-dynartio","overflorian","nlehuby","ben10dynartio","InfosReseaux")(newer:"2025-03-01T00:00:00Z")->.their_plants;
+    nwr["power"="plant"](user_touched: "Russ","map-dynartio","overflorian","nlehuby","ben10dynartio","InfosReseaux")(newer:"2024-03-01T00:00:00Z")->.their_plants;
 
     (
      .plants;
@@ -62,10 +62,6 @@ def fetch_power_plant_capacity():
         
         print(f"Received {len(data.get('elements', []))} elements from API")
         
-        response = requests.post(overpass_url, data={"data": query})
-        response.raise_for_status()  # Raise an exception for bad status codes
-        data = response.json()
-
         total_capacity_mw = 0
         plant_count = 0
 
@@ -77,6 +73,8 @@ def fetch_power_plant_capacity():
                     total_capacity_mw += capacity_mw
                     plant_count += 1
         
+        print(f"Processed {plant_count} plants with total capacity {total_capacity_mw} MW")
+        
         return {
             "total_capacity_mw": round(total_capacity_mw, 2),
             "plant_count": plant_count,
@@ -84,19 +82,34 @@ def fetch_power_plant_capacity():
         }
 
     except requests.exceptions.RequestException as e:
-        print(f"An error occurred: {e}")
+        print(f"Request error: {e}")
+        return None
+    except json.JSONDecodeError as e:
+        print(f"JSON decode error: {e}")
+        print(f"Response content: {response.text[:500]}...")
+        return None
+    except Exception as e:
+        print(f"Unexpected error: {e}")
         return None
 
 if __name__ == "__main__":
+    print("Script starting...")
     capacity_data = fetch_power_plant_capacity()
+    print(f"Capacity data result: {capacity_data}")
+    
     if capacity_data:
         # Ensure the data directory exists
         import os
+        print("Creating docs/data directory...")
         os.makedirs("docs/data", exist_ok=True)
         
+        print("Writing JSON file...")
         with open("docs/data/plant-capacity.json", "w") as f:
             json.dump(capacity_data, f, indent=2)
         
         print("Successfully updated plant capacity data.")
         print(f"Total Capacity: {capacity_data['total_capacity_mw']} MW")
         print(f"Plant Count: {capacity_data['plant_count']}")
+    else:
+        print("ERROR: No capacity data returned - check the logs above for errors")
+        exit(1)  # Exit with error code so GitHub Actions shows failure
