@@ -48,7 +48,7 @@ OhMyGrid measures its progress at user, hashtag and country level. If you use ou
   </div>
 
   <div class="progress-item">
-    <label>Total estimated power towers added by people using the #ohmygrid:</label>
+    <label>Total estimated power towers added by people using the <code>#ohmygrid</code>:</label>
     <div class="progress">
       <div class="progress-bar" id="community-tower-bar" style="background-color: #28a745;"></div>
     </div>
@@ -58,7 +58,7 @@ OhMyGrid measures its progress at user, hashtag and country level. If you use ou
   </div>
 
   <div class="progress-item">
-    <label>Total estimated length of power lines added by people using the #ohmygrid:</label>
+    <label>Total estimated length of power lines added by people using the <code>#ohmygrid</code>:</label>
     <div class="progress">
       <div class="progress-bar" id="community-line-length-bar" style="background-color: #28a745;"></div>
     </div>
