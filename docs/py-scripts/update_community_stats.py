@@ -17,7 +17,7 @@ TEAM_MEMBERS = {
     "relaxxe", "Russ", "map-dynartio", "overflorian", "nlehuby", 
     "ben10dynartio", "InfosReseaux"
 }
-HASHTAG = "ohmygrid"
+HASHTAG = "MapYourGrid"
 STATS_FILE = "docs/data/community-stats.json"
 
 class CommunityStatsAnalyzer:
@@ -196,7 +196,7 @@ def main(mode, start_date_str):
 
 
 if __name__ == "__main__":
-    parser = argparse.ArgumentParser(description="Update OhMyGrid community stats.")
+    parser = argparse.ArgumentParser(description="Update MapYourGrid community stats.")
     parser.add_argument(
         '--mode', 
         type=str, 

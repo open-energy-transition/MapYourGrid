@@ -1,8 +1,8 @@
-site_name: OhMyGrid
-site_url: 'https://ohmygrid.org/'
+site_name: MapYourGrid
+site_url: 'https://MapYourGrid.org/'
 site_description: A global community of citizen contributors creates and maintains data on the core infrastructures of our modern society. Let's empower them! 
-repo_name: 'OhMyGrid'
-repo_url: 'https://github.com/open-energy-transition/Oh-my-Grid'
+repo_name: 'MapYourGrid'
+repo_url: 'https://github.com/open-energy-transition/MapYourGrid'
 
 nav:
   - THE INITIATIVE : index.md
@@ -17,13 +17,13 @@ nav:
         - "Liberate the Grid": blog/firstrename.md
 
 copyright:    <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener noreferrer">
-      Creative Commons Attribution 4.0 International License   </a> -  <a href="https://ohmygrid.org/privacy-policy/"> Read our Privacy Policy</a> 
+      Creative Commons Attribution 4.0 International License   </a> -  <a href="https://MapYourGrid.org/privacy-policy/"> Read our Privacy Policy</a> 
 
 theme:
   name: material
   custom_dir: docs/overrides
-  favicon: images/logos/ohmygrid-logo.png
-  logo: images/logos/ohmygrid-logo.png
+  favicon: images/logos/MapYourGrid-logo.png
+  logo: images/logos/MapYourGrid-logo.png
   palette:
     # Light Mode
     - scheme: default
@@ -54,10 +54,10 @@ extra:
   generator: false
   social:
   - icon: fontawesome/brands/github
-    link: https://github.com/open-energy-transition/OhMyGrid
+    link: https://github.com/open-energy-transition/MapYourGrid
   - icon: fontawesome/brands/discord
     link: https://discord.gg/a5znpdFWfD
-  image: images/ohmygrid.ico
+  image: images/MapYourGrid.ico
 
 extra_javascript:
   - js/umami.js

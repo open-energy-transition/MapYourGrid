@@ -1,7 +1,7 @@
-# OhMyGrid
+# MapYourGrid
 **We empower individuals, communities and nations around the world to map the global electrical grid.** <br>
 
-> This is the repository of the [OhMyGrid website](https://ohmygrid.org/)
+> This is the repository of the [MapYourGrid website](https://MapYourGrid.org/)
 
 ## Why?
 <img src= https://raw.githubusercontent.com/open-energy-transition/Oh-my-Grid/refs/heads/main/docs/images/logo.png align="right" width="350">
@@ -18,7 +18,7 @@ That's why [Open Energy Transition](https://openenergytransition.org/) has launc
 ## How you can get involved?
 Your support can make a significant impact on closing the data gap in the electricity grid. The Oh-my-Grid initiative will empower you! Are you good at online research? Do you like programming? Do you want to recognise power towers and other electrical infrastructure on satellite images? Do you want to use this data for a climate mitigation or the electrification of rural communities? We can help you find the right contribution for your skills and experience:
 
-When you make an edit, please use the **#ohmygrid** in the changeset to help the initiative!
+When you make an edit, please use the **#MapYourGrid** in the changeset to help the initiative!
 
 ⚠️ **If you're eager to get started with transmission grid mapping in OpenStreetMap, check out the [Grid Mapping Starter Kit](https://github.com/open-energy-transition/grid-mapping-starter-kit) and [our community discord channel](https://discord.gg/a5znpdFWfD).** ⚠️
 
@@ -58,7 +58,7 @@ git push origin your-branch-name
 8. Create a pull request.
 
 ## Related Repositories 
-The OhMyGrid Website combines resources from multiple repositories:
+The MapYourGrid Website combines resources from multiple repositories:
 1. [Awesome-Electric-Grid-Mapping](https://github.com/open-energy-transition/Awesome-Electric-Grid-Mapping)
 2. [ColorMyGrid](https://github.com/open-energy-transition/color-my-grid)
 3. [osm-grid-definition](https://github.com/open-energy-transition/osm-grid-definition)

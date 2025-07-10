@@ -8,7 +8,7 @@ body_class: landing-page
 
 <div class="hero-section">
   <div class="hero-content-left">
-    <h1 class="hero-title">OhMyGrid</h1>
+    <h1 class="hero-title">MapYourGrid</h1>
     <p class="mission-statement"> We empower individuals, communities and nations around the world to map the electrical grid.
     </p>
     <div class="hero-buttons">
@@ -21,7 +21,7 @@ body_class: landing-page
     </div>
   </div>
   <div class="hero-content-right">
-    <img src="images/logos/ohmygrid-logo.png" class="hero-logo off-glb">
+    <img src="images/logos/MapYourGrid-logo.png" class="hero-logo off-glb">
   </div>
 </div>
 
@@ -77,7 +77,7 @@ body_class: landing-page
 <div class="who-we-are-section">
   <h2>Who We Are</h2>
   <p class="lead-statement">
-    OhMyGrid is a free, open-source initiative supported by the following organizations. We want to empower a global community of citizens and organizations to create and maintain data on the core infrastructures of our modern society. Our open data can be used in public administration, industry, academia, and more. Would you like to join or support us? Contact <a href="mailto:ohmygrid@openenergytransition.org" target="_blank" rel="noopener">us via email</a>. 
+    MapYourGrid is a free, open-source initiative supported by the following organizations. We want to empower a global community of citizens and organizations to create and maintain data on the core infrastructures of our modern society. Our open data can be used in public administration, industry, academia, and more. Would you like to join or support us? Contact <a href="mailto:MapYourGrid@openenergytransition.org" target="_blank" rel="noopener">us via email</a>. 
   </p>
   <div class="partners-grid">
       <div class="partner-item">

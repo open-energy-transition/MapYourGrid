@@ -25,7 +25,7 @@ JOSM is a more advanced desktop OpenStreetMap editor which is more suitable for 
 
 <div style="float: right; margin: 5px 0 20px 20px; width: 350px;">
   <img src="../images/starter-kit/kenya-tanzania.jpg" class="img-border" style="width: 100%;"> </a>
-  <figcaption class="image-caption">Default OhmyGrid Presets in JOSM toolbar. Click to enlarge.</figcaption>
+  <figcaption class="image-caption">Default MapYourGrid Presets in JOSM toolbar. Click to enlarge.</figcaption>
 </div>
 
 
@@ -37,26 +37,26 @@ JOSM is a more advanced desktop OpenStreetMap editor which is more suitable for 
 
 <div style="float: right; margin: 5px 0 10px 20px; width: 350px;">
   <img src="https://raw.githubusercontent.com/open-energy-transition/color-my-grid/refs/heads/main/legend/power-grid-legend.png" class="img-border" style="width: 100%;"> </a>
-  <figcaption class="image-caption">OhmyGrid legend for transmission grid mapping. Click to enlarge.</figcaption>
+  <figcaption class="image-caption">MapYourGrid legend for transmission grid mapping. Click to enlarge.</figcaption>
 </div>
 
 
 ## **<div class="tools-header">3. Coloring your Grid Map and Legend :art:</div>**
  
-To add our custom paint style to JOSM, go to `Preferences → Map Paint Styles` and press the "+" in the top right. Then you can paste this [URL](https://raw.githubusercontent.com/open-energy-transition/color-my-grid/refs/heads/main/ohmygrid-default.mapcss). If this does not work, you can also download the raw [file](https://github.com/open-energy-transition/color-my-grid/blob/main/ohmygrid-default.mapcss) on your device, and add it.
+To add our custom paint style to JOSM, go to `Preferences → Map Paint Styles` and press the "+" in the top right. Then you can paste this [URL](https://raw.githubusercontent.com/open-energy-transition/color-my-grid/refs/heads/main/MapYourGrid-default.mapcss). If this does not work, you can also download the raw [file](https://github.com/open-energy-transition/color-my-grid/blob/main/MapYourGrid-default.mapcss) on your device, and add it.
 
 
-## **<div class="tools-header">4. Setup your Presets :outbox_tray:</div>**
+## **<div class="tools-header">4. Setup your Presets </div>**
 
 1. For ease of mapping, customise your top toolbar with presets if you have not used the default preferences. Right click the toolbar and choose `Configure toolbar`, then select `Presets → Man Made → Man Made/Power` and add `Power Towers`, `Power Portal`, `Power Substation`, `Power Plants`, `Power Line` and `Power Generators`. This are the main objects to will need for transmission grid mapping. 
 2. Another important Preset your will need is `Add Node`. You will find it under `Tools` → `Add Node`. 
 
 <div style="float: right; margin: 10px 0 20px 20px; width: 350px;">
   <img src="../images/josm-toolbar.png" class="img-border" style="width: 100%;"> 
-  <figcaption class="image-caption">Default OhmyGrid Presets in JOSM toolbar. Click to enlarge.</figcaption>
+  <figcaption class="image-caption">Default MapYourGrid Presets in JOSM toolbar. Click to enlarge.</figcaption>
 </div>
 
-## **<div class="tools-header">5. Choose a Good First Line :outbox_tray:</div>**
+## **<div class="tools-header">5. Choose a Good First Line</div>**
 Our community is constantly investigating transmission lines that are suitable for beginner friendly mapping experiences. Simply select a 'Good First Lines' from the following spreadsheet, and tick it if you have started mapping it:
 
 ??? success "Starter powerlines (Click Me)"
@@ -68,11 +68,11 @@ Our community is constantly investigating transmission lines that are suitable f
 
 ## **<div class="tools-header">6. Load Power Infrastructure into JOSM :inbox_tray:</div>**
 
-Make sure remote control is enabled and ad-blocker disabled, and then go to the start mapping [page](https://ohmygrid.org/map-it/). Here you can click on the country you want to map, and it will directly open JOSM and load the data of that country. The "Default Transmission (90kV+)" data should already be selected when you open the page. Now press the country, state or province of the `Good First Line` you would like to map. To load data for provinces or states, simply zoom in further until the border becomes visible. The data should now automaticlly appear in JOSM. In the `Layer` window on the right handside you should see the `Data Layer`. The ✅ on the left of the Data Layer should be visible, indicating that this is the active layer. All your edits in the main windows will now be part of this `Data Layer` <br>
+Make sure remote control is enabled and ad-blocker disabled, and then go to the start mapping [page](https://MapYourGrid.org/map-it/). Here you can click on the country you want to map, and it will directly open JOSM and load the data of that country. The "Default Transmission (90kV+)" data should already be selected when you open the page. Now press the country, state or province of the `Good First Line` you would like to map. To load data for provinces or states, simply zoom in further until the border becomes visible. The data should now automaticlly appear in JOSM. In the `Layer` window on the right handside you should see the `Data Layer`. The ✅ on the left of the Data Layer should be visible, indicating that this is the active layer. All your edits in the main windows will now be part of this `Data Layer` <br>
 
 
 
-## **<div class="tools-header">7. Map your First Line :inbox_tray:</div>**
+## **<div class="tools-header">7. Map your First Line</div>**
 
 <div style="float: right; margin: 5px 0 20px 20px; width: 350px;">
   <img src="../images/starter-kit/josm_env.jpg" class="img-border" style="width: 100%;">
@@ -84,13 +84,12 @@ Make sure remote control is enabled and ad-blocker disabled, and then go to the 
 
 
 1. Zoom in on the satellite imagery until you can see the houses and roads.
-2. Copy the Coordiantes of your `First Good Line` and press the `Add Node` presets button. Enter the coordiantes here and press Ok. You should now see power towers that are not mapped at the end of a transmission line.
+2. Copy the Coordiantes of your `Good First Line` and press the `Add Node` presets button. Enter the coordiantes here and press Ok. You should now see power towers that are not mapped at the end of a transmission line.
 3. Now, press the last tower symbol at the end of the line. You should now be able to extend the line. 
 4. Search for the next power towers you can find and click on its footprint. 
 5. Continue the line to the best of your ability press CTRL+F while the line is still selected. Select all nodes you have created by Entering `child selected type:node AND untagged` as search string. Now Press `Search`. 
 6. With all the nodes select now, press the `Power Tower` preset followed by `Apply Preset`. 
-7. Whilst having the `Data Layer` activated, press the green Upload arrow. Avoid ignoring validation results. The only acceptable warning when uploading data is "Possible missing line support node within power line". To support our initiative, please use the #ohmygrid hashtag in the comments you make in the changeset.
-
+7. Whilst having the `Data Layer` activated, press the green Upload arrow. Avoid ignoring validation results. The only acceptable warning when uploading data is "Possible missing line support node within power line". To support our initiative, please use the #MapYourGrid hashtag in the comments you make in the changeset.
 
 
 
