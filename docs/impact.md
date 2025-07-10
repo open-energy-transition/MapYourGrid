@@ -66,7 +66,14 @@ Access to open and accurate data on electricity infrastructure is essential for 
 
 ### Bridging Data Gaps in Developing Countries
 
+<div style="float: right; margin: 5px 0 20px 20px; width: 350px;">
+  <a href="https://iea.blob.core.windows.net/assets/a688d0f5-a100-447f-91a1-50b7b0d8eaa1/BuildingtheFutureTransmissionGrid.pdf" target="_blank">
+  <img src="../images/impact/ember-africa.jpg" class="img-border" style="width: 100%;"> </a>
+  <figcaption class="image-caption"> <a href="https://iea.blob.core.windows.net/assets/a688d0f5-a100-447f-91a1-50b7b0d8eaa1/BuildingtheFutureTransmissionGrid.pdf" target="_blank"> Ember - Africa Electricity Data Transparency 2025  </a> - 54 African country profiles on electricity data: what data is available, where, and how good is it.</figcaption>
+</div> 
+
 In many low- and middle-income countries, data on electrical infrastructure is **outdated, incomplete, or fragmented**. This presents a significant barrier for governments, utilities, and planners. Even in high-income countries, while data may be more comprehensive, it is often **not publicly available** or limited by restrictive licensing—hampering transparency and the ability to collaborate or validate results.
+
 
 Open data ensures that:
 
