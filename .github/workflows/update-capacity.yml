@@ -25,7 +25,7 @@ jobs:
         run: pip install requests
 
       - name: 🚀 Run plant capacity script
-        run: py-scripts/plant-capacity-added.py
+        run: python docs/py-scripts/plant-capacity-added.py
 
       - name: 💾 Commit & push if changed
         uses: EndBug/add-and-commit@v9
