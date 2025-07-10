@@ -839,4 +839,4 @@ We welcome everyone to join our [community chat](https://discord.gg/a5znpdFWfD) 
 ## <div class="tools-header">Join the Community  :calendar: </div>
 We welcome everyone to join our community calls and tutorials, to learn more about the mapping process and the initiative.
 <iframe src="https://calendar.google.com/calendar/embed?src=mapyourgrid%40openenergytransition.org&ctz=Europe%2FBerlin" style="border: 0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
-style="border:solid 1px #777" width="800" height="600" frameborder="0" scrolling="no"></iframe>
+
