@@ -10,11 +10,11 @@ If you don't already have an OpenStreetMap account, [create one first](https://w
 <div style="float: right; margin: 5px 0 20px 20px; width: 350px;">
   
   <img src="../images/openinframap-portugal.jpg" class="img-border" style="width: 100%;"> 
-  <figcaption class="image-caption"><a href="https://openinframap.org/#6.54/39.026/-7.548" target="_blank">Open Infrastructure Map</a> showing the highly detailed transmission and distribution grid in Portugal.</figcaption>
+  <figcaption class="image-caption"><a href="https://openinframap.org/#6.54/39.026/-7.548" target="_blank">Open Infrastructure Map</a> showing the detailed transmission and distribution grid in Portugal.</figcaption>
 </div>
 
 !!! note
-    **⚠️By following our [Code of Mappers](./code-of-mappers.md), we collectively protect the integrity of the OSM platform, foster trust with communities, and unlock the power of open data for a more resilient and just energy future.Before you start mapping, please find out about the mapping restrictions in the respective country. In some countries, the mapping of transmission lines is not permitted. Get in touch with local users by finding out about [local projects](https://wiki.openstreetmap.org/wiki/Power_networks).⚠️**
+    **⚠️ By following our [Code of Mappers](./code-of-mappers.md), we collectively protect the integrity of the OSM platform, foster trust with communities, and unlock the power of open data for a more resilient and just energy future.Before you start mapping, please find out about the mapping restrictions in the respective country. In some countries, the mapping of transmission lines is not permitted. Get in touch with local users by finding out about [local projects](https://wiki.openstreetmap.org/wiki/Power_networks). ⚠️**
 
 ## **<div class="tools-header">2. Install JOSM <img src="../images/josm_logo.jpg" style="height: 1.2em; vertical-align: middle; margin-left: 10px;"></div>** 
 
