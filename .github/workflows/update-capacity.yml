@@ -1,0 +1,36 @@
+name: 📈 Update Power Plant Capacity Stats
+
+on:
+  workflow_dispatch: {} # Allows manual triggering
+  schedule:
+    - cron: '0 5 * * 0' # Runs every Sunday at 5 UTC
+
+permissions:
+  contents: write
+
+jobs:
+  update-capacity-stats:
+    runs-on: ubuntu-latest
+    steps:
+      - name: 🛎️ Checkout repository
+        uses: actions/checkout@v4
+
+      - name: 🐍 Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+          cache: 'pip'
+
+      - name: 📦 Install Python dependencies
+        run: pip install requests
+
+      - name: 🚀 Run plant capacity script
+        run: py-scripts/plant-capacity-added.py
+
+      - name: 💾 Commit & push if changed
+        uses: EndBug/add-and-commit@v9
+        with:
+          author_name: github-actions[bot]
+          author_email: github-actions[bot]@users.noreply.github.com
+          message: "chore: weekly power plant capacity update 🤖"
+          add: 'docs/data/plant-capacity.json'
