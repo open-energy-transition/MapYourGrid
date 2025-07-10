@@ -36,6 +36,49 @@ _Spot the gaps in the grid_ is a rather simple stradegy but highly efficent. By 
 
 As most transmission lines end at substations, the map painting technique allows us to mark the quiet lines that do not end at a substation with a circle. Zooming out allows the mapper to familiarise themselves with the gaps and nationwide coverage of the grid. If you haven't yet added our mapCSS to color the grid, you can find the recommended low-density grids map painting for this stradegy here <a href="https://raw.githubusercontent.com/open-energy-transition/color-my-grid/refs/heads/main/ohmygrid-default.mapcss">here.</a>
 
+1. We recommend using this MapCSS file for [low-density grids](https://raw.githubusercontent.com/open-energy-transition/color-my-grid/refs/heads/main/ohmygrid-default.mapcss) and this one for [high-density grids](https://raw.githubusercontent.com/open-energy-transition/color-my-grid/refs/heads/main/ohmygrid-default.mapcss). 
+2. You can use [ColorMyGrid](https://github.com/open-energy-transition/color_my_map), our MapCSS Generator tool, to easily adapt the MapCSS file to fit any special requirements you might have. 
+3. In the ColorMyGrid repo you will also find the raw data to edit the [map legend](https://raw.githubusercontent.com/open-energy-transition/color-my-grid/refs/heads/main/legend/power-grid-legend.png).
+
+## **<div class="tools-header">Unfinished lines with Osmose and the todo Plugin :white_check_mark:</div>**
+
+<div style="float: right; margin: 5px 0 20px 20px; width: 350px;">
+  <img src="../images/todo.jpg" class="img-border" style="width: 100%;">
+  <figcaption class="image-caption"> A simple but very efficient way of mapping the network is the continuation of “Unfinished Transmission Lines loaded into the todo plugin”:</figcaption>
+</div>
+
+1. Download the [Unfinished Power Transmission lines (Class 2) via Osmose](https://ohmygrid.org/map-it/) for your country.
+1. Drag and drop the downloaded geojson file into JSOM.
+1. Download the todo plugin for JSOM. `Edit → Preferences`. Search for todo, mark it and press OK. Press `Windows → todo list` to show the Todo list window. 
+1. Press `CTRL + A`  to select all issues in the new layer. Press the Add in the todo plugin window (`Windows → Todo list`)
+1. Switch back to the OSM data layer.
+1. You can now systematically step through all the issues by pressing Mark.  
+
+### <div class="tools-header">Map Fast </div>
+
+
+If you want to be able to map efficiently and fast, you will need to know how to correctly place towers and power lines. This will save you loads of time:
+
+1. Press `A` and draw nodes as you follow the towers. This will create a long line of untagged nodes, all connected by a untagged way.
+1. Click on the way, and tag it as a power line.
+1. Click on the way again, and `CTRL+F` to open up search. Then paste as search string: `child selected type:node AND untagged`. This will select all untagged nodes of the way.
+1. Then you can tag all the selected nodes as towers in one go.
+1. Use the preset power tower or poles to set all nodes at once.
+1. If you ever lose this query, click the right arrow on the search window and select it from your history.
+
+<div style="float: right; margin: 5px 0 20px 20px; width: 350px;">
+  <img src="../images/mapfast.png"  class="img-border" style="width: 100%;"> 
+  <figcaption class="image-caption">Selecting all the finished notes in a line enables you to quickly turn them into Power Towers.</figcaption>
+</div>
+
+
+### **<div class="tools-header">Common Mistakes </div>**
+1. Do not use the interactive map or the default queries for distribution grid mapping. The Overpass Turbo script provided with this starter kit and present in the interactive map is optimised for transmission grid mapping. Lines on towers below 90 kV are not visualised in JOSM and should not be mapped with the standard configuration of this script. 
+2. Not reading about [good practices](https://wiki.openstreetmap.org/wiki/Good_practice).
+3. When you leave the downloaded area, you may find transmission grids that do not appear to have been mapped. Actually, they were not downloaded to JOSM and you may end up duplicating them if mapped. To avoid this always be aware of the country boundary and be careful when crossing highlighted dashed orange lines. Due to the design of Overpass Turbo, some elements such as power lines may still be visible. across the border, but other objects such as substations will appear as if they have not yet been mapped.
+4. Mapping beyond your experience is something you should avoid. Mapping is an iterative process and you should not expect to be able to finish all the details you are mapping. If you cannot map with a high degree of certainty, leave it to local mappers, better satellite imagery or experienced grid mappers.
+
+
 
 ### <div class="tools-header">Connect Power Plants </div></h3>
 As most large power plants are directly connected to the transmission grid, Connect Power Plants provides an easy strategy using the comprehensive power plants dataset from Global Energy Monitor. A simple user interface for retrieving this data at a national level is integrated into [Map It📍](https://ohmygrid.org/map-it/), enabling users to preview and download GeoJSON data:
@@ -225,4 +268,21 @@ Follow the steps below to help improve rejected power plants in OSM:
 4. Switch to your OSM transmission or power layer.
 5. Step through the rejected entries by pressing 'Mark' in JOSM.
 6. Improve tagging to enhance the quality of OSM data.
+
+## **<div class="tools-header">Fundamentals of the Electrical Grid for Mappers </div>**
+The following documents and materials will give you a basic understanding of how to map an electrical grid. You don't need to be a grid expert to start mapping your first transmission lines. However, to map larger parts of the grid, you need to understand typical electrical grid design. 
+
+The [Learning Curve](https://www.youtube.com/@TheLearningCurveBenila/videos),is a youtube channel that provides multiple videos that will help you understand the basics of the electrical grid needed for grid mapping:
+
+1. [Electrical Line Supports - Transmission Towers & Poles](https://www.youtube.com/watch?v=AB1qYsiDm0M)
+1. [Components of Overhead Transmission Lines](https://www.youtube.com/watch?v=A6fwq3yHRXQ)
+1. [Comparison between HVAC and HVDC transmission system](https://www.youtube.com/watch?v=l9nHs8e0WUg)
+
+The following image is take from the report Key technology components of electricity grids Source: IEA - [Electricity Grids and Secure Energy Transitions](https://iea.blob.core.windows.net/assets/ea2ff609-8180-4312-8de9-494bcf21696d/ElectricityGridsandSecureEnergyTransitions.pdf).
+
+<div style="float: left; margin: 5px 0 20px 20px; width: 100%;">
+  <a href="../images/grid-design.png" target="_blank">
+  <img src="../images/grid-design.png" class="img-border" style="width: 100%;"> </a>
+  <figcaption class="image-caption">Key technology components of electricity grids Source: IEA - Electricity Grids and Secure Energy Transitions.</figcaption>
+</div>
 

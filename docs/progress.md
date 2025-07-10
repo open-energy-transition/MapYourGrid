@@ -524,7 +524,3 @@ You can find more stats for #ohmygrid at [OhsomeNowstats](https://stats.now.ohso
 ![Flag Suriname](http://commons.wikimedia.org/wiki/Special:FilePath/Flag%20of%20Suriname.svg){width=20px} [Suriname](countrypages/Suriname.md) - 
 ![Flag Uruguay](http://commons.wikimedia.org/wiki/Special:FilePath/Flag%20of%20Uruguay.svg){width=20px} [Uruguay](countrypages/Uruguay.md) - 
 ![Flag Venezuela](http://commons.wikimedia.org/wiki/Special:FilePath/Flag%20of%20Venezuela.svg){width=20px} [Venezuela](countrypages/Venezuela.md) - 
-
-## <div class="tools-header">Still got questions?</div>
-
-Check out our [Q&A page](q&a.md).
