@@ -67,7 +67,7 @@ Access to open and accurate data on electricity infrastructure is essential for 
 ### Bridging Data Gaps in Developing Countries
 
 <div style="float: right; margin: 5px 0 20px 20px; width: 350px;">
-  <a href="https://iea.blob.core.windows.net/assets/a688d0f5-a100-447f-91a1-50b7b0d8eaa1/BuildingtheFutureTransmissionGrid.pdf" target="_blank">
+  <a href="https://ember-energy.org/latest-insights/africa-electricity-data-transparency/" target="_blank">
   <img src="../images/impact/ember-africa.jpg" class="img-border" style="width: 100%;"> </a>
   <figcaption class="image-caption"> <a href="https://iea.blob.core.windows.net/assets/a688d0f5-a100-447f-91a1-50b7b0d8eaa1/BuildingtheFutureTransmissionGrid.pdf" target="_blank"> Ember - Africa Electricity Data Transparency 2025  </a> - 54 African country profiles on electricity data: what data is available, where, and how good is it.</figcaption>
 </div> 

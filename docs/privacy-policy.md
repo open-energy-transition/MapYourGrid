@@ -1,6 +1,6 @@
-# Oh My Grid - Privacy Policy
+# MapYourGrid - Privacy Policy
 
-The Oh My Grid Community takes your privacy seriously. To better protect your privacy we provide this privacy policy notice explaining the way your personal information is collected and used.
+The MapYourGrid community takes your privacy seriously. To better protect your privacy we provide this privacy policy notice explaining the way your personal information is collected and used.
 
 
 ## Collection of Routine Information
