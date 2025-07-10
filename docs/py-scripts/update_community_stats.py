@@ -17,7 +17,7 @@ TEAM_MEMBERS = {
     "relaxxe", "Russ", "map-dynartio", "overflorian", "nlehuby", 
     "ben10dynartio", "InfosReseaux"
 }
-HASHTAG = "MapYourGrid"
+HASHTAG = "ohmygrid"
 STATS_FILE = "docs/data/community-stats.json"
 
 class CommunityStatsAnalyzer:
