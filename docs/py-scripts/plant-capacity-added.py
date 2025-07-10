@@ -41,11 +41,10 @@ def fetch_power_plant_capacity():
     [out:json][timeout:900];
                 
     nwr["power"="plant"](user_touched:"Andreas Hernandez","Tobias Augspurger","davidtt92","Mwiche","relaxxe")->.plants;
-    nwr["power"="plant"](user_touched: "Russ","map-dynartio","overflorian","nlehuby","ben10dynartio","InfosReseaux")(newer:"2025-03-01T00:00:00Z")->.their_plants;
+    
 
     (
      .plants;
-     .their_plants;
         );
 
     out body;
