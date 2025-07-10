@@ -1,9 +1,9 @@
 <div class="page-headers">
-<h1>Starter-Kit🌱</h1>
+<h1>Starter-Kit</h1>
 </div>
-This starter kit for mapping the electrical transmission grid in OpenStreetMap outlines the basic skills required. If you ever get stuck with the Starter Kit or would like to provide feedback, please contact us via our [community chat](https://discord.gg/fBw7ARTUeR) or <a href="mailto:MapYourGrid@openenergytransition.org" target="_blank" rel="noopener"> via email</a>. A MapYourGrid member will help you finish your first line and set up your environment.
+This starter kit empowers you how to map your first line of the electrical transmission grid. If you ever get stuck with the Starter Kit or would like to provide feedback, please contact us via our [community chat](https://discord.gg/fBw7ARTUeR) or <a href="mailto:MapYourGrid@openenergytransition.org" target="_blank" rel="noopener"> via email</a>. A MapYourGrid member will help you finish your first line and set up your environment. When it comes to large-scale electrical grids, the [JOSM](https://josm.openstreetmap.de/) is the ideal tool for mappers and the main tool for MapYourGrid. However, the [iD editor](https://www.openstreetmap.org/) integrated in the OpenStreetMap Website is much more beginner-friendly of you just want to map the grid in your direct enviroment. MapComplete also offers grid-related tasks, such as [taking pictures of wind turbines](https://mapcomplete.org/openwindpowermap.html?z=12&lat=39.176368104932436&lon=8.330313607139601)
 
-## **<div class="tools-header">1. Get started with OpenStreetMap and Open Infrastructure Map <img src="../images/starter-kit/osm-logo.svg" style="height: 1.2em; vertical-align: middle; margin-left: 10px;"> </div>**
+### **<div class="tools-header">1. Get started with OpenStreetMap and Open Infrastructure Map <img src="../images/starter-kit/osm-logo.svg" style="height: 1.2em; vertical-align: middle; margin-left: 10px;"> </div>**
 
 If you don't already have an OpenStreetMap account, [create one first](https://www.openstreetmap.org/user/new). If you're new to OpenStreetMap, now is a good time to learn the basics of editing using the in-browser editor (iD) - find something which is missing from the map in your local area and add it! The [OpenStreetMap Wiki](https://wiki.openstreetmap.org) has lots of information about how to map with OpenStreetMap, and you can start by reading the [iD Beginners' Guide](https://learnosm.org/en/beginner/id-editor/). Adding missing power towers or substations can significantly improve mapping progress, as it gives other mappers a clue as to where parts of the entire grid are missing. To quickly check if anything is missing near you, go to the [Open Infrastructure Map](https://openinframap.org/). Press the 'Find my location' button in the top right corner or enter your town in the search box. See something missing next to you? Map it using your iD editor. Don't worry about making mistakes. Mapping is an iterative process, and the OpenStreetMap community automatically detects anything that is missing. The OpenStreetMap Wiki pages [The Power Network](https://wiki.openstreetmap.org/wiki/Power_networks) and [Key:Power](https://wiki.openstreetmap.org/wiki/Key:power) provide an overview of how to map different power infrastructure.
 
@@ -16,7 +16,7 @@ If you don't already have an OpenStreetMap account, [create one first](https://w
 !!! note
     **⚠️ By following our [Code of Mappers](./code-of-mappers.md), we collectively protect the integrity of the OSM platform, foster trust with communities, and unlock the power of open data for a more resilient and just energy future.Before you start mapping, please find out about the mapping restrictions in the respective country. In some countries, the mapping of transmission lines is not permitted. Get in touch with local users by finding out about [local projects](https://wiki.openstreetmap.org/wiki/Power_networks). ⚠️**
 
-## **<div class="tools-header">2. Install JOSM <img src="../images/josm_logo.jpg" style="height: 1.2em; vertical-align: middle; margin-left: 10px;"></div>** 
+### **<div class="tools-header">2. Install JOSM <img src="../images/josm_logo.jpg" style="height: 1.2em; vertical-align: middle; margin-left: 10px;"></div>** 
 
 JOSM is a more advanced desktop OpenStreetMap editor which is more suitable for power grid mapping.
 
@@ -41,12 +41,12 @@ JOSM is a more advanced desktop OpenStreetMap editor which is more suitable for 
 </div>
 
 
-## **<div class="tools-header">3. Coloring your Grid Map and Legend :art:</div>**
+### **<div class="tools-header">3. Coloring your Grid Map and Legend :art:</div>**
  
 To add our custom paint style to JOSM, go to `Preferences → Map Paint Styles` and press the "+" in the top right. Then you can paste this [URL](https://raw.githubusercontent.com/open-energy-transition/color-my-grid/refs/heads/main/MapYourGrid-default.mapcss). If this does not work, you can also download the raw [file](https://github.com/open-energy-transition/color-my-grid/blob/main/MapYourGrid-default.mapcss) on your device, and add it.
 
 
-## **<div class="tools-header">4. Setup your Presets </div>**
+### **<div class="tools-header">4. Setup your Presets </div>**
 
 1. For ease of mapping, customise your top toolbar with presets if you have not used the default preferences. Right click the toolbar and choose `Configure toolbar`, then select `Presets → Man Made → Man Made/Power` and add `Power Towers`, `Power Portal`, `Power Substation`, `Power Plants`, `Power Line` and `Power Generators`. This are the main objects to will need for transmission grid mapping. 
 2. Another important Preset your will need is `Add Node`. You will find it under `Tools` → `Add Node`. 
@@ -56,7 +56,7 @@ To add our custom paint style to JOSM, go to `Preferences → Map Paint Styles` 
   <figcaption class="image-caption">Default MapYourGrid Presets in JOSM toolbar. Click to enlarge.</figcaption>
 </div>
 
-## **<div class="tools-header">5. Choose a Good First Line</div>**
+### **<div class="tools-header">5. Choose a Good First Line</div>**
 Our community is constantly investigating transmission lines that are suitable for beginner friendly mapping experiences. Simply select a 'Good First Lines' from the following spreadsheet, and tick it if you have started mapping it:
 
 ??? success "Good First Lines (Click Me)"
@@ -66,13 +66,13 @@ Our community is constantly investigating transmission lines that are suitable f
      style="width:100%; height: 500px; border:1px solid #ddd; ">
     </iframe>
 
-## **<div class="tools-header">6. Load Power Infrastructure into JOSM :inbox_tray:</div>**
+### **<div class="tools-header">6. Load Power Infrastructure into JOSM :inbox_tray:</div>**
 
 Make sure remote control is enabled and ad-blocker disabled, and then go to the start mapping [page](https://MapYourGrid.org/map-it/). Here you can click on the country you want to map, and it will directly open JOSM and load the data of that country. The "Default Transmission (90kV+)" data should already be selected when you open the page. Now press the country, state or province of the `Good First Line` you would like to map. To load data for provinces or states, simply zoom in further until the border becomes visible. The data should now automaticlly appear in JOSM. In the `Layer` window on the right handside you should see the `Data Layer`. The ✅ on the left of the Data Layer should be visible, indicating that this is the active layer. All your edits in the main windows will now be part of this `Data Layer` <br>
 
 
 
-## **<div class="tools-header">7. Map your First Line</div>**
+### **<div class="tools-header">7. Map your First Line</div>**
 
 <div style="float: right; margin: 5px 0 20px 20px; width: 350px;">
   <img src="../images/starter-kit/josm_env.jpg" class="img-border" style="width: 100%;">
@@ -95,7 +95,7 @@ Make sure remote control is enabled and ad-blocker disabled, and then go to the 
 8. You just mapped your First Good Line. Feel free to close more First Good Lines, but make sure you leave some for the others. Finding your own lines to map is when all the [tools and strategies](tools.md) we have provided for you come into play.
 
 
-## <div class="tools-header">8. Still on Track and Motivated to Continue?</div>
+### <div class="tools-header">8. Still on Track and Motivated to Continue?</div>
 
 Well done on making it this far! We are offering free, hands-on transmission grid mapping workshops to people who have tried the Starter Kit. Join our [community chat](https://discord.gg/fBw7ARTUeR) and ask for our personal grid mapping workshops. Check out our [Tools and Strategies](tools.md) to learn how to find your own new lines and become a grid mapping expert!
 
