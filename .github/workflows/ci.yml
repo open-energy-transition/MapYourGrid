@@ -29,6 +29,5 @@ jobs:
           wget https://raw.githubusercontent.com/open-energy-transition/Awesome-Electric-Grid-Mapping/main/README.md -O- | \
           sed '1s/^#.*/<div class="page-headers">\n 🗺️ Curated Grid Maps\n\n<a href="https:\/\/github.com\/open-energy-transition\/Awesome-Electric-Grid-Mapping" class="github-link">🔗 View on GitHub<\/a>\n<\/div>\n/' > ./docs/awesome.md
       - run: pip install mkdocs-material mkdocs-glightbox
-      - run: pip install mkdocs-material[imaging]
       - run: mkdocs gh-deploy --force
       

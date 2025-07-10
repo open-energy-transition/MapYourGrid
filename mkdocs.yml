@@ -90,5 +90,5 @@ markdown_extensions:
 plugins:
   - glightbox
   - search
-  - social
+
   
