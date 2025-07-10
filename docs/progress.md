@@ -277,7 +277,7 @@ async function loadPlantCapacity() {
       if (!resp.ok) throw new Error(resp.statusText);
       const { total_capacity_mw, updated } = await resp.json();
 
-      capacityCountEl.textContent = `${total_capacity_mw.toLocaleString('en-US')} MW`;
+      capacityCountEl.textContent = `${Math.round(total_capacity_mw).toLocaleString('en-US')} MW`;
       capacityBar.style.width = Math.min(100, total_capacity_mw / PLANT_CAPACITY_GOAL * 100) + '%';
       capacityUpdatedEl.textContent = `Last updated: ${new Date(updated).toLocaleString()}`;
     } catch (err) {
