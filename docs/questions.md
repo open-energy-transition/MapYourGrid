@@ -2,32 +2,47 @@
 <h1>Questions & Answers</h1>
 </div>
 
+Here is a compilation of the most frequently asked questions we receive. If you have further questions or inquiries you can directly contact <a href="mailto:MapYourGrid@openenergytransition.org" target="_blank" rel="noopener">us via email</a>
+
 ## <div class="stradegy-header">General questions </div></h3>
 
-### <div class="tools-header">Who are you? What is OhMyGrid?</div>
+### <div class="tools-header">Who are you? What is MapYourGrid?</div>
 
-OhMyGrid is an open, collaborative initiative that aims to map electricity grids around the world, focusing on high-voltage transmission lines, substations, power plants, and major energy consumers. The initiative is contributing all its data to [OpenStreetMap](https://www.openstreetmap.org/) to make it globally accessible and verifiable.
+MapYourGrid is an open, collaborative initiative that aims to map electricity grids around the world, focusing on high-voltage transmission lines, substations, power plants, and major energy consumers. The initiative is contributing all its data to [OpenStreetMap](https://www.openstreetmap.org/) to make it globally accessible and verifiable.
 
 ### <div class="tools-header">What is included in the scope of the project?</div>
 
-Our main focus is to map transmission power grids, mostly power lines and cables and connect them to substations perimeters. We map lines that link cities, usually transmission lines.
-
-If you're local and/or have local knowledge, you're free to map every line you know.
+Our main focus is to map transmission power grids, mostly power lines and cables and connect them to substations perimeters. We map lines that link cities, usually transmission lines. If you're local and/or have local knowledge, you're free to map every line you know.
 
 ### <div class="tools-header">Won't all of this be solved by AI soon?</div>
  However, to ensure data quality, each data point in OpenStreetMap must be set and validated by a human. This prevents OpenStreetMap from becoming flooded with synthetic, unvalidated data that would not be suitable as ground truth in the long term. Furthermore, there are currently no detection methods that can accurately identify power towers and the course of transmission lines using classic RGB satellites alone. Grid mapping is a task that requires a high degree of expertise and contextual understanding. Due to the high relevance of this data, stochastic generation of the grid by AI is also not recommended. To validate this data, specialists must perform active grid mapping. However, we are currently evaluating the use of [open-source substation detection based on Sentinel 2 data](https://github.com/Lindsay-Lab/substation-seg) to provide another hint layer of substations for the mappers.
 
+
+### <div class="tools-header">Does publishing this data create a security risk?</div>
+
+No, publishing grid data through MapYourGrid does not meaningfully increase security risks. This concern is understandable—after all, electrical grids are critical infrastructure. However, multiple studies and real-world practices show that open grid data does not elevate threat levels, for several key reasons:
+
+* Much of the grid is already visible and documented. Transmission lines are easily observable in satellite imagery and by anyone on the ground. Most Substations are already in platforms like Google Maps. Major institutions, including government agencies, have publicly shared detailed grid data for decades.
+
+* Sophisticated actors already have better data. State-sponsored or malicious actors do not rely on OpenStreetMap. They have access to more advanced tools, commercial imagery, or even insider or cyber channels. Blocking public access doesn’t prevent their activity—it only hinders legitimate use.
+
+* Open data helps defenders more than attackers. Transparency allows utilities, researchers, and planners to spot weaknesses, model failures, and improve resilience. Public access to routing data supports cross-border planning and faster emergency response.
+
+* “Security through obscurity” doesn’t work. Hiding infrastructure details often impedes innovation and risk mitigation. As noted by the U.S. National Institute of Standards and Technology (NIST), obscurity is not a reliable security strategy.
+
+MapYourGrid builds on a decade of public infrastructure mapping, including global comparisons showing alignment with government datasets. Our mission is to democratize access for resilience, transparency, and innovation, not to expose anything adversaries don’t already know. Our [Code of Mappers](code-of-mappers.md) outlines the shared values, responsibilities, and safe practices for individuals and organizations participating in grid mapping activities in OpenStreetMap. It is designed to safeguard communities, promote transparency, and protect sensitive areas while enabling open data for global development and energy resilience.
+
 ### <div class="tools-header"> What are the roles of the team members? </div>
 
-We are developers, data scientists, power grid experts, cartographers and OpenStreetMap contributors. Our roles range from software development and data modeling to community coordination and field knowledge. The core OhMyGrid team sees itself as a fertiliser for the community. We build bridges between individuals and organisations, create mapping tools, document strategies and good practices, and develop training materials. In order to test our own material and gather experience, we map all around the world in order to understand the needs of the diverse community.
+We are developers, data scientists, power grid experts, cartographers and OpenStreetMap contributors. Our roles range from software development and data modeling to community coordination and field knowledge. The core MapYourGrid team sees itself as a fertiliser for the community. We build bridges between individuals and organisations, create mapping tools, document strategies and good practices, and develop training materials. In order to test our own material and gather experience, we map all around the world in order to understand the needs of the diverse community.
 
 ### <div class="tools-header"> What is the business model of the project? </div>
 
-OhMyGrid is a non-profit initiative funded by several smaller organisations that use this data for their own open-source products.
+MapYourGrid is a non-profit initiative funded by several smaller organisations that use this data for their own open-source products.
 
-### <div class="tools-header"> What is the governance of OhMyGrid? </div>
+### <div class="tools-header"> What is the governance of MapYourGrid? </div>
 
-OhMyGrid is led by [Open Energy Transition](https://openenergytransition.org/), a non-profit, and supported by [Datactivist](https://datactivist.coop/en/), [Jungle Bus](https://junglebus.io/en), [Dynartio](https://dynartio.com/) and [Infogeomatics](https://www.infrageomatics.com/). We are aligned with the values of OpenStreetMap's ecosystem and we act for a shared governance of the project within the community. The establishment of an official OhMyGrid governance board is planned for late 2025. Would you like to join or support us? Contact <a href="mailto:ohmygrid@openenergytransition.org" target="_blank" rel="noopener">us via email</a>. 
+MapYourGrid is led by [Open Energy Transition](https://openenergytransition.org/), a non-profit, and supported by [Datactivist](https://datactivist.coop/en/), [Jungle Bus](https://junglebus.io/en), [Dynartio](https://dynartio.com/) and [Infogeomatics](https://www.infrageomatics.com/). We are aligned with the values of OpenStreetMap's ecosystem and we act for a shared governance of the project within the community. The establishment of an official MapYourGrid governance board is planned for late 2025. Would you like to join or support us? Contact <a href="mailto:MapYourGrid@openenergytransition.org" target="_blank" rel="noopener">us via email</a>. 
 
 ### <div class="tools-header"> Why do we prioritize transmission line ?  </div>
 
@@ -35,7 +50,7 @@ The fastest way to broaden our impact right now is to map transmission power gri
 
 ### <div class="tools-header"> Why do you do this? Why does this matter?  </div>
 
-Transparent, accurate data on energy infrastructure is essential for climate resilience, energy planning and equity. In low and middle-income countries, most of this data is locked or missing. We aim to change that. Read more about the impact we are creating on our [impact page](/impact/). 
+Transparent, accurate data on energy infrastructure is essential for climate resilience, energy planning and equity. In low and middle-income countries, most of this data is locked or missing. We aim to change that. Read more about the impact we are creating on our [impact page](impact.md). 
 
 ### <div class="tools-header"> What countries are covered by the project?  </div>
 
@@ -95,9 +110,9 @@ JOSM : advanced OpenStreetMap editor. Desktop software available at [https://jos
 
 It's a group of edits submitted to OSM at once. It also includes the time and purpose of your edits. It’s best to keep changesets small and focused. For example, limit your edits to one geographic area or one type of object (for instance power lines or substations). This makes it easier for others to understand and review your work. It also helps avoid conflicts with other contributors editing the same area.
 
-### <div class="tools-header"> How do I credit my contributions in OpenStreetMap for OhMyGrid?</div>
+### <div class="tools-header"> How do I credit my contributions in OpenStreetMap for MapYourGrid?</div>
 
-Add the hashtag #ohmygrid to the comment field in your changeset. This helps us track and showcase the community's work.
+Add the hashtag #MapYourGrid to the comment field in your changeset. This helps us track and showcase the community's work.
 
 ### <div class="tools-header"> Who fixes errors I might make while mapping? </div>
 
@@ -141,4 +156,4 @@ No, never approach high-voltage infrastructure like substations, lines, power to
 
 ### <div class="tools-header"> Are there apps I can use while surveying in the field? </div>
 
-Yes, try [Vespucci](https://vespucci.io/) (Android), [GoMap](https://apps.apple.com/us/app/go-map/id592990211) (iOS), [Panoramax](https://gitlab.com/panoramax/clients/mobile-app/) or [Baba](https://gitlab.com/ravenfeld/baba) for capturing geolocated photos. [StreetComplete](https://streetcomplete.app/) offers simple mapping quests on the field. While it doesn't include energy-related tasks, you can still use it to leave notes on the map. For example, you can flag a power tower or a substation for later editing from a desktop tool. [Organic Maps](https://organicmaps.app/) or [CoMaps](https://www.comaps.app/) mobile apps can also be used to leave notes on the map. Don't forget to add #ohmygrid in your text note.
+Yes, try [Vespucci](https://vespucci.io/) (Android), [GoMap](https://apps.apple.com/us/app/go-map/id592990211) (iOS), [Panoramax](https://gitlab.com/panoramax/clients/mobile-app/) or [Baba](https://gitlab.com/ravenfeld/baba) for capturing geolocated photos. [StreetComplete](https://streetcomplete.app/) offers simple mapping quests on the field. While it doesn't include energy-related tasks, you can still use it to leave notes on the map. For example, you can flag a power tower or a substation for later editing from a desktop tool. [Organic Maps](https://organicmaps.app/) or [CoMaps](https://www.comaps.app/) mobile apps can also be used to leave notes on the map. Don't forget to add #MapYourGrid in your text note.

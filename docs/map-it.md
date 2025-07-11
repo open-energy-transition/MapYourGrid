@@ -9,10 +9,10 @@ hide:
 <h1>Map It 📍</h1>
 </div>
 Welcome to our interactive launchpad and hub for contributing to power grid mapping via OpenStreetMap! Click on a country or state below to start mapping power infrastructure directly in JOSM. :rocket:
-If this is your first time grid mapping, please go through the [Starter-Kit](/starter-kit/). You can use the **#ohmygrid** hashtag in your changeset to show your support for our initiative when you make an edit! To start mapping, please open [JOSM](https://josm.openstreetmap.de/), ensure that remote control is activated in `Preferences` and load your data: 
+If this is your first time grid mapping, please go through the [Starter-Kit](starter-kit.md). You can use the **#MapYourGrid** hashtag in your changeset to show your support for our initiative when you make an edit! To start mapping, please open [JOSM](https://josm.openstreetmap.de/), ensure that remote control is activated in `Preferences` and load your data: 
 
 1. The **Default Transmission (90 kV+)** pulls all power infrastructure relevant for the **transmission grid**. For more details about which data is pulled via Overpass please read our [OpenStreetMap Grid Definitions](https://github.com/open-energy-transition/osm-grid-definition). Distribution grids are barely visible in satellite data and should therefore only be mapped in individual cases.
-2. The Osmose, Global Energy Monitor, and Wikidata buttons provide **hint layer** data, which you can read about in our [Tools and Strategies](/tools/) page. Please note that this hint layers only work at a national level. 
+2. The Osmose, Global Energy Monitor, and Wikidata buttons provide **hint layer** data, which you can read about in our [Tools and Strategies](tools.md) page. Please note that this hint layers only work at a national level. 
 
 <!-- Beginning of Map section-->
 <style>
@@ -134,7 +134,7 @@ const worldBounds = L.latLngBounds(southWest, northEast);
 // Create the map with maxBounds & disable world wrapping
 const map = L.map('map', {
   worldCopyJump: false,      // disable dragging to duplicate worlds
-  minZoom: 2,               
+  minZoom: 2.2,               
   maxZoom: 18,
   maxBounds: worldBounds,    // restrict the view
   maxBoundsViscosity: 0.3    // “sticky” at the edges
@@ -749,7 +749,7 @@ fetch('../data/regionsv2.geojson')
   .catch(error => console.error('Regions GeoJSON error:', error));
 </script>
 
-??? info "Map Legend for the recommended [MapCSS](/starter-kit/#coloring-your-grid-map-and-legend)"
+??? info "Map Legend for the recommended [MapCSS](starter-kit.md#coloring-your-grid-map-and-legend) (Click Me)"
     <img 
       src="https://raw.githubusercontent.com/open-energy-transition/color-my-grid/refs/heads/main/legend/power-grid-legend.png" 
       class="img-border image-caption" 
@@ -757,10 +757,10 @@ fetch('../data/regionsv2.geojson')
       style="display: block; margin-left: auto; margin-right: auto;"
       width="600">
 
-:mag: Below you can find "Starter powerlines" where we have found some lines which you can map if you are new. <br>
+:mag: Below you can find "Good First Lines" where we have found some lines which you can map if you are new. <br>
 **Please** check the box if you mapped this line, so as to not waste other people's time! Once part of the community, we can grant you access to this spreadsheet so you can add other lines if you want.
 
-??? success "Starter powerlines"
+??? success "Good First Lines" (Click Me)"
     <iframe
      src="https://docs.google.com/spreadsheets/d/13YZftK9xZ09t2oSvhwjE0Zb7P25nl9OaUAxIBVNH0js/edit?usp=sharing&rm=minimal"
      class="iframestyle"
@@ -768,7 +768,7 @@ fetch('../data/regionsv2.geojson')
     </iframe>
 <!-- I couldn't make the page not go "up" when using this iframe, so for now there is this chatgpt js script that prevents this. It was very annoying, but if you have a better solution that would be great-->
 
-??? success "Curated Electrical Grid Maps"
+??? success "Curated Electrical Grid Maps (Click Me)"
     <div class="no-toc">
     --8<-- "docs/awesome.md"
     </div>
@@ -834,8 +834,9 @@ The following list provides the main good practices for mapping different power 
 
 
 ## Join the Chat <img src="/icons/discord.svg" alt="Discord" class="social-icon" style="width:1.2em; vertical-align:middle; margin-left:0.5ch;"> {.tools-header style="font-weight:700"}
-We welcome everyone to join our [community chat](https://discord.gg/a5znpdFWfD) called _📍-ohmygrid_ on the PyPSA-Earth discord channel. Here you can ask questions, and interact with the community. For mapping specific questions and to participate in our free personalized training, please join our [📍-ohmygrid-support-and-training](https://discord.gg/fBw7ARTUeR) channel. 
+We welcome everyone to join our [community chat](https://discord.gg/a5znpdFWfD) called _📍-MapYourGrid_ on the PyPSA-Earth discord channel. Here you can ask questions, and interact with the community. For mapping specific questions and to participate in our free personalized training, please join our [📍-MapYourGrid-support-and-training](https://discord.gg/fBw7ARTUeR) channel. 
 
 ## <div class="tools-header">Join the Community  :calendar: </div>
 We welcome everyone to join our community calls and tutorials, to learn more about the mapping process and the initiative.
-<iframe src="https://calendar.google.com/calendar/embed?height=600&wkst=1&ctz=Europe%2FBerlin&showPrint=0&title=Community%20live%20sessions&src=Y182ODE3NjE1MGIzMjY4MGRkZmUzMGM1ZTE1MDU0YTc5MTVhMzY2NmY1OGY5NjkxOGVjOTZhNDJjZWQwODQ2ZGVmQGdyb3VwLmNhbGVuZGFyLmdvb2dsZS5jb20&color=%23AD1457" style="border:solid 1px #777" width="800" height="600" frameborder="0" scrolling="no"></iframe>
+<iframe src="https://calendar.google.com/calendar/embed?src=mapyourgrid%40openenergytransition.org&ctz=Europe%2FBerlin" style="border: 0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
+

@@ -9,7 +9,7 @@
 <div style="float: right; margin: 5px 0 20px 20px; width: 350px;">
   <a href="https://pypsa-earth.readthedocs.io/en/latest/index.html" target="_blank">
   <img src="../images/impact/pypsa-earth-india.jpg" class="img-border" style="width: 100%;"> </a>
-  <figcaption class="image-caption">The PyPSA-Earth open-source energy system model uses OpenStreetMap data to study the future of energy around the world.</figcaption>
+  <figcaption class="image-caption">The PyPSA-Earth open-source energy system model uses OpenStreetMap data to study the future of energy around the world. Click to enlarge.</figcaption>
 </div> 
 
 
@@ -41,7 +41,7 @@ One of the major global challenges in the clean energy transition is the moderni
 <div style="float: right; margin: 5px 0 20px 20px; width: 350px;">
   <a href="https://iea.blob.core.windows.net/assets/a688d0f5-a100-447f-91a1-50b7b0d8eaa1/BuildingtheFutureTransmissionGrid.pdf" target="_blank">
   <img src="../images/impact/expected-grid-growth.jpg" class="img-border" style="width: 100%;"> </a>
-  <figcaption class="image-caption">Expanding and modernising grids is a key component of electricity security in each of the IEA scenarios. Adequate electricity transmission networks have strategic significance in outlooks that meet national and global climate goals.</figcaption>
+  <figcaption class="image-caption">Expanding and modernising grids is a key component of electricity security in each of the IEA scenarios. Adequate electricity transmission networks have strategic significance in outlooks that meet national and global climate goals. Click to enlarge.</figcaption>
 </div> 
 
 
@@ -66,7 +66,14 @@ Access to open and accurate data on electricity infrastructure is essential for 
 
 ### Bridging Data Gaps in Developing Countries
 
+<div style="float: right; margin: 5px 0 20px 20px; width: 350px;">
+  <a href="https://ember-energy.org/latest-insights/africa-electricity-data-transparency/" target="_blank">
+  <img src="../images/impact/ember-africa.jpg" class="img-border" style="width: 100%;"> </a>
+  <figcaption class="image-caption"> <a href="https://iea.blob.core.windows.net/assets/a688d0f5-a100-447f-91a1-50b7b0d8eaa1/BuildingtheFutureTransmissionGrid.pdf" target="_blank"> Ember - Africa Electricity Data Transparency 2025  </a> - 54 African country profiles on electricity data: what data is available, where, and how good is it. Click to enlarge.</figcaption>
+</div> 
+
 In many low- and middle-income countries, data on electrical infrastructure is **outdated, incomplete, or fragmented**. This presents a significant barrier for governments, utilities, and planners. Even in high-income countries, while data may be more comprehensive, it is often **not publicly available** or limited by restrictive licensing—hampering transparency and the ability to collaborate or validate results.
+
 
 Open data ensures that:
 
@@ -97,7 +104,7 @@ Open data on energy infrastructure supports not just **decarbonization and elect
 <div style="float: right; margin: 5px 0 20px 20px; width: 350px;">
   <a href="../images/impact/HILFD-savingspdf.png" target="_blank">
   <img src="../images/impact/HILFD-savingspdf.png" class="img-border" style="width: 100%;"> </a>
-  <figcaption class="image-caption">Creating Foundation Electric Energy Infrastructure Data from Open-Sources document.</figcaption>
+  <figcaption class="image-caption">Creating Foundation Electric Energy Infrastructure Data from Open-Sources document. Click to enlarge.</figcaption>
 </div> 
 
 ### Economic savings and benefits compared to proprietary datasets 
@@ -125,7 +132,7 @@ In contrast, some developed countries publish detailed open datasets outside of 
     <img src="../images/homeland-osm.png" class="img-border float-right" style="width: 400px;">
   </a>
   <figcaption class="image-caption">
-    Comparison of U.S. Homeland Infrastructure Foundation-Level Data (gray lines) with OpenStreetMap transmission data (green lines) shows matching spatial resolution.
+    Comparison of U.S. Homeland Infrastructure Foundation-Level Data (gray lines) with OpenStreetMap transmission data (green lines) shows matching spatial resolution. Click to enlarge.
   </figcaption>
 </div>
 
@@ -137,7 +144,7 @@ The [Homeland Infrastructure Foundation-Level Data](https://resilience.climate.g
 
 How does mapping have an impact? When you map towers, substations, powerplants in OpenStreetMap, you are essentially adding valuable data that is used by many different entities. Below is a curated list of organisations and projects that have had an impact and have used this data. <br> 
 
-Disclaimer: These organisations are not affiliated with OhMyGrid nor endorse it. All logos and brand names are the property of their respective owners. Usage here is for informational purposes only, identifying organisations that utilise OpenStreetMap data.
+Disclaimer: These organisations are not affiliated with MapYourGrid nor endorse it. All logos and brand names are the property of their respective owners. Usage here is for informational purposes only, identifying organisations that utilise OpenStreetMap data.
 
 **International Energy Agency**  ![IEA logo](images/impact/International-energy-agency-logo.png){width=30px} 
 ??? "Energy and AI Observatory"

@@ -3,38 +3,90 @@
 </div>
 Using the right tools and strategies is fundamental to mapping the electrical grid efficiently and accurately. The following strategies and tools will help you to extend existing transmission grid networks on OpenStreetMap. As a rule of thumb: The larger the towers and substations, the higher the voltage and the greater their relevance to the transmission grid. Priority should therefore be given to large, high-voltage infrastructure first. Please consider the following strategies and the associated processes as recommendations only. Ultimately, the most efficient strategy is the one that enables you to work on the electrical grid with passion and motivation over a longer period of time. The strategies can be divided roughly into two phases:
 
-1. **Pioneer Mapping Strategies**: To ensure the power grid has the best possible coverage, we recommend beginning with Pioneer Mapping in each country. Several strategies are employed at this stage to identify the location of all lines, power poles, and substations. Rather than reducing issues in the grid, the main focus is on increasing coverage and extending the geographic information of the grid. This may result in an increased total number of issues in the grid. These strategies focus primarily on mapping the geographical location of power lines, towers, plants and substations, rather than technical grid details. They require good eyesight, fast mapping skills and an understanding of situations in which satellite data is insufficient for consistent grid mapping.
+1. **[Pioneer Mapping Strategies](tools.md#pioneer-mapping-strategies-and-tools)**: To ensure the power grid has the best possible coverage, we recommend beginning with Pioneer Mapping in each country. Several strategies are employed at this stage to identify the location of all lines, power poles, and substations. Rather than reducing issues in the grid, the main focus is on increasing coverage and extending the geographic information of the grid. This may result in an increased total number of issues in the grid. These strategies focus primarily on mapping the geographical location of power lines, towers, plants and substations, rather than technical grid details. They require good eyesight, fast mapping skills and an understanding of situations in which satellite data is insufficient for consistent grid mapping.
 
-2. **Technical Mapping Strategies**: This phase involves solving more complex grid issues that require a fundamental understanding of the electrical grid. This includes mapping voltages, the number of circuits and routing issues. During this phase, the initial mapping work is validated against multiple sources to ensure its plausibility. These sources could include official maps from grid operators, statistics about grid length, and other official data. The main focus of these strategies is to minimise the number of complex quality issues in the grid.
+2. **[Technical Mapping Strategies](tools.md#technical-mapping-strategies)**: This phase involves solving more complex grid issues that require a fundamental understanding of the electrical grid. This includes mapping voltages, the number of circuits and routing issues. During this phase, the initial mapping work is validated against multiple sources to ensure its plausibility. These sources could include official maps from grid operators, statistics about grid length, and other official data. The main focus of these strategies is to minimise the number of complex quality issues in the grid.
 
 
-## <div class="stradegy-header">Pioneer Mapping Strategies</div></h3>
 
-### <div class="tools-header">Continue Open Lines</div>
+## **<div class="tools-header">Fundamentals of the Electrical Grid for Mappers </div>**
+The following documents and materials will give you a basic understanding of how to map an electrical grid. You don't need to be a grid expert to start mapping your first transmission lines. However, to map larger parts of the grid, you need to understand typical electrical grid design. 
+
+The [Learning Curve](https://www.youtube.com/@TheLearningCurveBenila/videos),is a youtube channel that provides multiple videos that will help you understand the basics of the electrical grid needed for grid mapping:
+
+1. [Electrical Line Supports - Transmission Towers & Poles](https://www.youtube.com/watch?v=AB1qYsiDm0M)
+1. [Components of Overhead Transmission Lines](https://www.youtube.com/watch?v=A6fwq3yHRXQ)
+1. [Comparison between HVAC and HVDC transmission system](https://www.youtube.com/watch?v=l9nHs8e0WUg)
+
+The following image is take from the report Key technology components of electricity grids Source: IEA - [Electricity Grids and Secure Energy Transitions](https://iea.blob.core.windows.net/assets/ea2ff609-8180-4312-8de9-494bcf21696d/ElectricityGridsandSecureEnergyTransitions.pdf).
+
+<div style="float: left; margin: 5px 0 20px 20px; width: 100%;">
+  <a href="../images/grid-design.png" target="_blank">
+  <img src="../images/grid-design.png" class="img-border" style="width: 100%;"> </a>
+  <figcaption class="image-caption">Key technology components of electricity grids Source: IEA - Electricity Grids and Secure Energy Transitions.</figcaption>
+</div>
+
 
 <div style="float: right; margin: 5px 0 20px 20px; width: 350px;">
     <img src="../images/osmose-unfinished-transmission-lines.jpg" class="img-border" alt="Osmose example">
     <figcaption class="image-caption">Osmose will provide you with a GeoJSON file containing the unfinished transmission power lines (shown as blue triangles) in the specified country, in this case Colombia. </figcaption>
 </div>
 
-_Continue Open Lines_ is the most efficent and most beginner friendly Strategy. It is directly integrated in [Map It📍](https://ohmygrid.org/map-it/). The strategy mainly depends on [osmose](https://osmose.openstreetmap.fr/en/map/), a quality assurance tool that detects issues in OpenStreetMap data on a daily basis. These include different power classes of issues, such as "unfinished power transmission lines" : 
 
-1. Select `Unfinished power transmission line (Class 2) (recommended for beginners ⭐)__` from the drop-down menu, then click on the country or state you wish to map. 
+## <div class="stradegy-header">Pioneer Mapping Strategies and Tools</div></h3>
+
+
+
+### <div class="tools-header">Continue Open Lines</div>
+
+
+_Continue Open Lines_ is the most efficent and most beginner friendly strategy. It is directly integrated in [Map It📍](https://MapYourGrid.org/map-it/). The strategy mainly depends on [osmose](https://osmose.openstreetmap.fr/en/map/), a quality assurance tool that detects issues in OpenStreetMap data on a daily basis. These include different power classes of issues, such as "unfinished power transmission lines" : 
+
+1. Select `Unfinished power transmission line (Class 2) (recommended for beginners ⭐)` from the drop-down menu, then click on the country or state you wish to map. 
 2. Now drag and drop the GeoJSON file you have just downloaded into you JSOM window.
 3. Press `CTRL+A` to select all the location you have selected and press `Add` in the window of the todo list plugin.
 4. Click on `Default Transmission (90 kV+)` in the `Transmission Overpass Query` selected and download the tranmission grid data into another layer in JOSM. Activate this layer.
 4. You can now step through all issues by pressing `Mark`.
 
-### <div class="tools-header">Spot the gaps in the grid</div>
+
+<div style="float: right; margin: 5px 0 20px 20px; width: 350px;">
+  <img src="../images/todo.jpg" class="img-border" style="width: 100%;">
+  <figcaption class="image-caption"> A simple but very efficient way of mapping the network is the continuation of “Unfinished Transmission Lines loaded into the todo plugin”:</figcaption>
+</div>
+
+
+### <div class="tools-header">Map Fast </div>
+
+
+If you want to be able to map efficiently and fast, you will need to know how to correctly place towers and power lines. This will save you loads of time:
+
+1. Press `A` and draw nodes as you follow the towers. This will create a long line of untagged nodes, all connected by a untagged way.
+1. Click on the way, and tag it as a power line.
+1. Click on the way again, and `CTRL+F` to open up search. Then paste as search string: `child selected type:node AND untagged`. This will select all untagged nodes of the way.
+1. Then you can tag all the selected nodes as towers in one go.
+1. Use the preset power tower or poles to set all nodes at once.
+1. If you ever lose this query, click the right arrow on the search window and select it from your history.
+
+<div style="float: right; margin: 5px 0 20px 20px; width: 350px;">
+  <img src="../images/mapfast.png"  class="img-border" style="width: 100%;"> 
+  <figcaption class="image-caption">Selecting all the finished notes in a line enables you to quickly turn them into Power Towers.</figcaption>
+</div>
+
+### <div class="tools-header">Spot the Gaps in the Grid</div>
+
+
+_Spot the gaps in the grid_ is a rather simple strategy but highly efficent. By using a bolt map coloring that highlights gaps in the grid and unconnected substation, is it easy to spot where are gaps in the grid. Unlike the 'Continue Open Lines' strategy, this approach is more flexible and relies on human judgement to address obvious topological issues in the grid. This allows us to prioritise lines extending or connecting new regions of the grid — lines with topological relevance, in other words. 
+
+As most transmission lines end at substations, the map painting technique allows us to mark the quiet lines that do not end at a substation with a circle. Zooming out allows the mapper to familiarise themselves with the gaps and nationwide coverage of the grid. If you haven't yet added our mapCSS to color the grid, you can find the recommended low-density grids map painting for this strategy here <a href="https://raw.githubusercontent.com/open-energy-transition/color-my-grid/refs/heads/main/MapYourGrid-default.mapcss">here.</a>
 
 <div style="float: right; margin: 5px 0 20px 20px; width: 350px;">
       <img src="../images/finding-gaps.jpg" class="img-border" alt="Equator ">
       <figcaption class="image-caption">Outdated satellite data results in larger gaps in the grid across many regions of Ecuador. These gaps can be spotted by lines that end abruptly rather than in a round circle, indicating a substation..</figcaption>
 </div>
 
-_Spot the gaps in the grid_ is a rather simple stradegy but highly efficent. By using a bolt map coloring that highlights gaps in the grid and unconnected substation, is it easy to spot where are gaps in the grid. Unlike the 'Continue Open Lines' strategy, this approach is more flexible and relies on human judgement to address obvious topological issues in the grid. This allows us to prioritise lines extending or connecting new regions of the grid — lines with topological relevance, in other words. 
-
-As most transmission lines end at substations, the map painting technique allows us to mark the quiet lines that do not end at a substation with a circle. Zooming out allows the mapper to familiarise themselves with the gaps and nationwide coverage of the grid. If you haven't yet added our mapCSS to color the grid, you can find the recommended low-density grids map painting for this stradegy here <a href="https://raw.githubusercontent.com/open-energy-transition/color-my-grid/refs/heads/main/ohmygrid-default.mapcss">here.</a>
+1. We recommend using this MapCSS file for [low-density grids](https://raw.githubusercontent.com/open-energy-transition/color-my-grid/refs/heads/main/MapYourGrid-default.mapcss) and this one for [high-density grids](https://raw.githubusercontent.com/open-energy-transition/color-my-grid/refs/heads/main/MapYourGrid-default.mapcss). 
+2. You can use [ColorMyGrid](https://github.com/open-energy-transition/color_my_map), our MapCSS Generator tool, to easily adapt the MapCSS file to fit any special requirements you might have. 
+3. In the ColorMyGrid repo you will also find the raw data to edit the [map legend](https://raw.githubusercontent.com/open-energy-transition/color-my-grid/refs/heads/main/legend/power-grid-legend.png).
 
 
 ## <div class="tools-header">Unfinished lines with Osmose and the todo Plugin :white_check_mark:</div>
@@ -52,7 +104,7 @@ As most transmission lines end at substations, the map painting technique allows
 1. You can now systematically step through all the issues by pressing Mark.  
 
 ### <div class="tools-header">Connect Power Plants </div></h3>
-As most large power plants are directly connected to the transmission grid, Connect Power Plants provides an easy strategy using the comprehensive power plants dataset from Global Energy Monitor. A simple user interface for retrieving this data at a national level is integrated into [Map It📍](https://ohmygrid.org/map-it/), enabling users to preview and download GeoJSON data:
+As most large power plants are directly connected to the transmission grid, Connect Power Plants provides an easy strategy using the comprehensive power plants dataset from Global Energy Monitor. A simple user interface for retrieving this data at a national level is integrated into [Map It📍](https://MapYourGrid.org/map-it/), enabling users to preview and download GeoJSON data:
 
 <div style="float: right; margin: 5px 0 20px 20px; width: 350px;">
     <img src="../images/connect-power-plants.jpg" class="img-border" alt="GEM Angola Data Example in JOSM">
@@ -79,7 +131,7 @@ As most national transmission grids are entirely connected, this strategy enable
 One single unmapped power tower can sometimes trace to a missing interconnector to another country as shown in the image of a substation in Malawi.
 Can you see the power tower that's missing from the bottom Left corner?
 
-1. Download the transmission grid data of your country using the [Map It📍](https://ohmygrid.org/map-it/) page.
+1. Download the transmission grid data of your country using the [Map It📍](https://MapYourGrid.org/map-it/) page.
 2. Press CTRL+F and filter by `power=substation`.
 3. With the installed todo plugin window press `Add`. 
 4. Switch back to your transmission grid layer.
@@ -94,8 +146,8 @@ Can you see the power tower that's missing from the bottom Left corner?
 
 Large industrial facilities require huge amounts of energy and therefore have their own substations, and are sometimes even directly connected to the transmission grid. Stepping through all industrial areas can also reveal substations or power plants that are often tagged already as landuse=industrial. Try also to check the surrounding area too as substations are sometimes placed outside of the mapped industrial area. 
 
-1. Download the transmission grid data of your country using the [Map It📍](https://ohmygrid.org/map-it/) page.
-1. Download the industrial areas of your country using into a new layer using the [Map It📍](https://ohmygrid.org/map-it/) page.
+1. Download the transmission grid data of your country using the [Map It📍](https://MapYourGrid.org/map-it/) page.
+1. Download the industrial areas of your country using into a new layer using the [Map It📍](https://MapYourGrid.org/map-it/) page.
 1. Press CTRL+F and filter by `type:way landuse=industrial`.
 1. With the installed todo plugin window press `Add`. 
 1. Switch back to your transmission grid layer.
@@ -110,10 +162,10 @@ Large industrial facilities require huge amounts of energy and therefore have th
 </div>
 
 
-WikiData provides access to Wikipedia articles about power infrastructure around the world. The [Map It📍](https://ohmygrid.org/map-it/) page provides you a simple interface to extract this data for the country you would like to map. The [osm-wikidata-comparison](https://github.com/open-energy-transition/osm-wikidata-comparison/) repository provides this data by identify missing or incomplete power infrastructure in OpenStreetMap by extracting structured data via the Wikidata API. It generates ready-to-use GeoJSON that can be opened in JOSM as a visual hint layer to guide new mapping work or improve existing tags.
+WikiData provides access to Wikipedia articles about power infrastructure around the world. The [Map It📍](https://MapYourGrid.org/map-it/) page provides you a simple interface to extract this data for the country you would like to map. The [osm-wikidata-comparison](https://github.com/open-energy-transition/osm-wikidata-comparison/) repository provides this data by identify missing or incomplete power infrastructure in OpenStreetMap by extracting structured data via the Wikidata API. It generates ready-to-use GeoJSON that can be opened in JOSM as a visual hint layer to guide new mapping work or improve existing tags.
 
-1. Use the [Map It📍](https://ohmygrid.org/map-it/) page to download the transmission grid data for your country.
-1. Download your country's WikiData into a new layer using the [Map It📍](https://ohmygrid.org/map-it/) page.
+1. Use the [Map It📍](https://MapYourGrid.org/map-it/) page to download the transmission grid data for your country.
+1. Download your country's WikiData into a new layer using the [Map It📍](https://MapYourGrid.org/map-it/) page.
 1. Press CTRL+A and click 'Add' in the 'Todo' window.
 1. Switch back to your transmission grid layer.
 1. You can now step through all WikiData entries by pressing 'Mark'.
@@ -133,7 +185,7 @@ WikiData provides access to Wikipedia articles about power infrastructure around
 
 ### <div class="tools-header">Offical Data and Maps</div></h3>
 
-In order to map more effectively, it is recommended to use maps and datasets that can help you find missing power lines, substations and power plants. Most National transmission system operators provide publicly available maps, which can help you to estimate the coverage of the grid, and locate what is missing in OSM. Furthermore, having the names of substations can also help locate them. OhMyGrid provides a list of [Curated Grid Maps](https://github.com/open-energy-transition/Awesome-Electric-Grid-Mapping), which contains datasets, maps, and documents for electrical grid all around the world.
+In order to map more effectively, it is recommended to use maps and datasets that can help you find missing power lines, substations and power plants. Most National transmission system operators provide publicly available maps, which can help you to estimate the coverage of the grid, and locate what is missing in OSM. Furthermore, having the names of substations can also help locate them. MapYourGrid provides a list of [Curated Grid Maps](https://github.com/open-energy-transition/Awesome-Electric-Grid-Mapping), which contains datasets, maps, and documents for electrical grid all around the world.
 
 <div style="float: right; margin: 5px 0 20px 20px; width: 350px;">
     <img src="../images/bangladeshawesome.jpg" class="img-border" alt="GEM Angola Data Example in JOSM">
@@ -158,7 +210,7 @@ OpenStreetMap allows mappers to quickly mark an object that seems to be wrong an
   <figcaption class="image-caption">Fixme tags loaded in the todo list.</figcaption>
 </div>
 
-1. Download the grid you want to look into using at the [Map It📍](https://ohmygrid.org/map-it/) page.
+1. Download the grid you want to look into using at the [Map It📍](https://MapYourGrid.org/map-it/) page.
 2. Press `CTRL+F`and search for `fixme=*`.
 3. In the todo list window press `Add`.
 4. After you fixed and issues please remove the fixme tag.
@@ -216,5 +268,27 @@ Interconnectors between countries are essential to the functioning of the transm
 3. <p><strong>Explanation:</strong> The query finds nodes in your bounding box, detects their admin area (level 4 by default), and fetches all power infrastructure within it. You can adjust the “admin level” in the query (e.g. level 2 for national, level 6 for province) by editing the <code>admin_level</code> parameter in the download tab. A smaller bounding box is better (faster execution).</p>
 
 
+### <div class="tools-header">Improve OSM tags with PPM </div></h3>
+
+<a href="https://github.com/PyPSA/powerplantmatching" target="_blank">Powerplantmatching (PPM)</a> is a python repository designed to harmonize and combine power plant datasets from sources like OpenStreetMap (OSM) and Global Energy Monitor. It is widely used to prepare validated generation data for energy system models such as PyPSA-EUR. A new feature now fetches power plant data  from OSM and flags all <strong>power plants and generators that are rejected</strong> due to incomplete or inconsistent metadata. These include elements missing a <code>name</code>, <code>output:electrical</code>, <code>plant:method</code>, incorrect unit formats, among others.
+
+<div style="float: right; margin: 5px 0 20px 20px; width: 350px;">
+    <img src="../images/ppm-hint-layer.jpg" class="img-border" alt="PPM Rejected Power Plants GeoJSON">
+    <figcaption class="image-caption">
+        Power plants rejected by powerplantmatching due to missing metadata, displayed in red as a JOSM hint layer. In black, the power infraestructure grid from OSM.
+    </figcaption>   
+</div>
+
+You can access this data through our [Map It📍](https://MapYourGrid.org/map-it/) interface. Select the <strong>powerplantmatching</strong> button and click on any country to download a GeoJSON file listing rejected power plants. Once downloaded, the file can be opened in JOSM as a hint layer to help improve tagging. You can do this by reviewing the reason why the power plant was not considered and adding the missing data. For example, a common reason is the lack of a technology tag like <code>plant:method=run-of-river</code> or <code>plant:method=reservoir</code> on hydro power plants, or <code>plant:method=wind_turbine</code> on wind farms relations.
+
+
+Follow the steps below to help improve rejected power plants in OSM:
+
+1. Use the [Map It📍](https://MapYourGrid.org/map-it/) page to download the rejected power plant layer for a given country.
+2. Open the GeoJSON file in JOSM as a new layer.
+3. Press CTRL+A and click 'Add' in the 'Todo' window.
+4. Switch to your OSM transmission or power layer.
+5. Step through the rejected entries by pressing 'Mark' in JOSM.
+6. Improve tagging to enhance the quality of OSM data.
 
 

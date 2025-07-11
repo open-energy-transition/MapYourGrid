@@ -1,0 +1,58 @@
+name: 📈 Update Power Plant Capacity Stats
+
+on:
+  workflow_dispatch: {} # Allows manual triggering
+  schedule:
+    - cron: '0 5 * * 0' # Runs every Sunday at 5 UTC
+
+permissions:
+  contents: write
+
+jobs:
+  update-capacity-stats:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30  # Set explicit timeout for the whole job
+    steps:
+      - name: 🛎️ Checkout repository
+        uses: actions/checkout@v4
+
+      - name: 🐍 Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+
+      - name: 📦 Install Python dependencies
+        run: pip install requests
+
+      - name: 🔍 Debug - Check files exist
+        run: |
+          echo "Current directory: $(pwd)"
+          echo "Contents of docs/py-scripts/:"
+          ls -la docs/py-scripts/ || echo "Directory not found"
+          echo "Script exists: $(test -f docs/py-scripts/plant-capacity-added.py && echo 'YES' || echo 'NO')"
+
+      - name: 🚀 Run plant capacity script
+        timeout-minutes: 25  # Set timeout for just this step
+        run: |
+          echo "Starting Python script execution at $(date)"
+          python docs/py-scripts/plant-capacity-added.py
+          echo "Python script completed at $(date)"
+
+      - name: 🔍 Debug - Check output file
+        run: |
+          echo "Contents of docs/data/:"
+          ls -la docs/data/ || echo "Directory not found"
+          echo "JSON file exists: $(test -f docs/data/plant-capacity.json && echo 'YES' || echo 'NO')"
+          if [ -f docs/data/plant-capacity.json ]; then
+            echo "JSON file size: $(wc -c < docs/data/plant-capacity.json) bytes"
+            echo "JSON file contents:"
+            cat docs/data/plant-capacity.json
+          fi
+
+      - name: 💾 Commit & push if changed
+        uses: EndBug/add-and-commit@v9
+        with:
+          author_name: github-actions[bot]
+          author_email: github-actions[bot]@users.noreply.github.com
+          message: "chore: weekly power plant capacity update 🤖"
+          add: 'docs/data/plant-capacity.json'

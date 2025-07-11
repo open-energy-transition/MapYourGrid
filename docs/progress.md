@@ -2,7 +2,7 @@
 <h1>Our Progress</h1>
 </div>
 
-OhMyGrid measures its progress at user, hashtag and country level. If you use our tools and training courses, we would be honored if you support our KPI. Just use the #OhMyGrid hashtag in your changesets or add your user id to our [KPI script](https://github.com/open-energy-transition/OhMyGrid/blob/main/.github/workflows/update-tower-count.yml). If you would like to contribute to our development or keep up to date with our progress, take a look at our public [organization project management in GitHub](https://github.com/orgs/open-energy-transition/projects).
+MapYourGrid measures its progress at user, hashtag and country level. If you use our tools and training courses, we would be honored if you support our KPI. Just use the #MapYourGrid hashtag in your changesets or add your user id to our [KPI script](https://github.com/open-energy-transition/MapYourGrid/blob/main/.github/workflows/update-tower-count.yml). If you would like to contribute to our development or keep up to date with our progress, take a look at our public [organization project management in GitHub](https://github.com/orgs/open-energy-transition/projects).
 
 <!-- Progress Bars Section -->
 ## **<div class="tools-header">Community Mapping Progress </div>**
@@ -14,20 +14,20 @@ OhMyGrid measures its progress at user, hashtag and country level. If you use ou
 
 
   <div class="progress-item">
-    <label>Contributors mapping with <code>#ohmygrid</code> hashtag:</label>
+    <label>Contributors mapping with <code>#mapyourgrid</code> and <code>#ohmygrid</code> hashtag:</label>
     <div class="progress"> <div class="progress-bar" id="contributors-bar" style="background-color: #28a745;"></div> </div>
     <span id="contributors-count">Loading…</span>
   </div>
 
   <div class="progress-item">
-    <label>Total Edits for <code>#ohmygrid</code> hashtag:</label>
+    <label>Total Edits for <code>#mapyourgrid</code> hashtag:</label>
     <div class="progress">
       <div class="progress-bar" id="edits-bar" style="background-color: #28a745;"></div> </div>
     <span id="edits-count">Loading…</span>
   </div>
 
   <div class="progress-item">
-    <label>Total estimated power towers added by mappers of the OhMyGrid funding organisations:</label>
+    <label>Total estimated power towers added by mappers of the MapYourGrid funding organisations:</label>
     <div class="progress">
       <div class="progress-bar" id="tower-bar" style="background-color: #17a2b8;"></div>
     </div>
@@ -37,7 +37,7 @@ OhMyGrid measures its progress at user, hashtag and country level. If you use ou
   </div>
 
   <div class="progress-item">
-    <label>Total estimated length of power lines added by mappers of the OhMyGrid funding organisations:</label>
+    <label>Total estimated length of power lines added by mappers of the MapYourGrid funding organisations:</label>
     <div class="progress">
       <div class="progress-bar" id="line-length-bar" style="background-color: #17a2b8;"></div>
     </div>
@@ -48,7 +48,17 @@ OhMyGrid measures its progress at user, hashtag and country level. If you use ou
   </div>
 
   <div class="progress-item">
-    <label>Total estimated power towers added by people using the #ohmygrid:</label>
+    <label>Total Estimated Global Power Capacity added by mappers of the MapYourGrid funding organisations:</label>
+    <div class="progress">
+      <div class="progress-bar" id="plant-capacity-bar" style="background-color: #17a2b8;"></div>
+    </div>
+    <span id="plant-capacity-count">Loading…</span>
+    <br>
+    <span id="plant-capacity-updated" style="font-size:0.8em; color:#666">Last updated: —</span>
+  </div>
+
+  <div class="progress-item">
+    <label>Total estimated power towers added by people using the <code>#MapYourGrid</code>:</label>
     <div class="progress">
       <div class="progress-bar" id="community-tower-bar" style="background-color: #28a745;"></div>
     </div>
@@ -58,7 +68,7 @@ OhMyGrid measures its progress at user, hashtag and country level. If you use ou
   </div>
 
   <div class="progress-item">
-    <label>Total estimated length of power lines added by people using the #ohmygrid:</label>
+    <label>Total estimated length of power lines added by people using the <code>#MapYourGrid</code>:</label>
     <div class="progress">
       <div class="progress-bar" id="community-line-length-bar" style="background-color: #28a745;"></div>
     </div>
@@ -67,6 +77,7 @@ OhMyGrid measures its progress at user, hashtag and country level. If you use ou
       Last updated: —
     </span>
   </div>
+
 
 </div>
 
@@ -80,7 +91,9 @@ OhMyGrid measures its progress at user, hashtag and country level. If you use ou
   const LINE_LENGTH_GOAL = 5000;
   const COMMUNITY_TOWER_GOAL = 5000;
   const COMMUNITY_LINE_LENGTH_GOAL = 2500;
-   // —— UPDATE Ohsome (#ohmygrid) ——
+  const PLANT_CAPACITY_GOAL = 5000
+
+   // —— UPDATE Ohsome (#MapYourGrid) ——
   async function updateOhsome() {
     const contribCountEl = document.getElementById('contributors-count');
     const editsCountEl   = document.getElementById('edits-count');
@@ -96,15 +109,25 @@ OhMyGrid measures its progress at user, hashtag and country level. If you use ou
     try {
       const startDate = '2025-03-12T22:00:00Z';
       const endDate   = new Date().toISOString();
-      const url       = `https://stats.now.ohsome.org/api/stats/ohmygrid?startdate=${startDate}&enddate=${endDate}`;
+      const hashtags = ['mapyourgrid', 'ohmygrid'];
+      const url       = `https://stats.now.ohsome.org/api/stats/MapYourGrid?startdate=${startDate}&enddate=${endDate}`;
+      const urls = hashtags.map(tag => `https://stats.now.ohsome.org/api/stats/${tag}?startdate=${startDate}&enddate=${endDate}`);
 
-      const resp = await fetch(url);
-      if (!resp.ok) throw new Error(resp.statusText);
-      const data = await resp.json();
+      const responses = await Promise.all(urls.map(url => fetch(url)));
+      for (const resp of responses) {
+        if (!resp.ok) throw new Error(`HTTP error! status: ${resp.status}`);
+      }
 
-      // your payload is in data.result
-      const users = data.result.users  ?? 0;
-      const edits = data.result.edits  ?? 0;
+      const dataArray = await Promise.all(responses.map(resp => resp.json()));
+
+      // Aggregate the results (sum of users and edits)
+      const total = dataArray.reduce((acc, data) => {
+        acc.users += data.result.users ?? 0;
+        acc.edits += data.result.edits ?? 0;
+        return acc;
+      }, { users: 0, edits: 0 });
+
+      const { users, edits } = total;
 
       // write DOM
       contribCountEl.textContent = users.toLocaleString();
@@ -114,14 +137,15 @@ OhMyGrid measures its progress at user, hashtag and country level. If you use ou
       editsBar.style.width   = Math.min(100, edits / EDITS_GOAL        * 100) + '%';
 
       // cache
-      localStorage.setItem('ohmygrid-ohsome', JSON.stringify({
-        users, edits, ts: Date.now()
+      localStorage.setItem('Combined-ohsome', JSON.stringify({
+        users,
+        edits,
+        ts: Date.now()
       }));
-    }
-    catch(err) {
+    } catch (err) {
       console.error('Ohsome error', err);
       contribCountEl.textContent = 'Error';
-      editsCountEl.textContent   = 'Error';
+      editsCountEl.textContent = 'Error';
     }
   }
 
@@ -222,7 +246,7 @@ async function loadCommunityStats() {
     communityLineLengthUpdatedEl.textContent = `Last updated: ${new Date(updated).toLocaleString()}`;
 
     // Cache community stats
-    localStorage.setItem('ohmygrid-community-stats', JSON.stringify({
+    localStorage.setItem('MapYourGrid-community-stats', JSON.stringify({
       communityTowerCount: towerCount,
       communityLineLengthKm: lengthKm,
       updated: updated, // Store the actual updated timestamp from JSON
@@ -239,8 +263,31 @@ async function loadCommunityStats() {
   }
 }
 
+async function loadPlantCapacity() {
+    const capacityCountEl = document.getElementById('plant-capacity-count');
+    const capacityBar = document.getElementById('plant-capacity-bar');
+    const capacityUpdatedEl = document.getElementById('plant-capacity-updated');
 
-    // —— MAIN & CACHE HANDLING ——
+    capacityCountEl.textContent = 'Loading…';
+    capacityBar.style.width = '0%';
+    capacityUpdatedEl.textContent = 'Last updated: —';
+
+    try {
+      const resp = await fetch('/data/plant-capacity.json');
+      if (!resp.ok) throw new Error(resp.statusText);
+      const { total_capacity_mw, updated } = await resp.json();
+
+      capacityCountEl.textContent = `${Math.round(total_capacity_mw).toLocaleString('en-US')} MW`;
+      capacityBar.style.width = Math.min(100, total_capacity_mw / PLANT_CAPACITY_GOAL * 100) + '%';
+      capacityUpdatedEl.textContent = `Last updated: ${new Date(updated).toLocaleString()}`;
+    } catch (err) {
+      console.error('Error loading plant capacity', err);
+      capacityCountEl.textContent = 'In Progress Feature';
+      capacityUpdatedEl.textContent = '';
+    }
+  }
+
+// —— MAIN & CACHE HANDLING ——
   function attemptCacheLoad(id, maxAgeMs) {
     try {
       const raw = localStorage.getItem(id);
@@ -257,7 +304,7 @@ async function loadCommunityStats() {
     const oneHour = 60*60*1000;
 
     // try Ohsome cache
-    const oCache = attemptCacheLoad('ohmygrid-ohsome', oneHour);
+    const oCache = attemptCacheLoad('MapYourGrid-ohsome', oneHour);
     if (oCache) {
       // populate from cache
       document.getElementById('contributors-count').textContent = oCache.users.toLocaleString('en-US');
@@ -269,7 +316,7 @@ async function loadCommunityStats() {
     }
 
     // try Towers cache
-    const tCache = attemptCacheLoad('ohmygrid-towers', oneHour);
+    const tCache = attemptCacheLoad('MapYourGrid-towers', oneHour);
     if (tCache) {
       document.getElementById('tower-count').textContent = tCache.count.toLocaleString('en-US');
       document.getElementById('tower-bar').style.width   = Math.min(100, tCache.count / TOWER_GOAL * 100) + '%';
@@ -279,9 +326,10 @@ async function loadCommunityStats() {
     }
 
     loadLineLength();
+    loadPlantCapacity();
 
     // Try Community Stats cache
-    const csCache = attemptCacheLoad('ohmygrid-community-stats', oneHour);
+    const csCache = attemptCacheLoad('MapYourGrid-community-stats', oneHour);
     if (csCache) {
       document.getElementById('community-tower-count').textContent = csCache.communityTowerCount.toLocaleString('en-US');
       document.getElementById('community-tower-bar').style.width = Math.min(100, csCache.communityTowerCount / COMMUNITY_TOWER_GOAL * 100) + '%';
@@ -299,24 +347,22 @@ async function loadCommunityStats() {
     const btn = document.getElementById('refresh-btn');
     if (btn) {
       btn.addEventListener('click', () => {
-        localStorage.removeItem('ohmygrid-ohsome');
-        localStorage.removeItem('ohmygrid-towers');
-        localStorage.removeItem('ohmygrid-line-length');
-        localStorage.removeItem('ohmygrid-community-stats'); // Clear community stats cache
+        localStorage.removeItem('MapYourGrid-ohsome');
+        localStorage.removeItem('MapYourGrid-towers');
+        localStorage.removeItem('MapYourGrid-line-length');
+        localStorage.removeItem('MapYourGrid-community-stats'); // Clear community stats cache
         updateOhsome();
         loadTowerCount();
         loadLineLength();
-        loadCommunityStats(); // Also call community stats refresh
+        loadCommunityStats(); 
+        loadPlantCapacity();
       });
     }
   });
 </script>
 
-You can find more stats for #ohmygrid at [OhsomeNowstats](https://stats.now.ohsome.org/dashboard#hashtag=ohmygrid&start=2025-03-12T22:00:00Z&end=2025-05-14T21:59:59Z&interval=P1M&countries=&topics=).
+You can find more stats for #mapyourgrid at [OhsomeNowstats](https://stats.now.ohsome.org/dashboard#hashtag=MapYourGrid&start=2025-03-12T22:00:00Z&end=2025-05-14T21:59:59Z&interval=P1M&countries=&topics=).
 
-<!-- LOGBOOK: Add your country below the last country. Some css (in extra.css at "Hide ### from logbook") is being used to remove the ### from the table of contents so please use the same name or tell me -->
-<!-- End of country logbook -->
-<br>
 ###Africa
 ![Flag Angola](http://commons.wikimedia.org/wiki/Special:FilePath/Flag%20of%20Angola.svg){width=20px} [Angola](countrypages/Angola.md) - 
 ![Flag Burkina Faso](http://commons.wikimedia.org/wiki/Special:FilePath/Flag%20of%20Burkina%20Faso.svg){width=20px} [Burkina Faso](countrypages/Burkina Faso.md) - 
@@ -524,7 +570,3 @@ You can find more stats for #ohmygrid at [OhsomeNowstats](https://stats.now.ohso
 ![Flag Suriname](http://commons.wikimedia.org/wiki/Special:FilePath/Flag%20of%20Suriname.svg){width=20px} [Suriname](countrypages/Suriname.md) - 
 ![Flag Uruguay](http://commons.wikimedia.org/wiki/Special:FilePath/Flag%20of%20Uruguay.svg){width=20px} [Uruguay](countrypages/Uruguay.md) - 
 ![Flag Venezuela](http://commons.wikimedia.org/wiki/Special:FilePath/Flag%20of%20Venezuela.svg){width=20px} [Venezuela](countrypages/Venezuela.md) - 
-
-## <div class="tools-header">Still got questions?</div>
-
-Check out our [Q&A page](q&a.md).
