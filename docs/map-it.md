@@ -112,6 +112,7 @@ If this is your first time grid mapping, please go through the [Starter-Kit](sta
 <!-- SheetJS for in‑browser XLSX parsing -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
 
+<!-- Start of script! -->
 <script>
 
 // ———————————————
@@ -473,7 +474,7 @@ async function handleAreaClick(iso, level, layer) {
     else {
        let tpl = await fetchQuery(currentMode, level);
        tpl = tpl.replace(/\$\{iso\}/g, iso);
-       sendToJosm(tpl);
+       sendToJosm(tpl, name);
     }
   } catch (err) {
     layer.getPopup().setContent(`Error: ${err.message}`).update();
@@ -485,7 +486,7 @@ setTimeout(() => {
   const html = `
     <div class="popup-success">
       <p>🎉 <strong>Great!</strong> Now go back to JOSM and check if it is downloading. Depending on the country, this may take <em>60 seconds or more</em>. The grid of some countries are to large to be mapped on a national level. However, you can zoom in and click on regions or states.</p>
-      <p>For <strong>tools and hints</strong> selections, you will need to download the geojson file. Afterwards drag and drop the file into JSOM.</p>
+      <p>For <strong>tools and hints</strong> selections, you will need to download the geojson file. Afterwards drag and drop the file into JOSM.</p>
       <p>⚠️ <strong>If nothing happens:</strong></p>
       <ol>
         <li>Check if your ad-blocker is off</li>
@@ -667,7 +668,7 @@ async function fetchPPMAndDownload(sovName) {
 
 
 // JOSM integration function
-function sendToJosm(query) {
+function sendToJosm(query, areaName) {
   // Encode only the query part
   const encodedQuery = encodeURIComponent(query);
   
@@ -675,16 +676,44 @@ function sendToJosm(query) {
   const overpassUrl = "https://overpass-api.de/api/interpreter?data=" + encodedQuery;
   
   // Build the final JOSM URL by concatenating the strings manually.
-  const josmUrl = "http://localhost:8111/import?new_layer=true&url=" + overpassUrl;
-
+  const josmUrl = `http://localhost:8111/import?new_layer=true&layer_name=${encodeURIComponent(areaName)}&changeset_tags=hashtags=mapyourgrid&url=${overpassUrl}`;
+  
+  // Load imagery too
+  const mapboxImageryUrl = 'http://localhost:8111/imagery?id=Mapbox';
+  const bingImageryUrl = 'http://localhost:8111/imagery?id=Bing';
+  const esriImageryUrl = 'http://localhost:8111/imagery?id=EsriWorldImagery';
+  
   // Keep a log to see the actual URL
   console.log("URL ", josmUrl);
+  console.log("Sending Esri Imagery URL: ", esriImageryUrl);
+  console.log("Sending Bing Imagery URL: ", bingImageryUrl);
+  console.log("Sending Mapbox Imagery URL: ", mapboxImageryUrl);
   
+  // Query part
   const iframe = document.createElement('iframe');
   iframe.style.display = 'none';
   iframe.src = josmUrl;
   document.body.appendChild(iframe);
   setTimeout(() => document.body.removeChild(iframe), 1000);
+  
+  // Imagery part
+  const mapboxIframe = document.createElement('iframe');
+  mapboxIframe.style.display = 'none';
+  mapboxIframe.src = mapboxImageryUrl;
+  document.body.appendChild(mapboxIframe);
+  setTimeout(() => document.body.removeChild(mapboxIframe), 1000);
+
+  const bingIframe = document.createElement('iframe');
+  bingIframe.style.display = 'none';
+  bingIframe.src = bingImageryUrl;
+  document.body.appendChild(bingIframe);
+  setTimeout(() => document.body.removeChild(bingIframe), 1000);
+
+  const esriIframe = document.createElement('iframe');
+  esriIframe.style.display = 'none';
+  esriIframe.src = esriImageryUrl;
+  document.body.appendChild(esriIframe);
+  setTimeout(() => document.body.removeChild(esriIframe), 1000);
 }
 
 // Handle zoom events to show/hide the appropriate layers
