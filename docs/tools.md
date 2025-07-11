@@ -89,6 +89,20 @@ As most transmission lines end at substations, the map painting technique allows
 3. In the ColorMyGrid repo you will also find the raw data to edit the [map legend](https://raw.githubusercontent.com/open-energy-transition/color-my-grid/refs/heads/main/legend/power-grid-legend.png).
 
 
+## <div class="tools-header">Unfinished lines with Osmose and the todo Plugin :white_check_mark:</div>
+
+<div style="float: right; margin: 5px 0 20px 20px; width: 350px;">
+  <img src="../images/todo.jpg" class="img-border" style="width: 100%;">
+  <figcaption class="image-caption"> A simple but very efficient way of mapping the network is the continuation of “Unfinished Transmission Lines loaded into the todo plugin”:</figcaption>
+</div>
+
+1. Download the [Unfinished Power Transmission lines (Class 2) via Osmose](https://ohmygrid.org/map-it/) for your country.
+1. Drag and drop the downloaded geojson file into JSOM.
+1. Download the todo plugin for JSOM. `Edit → Preferences`. Search for todo, mark it and press OK. Press `Windows → todo list` to show the Todo list window. 
+1. Press `CTRL + A`  to select all issues in the new layer. Press the Add in the todo plugin window (`Windows → Todo list`)
+1. Switch back to the OSM data layer.
+1. You can now systematically step through all the issues by pressing Mark.  
+
 ### <div class="tools-header">Connect Power Plants </div></h3>
 As most large power plants are directly connected to the transmission grid, Connect Power Plants provides an easy strategy using the comprehensive power plants dataset from Global Energy Monitor. A simple user interface for retrieving this data at a national level is integrated into [Map It📍](https://MapYourGrid.org/map-it/), enabling users to preview and download GeoJSON data:
 
@@ -138,7 +152,6 @@ Large industrial facilities require huge amounts of energy and therefore have th
 1. With the installed todo plugin window press `Add`. 
 1. Switch back to your transmission grid layer.
 1. You can now step trouth all substations by pressing `Mark`.
-
 
 
 ### <div class="tools-header"> Connect WikiData</div></h3>
