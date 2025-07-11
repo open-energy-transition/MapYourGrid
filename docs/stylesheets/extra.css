@@ -370,6 +370,20 @@
     white-space: normal;
     overflow-wrap: break-word;
   }
+
+  .stradegy-header {
+  background-color: #e8f5e9;
+  padding: 6px 14px;
+  border-left: 10px solid #6d0f06;
+  border-radius: 0 4px 4px 0;
+  display: inline-block;
+  /* Keep this */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-bottom: 0.75rem;
+  /* Add some space below the header */
+  font-weight: bold;
+  text-align: left
+  }
 }
 
 
