@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+
+{% block announce %}
+<a href="https://discord.gg/a5znpdFWfD">
+  <div style="display:inline-flex; align-items:center; color:#aad3c6">
+    <strong> Join our community chat </strong>
+    <img 
+      src="/icons/discord-white.png" 
+      alt="Discord logo" 
+      style="width:1em; height:0.75em; margin-left:0.5ch; vertical-align:middle;"
+      class="twemoji"
+      
+    />
+  </div>
+</a>
+<a href="https://MapYourGrid.org/map-it/">
+    <div style="display:inline-flex; align-items:center; color:#aad3c6">
+      <strong> and learn to map with us! 📍 </strong>
+    </div>
+  </a>
+{% endblock %}
+
+{% block extrahead %}
+  {{ super() }}
+  <meta property="og:image"   content="https://MapYourGrid.org/images/website/mapyourgrid-preview.jpg">
+  <meta name="twitter:image"  content="https://MapYourGrid.org/images/website/mapyourgrid-preview.jpg">
+  <meta name="twitter:card"   content="summary_large_image">
+{% endblock %}

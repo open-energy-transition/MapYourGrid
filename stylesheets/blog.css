@@ -1,0 +1,37 @@
+/* Titles of pages*/
+.blog-headers {
+    margin: 0.5rem 0 1.5rem;  /* drop it below the nav and give breathing room */
+    text-align: left;
+  }
+  
+ .blog-headers > h1 {
+    position: relative;
+    display: inline-block;
+    font-size: 1rem;
+    font-weight: 700;
+    color: #2A6D3C;               /* dark green text */
+    padding-bottom: 0.25rem;      /* space for underline */
+    margin: 0;
+  }
+  
+  /* 1) Bold underline accent */
+ .blog-headers > h1::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 40%;                   /* underline spans 40% of the title width */
+    height: 4px;
+    background-color: #54A36A;    /* brand green */
+    border-radius: 2px;
+  }
+  
+  /* 2) Subtle highlight behind first word or two */
+ .blog-headers > h1 span {
+    position: relative;
+    z-index: 1;
+    padding: 0 0.25rem;
+    background: rgba(233,245,233,0.6);
+    border-radius: 0.25rem;
+    margin-right: 0.5rem;
+  }

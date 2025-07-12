@@ -1,0 +1,476 @@
+/* ==== GENERAL/BODY  ==== */
+body {
+    font-family: sans-serif; 
+}
+
+/* Increased Specificity for Header Background -  */
+body.landing-page header.md-header {
+  background-color: #e9f5e9 !important; /* Match the hero section background color */
+  box-shadow: none !important; 
+}
+
+
+/* ==== HERO SECTION ==== */
+.hero-section {
+  min-height: 60vh;
+  background-color: #e9f5e9; /* This color determines the header background */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 4rem 2rem;
+  gap: 2rem;
+  flex-wrap: nowrap;
+  margin-top: -3rem;
+
+}
+
+.hero-content-left {
+  flex: 1 1 50%;
+  max-width: 600px;
+  text-align: left;
+  min-width: 450px;
+  padding-bottom: 4rem;
+}
+
+.hero-content-right {
+  flex-shrink: 0;
+  text-align: center;
+  flex-basis: auto;
+}
+
+/* Increased Specificity for Hero Title */
+.hero-section .hero-title {
+  font-size: 3.5rem;
+  color: #54a36a;
+  font-weight: 730;
+  margin-bottom: 1rem;
+  
+}
+
+.hero-logo {
+    /* pick the exact pixel width you want: */
+    width: 20rem !important;
+    /* undo any “max-width:100%” from the theme */
+    max-width: none !important;
+    height: auto !important;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+.mission-statement {
+  font-size: 1.2rem;
+  color: #555555;
+  max-width: 100%;
+  margin: 0 auto 2rem;
+  line-height: 1.4;
+  font-weight: 500;
+  text-align: left !important;
+}
+
+/* ==== HERO BUTTONS ==== */
+.hero-buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: flex-start;
+  margin-top: 2rem;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  font-weight: 700;
+  border-radius: 0.5rem;
+  text-decoration: none;
+  transition: transform 0.2s, filter 0.2s;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.btn-primary {
+  color: #ffffff !important;
+  background: #54a36a;
+  border: none;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.btn-secondary {
+  color: #2a6d3c !important;
+  background: white;
+  border: 1px solid #ddd;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+}
+
+.btn-primary:hover {
+  filter: brightness(1.1);
+}
+
+.btn-secondary:hover {
+  background: #f8f9fa;
+  border-color: #ccc;
+}
+
+/* ==== Why it matters SECTION ==== */
+.initiative-section {
+  padding: 1rem 1rem;
+  background-color: #f8f9fa;
+
+}
+
+.initiative-content {
+  max-width: 1000px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.initiative-content h2 {
+  color: #54a36a;
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+  font-weight: 700;
+}
+
+.initiative-content p {
+  color: #4a5568;
+  line-height: 1.7;
+  margin-bottom: 1.5rem;
+  font-size: 1.1rem;
+  font-weight: 400;
+}
+
+/* Style for the quote */
+.initiative-content blockquote {
+  margin: 1.5rem auto;
+  padding-left: 1.5rem;
+  border-left: 4px solid #2a6d3c;
+  font-style: italic;
+  color: #555;
+  max-width: 700px;
+  text-align: left;
+}
+
+/* Style for the reference */
+.initiative-content p.reference {
+  margin-top: 0.5rem;
+  margin-bottom: 1.5rem;
+  font-size: 0.9rem;
+  color: #777;
+  text-align: center;
+  font-style: italic;
+}
+
+.initiative-illustration {
+  max-width: 200px;
+  margin: 1rem auto 0;
+  width: 60%; /* Make it responsive up to max-width */
+}
+
+
+/* ==== GET INVOLVED SECTION ==== */
+.get-involved-section {
+  padding: 1rem 2rem;
+  background-color: #e9f5e9;
+  text-align: center;
+}
+
+.get-involved-section h2 {
+  color: #2A6D3C;
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  font-weight: 700;
+}
+
+.get-involved-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 2rem auto;
+}
+
+.get-involved-card {
+  padding: 2rem;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  border-radius: 16px; /* or any desired value like 8px, 1rem, etc. */
+
+}
+
+.get-involved-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(42, 109, 60, 0.15);
+}
+
+.get-involved-card h3 {
+  text-align: center;
+  color: #2a6d3c;
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.get-involved-card p {
+  text-align: center;
+  color: #4a5568;
+  line-height: 1.6;
+  font-weight: 400;
+  flex-grow: 1;
+}
+
+.card-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: -0.5rem;
+  height: 20px; /* Fixed height for consistent alignment */
+  font-size: 2rem; /* Size for emojis */
+}
+
+/*  SVG icon styling */
+.icon-svg {
+  width: 43px;
+  height: 43px;
+}
+
+/* Emoji icon styling */
+.icon-emoji {
+  font-size: 36px;
+  line-height: 1;
+}
+
+/* ==== WHO WE ARE SECTION ==== */
+.who-we-are-section {
+  padding: 0.5rem 2rem; /* Increased top/bottom padding */
+  background-color: #f8f9fa; /* Grey background to alternate */
+  text-align: center;
+}
+
+.who-we-are-section h2 {
+  color: #54a36a; /* Match other section titles */
+  font-size: 2.5rem;
+  margin-bottom: 1rem; /* Reduced bottom margin */
+  font-weight: 700;
+}
+
+.who-we-are-section .lead-statement {
+  max-width: 800px;
+  margin: 0 auto 2.5rem auto; /* Center align and add bottom margin */
+  color: #4a5568; /* Match paragraph text color */
+  line-height: 1.7;
+  font-size: 0.9rem;
+  font-weight: 400;
+}
+
+.partners-grid {
+  display: grid;
+  /* Adjust columns for different screen sizes */
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Responsive grid */
+  gap: 2.5rem; /* Increased gap */
+  max-width: 1000px; /* Limit overall width */
+  margin: 2rem auto 0; /* Center the grid */
+  align-items: center; /* Vertically align items if they have different heights */
+}
+
+.partner-item {
+  text-align: center; /* Center content within each item */
+}
+
+.partner-item a {
+  text-decoration: none;
+  color: inherit; /* Inherit text color */
+  display: flex; /* Use flexbox for layout within the link */
+  flex-direction: column; /* Stack logo and name vertically */
+  align-items: center; /* Center items horizontally */
+  gap: 0.8rem; /* Space between logo and name */
+  transition: transform 0.3s ease; /* Smooth hover effect */
+}
+
+.partner-item a:hover {
+  transform: translateY(-4px); /* Slight lift on hover */
+}
+
+.partner-logo {
+  max-height: 80px; /* Control maximum logo height */
+  max-width: 100%;  /* Ensure logo fits within its container */
+  height: auto;     /* Maintain aspect ratio */
+  object-fit: contain; /* Ensure the logo scales nicely without distortion */
+}
+
+.partner-logo-smaller {
+  max-height: 50px; /* Control maximum logo height */
+  max-width: 100%;  /* Ensure logo fits within its container */
+  height: auto;     /* Maintain aspect ratio */
+  object-fit: contain; /* Ensure the logo scales nicely without distortion */
+}
+
+/* ==== RESPONSIVE HERO SECTION FIX ==== */
+/* Add intermediate breakpoint for tablets/small laptops */
+@media (max-width: 1200px) and (min-width: 100px) {
+  .hero-section {
+    flex-direction: column-reverse; /* Stack logo above content */
+    text-align: center;
+    justify-content: center;
+    padding: 2rem 1rem;
+  }
+
+  .hero-content-left {
+    text-align: center;
+    max-width: 100%;
+    min-width: auto;
+    flex: 1 1 auto;
+  }
+
+  .hero-content-right {
+    margin-bottom: 1rem;
+    flex-basis: auto;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+  }
+
+  .hero-section .hero-title {
+    font-size: 3rem; /* Slightly smaller than desktop but larger than mobile */
+  }
+
+  .hero-logo {
+    width: 70% !important; /* Scale logo appropriately for tablet */
+    max-width: 600px !important;
+  }
+
+  .mission-statement {
+    text-align: center !important;
+    font-size: 1.1rem; /* Slightly smaller */
+  }
+
+  .hero-buttons {
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap; /* Allow wrapping if needed */
+  }
+
+  .btn {
+    max-width: 250px; /* Prevent buttons from getting too wide */
+  }
+}
+
+
+/* ==== MEDIA QUERIES (Adjustments for smaller screens) ==== */
+@media (max-width: 768px) {
+  /* Hero Section Adjustments */
+  .hero-section {
+    flex-direction: column-reverse; /* Stack logo on top of content */
+    text-align: center;
+    justify-content: center;
+    padding: 2rem 1rem 0rem;
+    flex-wrap: wrap; /* Allow the section to wrap its children on mobile */
+  }
+
+  .hero-content-left {
+    text-align: center;
+    max-width: 100%; /* Allow to take full width */
+    min-width: auto; /* Remove fixed min-width for mobile */
+    flex: 1 1 auto; /* Allow growth/shrinkage based on content */
+  }
+
+  .hero-content-right {
+    margin-bottom: 0rem;
+    flex-basis: auto;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+  }
+
+  .hero-section .hero-title {
+    font-size: 2.3rem; /* Smaller title on mobile */
+  }
+
+  .hero-logo {
+    width: 90% !important; /* Scale logo down for mobile */
+    max-width: 500px !important; /* Cap its size for slightly larger mobile screens */
+  }
+
+  .mission-statement {
+    text-align: center !important; /* Center mission statement on mobile */
+  }
+  
+  .hero-buttons {
+    flex-direction: column; /* Stack buttons vertically on mobile */
+    gap: 1rem;
+    justify-content: center; /* Center buttons on mobile */
+    align-items: center; /* Center align buttons */
+    margin-top: 2rem;
+  }
+
+  .btn {
+    width: 100%; /* Make buttons full width on mobile */
+    max-width: 280px; /* But cap the width so they don't get too wide */
+    justify-content: center; /* Center the content within buttons */
+    padding: 0.75rem 1rem; /* Slightly larger padding for easier touch */
+    font-size: 1rem;
+  }
+
+  .initiative-content h2,
+  .get-involved-section h2 {
+      font-size: 2rem;
+  }
+  
+  .initiative-illustration {
+      max-width: 80%;
+  }
+
+  .get-involved-grid {
+      grid-template-columns: 1fr;
+  }
+   /* Mobile Specificity for Header Background */
+   body.landing-page header.md-header {
+     background-color: #e9f5e9; /* Apply on mobile too */
+     box-shadow: none;
+   }
+}
+
+/* ==== MEDIA QUERIES (Additions/Adjustments for Who We Are) ==== */
+@media (max-width: 768px) {
+  .who-we-are-section h2 {
+      font-size: 2rem; /* Match other mobile titles */
+  }
+
+  .who-we-are-section .lead-statement {
+      font-size: 1rem; /* Slightly smaller lead text on mobile */
+      margin-bottom: 2rem;
+  }
+
+  .partners-grid {
+    /* Adjust grid for smaller screens - maybe fewer columns */
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 2rem; /* Slightly smaller gap */
+  }
+
+  .partner-logo {
+    max-height: 60px; /* Smaller logos on mobile */
+  }
+
+}
+
+@media (max-width: 480px) {
+    .partners-grid {
+    /* Stack items in two columns on very small screens */
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+}
+

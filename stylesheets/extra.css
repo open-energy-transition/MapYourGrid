@@ -1,0 +1,717 @@
+/* ----------------Map it page----------------------------------------------------------------------------------------------*/
+/* Map it pagebuttons css */
+#query-buttons {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 1rem;
+  /* space between each group */
+  margin: 4em 0 0.3em;
+}
+
+.query-btn {
+  font-size: 0.85rem;
+  /* a bit smaller text */
+  padding: 0.3em 0.6em;
+  /* tighter padding */
+  margin: 0 0.3em;
+  border: 1.5px solid #3388ff;
+  border-radius: 4px;
+  background: #f0f8ff;
+  color: #2050a0;
+  cursor: pointer;
+  transition: background 0.2s, border-color 0.2s, transform 0.1s;
+}
+
+.query-btn:hover {
+  background: #3388ff;
+  color: #fff;
+}
+
+.query-btn.active {
+  background: #005bb5;
+  border-color: #003f7f;
+  color: #fff;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  transform: translateY(-1px);
+}
+
+.query-version {
+  font-size: 0.5rem;
+  color: #666;
+  margin-top: 0.2em;
+  text-align: center;
+}
+
+.query-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#overpass-buttons,
+#tool-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1em;
+}
+
+.popup-success h3 {
+  margin: 0 0 0.5em;
+  font-size: 1.1em;
+}
+
+.popup-success ul {
+  margin: 0;
+  padding-left: 1.2em;
+  line-height: 1.3;
+}
+
+.popup-success ul ul {
+  padding-left: 1em;
+  margin-top: 0.3em;
+}
+
+.popup-success li {
+  margin-bottom: 0.4em;
+}
+
+/* -------------------------Navigation bar css-------------------------------------------------------------------------------------*/
+.md-tabs__link {
+  font-weight: bold;
+  padding: 0rem 0.6rem;
+  font-size: 0.75rem; /* I think default is 0.7 rem for mkdocs material, but I made it slightly bigger */
+}
+
+/* -------------------------General all pages css stuff-------------------------------------------------------------------------------------*/
+/* make all level‑3 (###) headings use a bold font-weight */
+.md-typeset h3 {
+  font-weight: 700 !important;
+}
+
+/* -------------------------Pages-------------------------------------------------------------------------------------*/
+
+/* Justify regular content */
+.md-content {
+  text-align: justify;
+}
+
+/* Remove footer mkdocs material */
+.md-footer__generator {
+  display: none !important;
+}
+
+/* Increase logo size in the header */
+.md-header__button.md-logo img,
+.md-header__button.md-logo svg {
+  width: auto;
+  height: 2.5rem;
+  margin-right: +0.6rem;
+  /* Adjust this value (e.g., 2.5rem, 3rem) */
+}
+
+
+/* CSS of images on starterkit and other pages  */
+.img-border {
+  border: 2px solid #000 !important;
+  padding: 0.25px;
+  border-radius: 0;
+  /* Remove if you want rounded corners */
+}
+
+/* IMAGE CSS (starterkit page for now) */
+.float-right {
+  float: right;
+  margin: 0.5em 1em 1em 1em;
+}
+
+/* MOBILE IMAGE TWEAKS for starterit for ex */
+@media (max-width: 768px) {
+
+  /* 1) Give all bordered images a bit more breathing room */
+  .img-border {
+    max-width: 90% !important;
+    /* don’t overflow */
+    height: auto !important;
+    display: block;
+    margin: 1em auto !important;
+    /* center & separate each image */
+  }
+
+  .float-right {
+    float: none !important;
+    display: block !important;
+    margin: 1em auto !important;
+    width: 90%;
+  }
+
+  /* Prevent interference with lists */
+  ol,
+  ul {
+    clear: both;
+  }
+}
+
+
+
+.align-with-heading {
+  float: right;
+  margin-left: 20px;
+  margin-top: 30px !important;
+  /* Matches heading's top spacing */
+}
+
+/*Increase size of site name */
+.md-header__topic {
+  font-size: 1.1rem !important;
+  /* Adjust as needed */
+  font-weight: bold;
+}
+
+/* Image caption styling */
+.image-caption {
+  font-size: 0.7rem;
+  color: #666;
+  text-align: center;
+  margin-top: 0.2rem;
+  line-height: 1.4;
+}
+
+
+/* --- Responsive Adjustments --- */
+@media (max-width: 768px) {
+
+  /* Adjust breakpoint as needed (e.g., 992px for tablets) */
+  .tool-section {
+    flex-direction: column;
+    /* Stack text and images vertically */
+    gap: 1.5rem;
+    /* Adjust gap for vertical layout */
+    align-items: stretch;
+    /* Let items take full width */
+  }
+
+  .tool-images {
+    flex-basis: auto;
+    /* Let width be determined by content */
+    width: 100%;
+    /* Take full width */
+    max-width: 400px;
+    /* Optional: Limit image size even on mobile */
+    margin: 0 auto;
+    /* Center the image block if it's narrower than the container */
+    align-items: center;
+    /* Center images within the container */
+  }
+
+  .tool-images img.img-border {
+    max-width: 100%;
+    /* Ensure it doesn't exceed container */
+  }
+}
+
+/* --------------------------------------------------------------------------------------------------------------*/
+/* --- NEW STYLES FOR TOOL SECTIONS --- */
+
+/* Main container for each tool */
+.tool-section {
+  display: flex;
+  /* Use flexbox for layout */
+  flex-wrap: wrap;
+  /* Allow wrapping on smaller screens if needed, though media query is better */
+  align-items: flex-start;
+  /* Align items to the top */
+  gap: 2rem;
+  /* Space between text content and image block */
+  margin-bottom: 3rem;
+  /* Space below each tool section */
+  padding-bottom: 1.5rem;
+  /* Space before the border */
+  border-bottom: 1px solid #eee;
+  /* Visual separator between tools */
+}
+
+/* Ensure the last tool doesn't have a bottom border */
+.tool-section:last-of-type {
+  border-bottom: none;
+  margin-bottom: 1rem;
+  /* Adjust margin for the very last item */
+  padding-bottom: 0;
+}
+
+/* Container for the text content */
+.tool-content {
+  flex: 1;
+  /* Allow text content to grow and fill available space */
+  min-width: 0;
+  /* Prevents flex items from overflowing if content is too wide (e.g., long code lines) */
+  /* Adjust min-width if needed, e.g., min-width: 300px; */
+}
+
+/* Container for the image(s) on the right */
+.tool-images {
+  flex-basis: 320px;
+  /* Preferred starting width for the image container */
+  flex-shrink: 0;
+  /* Prevent the image container from shrinking */
+  display: flex;
+  flex-direction: column;
+  /* Stack images vertically */
+  gap: 1rem;
+  /* Space between multiple images within the same tool */
+  /* margin-top: 0.5rem; */
+  /* Optional: Add slight top margin to align better with text flow if needed */
+}
+
+/* Styling for images within the tool section */
+.tool-images img.img-border {
+  display: block;
+  /* Remove extra space below image */
+  max-width: 100%;
+  /* Ensure image scales down within its container */
+  height: auto;
+  /* Maintain aspect ratio */
+  margin: 0;
+  /* Reset any default margins */
+  /* Keep your existing border style */
+  border: 2px solid #000 !important;
+  padding: 1px;
+  /* Reduced padding slightly */
+  border-radius: 0;
+}
+
+/* Styling for figure/figcaption if used */
+.tool-images figure {
+  margin: 0;
+  /* Reset default figure margins */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* Center caption below image if figure is wider */
+}
+
+.tool-images figcaption.image-caption {
+  /* Keep your existing caption style, adjust as needed */
+  font-size: 0.8rem;
+  /* Slightly larger for readability */
+  color: #555;
+  /* Slightly darker */
+  text-align: center;
+  margin-top: 0.3rem;
+  line-height: 1.3;
+  width: 100%;
+  /* Ensure caption uses the width of the figure */
+}
+
+/* Ensure headers within the content area don't have excessive top margin */
+.tool-content h2:first-child,
+.tool-content h3:first-child {
+  margin-top: 0;
+}
+
+/* Card-style header - looks good, keep as is */
+.tools-header {
+  background-color: #e8f5e9;
+  padding: 8px 15px;
+  border-left: 4px solid #2a8000;
+  border-radius: 0 4px 4px 0;
+  display: inline-block;
+  /* Keep this */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-bottom: 0.75rem;
+  /* Add some space below the header */
+  font-weight: bold;
+}
+
+@media (max-width: 480px) {
+  .tools-header {
+    /* shrink the text a bit */
+    font-size: 1rem;
+    /* adjust to taste */
+    padding: 6px 12px;
+    /* tighter padding */
+    /* never hyphenate on mobile */
+    hyphens: none !important;
+    /* keep it left-aligned */
+    text-align: left !important;
+    /* ensure it wraps only between words */
+    white-space: normal;
+    overflow-wrap: break-word;
+  }
+}
+
+/* Card-style header - looks good, keep as is */
+.stradegy-header {
+  background-color: #e8f5e9;
+  padding: 6px 14px;
+  border-left: 10px solid #6d0f06;
+  border-radius: 0 4px 4px 0;
+  display: inline-block;
+  /* Keep this */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-bottom: 0.75rem;
+  /* Add some space below the header */
+  font-weight: bold;
+}
+
+@media (max-width: 480px) {
+  .tools-header {
+    /* shrink the text a bit */
+    font-size: 1rem;
+    /* adjust to taste */
+    padding: 6px 12px;
+    /* tighter padding */
+    /* never hyphenate on mobile */
+    hyphens: none !important;
+    /* keep it left-aligned */
+    text-align: left !important;
+    /* ensure it wraps only between words */
+    white-space: normal;
+    overflow-wrap: break-word;
+  }
+
+  .stradegy-header {
+  background-color: #e8f5e9;
+  padding: 6px 14px;
+  border-left: 10px solid #6d0f06;
+  border-radius: 0 4px 4px 0;
+  display: inline-block;
+  /* Keep this */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-bottom: 0.75rem;
+  /* Add some space below the header */
+  font-weight: bold;
+  text-align: left
+  }
+}
+
+
+/* --------------------------------------------------------------------------------------------------------------*/
+/* —————————————————————————
+   BASE: full‑width sections
+   ————————————————————————— */
+.section {
+  position: relative;
+  left: 50%;
+  width: 100vw;
+  margin-left: -50vw;
+  padding: 4rem 2rem;
+}
+
+
+
+
+.big-font {
+  font-size: 1rem;
+  font-weight: bold;
+  color: #333;
+}
+
+/* --------------------------------------------------------------------------------------------------------------*/
+
+/* Titles of pages*/
+.page-headers {
+  margin: 0.5rem 0 1rem;
+  /* drop it below the nav and give breathing room */
+  text-align: left;
+}
+
+.page-headers>h1 {
+  position: relative;
+  display: inline-block;
+  font-size: 2.25rem;
+  font-weight: 700;
+  color: #2A6D3C;
+  /* dark green text */
+  padding-bottom: 0.25rem;
+  /* space for underline */
+  margin: 0;
+}
+
+/* 1) Bold underline accent */
+.page-headers>h1::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 40%;
+  /* underline spans 40% of the title width */
+  height: 4px;
+  background-color: #54A36A;
+  /* brand green */
+  border-radius: 2px;
+}
+
+/* 2) Subtle highlight behind first word or two */
+.page-headers>h1 span {
+  position: relative;
+  z-index: 1;
+  padding: 0 0.25rem;
+  background: rgba(233, 245, 233, 0.6);
+  border-radius: 0.25rem;
+  margin-right: 0.5rem;
+}
+
+/* --------------------------------------------------------------------------------------------------------------*/
+/* PROGRESS BAR ON CONTRIBUTING PAGE */
+.progress-section {
+  margin: 2rem 0;
+}
+
+.progress-item {
+  margin-bottom: 1.5rem;
+}
+
+.progress-item label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+}
+
+/* --- Styling for the outer container of the bar --- */
+.progress {
+  background-color: #e9ecef;
+  /* Lighter grey background */
+  border-radius: 0.5rem;
+  /* More rounded corners */
+  overflow: hidden;
+  /* Keep the inner bar contained */
+  height: 0.6rem;
+  /* Make it a bit taller */
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+  /* Subtle inner shadow for depth */
+}
+
+/* --- Styling for the inner fill bar --- */
+.progress-bar {
+  height: 100%;
+  /* Use a nicer green or your theme's primary color */
+  background-color: #28a745;
+  /* A common 'success' green */
+  /* Add a subtle gradient/stripe effect */
+  background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+  background-size: 1rem 1rem;
+  /* Control the size of the stripes */
+
+  width: 0;
+  /* Initial width */
+  border-radius: 0.5rem;
+  /* Match outer radius - adjust if it looks odd */
+  /* Ensure smooth transition */
+  transition: width 0.6s ease;
+
+  /* Optional: Add animation to make stripes move */
+  /* animation: progress-bar-stripes 1s linear infinite; */
+}
+
+/* --- Styling for the count number next to the bar --- */
+.progress-item span {
+  display: inline-block;
+  margin-left: 0.75rem;
+  /* Slightly more space */
+  font-weight: bold;
+  vertical-align: middle;
+  /* Align better with the taller bar */
+  line-height: 1.25rem;
+  /* Match progress bar height */
+}
+
+/* --- Styling for the Refresh Button --- */
+#refresh-btn {
+  /* Button Base Styles */
+  display: inline-block;
+  /* Behave like a button */
+  padding: 0.5rem 0.5rem;
+  /* Comfortable padding */
+  margin-bottom: 1rem;
+  /* Keep the margin (moved from inline) */
+  font-size: 0.6rem;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  color: #ffffff;
+  /* White text */
+  background-color: #007bff;
+  /* A standard blue */
+  border: 1px solid #007bff;
+  border-radius: 0.25rem;
+  /* Slightly rounded corners */
+  cursor: pointer;
+  /* Hand cursor on hover */
+  user-select: none;
+  /* Prevent selecting text */
+  vertical-align: middle;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  /* Smooth transitions */
+}
+
+/* Hover State */
+#refresh-btn:hover {
+  background-color: #0056b3;
+  /* Darker blue */
+  border-color: #0056b3;
+  color: #ffffff;
+  text-decoration: none;
+}
+
+/* Active State (when clicked) */
+#refresh-btn:active {
+  background-color: #004085;
+  /* Even darker blue */
+  border-color: #00376e;
+  transform: translateY(1px);
+  /* Subtle "push" effect */
+}
+
+/* Focus State (for accessibility) */
+#refresh-btn:focus {
+  outline: 0;
+  /* Remove default outline */
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.5);
+  /* Add a blue glow */
+}
+
+/* --------------------------------------------------------------------------------------------------------------*/
+/* Hide ### from logbook */
+.md-nav__item a[href$="#success-stories"],
+.md-nav__item a[href$="#key-numbers"] {
+  display: none;
+}
+
+/* -------------------------------------------Heatmaps (progress.md)-------------------------------------------------------------------*/
+/* Heatmap images container - responsive layout */
+.heatmap-container {
+  display: flex;
+
+  gap: 20px;
+  margin: 20px 0;
+}
+
+.heatmap-container img {
+  width: 300px;
+  max-width: 100%;
+  height: auto;
+}
+
+/* Mobile adjustments for heatmap images */
+@media (max-width: 768px) {
+  .heatmap-container {
+    flex-direction: column !important;
+    align-items: center;
+    gap: 1px;
+  }
+
+  .heatmap-container img {
+    width: 200px !important;
+    /* Slightly smaller on mobile */
+    max-width: 90% !important;
+  }
+}
+
+/* -----------------------------------------nav bar colour---------------------------------------------------------------------*/
+:root>* {
+  --md-primary-fg-color: #036d7a;
+  --md-primary-fg-color--light: #036d7a;
+  --md-primary-fg-color--dark: #036d7a;
+}
+
+/* -----------------------------------------announce banner at top---------------------------------------------------------------------*/
+aside.md-banner {
+  background-color: #037a4c !important;
+  color: #ffffff !important;
+}
+
+
+aside.md-banner a,
+aside.md-banner a>div {
+  background: transparent !important;
+  color: #fff !important;
+}
+
+@media (max-width: 768px) {
+  /* Banner Text Font Size Adjustment for Mobile */
+  aside.md-banner a strong {
+    font-size: 0.9em; /
+  }
+}
+
+
+/* -----------------------------------------frame around repo link top right---------------------------------------------------------------------*/
+.md-source {
+  background-color: transparent !important;
+  border: 1.3px solid #fff !important;
+  border-radius: 8px !important;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1) !important;
+  transition: all 0.3s ease !important;
+  text-decoration: none !important;
+  color: #ffff !important;
+  max-width: 160px !important;
+  /* Limit the maximum width */
+  width: auto !important;
+  overflow: hidden !important;
+}
+
+@media (max-width: 768px) {
+  .md-source {
+    background-color: initial !important;
+    border: none !important;
+    border-radius: 0 !important;
+    padding: initial !important;
+    box-shadow: none !important;
+    margin: initial !important;
+    max-width: initial !important;
+    width: initial !important;
+    overflow: initial !important;
+  }
+}
+
+/* --------------------------------------------------------------------------------------------------------------*/
+
+.no-toc h2,
+.no-toc h3,
+.no-toc h4 {
+  display: block;
+}
+
+.no-toc .md-nav__link {
+  display: none;
+}
+
+/* -----------------------------------------make the title (ohmygird) of page bigger in the topbar---------------------------------------------------------------------*/
+.md-header-nav__title .md-ellipsis,
+.md-header__title .md-ellipsis {
+  font-size: 1.4rem !important;      /* your larger size */
+}
+
+@media (max-width: 1220px) {
+  .md-header-nav__title .md-ellipsis,
+  .md-header__title .md-ellipsis {
+    font-size: 1rem !important;      /* smaller than laptop */
+    margin-left: 0.75rem !important;
+  }  
+}
+/* ---------------------------------make the title (ohmygird) of page stay and not change when scrolling-------------------------------------------------------*/
+/* Disable the header title animation completely */
+.md-header__title[data-md-component="header-title"] {
+  pointer-events: none;
+  margin-left: -0.6rem !important;
+}
+
+@media (max-width: 768px) {
+  .md-header__title[data-md-component="header-title"] {
+    margin-left: 0 !important;
+  }
+}
+
+/* Keep only the first topic (site name) visible */
+.md-header__title .md-header__topic:first-child {
+  transform: translateY(0) !important;
+  opacity: 1 !important;
+}
+
+/* Hide the second topic (navpage title) */
+.md-header__title .md-header__topic:last-child {
+  transform: translateY(2.5rem) !important;
+  opacity: 0 !important;
+}
