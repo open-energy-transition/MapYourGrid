@@ -50,6 +50,8 @@ JOSM is a more advanced desktop OpenStreetMap editor which is more suitable for 
 <div style="float: right; margin: 5px 0 20px 20px; width: 350px;">
   <img src="../images/starter-kit/kenya-tanzania.jpg" class="img-border" style="width: 100%;"> </a>
   <figcaption class="image-caption">This is what your JOSM should look like after setting up the Starter-Kit. Click to enlarge.</figcaption>
+  <img src="../images/preferences.jpg" class="img-border" style="width: 100%;"> </a>
+  <figcaption class="image-caption">Different preferences that need to be configured, including the Power Presets. Click to enlarge.</figcaption>
 </div>
 
 1. Install [Java](https://www.java.com/en/download/help/download_options.html) on your device. <br>
@@ -61,6 +63,7 @@ JOSM is a more advanced desktop OpenStreetMap editor which is more suitable for 
     * You can switch between multiple satellite imagery sources (for instance, Esri, Mapbox) to use the clearest one for your area.
 1. Create an OSM [account](https://www.openstreetmap.org/user/new) if you don't have one. Once you do, go to `Preferences → OSM Server` and press authorise now. Login with your OSM account, and authorise. Your account is now linked to JOSM on your device.
 1. Load your Satellite Imagery via `Imagery` and select `Bing aerial imagery` and `Esri World Imagery`. In the `Layers` window on the right hand side you can now `Show/hide` the different imagery. This is also where you will load additional data layers. Changing the order of the data and imagery allows you to combine and overlap the different data sources.
+
 
 
 ### **<div class="tools-header">3. Setup your Presets </div>**
