@@ -31,7 +31,7 @@ The OpenStreetMap Wiki pages [The Power Network](https://wiki.openstreetmap.org/
 <div style="float: right; margin: 5px 0 20px 20px; width: 350px;">
   
   <img src="../images/openinframap-portugal.jpg" class="img-border" style="width: 100%;"> 
-  <figcaption class="image-caption"><a href="https://openinframap.org/#6.54/39.026/-7.548" target="_blank">Open Infrastructure Map</a> showing the detailed transmission and distribution grid in Portugal.</figcaption>
+  <figcaption class="image-caption"><a href="https://openinframap.org/#6.54/39.026/-7.548" target="_blank">Open Infrastructure Map</a> showing the detailed transmission and distribution grid in Portugal. Click to enlarge.</figcaption>
 </div>
 
 !!! note
@@ -49,7 +49,7 @@ JOSM is a more advanced desktop OpenStreetMap editor which is more suitable for 
 
 <div style="float: right; margin: 5px 0 20px 20px; width: 350px;">
   <img src="../images/starter-kit/kenya-tanzania.jpg" class="img-border" style="width: 100%;"> </a>
-  <figcaption class="image-caption">This is what your JOSM should look like in the end. Click to enlarge.</figcaption>
+  <figcaption class="image-caption">This is what your JOSM should look like after setting up the Starter-Kit. Click to enlarge.</figcaption>
 </div>
 
 1. Install [Java](https://www.java.com/en/download/help/download_options.html) on your device. <br>

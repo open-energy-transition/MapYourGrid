@@ -10,8 +10,40 @@ Using the right tools and strategies is fundamental to mapping the electrical gr
 
 ## <div class="stradegy-header">Pioneer Mapping Strategies and Tools</div></h3>
 
-### <div class="tools-header">Continue Open Lines</div>
+### **<div class="tools-header">todo Plugin :white_check_mark:</div>**
+The todo plugin is used for almost all pioneer mapping strategies, systematically stepping through a dataset of `hints`.
 
+<div style="float: right; margin: 5px 0 20px 20px; width: 350px;">
+  <img src="../images/todo.jpg" class="img-border" style="width: 100%;">
+  <figcaption class="image-caption"> A simple but very efficient way of mapping the network is the continuation of “Unfinished Transmission Lines loaded into the todo plugin”. Click to enlarge.</figcaption>
+</div>
+
+1. Download any hint data layer into JOSM, or select other OpenStreetMap objects that you have filtered with `CTRL+F`.
+1. Download the todo plugin for JSOM. `Edit → Preferences`. Search for todo, mark it and press OK. Press `Windows → Todo list` to show the Todo list window. 
+1. Press CTRL + A  to select all objects in the hint layer. Press the Add in the todo plugin window (`Windows → Todo list`)
+1. Switch back to the OSM data layer.
+1. You can now systematically step through all the hints by pressing Mark.
+
+### <div class="tools-header">Map Fast </div>
+
+
+To map efficiently and quickly, you need to know how to select all the nodes along your new line and convert them into power towers in one go. This will save you loads of time:
+
+1. Press `A` and draw nodes as you follow the towers. This will create a long line of untagged nodes, all connected by a untagged way.
+1. Click on the way, and tag it as a power line.
+1. Click on the way again, and `CTRL+F` to open up search. Then paste as search string: `child selected type:node AND untagged`. This will select all untagged nodes of the way.
+1. Then you can tag all the selected nodes as towers in one go.
+1. Use the preset power tower or poles to set all nodes at once.
+1. If you ever lose this query, click the right arrow on the search window and select it from your history.
+
+
+
+<div style="float: right; margin: 5px 0 20px 20px; width: 350px;">
+  <img src="../images/osmose-unfinished-transmission-lines.jpg" class="img-border" style="width: 100%;">
+  <figcaption class="image-caption"> The Osmose Unfinished power transmission line (Class 2) issue shows all transmission lines that are not connected to a substation. Click to enlarge.</figcaption>
+</div>
+
+### <div class="tools-header">Continue Open Lines</div>
 
 _Continue Open Lines_ is the most efficent and most beginner friendly strategy. It is directly integrated in [Map It📍](https://MapYourGrid.org/map-it/). The strategy mainly depends on [osmose](https://osmose.openstreetmap.fr/en/map/), a quality assurance tool that detects issues in OpenStreetMap data on a daily basis. These include different power classes of issues, such as "unfinished power transmission lines" : 
 
@@ -22,30 +54,12 @@ _Continue Open Lines_ is the most efficent and most beginner friendly strategy. 
 4. You can now step through all issues by pressing `Mark`.
 
 
-<div style="float: right; margin: 5px 0 20px 20px; width: 350px;">
-  <img src="../images/todo.jpg" class="img-border" style="width: 100%;">
-  <figcaption class="image-caption"> A simple but very efficient way of mapping the network is the continuation of “Unfinished Transmission Lines loaded into the todo plugin”:</figcaption>
-</div>
-
-
-### <div class="tools-header">Map Fast </div>
-
-
-If you want to be able to map efficiently and fast, you will need to know how to correctly place towers and power lines. This will save you loads of time:
-
-1. Press `A` and draw nodes as you follow the towers. This will create a long line of untagged nodes, all connected by a untagged way.
-1. Click on the way, and tag it as a power line.
-1. Click on the way again, and `CTRL+F` to open up search. Then paste as search string: `child selected type:node AND untagged`. This will select all untagged nodes of the way.
-1. Then you can tag all the selected nodes as towers in one go.
-1. Use the preset power tower or poles to set all nodes at once.
-1. If you ever lose this query, click the right arrow on the search window and select it from your history.
-
 
 ### <div class="tools-header">Spot the Gaps in the Grid</div>
 
 <div style="float: right; margin: 5px 0 20px 20px; width: 350px;">
       <img src="../images/finding-gaps.jpg" class="img-border" alt="Equator ">
-      <figcaption class="image-caption">Outdated satellite data results in larger gaps in the grid across many regions of Ecuador. These gaps can be spotted by lines that end abruptly rather than in a round circle, indicating a substation..</figcaption>
+      <figcaption class="image-caption">Outdated satellite data results in larger gaps in the grid across many regions of Ecuador. These gaps can be spotted by lines that end abruptly rather than in a round circle, indicating a substation. Click to enlarge.</figcaption>
 </div>
 
 _Spot the gaps in the grid_ is a rather simple strategy but highly efficent. By using a bolt map coloring that highlights gaps in the grid and unconnected substation, is it easy to spot where are gaps in the grid. Unlike the 'Continue Open Lines' strategy, this approach is more flexible and relies on human judgement to address obvious topological issues in the grid. This allows us to prioritise lines extending or connecting new regions of the grid — lines with topological relevance, in other words. 
@@ -58,26 +72,12 @@ As most transmission lines end at substations, the map painting technique allows
 3. In the ColorMyGrid repo you will also find the raw data to edit the [map legend](https://raw.githubusercontent.com/open-energy-transition/color-my-grid/refs/heads/main/legend/power-grid-legend.png).
 
 
-## <div class="tools-header">Unfinished lines with Osmose and the todo Plugin :white_check_mark:</div>
-
-<div style="float: right; margin: 5px 0 20px 20px; width: 350px;">
-  <img src="../images/todo.jpg" class="img-border" style="width: 100%;">
-  <figcaption class="image-caption"> A simple but very efficient way of mapping the network is the continuation of “Unfinished Transmission Lines loaded into the todo plugin”:</figcaption>
-</div>
-
-1. Download the [Unfinished Power Transmission lines (Class 2) via Osmose](https://ohmygrid.org/map-it/) for your country.
-1. Drag and drop the downloaded geojson file into JSOM.
-1. Download the todo plugin for JSOM. `Edit → Preferences`. Search for todo, mark it and press OK. Press `Windows → todo list` to show the Todo list window. 
-1. Press `CTRL + A`  to select all issues in the new layer. Press the Add in the todo plugin window (`Windows → Todo list`)
-1. Switch back to the OSM data layer.
-1. You can now systematically step through all the issues by pressing Mark.  
-
 ### <div class="tools-header">Connect Power Plants </div></h3>
 As most large power plants are directly connected to the transmission grid, Connect Power Plants provides an easy strategy using the comprehensive power plants dataset from Global Energy Monitor. A simple user interface for retrieving this data at a national level is integrated into [Map It📍](https://MapYourGrid.org/map-it/), enabling users to preview and download GeoJSON data:
 
 <div style="float: right; margin: 5px 0 20px 20px; width: 350px;">
     <img src="../images/connect-power-plants.jpg" class="img-border" alt="GEM Angola Data Example in JOSM">
-  <figcaption class="image-caption">A power plant in Colombia is located close to a large substation.</figcaption>
+  <figcaption class="image-caption">A power plant in Colombia is located close to a large substation. Click to enlarge.</figcaption>
 </div>
 
 1. Select 'Global Energy Monitor – Power Plants' as the hint layer and press the country you like to map.
@@ -92,7 +92,7 @@ As most large power plants are directly connected to the transmission grid, Conn
 
 <div style="float: right; margin: 5px 0 20px 20px; width: 350px;">
   <img src="../images/substation_malawi.jpg" class="img-border" alt="Substation in Malawi with unmapped interconnector in the left corner">
-  <figcaption class="image-caption">A substation in Malawi with an unmapped interconnector with the first tower in image center.</figcaption>
+  <figcaption class="image-caption">A substation in Malawi with an unmapped interconnector with the first tower in image center. Click to enlarge.</figcaption>
 </div>
 
 A simple yet efficient strategy for mapping the transmission grid is to check every substation for new lines branching out from it. 
