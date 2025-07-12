@@ -16,7 +16,7 @@ body_class: landing-page
       Learn Grid Mapping ⚡
      </a>
       <a href="/map-it/" target="_blank" rel="noopener" class="btn btn-secondary">
-        Map Your Grid 📍
+        Map It📍
       </a>
     </div>
   </div>
