@@ -29,6 +29,7 @@ Please consider the following strategies and the associated processes as recomme
 ## <div class="stradegy-header">Pioneer Mapping Strategies and Tools</div></h3>
 
 <div class="tools-buttons-small">
+  <a href="#osmose" class="btn btn-primary">Osmose</a> 
   <a href="#todo-plugin" class="btn btn-primary">Todo Plugin</a> 
   <a href="#map-fast" class="btn btn-secondary">Map Fast</a>
   <a href="#copy-coordinates-from-and-into-josm" class="btn btn-secondary">Coordinates and JOSM</a>
@@ -39,6 +40,20 @@ Please consider the following strategies and the associated processes as recomme
   <a href="#connect-industrial-areas" class="btn btn-secondary">Connect Industrial Areas </a>
   <a href="#connect-wikidata" class="btn btn-secondary">Connect WikiData</a>
 </div>
+
+### **<div class="tools-header">Osmose</div>**
+Osmose is a quality assurance tool that detects issues in OpenStreetMap data on a daily basis. It is the main tool we use to find and fix power infrastructure, and many strategies explained below utilise it. You can either use our integrated Osmose tool on MAP IT📍, but you can also use the official Osmose [website](https://osmose.openstreetmap.fr/en/map/).
+
+<div style="float: right; margin: 3px 0 10px 20px; width: 350px;">
+  <img src="../images/tools/osmose-tool.jpg" class="img-border" style="width: 100%;">
+  <figcaption class="image-caption"> Use the Osmose tool we have on the MAP IT📍page. Click to enlarge.</figcaption>
+</div>
+
+1. Go to the [MAP IT📍](https://mapyourgrid.org/map-it/)page.
+1. Press on the Osmose hint layer button.
+1. Choose one of the Osmose issues, and press on a country. This will fetch up to 5000 Osmose issues for that country and issue type.
+
+If you want to get Osmose issues for a specific region/province, we recommend using the Osmose website as you can get power-related issues by choosing the power topic for your area of interest and then `Export → JOSM`. In the future we will be integrating regions into MAP IT📍.
 
 ### **<div class="tools-header">Todo Plugin :white_check_mark:</div>**
 The Todo plugin is used for almost all pioneer mapping strategies, systematically stepping through a dataset of `hints`.
@@ -209,7 +224,7 @@ WikiData provides access to Wikipedia articles about power infrastructure around
 <div class="tool-buttons">
   <a href="#Official-Data-and-Maps" class="btn btn-primary">Official Data and Maps</a> 
   <a href="#fixme-tags" class="btn btn-secondary">FixMe Tags</a>
-  <a href="#open-infrastructure-map-nighttime-and-osmose" class="btn btn-secondary">Open Infrastructure Map </a>
+  <a href="#open-infrastructure-map-nighttime-osmose-and-josm" class="btn btn-secondary">Open Infrastructure Map </a>
   <a href="#online-investigation" class="btn btn-secondary">Online Investigation</a>
   <a href="#josm-powernetworktools-plugin" class="btn btn-secondary">PowerNetworkTools Plugin</a>
   <a href="#validating-and-mapping-interconnectors" class="btn btn-secondary">Interconnectors</a>
@@ -248,7 +263,7 @@ OpenStreetMap allows mappers to quickly mark an object that seems to be wrong an
 3. In the Todo list window press `Add`.
 4. Once you have fixed an issue, please remove the `fixme` tag..
 
-### <div class="tools-header">Open Infrastructure Map - Nighttime and Osmose </div></h3>
+### <div class="tools-header">Open Infrastructure Map - Nighttime, Osmose and JOSM </div></h3>
 <div style="float: right; margin: 5px 0 20px 20px; width: 350px;">
     <img src="../images/openinfraosmose.jpg" class="img-border" alt="Open Infrastructure Map - Osmose">
     <figcaption class="image-caption">Open Infrastructure Map also includes the osmose issues in the grid as another layer.</figcaption>
@@ -257,6 +272,7 @@ OpenStreetMap allows mappers to quickly mark an object that seems to be wrong an
 1. Open Infrastructure Map can be used as a tool to map and find issues by utilising the nighttime lights feature.
 2. Go to the <a href="https://openinframap.org/#2/26/12">website</a> and set the background to nighttime lights. This can help see clear "holes" in a country's grid.
 3. In layers, activate the power validation feature. If you zoom in and find an unfinished power line, you can see the osmose issue affiliated to this line.
+4. If you want to edit what you found, Open Infrastructure Map allows editing via JOSM once zoomed-in enough. On the bottom right of the page, you can press on `Edit` and `Remote Editing` (remember to enable remote in JOSM). 
 
 ### <div class="tools-header">Online Investigation :mag:</div>
 

@@ -652,6 +652,11 @@ aside.md-banner a>div {
   overflow: hidden !important;
 }
 
+/* removes the releases icon top right*/
+.md-source__fact--version {
+  display: none !important;
+}
+
 @media (max-width: 768px) {
   .md-source {
     background-color: initial !important;

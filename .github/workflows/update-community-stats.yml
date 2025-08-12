@@ -3,7 +3,7 @@ name: 📈 Update Community Stats
 on:
   workflow_dispatch: {} # Allows manual triggering
   schedule:
-    - cron: '0 4 * * 5' # Runs every Friday (number 5) at 4 UTC
+    - cron: '0 4 * * 1' # Runs every Monday (number 1) at 4 UTC
 
 permissions:
   contents: write
