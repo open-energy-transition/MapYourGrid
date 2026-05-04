@@ -60,6 +60,7 @@ theme:
 
 extra_css:
     - stylesheets/extra.css
+    - stylesheets/mapit.css
     - stylesheets/landing.css
     - stylesheets/blog.css
     - stylesheets/awesome_list.css
