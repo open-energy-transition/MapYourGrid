@@ -295,28 +295,14 @@ Our work improves access to high-quality data on power generation and transmissi
 
     try {
       const startDate = '2025-03-12T22:00:00Z';
-      const endDate   = new Date().toISOString();
       const hashtags = ['mapyourgrid', 'ohmygrid'];
-      const url       = `https://stats.now.ohsome.org/api/stats/MapYourGrid?startdate=${startDate}&enddate=${endDate}`;
-      const urls = hashtags.map(tag => `https://stats.now.ohsome.org/api/stats/${tag}?startdate=${startDate}&enddate=${endDate}`);
-
-      const responses = await Promise.all(urls.map(url => fetch(url)));
-      for (const resp of responses) {
-        if (!resp.ok) throw new Error(`HTTP error! status: ${resp.status}`);
-      }
-
-      const dataArray = await Promise.all(responses.map(resp => resp.json()));
-
-      // Aggregate the results (sum of users and edits)
-      const totalEdits = dataArray.reduce((acc, data) => {
-      acc += data.result.edits ?? 0;
-      return acc;
-      }, 0);
-
+      const url = `https://stats.now.ohsome.org/api/stats/hashtags/${hashtags.join(',')}?startdate=${startDate}`;
+      const resp = await fetch(url);
+      if (!resp.ok) throw new Error(`HTTP error! status: ${resp.status}`);
+      const data = await resp.json();
       const OHMYGRID_LEGACY_USERS = 3; //Hazem, Jbcharron, nolan, (cidomo but he also used the new one)
-      const mapyourgridData = dataArray[0]; // mapyourgrid is first in the array
-      const users = (mapyourgridData.result.users ?? 0) + OHMYGRID_LEGACY_USERS;
-      const edits = totalEdits;
+      const users = (data.result.mapyourgrid.users || 0) + OHMYGRID_LEGACY_USERS;
+      const edits = (data.result.mapyourgrid.edits || 0) + (data.result.ohmygrid.edits || 0);
 
       // write DOM
       contribCountEl.textContent = users.toLocaleString();

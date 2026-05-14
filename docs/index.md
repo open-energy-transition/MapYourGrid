@@ -277,21 +277,15 @@ document.addEventListener('DOMContentLoaded', () => {
     try {
       const startDate = '2025-03-12T22:00:00Z';
       const hashtags = ['mapyourgrid'];
-      const urls = hashtags.map(tag => `https://stats.now.ohsome.org/api/stats/${tag}?startdate=${startDate}`);
-      
-      const responses = await Promise.all(urls.map(url => fetch(url)));
-      const dataArray = await Promise.all(responses.map(resp => {
-        if (!resp.ok) throw new Error(`HTTP error! status: ${resp.status}`);
-        return resp.json();
-      }));
+      const url = `https://stats.now.ohsome.org/api/stats/hashtags/${hashtags}?startdate=${startDate}`;
+      const resp = await fetch(url);
+      if (!resp.ok) throw new Error(`HTTP error! status: ${resp.status}`);
+      const data = await resp.json();
 
       const OHMYGRID_LEGACY_USERS = 3; //Hazem, Jbcharron, nolan, (cidomo but he also used the new one)
-      const total = dataArray.reduce((acc, data) => {
-        acc.users += (data.result.users || 0) + OHMYGRID_LEGACY_USERS;
-        return acc;
-      }, { users: 0 });
+      const users = (data.result.mapyourgrid.users || 0) + OHMYGRID_LEGACY_USERS;
 
-      contribEl.textContent = total.users.toLocaleString('en-US');
+      contribEl.textContent = users.toLocaleString('en-US');
     } catch (err) {
       console.error('Failed to fetch Ohsome data', err);
       contribEl.textContent = 'Error';
