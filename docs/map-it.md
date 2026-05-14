@@ -295,7 +295,8 @@ const map = L.map("map", {
   maxZoom:              18,
   maxBounds:            [[-80, -230], [85, 195]],
   maxBoundsViscosity:   1.0,
-  worldCopyJump:        false
+  worldCopyJump:        false,
+  zoomControl: false // this disables the zoom buttons on the left side
 }).setView([20, 0], 2);
 
 // Tile layer chosen here, and zoom
@@ -304,6 +305,9 @@ L.tileLayer("https://server.arcgisonline.com/ArcGIS/rest/services/World_Shaded_R
   maxZoom: 19,
   noWrap:  true // noWrap: true stops the tile layer from repeating tiles outside [-180, 180].
 }).addTo(map);
+
+// Zoom buttons top right
+L.control.zoom({ position: "topright" }).addTo(map);
 
 // Fullscreen button 
 L.Control.Fullscreen = L.Control.extend({
