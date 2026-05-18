@@ -28,7 +28,7 @@ hide:
       </div>
       <!-- Overpass query buttons -->
       <div class="mi-section" id="section-overpass">
-        <div class="mi-section-header static">Overpass Query</div>
+        <div class="mi-section-header static">Load Layer</div>
         <div class="mi-section-body" id="overpass-buttons"></div>
       </div>
       <!-- iD URL box when link appears -->
@@ -94,14 +94,14 @@ hide:
           <span class="mi-chevron">&#9660;</span>
         </button>
         <div class="mi-section-body">
-          <p class="mi-body-text">Lines we found that need mapping!</p>
+          <p class="mi-body-text">Lines we found that need mapping! (🔶 countries)</p>
           <a href="/good-first-lines/" class="mi-link-btn">View Good First Lines &#8594;</a>
         </div>
       </div>
       <!-- Map Legend -->
       <div class="mi-section">
         <button class="mi-icon-btn" onclick="openOverlay('legend')">
-          <span class="mi-btn-label">&#128506;&#160; Map Legend</span>
+          <span class="mi-btn-label">&#128506;&#160; JOSM MapCSS Legend</span>
         </button>
       </div>
       <!-- JOSM Hotkeys -->
@@ -150,7 +150,7 @@ hide:
   <!-- MAP -->
   <div id="map"></div>
 
-  <!-- Introduction info card -->
+  <!-- Introduction/how to use info card -->
   <div id="info-card">
     <div id="info-card-header">
       <span id="info-title">Introduction</span>
@@ -242,11 +242,11 @@ const GFL_NAME_NORMALISE = {
 const INFO_SLIDES = [
   {
     title: "Introduction",
-    content: "<p>Welcome to our interactive launchpad for contributing to power grid mapping via <strong>OpenStreetMap</strong>!</p><p>On your laptop, click on a country or zoom in and click a region to load infrastructure data into <strong>JOSM</strong> or <strong>iD</strong>.</p><p>New to grid mapping? Start with the <a href='/starter-kit/' target='_blank'>Starter Kit</a>. Please use the <strong>#MapYourGrid</strong> hashtag in your changesets!</p>"
+    content: "<p>Welcome to our interactive launchpad for contributing to power grid mapping via <strong>OpenStreetMap</strong>!</p><p>On your laptop, click on a country, or zoom in and click a region to load infrastructure data into <strong>JOSM</strong> or <strong>iD</strong>.</p><p>New to grid mapping? Start with the <a href='/starter-kit/' target='_blank'>Starter Kit</a>. Please use the <strong>#MapYourGrid</strong> hashtag in your changesets!</p>"
   },
   {
     title: "How to Load Data",
-    content: "<ol><li>Select your editor (JOSM or iD) in the sidebar.</li><li>Open <a href='https://josm.openstreetmap.de/' target='_blank'>JOSM</a> and enable <em>Remote Control</em> in Preferences.</li><li>Choose an <strong>Overpass Query</strong> type.</li><li>Click a country — or zoom in and click a region.</li><li>Use <strong>Tools &amp; Hints</strong> for extra data layers.</li></ol>"
+    content: "<ol><li>Select your editor (JOSM or iD) in the sidebar.</li><li>If JOSM, open <a href='https://josm.openstreetmap.de/' target='_blank'>JOSM</a> and enable <em>Remote Control</em> in Preferences. Make sure your ad-blocker is off.</li><li>If iD, choose a hint layer, and press on a country/region.</li><li>Choose an <strong>Overpass Query</strong> type (in Load Layer).</li><li>Click a country — or zoom in and click a region.</li><li>Use <strong>Tools &amp; Hints</strong> for extra data layers.</li><li>Countries in orange already have a good first line you can map, so check these out!</li></ol>"
   }
 ];
 
