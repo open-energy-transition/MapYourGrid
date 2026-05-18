@@ -11,13 +11,13 @@
 :root {
   --mi-sidebar-width:   300px;
   --mi-sidebar-border:  rgba(255, 255, 255, 0.06);
-  --mi-sidebar-bg:      #0f1923;
-  --mi-text:            #e2eaf0;
-  --mi-text-muted:      #607080;
-  --mi-active:          #38bdf8;
-  --mi-active-hover:    #0ea5e9;
-  --mi-active-light:    rgba(56, 189, 248, 0.15);
-  --mi-section-divider: rgba(255, 255, 255, 0.05);
+  --mi-sidebar-bg:      #111827;
+  --mi-text:            #d4ead8;
+  --mi-text-muted:      #fbfbfb;
+  --mi-active:          #036d7a;
+  --mi-active-hover:    #16a34a;
+  --mi-active-light:    rgba(34, 197, 94, 0.16);
+  --mi-section-divider: rgba(255, 255, 255, 0.06);
   --mi-radius:          6px;
   --mi-radius-sm:       4px;
   --mi-transition:      200ms ease;
@@ -44,6 +44,20 @@ body:has(#mapit-root) .md-content__inner {
   max-width: none !important;
   height: 100%;
 }
+
+/* Changes the announce banner colour at the top of the website*/
+body:has(#mapit-root) aside.md-banner {
+  background-color: #111827 !important;
+  color: #ffffff !important;
+}
+
+/* Removes white space on mobile between map and header*/
+body:has(#mapit-root) .md-typeset h1,
+body:has(#mapit-root) .md-content__inner > h1 {
+  display: none !important;
+}
+
+
 
 /*
   ── Optional: hide the MkDocs header for a truly full-screen map ────────
@@ -363,6 +377,7 @@ button.mi-section-header.toggle:hover { background: rgba(255, 255, 255, 0.04); }
   border-radius: var(--mi-radius);
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
   overflow: hidden;
+  border-left: 3px solid var(--mi-active);
 }
 
 #info-card-header {
@@ -410,6 +425,7 @@ button.mi-section-header.toggle:hover { background: rgba(255, 255, 255, 0.04); }
   line-height: 1.5;
   max-height: 200px;
   overflow-y: auto;
+  text-align: left;
 }
 #info-card-body ol, #info-card-body ul { padding-left: 1.2em; margin: 4px 0; }
 #info-card-body li  { margin-bottom: 4px; }
@@ -428,7 +444,7 @@ button.mi-section-header.toggle:hover { background: rgba(255, 255, 255, 0.04); }
   left: var(--mi-sidebar-width);
   right: 0;
   z-index: 700;
-  background: #fff;
+  background: #1b2a1e;;
   border-top: 3px solid var(--mi-active);
   border-radius: 10px 10px 0 0;
   box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.2);
@@ -449,7 +465,7 @@ button.mi-section-header.toggle:hover { background: rgba(255, 255, 255, 0.04); }
 #country-panel-flag-name { display: flex; align-items: center; gap: 10px; }
 
 #country-flag  { width: 28px; height: 21px; border-radius: 3px; object-fit: cover; }
-#country-name  { font-weight: 700; font-size: 1rem; color: #222; }
+#country-name  { font-weight: 700; font-size: 1rem; color: #f1eded; }
 
 #country-panel-close {
   background: none;
@@ -467,7 +483,7 @@ button.mi-section-header.toggle:hover { background: rgba(255, 255, 255, 0.04); }
 #country-panel-body {
   padding: 10px 16px 14px;
   font-size: 0.84rem;
-  color: #444;
+  color: #ffefef;
   line-height: 1.55;
   overflow-y: auto;
   max-height: 150px;
@@ -627,7 +643,7 @@ button.mi-section-header.toggle:hover { background: rgba(255, 255, 255, 0.04); }
   #info-card {
     left: 8px;
     width: calc(100vw - 16px);
-    bottom: 12px;
+    bottom: 42px;
   }
 
   #country-panel { left: 0; }
