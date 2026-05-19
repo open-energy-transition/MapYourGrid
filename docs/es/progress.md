@@ -293,60 +293,46 @@ Nuestro trabajo mejora el acceso a datos de calidad sobre las infraestructuras d
 
  // —— UPDATE Ohsome (#MapYourGrid) ——
  async function updateOhsome() {
- const contribCountEl = document.getElementById('contributors-count');
- const editsCountEl = document.getElementById('edits-count');
- const contribBar = document.getElementById('contributors-bar');
- const editsBar = document.getElementById('edits-bar');
+  const contribCountEl = document.getElementById('contributors-count');
+  const editsCountEl = document.getElementById('edits-count');
+  const contribBar = document.getElementById('contributors-bar');
+  const editsBar = document.getElementById('edits-bar');
 
- // set loading
- contribCountEl.textContent = 'Loading…';
- editsCountEl.textContent = 'Loading…';
- contribBar.style.width = '0%';
- editsBar.style.width = '0%';
+  // set loading
+  contribCountEl.textContent = 'Loading…';
+  editsCountEl.textContent = 'Loading…';
+  contribBar.style.width = '0%';
+  editsBar.style.width = '0%';
 
- try {
- const startDate = '2025-03-12T22:00:00Z';
- const endDate = new Date().toISOString();
- const hashtags = ['mapyourgrid', 'ohmygrid'];
- const url = `https://stats.now.ohsome.org/api/stats/MapYourGrid?startdate=${startDate}&enddate=${endDate}`;
- const urls = hashtags.map(tag => `https://stats.now.ohsome.org/api/stats/${tag}?startdate=${startDate}&enddate=${endDate}`);
+    try {
+          const startDate = '2025-03-12T22:00:00Z';
+          const hashtags = ['mapyourgrid', 'ohmygrid'];
+          const url = `https://stats.now.ohsome.org/api/stats/hashtags/${hashtags.join(',')}?startdate=${startDate}`;
+          const resp = await fetch(url);
+          if (!resp.ok) throw new Error(`HTTP error! status: ${resp.status}`);
+          const data = await resp.json();
+          const OHMYGRID_LEGACY_USERS = 3; //Hazem, Jbcharron, nolan, (cidomo but he also used the new one)
+          const users = (data.result.mapyourgrid.users || 0) + OHMYGRID_LEGACY_USERS;
+          const edits = (data.result.mapyourgrid.edits || 0) + (data.result.ohmygrid.edits || 0);
 
- const responses = await Promise.all(urls.map(url => fetch(url)));
- for (const resp of responses) {
- if (!resp.ok) throw new Error(`HTTP error! status: ${resp.status}`);
- }
+          // write DOM
+          contribCountEl.textContent = users.toLocaleString();
+          editsCountEl.textContent   = edits.toLocaleString('en-US');
 
- const dataArray = await Promise.all(responses.map(resp => resp.json()));
+          contribBar.style.width = Math.min(100, users / CONTRIBUTORS_GOAL * 100) + '%';
+          editsBar.style.width   = Math.min(100, edits / EDITS_GOAL        * 100) + '%';
 
- // Aggregate the results (sum of users and edits)
- const totalEdits = dataArray.reduce((acc, data) => {
- acc += data.result.edits ?? 0;
- return acc;
- }, 0);
-
- const OHMYGRID_LEGACY_USERS = 3; //Hazem, Jbcharron, nolan, (cidomo but he also used the new one)
- const mapyourgridData = dataArray[0]; // mapyourgrid is first in the array
- const users = (mapyourgridData.result.users ?? 0) + OHMYGRID_LEGACY_USERS;
- const edits = totalEdits;
-
- // write DOM
- contribCountEl.textContent = users.toLocaleString();
- editsCountEl.textContent = edits.toLocaleString('en-US');
-
- contribBar.style.width = Math.min(100, users / CONTRIBUTORS_GOAL * 100) + '%';
- editsBar.style.width = Math.min(100, edits / EDITS_GOAL * 100) + '%';
-
- // cache
- localStorage.setItem('Combined-ohsome', JSON.stringify({
- users,
- edits,
- ts: Date.now()
- }));
- } catch (err) {
- console.error('Ohsome error', err);
- contribCountEl.textContent = 'Error';
- editsCountEl.textContent = 'Error';
- }
+          // cache
+          localStorage.setItem('Combined-ohsome', JSON.stringify({
+            users,
+            edits,
+            ts: Date.now()
+          }));
+        } catch (err) {
+          console.error('Ohsome error', err);
+          contribCountEl.textContent = 'Error';
+          editsCountEl.textContent = 'Error';
+        }
  }
 
  async function loadTowerCount() {
@@ -359,7 +345,7 @@ Nuestro trabajo mejora el acceso a datos de calidad sobre las infraestructuras d
  towerUpdatedEl.textContent = 'Last updated: —';
 
  try {
- const towerdataUrl = 'https://corsproxy.io/?' + encodeURIComponent('https://github.com/open-energy-transition/MapYourGrid/releases/download/latest-stats/line-length.json');
+ const towerdataUrl = '/data/line-length.json';
  const resp = await fetch(towerdataUrl);
  if (!resp.ok) throw new Error(resp.statusText);
  const { towerCount: count, updated } = await resp.json();
@@ -385,7 +371,7 @@ async function loadLineLength() {
  updatedEl.textContent = 'Last updated: —';
 
  try {
- const lineDataUrl = 'https://corsproxy.io/?' + encodeURIComponent('https://github.com/open-energy-transition/MapYourGrid/releases/download/latest-stats/line-length.json');
+ const lineDataUrl = '/data/line-length.json';
  const resp = await fetch(lineDataUrl);
  const data = await resp.json();
  const { lengthKm, mediumHighVoltageKm, percentageOfMediumHigh, updated } = data;
@@ -427,7 +413,7 @@ async function loadCommunityStats() {
  communityLineLengthUpdatedEl.textContent = 'Last updated: —';
 
  try {
- const communityDataUrl = 'https://corsproxy.io/?' + encodeURIComponent('https://github.com/open-energy-transition/MapYourGrid/releases/download/latest-stats/community-stats.json');
+ const communityDataUrl = '/data/community-stats.json';
  const resp = await fetch(communityDataUrl);
  if (!resp.ok) throw new Error(resp.statusText);
  const data = await resp.json();
@@ -475,7 +461,7 @@ async function loadPlantCapacity() {
  capacityUpdatedEl.textContent = 'Last updated: —';
 
  try {
- const powerDataUrl = 'https://corsproxy.io/?' + encodeURIComponent('https://github.com/open-energy-transition/MapYourGrid/releases/download/latest-stats/power-stats.json');
+ const powerDataUrl = '/data/power-stats.json';
  const resp = await fetch(powerDataUrl);
  if (!resp.ok) throw new Error(resp.statusText);
  const { total_capacity_mw, updated } = await resp.json();
@@ -500,7 +486,7 @@ async function loadSubstationCount() {
  substationUpdatedEl.textContent = 'Last updated: —';
 
  try {
- const powerDataUrl = 'https://corsproxy.io/?' + encodeURIComponent('https://github.com/open-energy-transition/MapYourGrid/releases/download/latest-stats/power-stats.json');
+ const powerDataUrl = '/data/power-stats.json';
  const resp = await fetch(powerDataUrl);
  if (!resp.ok) throw new Error(resp.statusText);
  const { substation_count, updated } = await resp.json();
@@ -607,7 +593,7 @@ You can find more stats for #MapYourGrid at [OhsomeNowstats](https://stats.now.o
  const lastUpdatedElement = document.getElementById('last-updated');
  
  // The URL to fetch the JSON data from the release
- const dataUrl = 'https://corsproxy.io/?' + encodeURIComponent('https://github.com/open-energy-transition/MapYourGrid/releases/download/latest-stats/community-stats.json');
+ const dataUrl = '/data/community-stats.json';
  
  async function fetchAndDisplayLeaderboard() {
  try {

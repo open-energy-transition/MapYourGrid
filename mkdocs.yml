@@ -139,7 +139,7 @@ plugins:
             "STRATEGIES": "ESTRATEGIAS"
             "PROGRESS": "PROGRESO"
             "FAQ": "FAQ"
-            "ABOUT US": "SOBRE NOSOTROS"
+            "ABOUT US": "EQUIPO"
         - locale: fr
           name: Français
           build: true

@@ -1,5 +1,5 @@
 <div class="page-headers">
-<h1>Sobre nosotros </h1>
+<h1>Equipo y blog </h1>
 </div>
 
 MapYourGrid reúne a un equipo multidisciplinar con una gobernanza transparente, al servicio de los datos abiertos y de la transición energética. A continuación, encontrará nuestros documentos de gobernanza, nuestro equipo, así como nuestros artículos de blog y noticias.
