@@ -315,7 +315,7 @@ L.Control.Fullscreen = L.Control.extend({
     const btn = L.DomUtil.create("button", "leaflet-bar leaflet-control");
     btn.innerHTML = "&#x26F6;";
     btn.title = "Toggle fullscreen";
-    btn.style.cssText = "width:30px;height:30px;cursor:pointer;font-size:14px;line-height:28px;background:white;border:none;";
+    btn.style.cssText = "width:30px;height:30px;cursor:pointer;font-size:14px;line-height:28px;background:white;color:#333;border:none;";
     L.DomEvent.disableClickPropagation(btn);
     L.DomEvent.on(btn, "click", () =>
       document.fullscreenElement ? document.exitFullscreen() : map.getContainer().requestFullscreen()
