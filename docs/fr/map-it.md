@@ -241,7 +241,7 @@ const GFL_NAME_NORMALISE = {
 // Text content for the bottom-left introduction info card carousel.
 const INFO_SLIDES = [
   {
-    title: "Introducción",
+    title: "Introduction",
     content: "<p>Bienvenue sur notre plateforme interactive permettant de cartographier le réseau électrique via <strong>OpenStreetMap</strong>!</p><p>Sur ton ordinateur, clique sur un pays ou agrandis la carte et clique sur une région pour charger les données du réseau dans <strong>JOSM</strong> ou <strong>iD</strong>.</p><p>Vous débutez dans la cartographie du réseau électrique? Commencez avec les <a href='/starter-kit/' target='_blank'>Tutos</a>. Utilise notre hashtag <strong>#MapYourGrid</strong>!</p>"
   },
   {
@@ -967,12 +967,12 @@ function buildSuccessHtml() {
     return "<div class='popup-success'><p>&#127881; <strong>Great!</strong> Copy the URL in the sidebar. In iD Editor, click \"Map Data\" → three dots → \"Custom map data\" and paste.</p></div>";
   }
   return `<div class="popup-success">
-    <p>Entra en <a href="https://josm.openstreetmap.de/" target="_blank">JOSM</a> — ciertos países pueden tardar más de 60 segundos.</p>
+    <p>Ouvre <a href="https://josm.openstreetmap.de/" target="_blank">JOSM</a> — certains pays prennent plus de 60 secondes à charger.</p>
     <ol>
-      <li>El servidor Overpass puede estar ocupado — intenta otra vez.</li>
-      <li>Asegúrate que Control Remoto esté activado en JOSM Preferencias.</li>
-      <li>Ciertas capas de herraminetas solo funcionan al nivel nacional.</li>
-      <li>Miré <a href="/starter-kit/">Tutoriales</a> para más ayuda.</li>
+      <li>Le serveur Overpass peut être occupé — essaie encore une/deux fois.</li>
+      <li>Assure toi que le Controle à Distance est activé dans JOSM Preferences.</li>
+      <li>Certaines couches d'outils ne marchent qu'au niveau national.</li>
+      <li>Regarder <a href="/starter-kit/">Tutos</a> pour plus d'aide.</li>
     </ol>
   </div>`;
 }
