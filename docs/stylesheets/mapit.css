@@ -383,7 +383,10 @@ button.mi-section-header.toggle:hover { background: rgba(255, 255, 255, 0.04); }
   bottom: 28px;
   left: calc(var(--mi-sidebar-width) + 16px);
   z-index: 600;
-  width: 300px;
+  width: 450px;
+  min-width: 300px;
+  max-width: 500px;
+  resize: horizontal;
   background: var(--mi-sidebar-bg);
   border-radius: var(--mi-radius);
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
