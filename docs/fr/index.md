@@ -197,6 +197,11 @@ title: MapYourGrid
   </a>
   </div>
   <div class="partner-item">
+    <a href="https://globalenergymonitor.org/" target="_blank" rel="noopener">
+    <img src="../images/logos/gem-logo-horizontal.svg" alt="Global Energy Monitor Logo" class="partner-logo-smaller"> 
+    </a>
+  </div>
+  <div class="partner-item">
   <a href="https://wiki.openstreetmap.org/wiki/MyOSM" target="_blank" rel="noopener">
   <img src="../images/logos/myosm-logo.png" alt="MyOSM Logo" class="partner-logo-smaller"> 
   </a>
@@ -269,21 +274,15 @@ document.addEventListener('DOMContentLoaded', () => {
  try {
  const startDate = '2025-03-12T22:00:00Z';
  const hashtags = ['mapyourgrid'];
- const urls = hashtags.map(tag => `https://stats.now.ohsome.org/api/stats/${tag}?startdate=${startDate}`);
- 
- const responses = await Promise.all(urls.map(url => fetch(url)));
- const dataArray = await Promise.all(responses.map(resp => {
+ const url = `https://stats.now.ohsome.org/api/stats/hashtags/${hashtags}?startdate=${startDate}`;
+ const resp = await fetch(url);
  if (!resp.ok) throw new Error(`HTTP error! status: ${resp.status}`);
- return resp.json();
- }));
+ const data = await resp.json();
 
  const OHMYGRID_LEGACY_USERS = 3; //Hazem, Jbcharron, nolan, (cidomo but he also used the new one)
- const total = dataArray.reduce((acc, data) => {
- acc.users += (data.result.users || 0) + OHMYGRID_LEGACY_USERS;
- return acc;
- }, { users: 0 });
+ const users = (data.result.mapyourgrid.users || 0) + OHMYGRID_LEGACY_USERS;
 
- contribEl.textContent = total.users.toLocaleString('en-US');
+ contribEl.textContent = users.toLocaleString('en-US');
  } catch (err) {
  console.error('Failed to fetch Ohsome data', err);
  contribEl.textContent = 'Error';
@@ -294,7 +293,7 @@ document.addEventListener('DOMContentLoaded', () => {
  async function fetchLineLengthData() {
  const linesWrapperEl = document.getElementById('stat-lines-wrapper');
  try {
- const linedataUrl = 'https://corsproxy.io/?' + encodeURIComponent('https://github.com/open-energy-transition/MapYourGrid/releases/download/latest-stats/line-length.json');
+ const linedataUrl = '/data/line-length.json';
  const resp = await fetch(linedataUrl);
  if (!resp.ok) throw new Error(resp.statusText);
  const data = await resp.json();
@@ -318,7 +317,7 @@ document.addEventListener('DOMContentLoaded', () => {
  async function fetchTowerData() {
  const towersEl = document.getElementById('stat-towers');
  try {
- const towerdataUrl = 'https://corsproxy.io/?' + encodeURIComponent('https://github.com/open-energy-transition/MapYourGrid/releases/download/latest-stats/line-length.json');
+ const towerdataUrl = '/data/line-length.json';
  const resp = await fetch(towerdataUrl);
  if (!resp.ok) throw new Error(resp.statusText);
  const { towerCount } = await resp.json();
