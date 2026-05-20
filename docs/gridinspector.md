@@ -5,39 +5,50 @@ hide:
   - footer
 ---
 
+<div id="gridinspector-root">
+  <iframe
+    src="https://mapyourgrid.dynartio.com/gridinspector/"
+    class="iframestyle" allow="fullscreen">
+  </iframe>
+</div>
+
 <style>
-/* Remove default padding/margins from html and body */
-html, body {
-  margin: 0;
-  padding: 0;
-  width: 100%;
+
+body:has(#gridinspector-root) {
+  overflow: hidden;
+}
+
+body:has(#gridinspector-root) .md-main,
+body:has(#gridinspector-root) .md-main__inner,
+body:has(#gridinspector-root) .md-content,
+body:has(#gridinspector-root) .md-content__inner {
+  padding: 0 !important;
+  margin: 0 !important;
+  max-width: none !important;
   height: 100%;
 }
 
-/* Remove padding/margin from main container and inner content */
-.md-main, .md-main__inner, .md-content {
-  margin: 0 !important;
-  padding: 0 !important;
-  width: 120% !important;
-  max-width: none !important;
+body:has(#gridinspector-root) .md-typeset h1, 
+body:has(#gridinspector-root) .md-content__inner > h1 {
+  display: none !important;
 }
 
-/* Hide headings and buttons inside the page */
-.md-typeset h1, .md-content__button {
-  display: none !important;
+#gridinspector-root {
+  position: fixed;
+  top: 5.8rem;      
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow: hidden;
 }
 
 
 /* Make iframe fill the viewport completely */
 .iframestyle {
-  width: 100vw;
-  height: 75vh;
+  width: 100%;
+  height: 100%;
   border: none;
   display: block;
-  margin-top: -2rem;
-  margin-left: -1.3rem;
-  margin-bottom: -1.3rem;
-  padding: 0;
 }
 
 @media (max-width: 1080px){
@@ -46,7 +57,15 @@ html, body {
  }
 }
 </style>
-<iframe
-  src="https://mapyourgrid.dynartio.com/gridinspector/"
-  class="iframestyle" allow="fullscreen">
-</iframe>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const header = document.querySelector(".md-header");
+  const banner = document.querySelector(".md-banner");
+  let topOffset = 0;
+  if (header) topOffset += header.getBoundingClientRect().height;
+  if (banner) topOffset += banner.getBoundingClientRect().height;
+  document.getElementById("gridinspector-root").style.top = topOffset + "px";
+});
+</script>
+
