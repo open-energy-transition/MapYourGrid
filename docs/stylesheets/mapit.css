@@ -279,6 +279,16 @@ button.mi-section-header.toggle:hover { background: rgba(255, 255, 255, 0.04); }
   box-shadow: 0 0 0 1px var(--mi-active), 0 2px 8px rgba(34, 197, 94, 0.25);
 }  
 
+/* slightly different colour button for hints buttons but same as query */
+.mi-tool-btn {
+  background: #162e35;
+}
+.mi-tool-btn:hover {
+  background: #1c3d47;
+}
+.mi-tool-btn.active {
+  background: #1e4a57;
+}
 
 .mi-query-version {
   display: block;

@@ -38,9 +38,9 @@ Cartographie ta premiere ligne! Ces coordonnées pointent vers des lignes electr
   </div>
   
   <div class="form-group">
-    <label for="add-country">Pays (en anglais) *</label>
+    <label for="add-country">Pays  *</label>
     <input type="text" id="add-country" placeholder="" required>
-    <small>Exemple: Spain</small>
+    <small>Exemple: Espagne, Namibie, Spain</small>
   </div>
   
   <div class="form-group">
