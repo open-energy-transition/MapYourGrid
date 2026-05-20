@@ -51,21 +51,19 @@ body:has(#gridinspector-root) .md-content__inner > h1 {
   display: block;
 }
 
-@media (max-width: 1080px){
- .iframestyle {
-   width: 104vw;
- }
-}
 </style>
 
 <script>
-document.addEventListener("DOMContentLoaded", () => {
+function setGridInspectorTop() {
   const header = document.querySelector(".md-header");
   const banner = document.querySelector(".md-banner");
   let topOffset = 0;
   if (header) topOffset += header.getBoundingClientRect().height;
   if (banner) topOffset += banner.getBoundingClientRect().height;
   document.getElementById("gridinspector-root").style.top = topOffset + "px";
-});
+}
+document.addEventListener("DOMContentLoaded", setGridInspectorTop);
+window.addEventListener("resize", setGridInspectorTop);
+window.addEventListener("orientationchange", setGridInspectorTop);
 </script>
 
