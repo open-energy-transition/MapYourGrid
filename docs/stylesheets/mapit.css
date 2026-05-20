@@ -599,7 +599,7 @@ button.mi-section-header.toggle:hover { background: rgba(255, 255, 255, 0.04); }
 .mi-hotkeys-table th,
 .mi-hotkeys-table td               { padding: 6px 10px; text-align: left; border-bottom: 1px solid #f0f0f0; }
 .mi-hotkeys-table th               { background: #f5f5f5; font-weight: 600; font-size: 0.74rem; color: #555; }
-.mi-hotkeys-table code             { background: #e8e8e8; padding: 1px 5px; border-radius: 3px; font-size: 0.79rem; }
+.mi-hotkeys-table code             { background: #e8e8e8; color: #333; padding: 1px 5px; border-radius: 3px; font-size: 0.79rem; }
 
 /* Guidelines link list */
 .mi-guideline-list                 { list-style: none; padding: 0; margin: 0; }

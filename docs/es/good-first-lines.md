@@ -11,7 +11,7 @@ hide:
 
 Mapea tu primera linea! Estas coordenadas apuntan hacia lines electricas faciles de mapear para principiantes. También puedes añadir "buenas primeras líneas" [abajo de la pagina web](#quieres-anadir-una-buena-linea).
 
-??? success "INTRODUCTION (Click Me)"
+??? success "INTRODUCCION (Haz clic)"
     Bienvenido a nuestra plataforma interactiva y centro de contribución a «buenas primeras líneas» a través de OpenStreetMap! Haga clic en el cuadro «buenas primeras líneas» que prefiera y comience a cartografiar la infraestructura electrica directamente en iD o JOSM :rocket:
     Si es tu primera mapeando, explora nuestro tutorial [JOSM Starter-Kit](https://mapyourgrid.org/starter-kit/#josm-starter-kit) or [iD Starter-Kit](https://mapyourgrid.org/starter-kit/#id-starter-kit). Puedes usar el hashtag **#MapYourGrid** en tus cambios para apoyar la inciativa! 
 
@@ -32,29 +32,30 @@ Mapea tu primera linea! Estas coordenadas apuntan hacia lines electricas faciles
 
 <div id="add-gfl-form">
   <div class="form-group">
-    <label for="add-coordinates">Coordinates *</label>
+    <label for="add-coordinates">Coordenadas *</label>
     <input type="text" id="add-coordinates" placeholder="" required>
-    <small>Latitude,Longitude (example: 43.22443,12.82870)</small>
+    <small>Latitud,Longitud (ejemplo: 43.22443,12.82870)</small>
   </div>
   
   <div class="form-group">
-    <label for="add-country">Country *</label>
+    <label for="add-country">País (en Ingles) *</label>
     <input type="text" id="add-country" placeholder="" required>
-    <small>Example: Spain</small>
+    <small>Ejemplo: Spain</small>
   </div>
   
   <div class="form-group">
-    <label for="add-details">Region/Details (Optional)</label>
+    <label for="add-details">Region/Detalles (Opcional)</label>
     <input type="text" id="add-details" placeholder="" maxlength="200">
-    <small>Example: "Madrid Region", "Line goes North"</small>
+    <small>Ejemplo: "Madrid Region", "Linea sube"</small>
   </div>
   
-  <button id="submit-gfl" class="submit-btn">Add Good First Line</button>
+  <button id="submit-gfl" class="submit-btn">Añadir Buena Primera Linea</button>
   <div id="form-message"></div>
 </div>
 
-## *Archived Lines*
+## *Líneas archivadas*
 
-[Archived Lines :fontawesome-solid-paper-plane:](archive/archive.md){ .md-button .md-button--primary }
+[Líneas archivadas :fontawesome-solid-paper-plane:](archive/archive.md){ .md-button .md-button--primary }
 
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 <script src="/assets/javascripts/gfl.js"></script>
