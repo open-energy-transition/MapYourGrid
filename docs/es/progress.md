@@ -185,7 +185,7 @@ Nuestro trabajo mejora el acceso a datos de calidad sobre las infraestructuras d
 
   <div class="country-card">
     <a href="https://stats.now.ohsome.org/dashboard#hashtag=MapYourGrid&start=2025-03-12T22:00:00Z&end=2025-05-14T21:59:59Z&interval=P1M&countries=&topics=" target="_blank">
-      <img style="width:200px; margin-top:20px;" class="off-glb" src="https://stats.now.ohsome.org/assets/images/ohsomeNowStats_logo.svg" alt="Ohsome Nowstats">
+      <img style="width:200px; margin-top:20px;" class="off-glb" src="/images/logos/ohsomenow-logo.svg" alt="Ohsome Nowstats">
       </br>Ohsome Nowstats
     </a>
   </div>
