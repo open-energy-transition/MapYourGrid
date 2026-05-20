@@ -212,6 +212,7 @@ const RAW_BASE =
 const ZOOM_REGION_THRESHOLD = 5;
 
 // Names that differ between the countries/regions GeoJSON and the hint layers.
+// Can find naming in https://osmose.openstreetmap.fr/api/0.3/countries
 const OVERRIDES = {
   osmoseCountries: {
     "Bosnia and Herzegovina":           "bosnia_herzegovina",
