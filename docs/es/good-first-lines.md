@@ -38,9 +38,9 @@ Mapea tu primera linea! Estas coordenadas apuntan hacia lines electricas faciles
   </div>
   
   <div class="form-group">
-    <label for="add-country">País (en Ingles) *</label>
+    <label for="add-country">País *</label>
     <input type="text" id="add-country" placeholder="" required>
-    <small>Ejemplo: Spain</small>
+    <small>Ejemplo: Francia, Peru, Spain</small>
   </div>
   
   <div class="form-group">

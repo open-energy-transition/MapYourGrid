@@ -79,13 +79,6 @@
     background: var(--md-code-bg-color);
   }
   
-  .region-details {
-    font-size: 0.9rem;
-    color: var(--md-default-fg-color--light);
-    margin-bottom: 1rem;
-    font-style: italic;
-  }
-  
   .editor-buttons {
     display: flex;
     gap: 1rem;

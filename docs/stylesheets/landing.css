@@ -3,13 +3,6 @@ body {
     font-family: sans-serif; 
 }
 
-/* Increased Specificity for Header Background -  */
-body.landing-page header.md-header {
-  background-color: #e9f5e9 !important; /* Match the hero section background color */
-  box-shadow: none !important; 
-}
-
-
 /* ==== HERO SECTION ==== */
 .hero-section {
   min-height: 60vh;
@@ -185,13 +178,6 @@ body.landing-page header.md-header {
   font-style: italic;
 }
 
-.initiative-illustration {
-  max-width: 200px;
-  margin: 1rem auto 0;
-  width: 60%; /* Make it responsive up to max-width */
-}
-
-
 /* ==== GET INVOLVED SECTION ==== */
 .get-involved-section {
   padding: 1rem 2rem;
@@ -266,11 +252,6 @@ body.landing-page header.md-header {
   height: 43px;
 }
 
-/* Emoji icon styling */
-.icon-emoji {
-  font-size: 36px;
-  line-height: 1;
-}
 
 /* ==== OUR MAPPING SECTION ============================================================================== */
 .our-mapping-section {
@@ -278,32 +259,12 @@ body.landing-page header.md-header {
   background-color: #f8f9fa; /* Light grey background */
   text-align: center;
 }
-
-.our-newsletter-section {
-  padding: 2rem 2rem 4rem 2rem;
-  background-color: #f8f9fa; /* Light grey background */
-  text-align: center;
-}
-
-.our-newsletter-section h1 {
-  color: #54a36a;
-  font-size: 2.5rem;
-  margin-top: 1rem;
-  margin-bottom: 2.5rem;
-  font-weight: 700;
-}
-
 .our-mapping-section h2 {
   color: #54a36a;
   font-size: 2.5rem;
   margin-top: 1rem;
   margin-bottom: 2.5rem;
   font-weight: 700;
-}
-
-.our-mapping-section h2.countries-title {
-  margin-top: 2rem;
-  margin-bottom: -0.5rem;
 }
 
 .stats-grid {
@@ -600,10 +561,6 @@ body.landing-page header.md-header {
   .initiative-content h2,
   .get-involved-section h2 {
       font-size: 2rem;
-  }
-  
-  .initiative-illustration {
-      max-width: 80%;
   }
 
   .get-involved-grid {

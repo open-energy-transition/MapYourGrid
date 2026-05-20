@@ -473,13 +473,13 @@ async function fetchGFLCountries() {
   const SUPABASE_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im1vbWhwZ3RpdGFiaGxwc3hjcXhoIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTk3MzUxODMsImV4cCI6MjA3NTMxMTE4M30.IUj10ikNkwip_iZsGxR8vUWNgRtK9aaiTovpTeKvm4c";
   try {
     const resp = await fetch(
-      SUPABASE_URL + "/rest/v1/lines?select=country&status=neq.completed",
+      SUPABASE_URL + "/rest/v1/lines?select=country,country_en&status=neq.completed",
       { headers: { apikey: SUPABASE_KEY, Authorization: "Bearer " + SUPABASE_KEY } }
     );
     if (!resp.ok) return;
     const data = await resp.json();
     GFL_COUNTRY_NAMES = new Set(data.map(r => {
-      const n = r.country.toLowerCase().trim();
+      const n = r.country_en ?? r.country.toLowerCase().trim();
       const normalized = GFL_NAME_NORMALISE[n] ?? n;
       return normalized.toLowerCase();}));
   } catch (err) {
@@ -696,7 +696,7 @@ function buildToolButton(mode) {
   };
 
   const btn = document.createElement("button");
-  btn.className    = "mi-query-btn";
+  btn.className    = "mi-query-btn mi-tool-btn";
   btn.dataset.mode = mode;
   btn.textContent  = LABELS[mode] || mode;
   btn.addEventListener("click", () => selectMode(mode, btn));
