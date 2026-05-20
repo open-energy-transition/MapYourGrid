@@ -212,6 +212,7 @@ const RAW_BASE =
 const ZOOM_REGION_THRESHOLD = 5;
 
 // Names that differ between the countries/regions GeoJSON and the hint layers.
+// Can find naming in https://osmose.openstreetmap.fr/api/0.3/countries
 const OVERRIDES = {
   osmoseCountries: {
     "Bosnia and Herzegovina":           "bosnia_herzegovina",
@@ -286,7 +287,24 @@ const countryNameMap = {};
 let GFL_COUNTRY_NAMES = new Set();
 
 
-// Map loading
+// Hover label on countries
+const hoverLabel = (() => {
+  const el = document.createElement('div');
+  el.className = 'mi-hover-label';
+  document.body.appendChild(el);
+  return el;
+})();
+
+function showLabel(text, e) {
+  hoverLabel.textContent = text;
+  hoverLabel.style.display = 'block';
+  positionLabel(e.originalEvent);
+}
+function positionLabel(e) {
+  hoverLabel.style.left = (e.clientX + 14) + 'px';
+  hoverLabel.style.top  = (e.clientY - 34) + 'px';
+}
+function hideLabel() { hoverLabel.style.display = 'none'; }
 
 // maxBounds restricts panning to exactly one world map.
 // maxBoundsViscosity: 1.0 = completely rigid boundary, no elastic scrolling past it.
@@ -454,9 +472,11 @@ function setupCountryLayer(layer) {
   const name = layer.feature.properties.NAME;
   if (iso) countryNameMap[iso.toUpperCase()] = name;
 
-  layer.on("mouseover", () =>
-    layer.setStyle({ fillColor: "#0ea5e9", fillOpacity: 0.28, weight: 1.5 }));
-  layer.on("mouseout", () => {
+  layer.on("mouseover", e => { showLabel(name, e);
+    layer.setStyle({ fillColor: "#0ea5e9", fillOpacity: 0.28, weight: 1.5 }); 
+  });
+  layer.on("mousemove", e => positionLabel(e.originalEvent));
+  layer.on("mouseout", () => { hideLabel(); 
     // Restore GFL orange fill rather than the default transparent fill.
     if (layer._isGFL) {
       layer.setStyle({ color: "#f97316", weight: 2, fillColor: "#fb923c", fillOpacity: 0.15 });
@@ -576,8 +596,12 @@ function setupRegionLayer(layer) {
   const iso  = layer.feature.properties.ISO_1;
   const name = layer.feature.properties.NAME_1;
 
-  layer.on("mouseover", () => layer.setStyle({ fillColor: "#1a4f80", fillOpacity: 0.22, weight: 1.2 }));
-  layer.on("mouseout",  () => regionsLayer.resetStyle(layer));
+  layer.on("mouseover", e => { showLabel(name, e);  
+    layer.setStyle({ fillColor: "#1a4f80", fillOpacity: 0.22, weight: 1.2 });
+  });
+  layer.on("mousemove", e => positionLabel(e.originalEvent)); 
+  layer.on("mouseout",  () => { hideLabel();                 
+    regionsLayer.resetStyle(layer); });
   layer.on("click",     () => handleAreaClick(iso, 4, layer));
 }
 
@@ -942,7 +966,7 @@ async function handleAreaClick(iso, level, layer) {
     else if (STATE.mode === "PPM")             await fetchPPMAndDownload(sovName);
     else {
       if (!iso) {
-        updateCountryPanel("<p>No ISO code for this region — click the country boundary for national data.</p>");
+        updateCountryPanel("<p>No ISO code for this region — click the country boundary for national data. If a bug, please report it as an issue in github!</p>");
         showSuccess = false;
       } else {
         let tpl = await fetchQuery(STATE.mode, level);

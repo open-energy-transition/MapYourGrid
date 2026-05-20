@@ -620,6 +620,24 @@ button.mi-section-header.toggle:hover { background: rgba(255, 255, 255, 0.04); }
 /* Calendar iframe */
 #overlay-body iframe               { width: 100%; border: none; border-radius: var(--mi-radius-sm); }
 
+/* ── Country / region hover label ────────────────────────────────────────── */
+.mi-hover-label {
+  position: fixed;
+  display: none;
+  z-index: 2000;
+  background: #111827;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 5px;
+  color: #d4ead8;
+  font-size: 0.73rem;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  padding: 5px 11px;
+  white-space: nowrap;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.5);
+  pointer-events: none;
+}
+
 
 /* ══════════════════════════════════════════════════════════════════════
    LEAFLET CONTROL ADJUSTMENTS
