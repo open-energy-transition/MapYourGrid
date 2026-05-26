@@ -311,7 +311,7 @@ function hideLabel() { hoverLabel.style.display = 'none'; }
 const map = L.map("map", {
   minZoom:              3,
   maxZoom:              18,
-  maxBounds:            [[-80, -230], [85, 195]],
+  maxBounds:            [[-80, -220], [85, 190]],
   maxBoundsViscosity:   1.0,
   worldCopyJump:        false,
   zoomControl: false // this disables the zoom buttons on the left side
@@ -321,7 +321,7 @@ const map = L.map("map", {
 L.tileLayer("https://server.arcgisonline.com/ArcGIS/rest/services/World_Shaded_Relief/MapServer/tile/{z}/{y}/{x}", {
   attribution: "Tiles &copy; <a href='https://www.esri.com' target='_blank'>Esri</a>, USGS, NOAA | © <a href='https://www.openstreetmap.org/copyright' target='_blank'>OpenStreetMap</a> contributors",
   maxZoom: 19,
-  noWrap:  true // noWrap: true stops the tile layer from repeating tiles outside [-180, 180].
+  noWrap:  false, // noWrap: true stops the tile layer from repeating tiles outside [-180, 180].
 }).addTo(map);
 
 // Zoom buttons top right
