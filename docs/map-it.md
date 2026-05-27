@@ -891,6 +891,9 @@ const OVERLAY_REGISTRY = {
   }
 };
 
+// For URL links to specific section (since no longer markdown doesn't work). Can add more
+const HASH_ALIASES = { 'join-the-community': 'calendar' };
+
 // Opens the modal overlay for the given registry key.
 function openOverlay(key) {
   const cfg = OVERLAY_REGISTRY[key];
@@ -910,8 +913,16 @@ function openOverlay(key) {
     nav.classList.add("hidden");
   }
 
+  history.replaceState(null, '', '#' + key);
   document.getElementById("mapit-overlay").classList.remove("hidden");
 }
+
+function syncOverlayFromHash() {
+  const key = HASH_ALIASES[location.hash.slice(1)] || location.hash.slice(1);
+  if (OVERLAY_REGISTRY[key]) openOverlay(key);
+}
+addEventListener('hashchange', syncOverlayFromHash);
+addEventListener('load',       syncOverlayFromHash);
 
 function renderOverlaySlide() {
   const slide = STATE.overlaySlides[STATE.overlaySlideIdx];
