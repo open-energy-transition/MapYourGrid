@@ -86,7 +86,7 @@ body:has(#mapit-root) .md-content__inner > h1 {
   position: absolute;
   inset: 0;
   z-index: 1;
-  background: #aad3df; /* ocean colour shown before tiles arrive */
+  background: #9ebcd8; /* ocean colour shown before tiles arrive */
 }
 
 
