@@ -56,22 +56,24 @@ function flagUrl(line) {
 }
 
 // ── Country resolution ───────────────────────────────────────────────────────
-/**
- * Resolves any-language country name to { iso2, nameEn } via REST Countries.
- * Returns null if not found or network fails.
- */
-async function resolveCountry(name) {
-  try {
-    const res = await fetch(
-      `https://restcountries.com/v3.1/name/${encodeURIComponent(name)}?fields=name,cca2`
-    );
-    if (!res.ok) return null;
-    const data  = await res.json();
-    const first = Array.isArray(data) ? data[0] : null;
-    return first ? { iso2: first.cca2, nameEn: first.name.common } : null;
-  } catch {
-    return null;
-  }
+const EN_REGIONS = (() => {
+  try { return new Intl.DisplayNames(['en'], { type: 'region' }); } catch { return null; }
+})();
+
+const COUNTRY_TO_ISO2 = (() => {
+  const idx = {};
+  if (EN_REGIONS)
+    for (let i = 65; i <= 90; i++)
+      for (let j = 65; j <= 90; j++) {
+        const code = String.fromCharCode(i, j), nm = EN_REGIONS.of(code);
+        if (nm && nm !== code) idx[nm.toLowerCase()] = code;
+      }
+  return Object.assign(idx, NAME_TO_ISO2); // aliases (uk, usa, holland…) take precedence
+})();
+
+function resolveCountry(name) {
+  const iso2 = COUNTRY_TO_ISO2[(name || '').trim().toLowerCase()];
+  return iso2 ? { iso2, nameEn: EN_REGIONS?.of(iso2) || name.trim() } : null;
 }
 
 // ── JOSM ─────────────────────────────────────────────────────────────────────
@@ -240,7 +242,9 @@ async function handleSubmit() {
   }
 
   btn.disabled  = true;
-  msg.innerHTML = '<span>Resolving country…</span>';
+  msg.innerHTML = '<span>Adding…</span>';
+
+  const resolved = resolveCountry(country); 
 
   try {
     const resolved = await resolveCountry(country);
