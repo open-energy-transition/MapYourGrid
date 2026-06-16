@@ -244,20 +244,14 @@ async function handleSubmit() {
   btn.disabled  = true;
   msg.innerHTML = '<span>Adding…</span>';
 
-  const resolved = resolveCountry(country); 
+  const resolved = resolveCountry(country); // best-effort enrichment; null is fine
 
   try {
-    const resolved = await resolveCountry(country);
-    if (!resolved) {
-      msg.innerHTML = `<span class="error">Country "${esc(country)}" not found. Check spelling or try the English name.</span>`;
-      return;
-    }
-
     const { error } = await db.from('lines').insert([{
       coordinates,
       country,
-      country_en: resolved.nameEn,
-      iso2:       resolved.iso2,
+      country_en: resolved?.nameEn ?? null,
+      iso2:       resolved?.iso2 ?? null,
       details:    details || null,
       status:     'available',
       lat, lon,

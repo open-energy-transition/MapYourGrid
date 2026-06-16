@@ -285,6 +285,7 @@ const countryNameMap = {};
 // Lowercase country names that have at least one active Good First Line entry.
 // Populated by fetchGFLCountries() before country layers are styled.
 let GFL_COUNTRY_NAMES = new Set();
+let GFL_ISO2 = new Set();
 
 
 // Hover label on countries
@@ -493,11 +494,12 @@ async function fetchGFLCountries() {
   const SUPABASE_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im1vbWhwZ3RpdGFiaGxwc3hjcXhoIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTk3MzUxODMsImV4cCI6MjA3NTMxMTE4M30.IUj10ikNkwip_iZsGxR8vUWNgRtK9aaiTovpTeKvm4c";
   try {
     const resp = await fetch(
-      SUPABASE_URL + "/rest/v1/lines?select=country,country_en&status=neq.completed",
+      SUPABASE_URL + "/rest/v1/lines?select=country,country_en,iso2&status=neq.completed",
       { headers: { apikey: SUPABASE_KEY, Authorization: "Bearer " + SUPABASE_KEY } }
     );
     if (!resp.ok) return;
     const data = await resp.json();
+    GFL_ISO2 = new Set(data.map(r => r.iso2).filter(Boolean).map(s => s.toUpperCase()));
     GFL_COUNTRY_NAMES = new Set(data.map(r => {
       const n = r.country_en ?? r.country.toLowerCase().trim();
       const normalized = GFL_NAME_NORMALISE[n] ?? n;
@@ -511,8 +513,8 @@ async function fetchGFLCountries() {
 // Called after both loadCountries() and fetchGFLCountries() have resolved.
 function applyGFLStyles() {
   countriesLayer.eachLayer(layer => {
-    const name = layer.feature.properties.NAME;
-    if (GFL_COUNTRY_NAMES.has(name.toLowerCase())) {
+    const { NAME: name, ISO_A2: iso } = layer.feature.properties;
+    if (GFL_ISO2.has((iso || "").toUpperCase()) || GFL_COUNTRY_NAMES.has(name.toLowerCase())) {
       layer._isGFL = true;
       layer.setStyle({ color: "#e07000", weight: 2, fillColor: "#ff8c00", fillOpacity: 0.15 });
     }
