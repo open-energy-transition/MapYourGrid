@@ -1,0 +1,241 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Power Line Length Evolution</title>
+    <style>
+        table.sortable {
+            border-collapse: collapse;
+            width: 100%;
+            font-family: sans-serif;
+        }
+        .sortable th, .sortable td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: center;
+        }
+        .sortable th {
+            background-color: #f2f2f2;
+            cursor: pointer;
+        }
+        .sortable th:hover {
+            background-color: #e0e0e0;
+        }
+    </style>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const getCellValue = (tr, idx) =>
+                tr.children[idx].getAttribute('data-sort') || tr.children[idx].innerText;
+
+            const comparer = (idx, asc) => (a, b) => {
+                const v1 = getCellValue(asc ? a : b, idx);
+                const v2 = getCellValue(asc ? b : a, idx);
+                const f1 = parseFloat(v1);
+                const f2 = parseFloat(v2);
+                return (!isNaN(f1) && !isNaN(f2)) ? f1 - f2 : v1.localeCompare(v2);
+            };
+
+            document.querySelectorAll('table.sortable th').forEach(th => {
+                th.addEventListener('click', () => {
+                    const table = th.closest('table');
+                    const tbody = table.querySelector('tbody');
+                    const index = Array.from(th.parentNode.children).indexOf(th);
+                    const rows = Array.from(tbody.querySelectorAll('tr'));
+                    const asc = !th.asc;
+                    th.asc = asc;
+                    rows.sort(comparer(index, asc));
+                    rows.forEach(tr => tbody.appendChild(tr));
+                });
+            });
+        });
+    </script>
+</head>
+<body>
+<p style="font-family: sans-serif; font-size: 14px; margin-bottom: 10px;">
+    🔽 Click on any column header to sort the table.
+</p>
+<table class="sortable" id="sortable-table">
+<thead>
+<tr>
+<th>Country</th>
+<th>Power line length (km)<br>2025-08-20</th><th>Growth since 2025-01-01 (%)</th><th>Growth since 2025-01-01 (km)</th></tr></thead>
+<tbody>
+<tr><td>Nepal 🇳🇵</td><td data-sort='3824.0'>3824</td><td style='background:#00b400' data-sort='49.375'>49.4 %</td><td style='background:#00b400' data-sort='1264.0'>1264</td></tr>
+<tr><td>Bosnia and Herzegovina 🇧🇦</td><td data-sort='6207.0'>6207</td><td style='background:#00b400' data-sort='34.46707105719237'>34.5 %</td><td style='background:#00b400' data-sort='1591.0'>1591</td></tr>
+<tr><td>Kazakhstan 🇰🇿</td><td data-sort='72164.0'>72164</td><td style='background:#00b400' data-sort='32.59347726228755'>32.6 %</td><td style='background:#00b400' data-sort='17739.0'>17739</td></tr>
+<tr><td>Togo 🇹🇬</td><td data-sort='955.0'>955</td><td style='background:#00b400' data-sort='28.187919463087248'>28.2 %</td><td style='background:#00b400' data-sort='210.0'>210</td></tr>
+<tr><td>Turkmenistan 🇹🇲</td><td data-sort='14691.0'>14691</td><td style='background:#00b400' data-sort='27.139766334919948'>27.1 %</td><td style='background:#00b400' data-sort='3136.0'>3136</td></tr>
+<tr><td>Mongolia 🇲🇳</td><td data-sort='15960.0'>15960</td><td style='background:#00b400' data-sort='25.166653595796408'>25.2 %</td><td style='background:#00b400' data-sort='3209.0'>3209</td></tr>
+<tr><td>Uganda 🇺🇬</td><td data-sort='3276.0'>3276</td><td style='background:#0ab800' data-sort='23.576009053187477'>23.6 %</td><td style='background:#0ab800' data-sort='625.0'>625</td></tr>
+<tr><td>Madagascar 🇲🇬</td><td data-sort='287.0'>287</td><td style='background:#1ec100' data-sort='20.588235294117645'>20.6 %</td><td style='background:#1ec100' data-sort='49.0'>49</td></tr>
+<tr><td>Lebanon 🇱🇧</td><td data-sort='896.0'>896</td><td style='background:#26c500' data-sort='19.466666666666665'>19.5 %</td><td style='background:#26c500' data-sort='146.0'>146</td></tr>
+<tr><td>Georgia 🇬🇪</td><td data-sort='6671.0'>6671</td><td style='background:#2ec800' data-sort='18.23821339950372'>18.2 %</td><td style='background:#2ec800' data-sort='1029.0'>1029</td></tr>
+<tr><td>Cambodia 🇰🇭</td><td data-sort='3103.0'>3103</td><td style='background:#3acd00' data-sort='16.522718738265116'>16.5 %</td><td style='background:#3acd00' data-sort='440.0'>440</td></tr>
+<tr><td>Sri Lanka 🇱🇰</td><td data-sort='3739.0'>3739</td><td style='background:#3ccf00' data-sort='16.15408511960236'>16.2 %</td><td style='background:#3ccf00' data-sort='520.0'>520</td></tr>
+<tr><td>Colombia 🇨🇴</td><td data-sort='18144.0'>18144</td><td style='background:#50d700' data-sort='13.293787074617548'>13.3 %</td><td style='background:#50d700' data-sort='2129.0'>2129</td></tr>
+<tr><td>Benin 🇧🇯</td><td data-sort='1345.0'>1345</td><td style='background:#52d800' data-sort='12.930310663308145'>12.9 %</td><td style='background:#52d800' data-sort='154.0'>154</td></tr>
+<tr><td>Bolivia 🇧🇴</td><td data-sort='7987.0'>7987</td><td style='background:#54d900' data-sort='12.699308593198817'>12.7 %</td><td style='background:#54d900' data-sort='900.0'>900</td></tr>
+<tr><td>Uzbekistan 🇺🇿</td><td data-sort='23064.0'>23064</td><td style='background:#64e000' data-sort='10.264378256920208'>10.3 %</td><td style='background:#64e000' data-sort='2147.0'>2147</td></tr>
+<tr><td>Bangladesh 🇧🇩</td><td data-sort='8846.0'>8846</td><td style='background:#66e100' data-sort='10.038562010200273'>10.0 %</td><td style='background:#66e100' data-sort='807.0'>807</td></tr>
+<tr><td>Burkina Faso 🇧🇫</td><td data-sort='1495.0'>1495</td><td style='background:#69e200' data-sort='9.604105571847507'>9.6 %</td><td style='background:#69e200' data-sort='131.0'>131</td></tr>
+<tr><td>Kyrgyzstan 🇰🇬</td><td data-sort='6949.0'>6949</td><td style='background:#6ce400' data-sort='9.14088267629967'>9.1 %</td><td style='background:#6ce400' data-sort='582.0'>582</td></tr>
+<tr><td>North Macedonia 🇲🇰</td><td data-sort='1924.0'>1924</td><td style='background:#6ee500' data-sort='8.762012436404747'>8.8 %</td><td style='background:#6ee500' data-sort='155.0'>155</td></tr>
+<tr><td>North Korea 🇰🇵</td><td data-sort='6010.0'>6010</td><td style='background:#72e600' data-sort='8.19081908190819'>8.2 %</td><td style='background:#72e600' data-sort='455.0'>455</td></tr>
+<tr><td>Afghanistan 🇦🇫</td><td data-sort='3749.0'>3749</td><td style='background:#73e700' data-sort='8.133833285261034'>8.1 %</td><td style='background:#73e700' data-sort='282.0'>282</td></tr>
+<tr><td>Mozambique 🇲🇿</td><td data-sort='9467.0'>9467</td><td style='background:#74e700' data-sort='7.947548460661345'>7.9 %</td><td style='background:#74e700' data-sort='697.0'>697</td></tr>
+<tr><td>Kenya 🇰🇪</td><td data-sort='7580.0'>7580</td><td style='background:#76e800' data-sort='7.655162618946172'>7.7 %</td><td style='background:#76e800' data-sort='539.0'>539</td></tr>
+<tr><td>Nigeria 🇳🇬</td><td data-sort='13932.0'>13932</td><td style='background:#76e800' data-sort='7.641196013289036'>7.6 %</td><td style='background:#76e800' data-sort='989.0'>989</td></tr>
+<tr><td>Tajikistan 🇹🇯</td><td data-sort='5895.0'>5895</td><td style='background:#79e900' data-sort='7.220807566387776'>7.2 %</td><td style='background:#79e900' data-sort='397.0'>397</td></tr>
+<tr><td>People's Republic of China 🇨🇳</td><td data-sort='1040225.0'>1040225</td><td style='background:#7eec00' data-sort='6.496302613406828'>6.5 %</td><td style='background:#7eec00' data-sort='63454.0'>63454</td></tr>
+<tr><td>Eritrea 🇪🇷</td><td data-sort='133.0'>133</td><td style='background:#7eec00' data-sort='6.4'>6.4 %</td><td style='background:#7eec00' data-sort='8.0'>8</td></tr>
+<tr><td>Gabon 🇬🇦</td><td data-sort='467.0'>467</td><td style='background:#84ee00' data-sort='5.656108597285068'>5.7 %</td><td style='background:#84ee00' data-sort='25.0'>25</td></tr>
+<tr><td>Bahrain 🇧🇭</td><td data-sort='19.0'>19</td><td style='background:#84ee00' data-sort='5.555555555555555'>5.6 %</td><td style='background:#84ee00' data-sort='1.0'>1</td></tr>
+<tr><td>Equatorial Guinea 🇬🇶</td><td data-sort='1171.0'>1171</td><td style='background:#87ef00' data-sort='5.211141060197664'>5.2 %</td><td style='background:#87ef00' data-sort='58.0'>58</td></tr>
+<tr><td>Pakistan 🇵🇰</td><td data-sort='41030.0'>41030</td><td style='background:#87f000' data-sort='5.151204510507433'>5.2 %</td><td style='background:#87f000' data-sort='2010.0'>2010</td></tr>
+<tr><td>Qatar 🇶🇦</td><td data-sort='1236.0'>1236</td><td style='background:#87f000' data-sort='5.1020408163265305'>5.1 %</td><td style='background:#87f000' data-sort='60.0'>60</td></tr>
+<tr><td>Philippines 🇵🇭</td><td data-sort='14633.0'>14633</td><td style='background:#88f000' data-sort='4.986368202037595'>5.0 %</td><td style='background:#88f000' data-sort='695.0'>695</td></tr>
+<tr><td>Myanmar 🇲🇲</td><td data-sort='14565.0'>14565</td><td style='background:#8bf100' data-sort='4.618589283148973'>4.6 %</td><td style='background:#8bf100' data-sort='643.0'>643</td></tr>
+<tr><td>Vietnam 🇻🇳</td><td data-sort='30424.0'>30424</td><td style='background:#8cf200' data-sort='4.409897388379835'>4.4 %</td><td style='background:#8cf200' data-sort='1285.0'>1285</td></tr>
+<tr><td>Ivory Coast 🇨🇮</td><td data-sort='11170.0'>11170</td><td style='background:#8ef300' data-sort='4.09095144907278'>4.1 %</td><td style='background:#8ef300' data-sort='439.0'>439</td></tr>
+<tr><td>Uruguay 🇺🇾</td><td data-sort='7175.0'>7175</td><td style='background:#8ff300' data-sort='3.925260718424102'>3.9 %</td><td style='background:#8ff300' data-sort='271.0'>271</td></tr>
+<tr><td>Bulgaria 🇧🇬</td><td data-sort='13882.0'>13882</td><td style='background:#90f300' data-sort='3.8838584150265656'>3.9 %</td><td style='background:#90f300' data-sort='519.0'>519</td></tr>
+<tr><td>Yemen 🇾🇪</td><td data-sort='1606.0'>1606</td><td style='background:#90f400' data-sort='3.8138332255979317'>3.8 %</td><td style='background:#90f400' data-sort='59.0'>59</td></tr>
+<tr><td>Montenegro 🇲🇪</td><td data-sort='2080.0'>2080</td><td style='background:#92f400' data-sort='3.5340965654554504'>3.5 %</td><td style='background:#92f400' data-sort='71.0'>71</td></tr>
+<tr><td>The Bahamas 🇧🇸</td><td data-sort='92.0'>92</td><td style='background:#93f500' data-sort='3.3707865168539324'>3.4 %</td><td style='background:#93f500' data-sort='3.0'>3</td></tr>
+<tr><td>Peru 🇵🇪</td><td data-sort='21218.0'>21218</td><td style='background:#94f500' data-sort='3.2455841564887353'>3.2 %</td><td style='background:#94f500' data-sort='667.0'>667</td></tr>
+<tr><td>Albania 🇦🇱</td><td data-sort='2879.0'>2879</td><td style='background:#95f600' data-sort='3.1529917592260834'>3.2 %</td><td style='background:#95f600' data-sort='88.0'>88</td></tr>
+<tr><td>Democratic Republic of the Congo 🇨🇩</td><td data-sort='8118.0'>8118</td><td style='background:#96f600' data-sort='2.941922394116155'>2.9 %</td><td style='background:#96f600' data-sort='232.0'>232</td></tr>
+<tr><td>Ecuador 🇪🇨</td><td data-sort='8374.0'>8374</td><td style='background:#96f600' data-sort='2.937922556853104'>2.9 %</td><td style='background:#96f600' data-sort='239.0'>239</td></tr>
+<tr><td>India 🇮🇳</td><td data-sort='460581.0'>460581</td><td style='background:#96f600' data-sort='2.9187587566114512'>2.9 %</td><td style='background:#96f600' data-sort='13062.0'>13062</td></tr>
+<tr><td>Iraq 🇮🇶</td><td data-sort='19775.0'>19775</td><td style='background:#96f600' data-sort='2.871560110284555'>2.9 %</td><td style='background:#96f600' data-sort='552.0'>552</td></tr>
+<tr><td>Zambia 🇿🇲</td><td data-sort='13182.0'>13182</td><td style='background:#97f600' data-sort='2.863831447522435'>2.9 %</td><td style='background:#97f600' data-sort='367.0'>367</td></tr>
+<tr><td>Thailand 🇹🇭</td><td data-sort='22542.0'>22542</td><td style='background:#98f700' data-sort='2.71575685774173'>2.7 %</td><td style='background:#98f700' data-sort='596.0'>596</td></tr>
+<tr><td>United States 🇺🇸</td><td data-sort='867988.0'>867988</td><td style='background:#98f700' data-sort='2.618583442002556'>2.6 %</td><td style='background:#98f700' data-sort='22149.0'>22149</td></tr>
+<tr><td>State of Palestine 🇵🇸</td><td data-sort='279.0'>279</td><td style='background:#98f700' data-sort='2.5735294117647056'>2.6 %</td><td style='background:#98f700' data-sort='7.0'>7</td></tr>
+<tr><td>Tanzania 🇹🇿</td><td data-sort='8211.0'>8211</td><td style='background:#99f700' data-sort='2.522162567111999'>2.5 %</td><td style='background:#99f700' data-sort='202.0'>202</td></tr>
+<tr><td>Algeria 🇩🇿</td><td data-sort='36969.0'>36969</td><td style='background:#99f800' data-sort='2.4299013631829767'>2.4 %</td><td style='background:#99f800' data-sort='877.0'>877</td></tr>
+<tr><td>Ghana 🇬🇭</td><td data-sort='5704.0'>5704</td><td style='background:#9af800' data-sort='2.3689877961234744'>2.4 %</td><td style='background:#9af800' data-sort='132.0'>132</td></tr>
+<tr><td>Nicaragua 🇳🇮</td><td data-sort='2599.0'>2599</td><td style='background:#9efa00' data-sort='1.7221135029354209'>1.7 %</td><td style='background:#9efa00' data-sort='44.0'>44</td></tr>
+<tr><td>Canada 🇨🇦</td><td data-sort='152258.0'>152258</td><td style='background:#9efa00' data-sort='1.7107891273706222'>1.7 %</td><td style='background:#9efa00' data-sort='2561.0'>2561</td></tr>
+<tr><td>Croatia 🇭🇷</td><td data-sort='9791.0'>9791</td><td style='background:#9ffa00' data-sort='1.5453225471893797'>1.5 %</td><td style='background:#9ffa00' data-sort='149.0'>149</td></tr>
+<tr><td>Brazil 🇧🇷</td><td data-sort='299265.0'>299265</td><td style='background:#a0fa00' data-sort='1.5287065026004294'>1.5 %</td><td style='background:#a0fa00' data-sort='4506.0'>4506</td></tr>
+<tr><td>Guatemala 🇬🇹</td><td data-sort='2685.0'>2685</td><td style='background:#a0fb00' data-sort='1.473922902494331'>1.5 %</td><td style='background:#a0fb00' data-sort='39.0'>39</td></tr>
+<tr><td>Rwanda 🇷🇼</td><td data-sort='1210.0'>1210</td><td style='background:#a0fb00' data-sort='1.4249790444258172'>1.4 %</td><td style='background:#a0fb00' data-sort='17.0'>17</td></tr>
+<tr><td>Moldova 🇲🇩</td><td data-sort='11768.0'>11768</td><td style='background:#a1fb00' data-sort='1.3347110996297253'>1.3 %</td><td style='background:#a1fb00' data-sort='155.0'>155</td></tr>
+<tr><td>Turkey 🇹🇷</td><td data-sort='65292.0'>65292</td><td style='background:#a1fb00' data-sort='1.3284499348190453'>1.3 %</td><td style='background:#a1fb00' data-sort='856.0'>856</td></tr>
+<tr><td>Estonia 🇪🇪</td><td data-sort='6985.0'>6985</td><td style='background:#a1fb00' data-sort='1.2906032482598608'>1.3 %</td><td style='background:#a1fb00' data-sort='89.0'>89</td></tr>
+<tr><td>Morocco 🇲🇦</td><td data-sort='23425.0'>23425</td><td style='background:#a1fb00' data-sort='1.2841577308889658'>1.3 %</td><td style='background:#a1fb00' data-sort='297.0'>297</td></tr>
+<tr><td>Serbia 🇷🇸</td><td data-sort='10234.0'>10234</td><td style='background:#a2fb00' data-sort='1.2465373961218837'>1.2 %</td><td style='background:#a2fb00' data-sort='126.0'>126</td></tr>
+<tr><td>Paraguay 🇵🇾</td><td data-sort='4707.0'>4707</td><td style='background:#a2fb00' data-sort='1.2040421414749516'>1.2 %</td><td style='background:#a2fb00' data-sort='56.0'>56</td></tr>
+<tr><td>Lithuania 🇱🇹</td><td data-sort='9712.0'>9712</td><td style='background:#a2fc00' data-sort='1.1245314452311537'>1.1 %</td><td style='background:#a2fc00' data-sort='108.0'>108</td></tr>
+<tr><td>Indonesia 🇮🇩</td><td data-sort='36564.0'>36564</td><td style='background:#a2fc00' data-sort='1.1060723371308483'>1.1 %</td><td style='background:#a2fc00' data-sort='400.0'>400</td></tr>
+<tr><td>Republic of the Congo 🇨🇬</td><td data-sort='1616.0'>1616</td><td style='background:#a3fc00' data-sort='1.0631644777986242'>1.1 %</td><td style='background:#a3fc00' data-sort='17.0'>17</td></tr>
+<tr><td>Malawi 🇲🇼</td><td data-sort='2495.0'>2495</td><td style='background:#a3fc00' data-sort='1.0121457489878543'>1.0 %</td><td style='background:#a3fc00' data-sort='25.0'>25</td></tr>
+<tr><td>Angola 🇦🇴</td><td data-sort='6434.0'>6434</td><td style='background:#a3fc00' data-sort='1.0047095761381475'>1.0 %</td><td style='background:#a3fc00' data-sort='64.0'>64</td></tr>
+<tr><td>Spain 🇪🇸</td><td data-sort='82982.0'>82982</td><td style='background:#a3fc00' data-sort='0.9795928301106149'>1.0 %</td><td style='background:#a3fc00' data-sort='805.0'>805</td></tr>
+<tr><td>Belize 🇧🇿</td><td data-sort='660.0'>660</td><td style='background:#a4fc00' data-sort='0.9174311926605505'>0.9 %</td><td style='background:#a4fc00' data-sort='6.0'>6</td></tr>
+<tr><td>Malaysia 🇲🇾</td><td data-sort='15143.0'>15143</td><td style='background:#a4fc00' data-sort='0.9129681460749033'>0.9 %</td><td style='background:#a4fc00' data-sort='137.0'>137</td></tr>
+<tr><td>Slovenia 🇸🇮</td><td data-sort='3308.0'>3308</td><td style='background:#a4fc00' data-sort='0.8844159804818542'>0.9 %</td><td style='background:#a4fc00' data-sort='29.0'>29</td></tr>
+<tr><td>Jordan 🇯🇴</td><td data-sort='2691.0'>2691</td><td style='background:#a4fc00' data-sort='0.8620689655172413'>0.9 %</td><td style='background:#a4fc00' data-sort='23.0'>23</td></tr>
+<tr><td>Azerbaijan 🇦🇿</td><td data-sort='10043.0'>10043</td><td style='background:#a4fd00' data-sort='0.8232105210320249'>0.8 %</td><td style='background:#a4fd00' data-sort='82.0'>82</td></tr>
+<tr><td>Chad 🇹🇩</td><td data-sort='128.0'>128</td><td style='background:#a5fd00' data-sort='0.7874015748031495'>0.8 %</td><td style='background:#a5fd00' data-sort='1.0'>1</td></tr>
+<tr><td>Tunisia 🇹🇳</td><td data-sort='5839.0'>5839</td><td style='background:#a5fd00' data-sort='0.7418909592822636'>0.7 %</td><td style='background:#a5fd00' data-sort='43.0'>43</td></tr>
+<tr><td>Australia 🇦🇺</td><td data-sort='81856.0'>81856</td><td style='background:#a5fd00' data-sort='0.7086614173228346'>0.7 %</td><td style='background:#a5fd00' data-sort='576.0'>576</td></tr>
+<tr><td>Saudi Arabia 🇸🇦</td><td data-sort='48986.0'>48986</td><td style='background:#a6fd00' data-sort='0.6451347797501643'>0.6 %</td><td style='background:#a6fd00' data-sort='314.0'>314</td></tr>
+<tr><td>Chile 🇨🇱</td><td data-sort='25632.0'>25632</td><td style='background:#a6fd00' data-sort='0.6123410268487989'>0.6 %</td><td style='background:#a6fd00' data-sort='156.0'>156</td></tr>
+<tr><td>Israel 🇮🇱</td><td data-sort='3563.0'>3563</td><td style='background:#a6fd00' data-sort='0.592885375494071'>0.6 %</td><td style='background:#a6fd00' data-sort='21.0'>21</td></tr>
+<tr><td>Romania 🇷🇴</td><td data-sort='25556.0'>25556</td><td style='background:#a6fd00' data-sort='0.5904117137684012'>0.6 %</td><td style='background:#a6fd00' data-sort='150.0'>150</td></tr>
+<tr><td>Japan 🇯🇵</td><td data-sort='72779.0'>72779</td><td style='background:#a6fd00' data-sort='0.5762693126226472'>0.6 %</td><td style='background:#a6fd00' data-sort='417.0'>417</td></tr>
+<tr><td>Niger 🇳🇪</td><td data-sort='1222.0'>1222</td><td style='background:#a6fd00' data-sort='0.5761316872427984'>0.6 %</td><td style='background:#a6fd00' data-sort='7.0'>7</td></tr>
+<tr><td>Mexico 🇲🇽</td><td data-sort='85459.0'>85459</td><td style='background:#a6fd00' data-sort='0.5660288545270541'>0.6 %</td><td style='background:#a6fd00' data-sort='481.0'>481</td></tr>
+<tr><td>Finland 🇫🇮</td><td data-sort='24677.0'>24677</td><td style='background:#a6fd00' data-sort='0.5623701047312442'>0.6 %</td><td style='background:#a6fd00' data-sort='138.0'>138</td></tr>
+<tr><td>Bhutan 🇧🇹</td><td data-sort='1042.0'>1042</td><td style='background:#a7fe00' data-sort='0.4821600771456124'>0.5 %</td><td style='background:#a7fe00' data-sort='5.0'>5</td></tr>
+<tr><td>Hungary 🇭🇺</td><td data-sort='10401.0'>10401</td><td style='background:#a7fe00' data-sort='0.46363372935381053'>0.5 %</td><td style='background:#a7fe00' data-sort='48.0'>48</td></tr>
+<tr><td>Greece 🇬🇷</td><td data-sort='12050.0'>12050</td><td style='background:#a7fe00' data-sort='0.4334055675945991'>0.4 %</td><td style='background:#a7fe00' data-sort='52.0'>52</td></tr>
+<tr><td>Argentina 🇦🇷</td><td data-sort='56931.0'>56931</td><td style='background:#a7fe00' data-sort='0.40386582483863'>0.4 %</td><td style='background:#a7fe00' data-sort='229.0'>229</td></tr>
+<tr><td>Sweden 🇸🇪</td><td data-sort='45417.0'>45417</td><td style='background:#a7fe00' data-sort='0.39568504354746015'>0.4 %</td><td style='background:#a7fe00' data-sort='179.0'>179</td></tr>
+<tr><td>Italy 🇮🇹</td><td data-sort='71145.0'>71145</td><td style='background:#a7fe00' data-sort='0.38803442923663045'>0.4 %</td><td style='background:#a7fe00' data-sort='275.0'>275</td></tr>
+<tr><td>Czech Republic 🇨🇿</td><td data-sort='15716.0'>15716</td><td style='background:#a7fe00' data-sort='0.37682825573226036'>0.4 %</td><td style='background:#a7fe00' data-sort='59.0'>59</td></tr>
+<tr><td>Iran 🇮🇷</td><td data-sort='77097.0'>77097</td><td style='background:#a8fe00' data-sort='0.3671157976957625'>0.4 %</td><td style='background:#a8fe00' data-sort='282.0'>282</td></tr>
+<tr><td>Dominican Republic 🇩🇴</td><td data-sort='2461.0'>2461</td><td style='background:#a8fe00' data-sort='0.367047308319739'>0.4 %</td><td style='background:#a8fe00' data-sort='9.0'>9</td></tr>
+<tr><td>Ireland 🇮🇪</td><td data-sort='6752.0'>6752</td><td style='background:#a8fe00' data-sort='0.356718192627824'>0.4 %</td><td style='background:#a8fe00' data-sort='24.0'>24</td></tr>
+<tr><td>Djibouti 🇩🇯</td><td data-sort='283.0'>283</td><td style='background:#a8fe00' data-sort='0.3546099290780142'>0.4 %</td><td style='background:#a8fe00' data-sort='1.0'>1</td></tr>
+<tr><td>Laos 🇱🇦</td><td data-sort='7801.0'>7801</td><td style='background:#a8fe00' data-sort='0.34731155132492925'>0.3 %</td><td style='background:#a8fe00' data-sort='27.0'>27</td></tr>
+<tr><td>Armenia 🇦🇲</td><td data-sort='5231.0'>5231</td><td style='background:#a8fe00' data-sort='0.3452906196048341'>0.3 %</td><td style='background:#a8fe00' data-sort='18.0'>18</td></tr>
+<tr><td>Venezuela 🇻🇪</td><td data-sort='21917.0'>21917</td><td style='background:#a8fe00' data-sort='0.28368794326241137'>0.3 %</td><td style='background:#a8fe00' data-sort='62.0'>62</td></tr>
+<tr><td>Egypt 🇪🇬</td><td data-sort='28067.0'>28067</td><td style='background:#a8fe00' data-sort='0.22138903767184429'>0.2 %</td><td style='background:#a8fe00' data-sort='62.0'>62</td></tr>
+<tr><td>Ethiopia 🇪🇹</td><td data-sort='16822.0'>16822</td><td style='background:#a9ff00' data-sort='0.1607621315867818'>0.2 %</td><td style='background:#a9ff00' data-sort='27.0'>27</td></tr>
+<tr><td>Senegal 🇸🇳</td><td data-sort='2681.0'>2681</td><td style='background:#a9ff00' data-sort='0.1494209936496078'>0.1 %</td><td style='background:#a9ff00' data-sort='4.0'>4</td></tr>
+<tr><td>Zimbabwe 🇿🇼</td><td data-sort='7412.0'>7412</td><td style='background:#a9ff00' data-sort='0.13509862199405567'>0.1 %</td><td style='background:#a9ff00' data-sort='10.0'>10</td></tr>
+<tr><td>Sierra Leone 🇸🇱</td><td data-sort='753.0'>753</td><td style='background:#a9ff00' data-sort='0.13297872340425532'>0.1 %</td><td style='background:#a9ff00' data-sort='1.0'>1</td></tr>
+<tr><td>South Africa 🇿🇦</td><td data-sort='81109.0'>81109</td><td style='background:#a9ff00' data-sort='0.12467904404503259'>0.1 %</td><td style='background:#a9ff00' data-sort='101.0'>101</td></tr>
+<tr><td>Slovakia 🇸🇰</td><td data-sort='7201.0'>7201</td><td style='background:#a9ff00' data-sort='0.11121924092868066'>0.1 %</td><td style='background:#a9ff00' data-sort='8.0'>8</td></tr>
+<tr><td>Costa Rica 🇨🇷</td><td data-sort='2453.0'>2453</td><td style='background:#a9ff00' data-sort='0.08159934720522236'>0.1 %</td><td style='background:#a9ff00' data-sort='2.0'>2</td></tr>
+<tr><td>Guinea 🇬🇳</td><td data-sort='1238.0'>1238</td><td style='background:#a9ff00' data-sort='0.08084074373484236'>0.1 %</td><td style='background:#a9ff00' data-sort='1.0'>1</td></tr>
+<tr><td>United Arab Emirates 🇦🇪</td><td data-sort='8148.0'>8148</td><td style='background:#aaff00' data-sort='0.06140243153628884'>0.1 %</td><td style='background:#aaff00' data-sort='5.0'>5</td></tr>
+<tr><td>Kuwait 🇰🇼</td><td data-sort='4795.0'>4795</td><td style='background:#aaff00' data-sort='0.041727519298977674'>0.0 %</td><td style='background:#aaff00' data-sort='2.0'>2</td></tr>
+<tr><td>Ukraine 🇺🇦</td><td data-sort='126163.0'>126163</td><td style='background:#aaff00' data-sort='0.03250820633989312'>0.0 %</td><td style='background:#aaff00' data-sort='41.0'>41</td></tr>
+<tr><td>Belarus 🇧🇾</td><td data-sort='34509.0'>34509</td><td style='background:#aaff00' data-sort='0.011592522822779307'>0.0 %</td><td style='background:#aaff00' data-sort='4.0'>4</td></tr>
+<tr><td>Andorra 🇦🇩</td><td data-sort='53.0'>53</td><td style='background:#c8c8c8' data-sort='0.0'>0.0 %</td><td style='background:#c8c8c8' data-sort='0.0'>0</td></tr>
+<tr><td>Antigua and Barbuda 🇦🇬</td><td data-sort='42.0'>42</td><td style='background:#c8c8c8' data-sort='0.0'>0.0 %</td><td style='background:#c8c8c8' data-sort='0.0'>0</td></tr>
+<tr><td>Brunei 🇧🇳</td><td data-sort='309.0'>309</td><td style='background:#c8c8c8' data-sort='0.0'>0.0 %</td><td style='background:#c8c8c8' data-sort='0.0'>0</td></tr>
+<tr><td>Burundi 🇧🇮</td><td data-sort='394.0'>394</td><td style='background:#c8c8c8' data-sort='0.0'>0.0 %</td><td style='background:#c8c8c8' data-sort='0.0'>0</td></tr>
+<tr><td>Cyprus 🇨🇾</td><td data-sort='1060.0'>1060</td><td style='background:#c8c8c8' data-sort='0.0'>0.0 %</td><td style='background:#c8c8c8' data-sort='0.0'>0</td></tr>
+<tr><td>Cuba 🇨🇺</td><td data-sort='6340.0'>6340</td><td style='background:#c8c8c8' data-sort='0.0'>0.0 %</td><td style='background:#c8c8c8' data-sort='0.0'>0</td></tr>
+<tr><td>Botswana 🇧🇼</td><td data-sort='5472.0'>5472</td><td style='background:#c8c8c8' data-sort='0.0'>0.0 %</td><td style='background:#c8c8c8' data-sort='0.0'>0</td></tr>
+<tr><td>Central African Republic 🇨🇫</td><td data-sort='139.0'>139</td><td style='background:#c8c8c8' data-sort='0.0'>0.0 %</td><td style='background:#c8c8c8' data-sort='0.0'>0</td></tr>
+<tr><td>The Gambia 🇬🇲</td><td data-sort='160.0'>160</td><td style='background:#c8c8c8' data-sort='0.0'>0.0 %</td><td style='background:#c8c8c8' data-sort='0.0'>0</td></tr>
+<tr><td>Tonga 🇹🇴</td><td data-sort='3.0'>3</td><td style='background:#c8c8c8' data-sort='0.0'>0.0 %</td><td style='background:#c8c8c8' data-sort='0.0'>0</td></tr>
+<tr><td>Trinidad and Tobago 🇹🇹</td><td data-sort='273.0'>273</td><td style='background:#c8c8c8' data-sort='0.0'>0.0 %</td><td style='background:#c8c8c8' data-sort='0.0'>0</td></tr>
+<tr><td>El Salvador 🇸🇻</td><td data-sort='1405.0'>1405</td><td style='background:#c8c8c8' data-sort='0.0'>0.0 %</td><td style='background:#c8c8c8' data-sort='0.0'>0</td></tr>
+<tr><td>Federated States of Micronesia 🇫🇲</td><td data-sort='8.0'>8</td><td style='background:#c8c8c8' data-sort='0.0'>0.0 %</td><td style='background:#c8c8c8' data-sort='0.0'>0</td></tr>
+<tr><td>Cape Verde 🇨🇻</td><td data-sort='43.0'>43</td><td style='background:#c8c8c8' data-sort='0.0'>0.0 %</td><td style='background:#c8c8c8' data-sort='0.0'>0</td></tr>
+<tr><td>Cameroon 🇨🇲</td><td data-sort='2193.0'>2193</td><td style='background:#c8c8c8' data-sort='0.0'>0.0 %</td><td style='background:#c8c8c8' data-sort='0.0'>0</td></tr>
+<tr><td>Monaco 🇲🇨</td><td data-sort='4.0'>4</td><td style='background:#c8c8c8' data-sort='0.0'>0.0 %</td><td style='background:#c8c8c8' data-sort='0.0'>0</td></tr>
+<tr><td>South Sudan 🇸🇸</td><td data-sort='218.0'>218</td><td style='background:#c8c8c8' data-sort='0.0'>0.0 %</td><td style='background:#c8c8c8' data-sort='0.0'>0</td></tr>
+<tr><td>São Tomé and Príncipe 🇸🇹</td><td data-sort='6.0'>6</td><td style='background:#c8c8c8' data-sort='0.0'>0.0 %</td><td style='background:#c8c8c8' data-sort='0.0'>0</td></tr>
+<tr><td>Suriname 🇸🇷</td><td data-sort='133.0'>133</td><td style='background:#c8c8c8' data-sort='0.0'>0.0 %</td><td style='background:#c8c8c8' data-sort='0.0'>0</td></tr>
+<tr><td>San Marino 🇸🇲</td><td data-sort='5.0'>5</td><td style='background:#c8c8c8' data-sort='0.0'>0.0 %</td><td style='background:#c8c8c8' data-sort='0.0'>0</td></tr>
+<tr><td>Malta 🇲🇹</td><td data-sort='12.0'>12</td><td style='background:#c8c8c8' data-sort='0.0'>0.0 %</td><td style='background:#c8c8c8' data-sort='0.0'>0</td></tr>
+<tr><td>Haiti 🇭🇹</td><td data-sort='153.0'>153</td><td style='background:#c8c8c8' data-sort='0.0'>0.0 %</td><td style='background:#c8c8c8' data-sort='0.0'>0</td></tr>
+<tr><td>Guinea-Bissau 🇬🇼</td><td data-sort='220.0'>220</td><td style='background:#c8c8c8' data-sort='0.0'>0.0 %</td><td style='background:#c8c8c8' data-sort='0.0'>0</td></tr>
+<tr><td>Jamaica 🇯🇲</td><td data-sort='613.0'>613</td><td style='background:#c8c8c8' data-sort='0.0'>0.0 %</td><td style='background:#c8c8c8' data-sort='0.0'>0</td></tr>
+<tr><td>Guyana 🇬🇾</td><td data-sort='2.0'>2</td><td style='background:#c8c8c8' data-sort='0.0'>0.0 %</td><td style='background:#c8c8c8' data-sort='0.0'>0</td></tr>
+<tr><td>Honduras 🇭🇳</td><td data-sort='1808.0'>1808</td><td style='background:#c8c8c8' data-sort='0.0'>0.0 %</td><td style='background:#c8c8c8' data-sort='0.0'>0</td></tr>
+<tr><td>Liberia 🇱🇷</td><td data-sort='587.0'>587</td><td style='background:#c8c8c8' data-sort='0.0'>0.0 %</td><td style='background:#c8c8c8' data-sort='0.0'>0</td></tr>
+<tr><td>Liechtenstein 🇱🇮</td><td data-sort='30.0'>30</td><td style='background:#c8c8c8' data-sort='0.0'>0.0 %</td><td style='background:#c8c8c8' data-sort='0.0'>0</td></tr>
+<tr><td>Mauritania 🇲🇷</td><td data-sort='1447.0'>1447</td><td style='background:#c8c8c8' data-sort='0.0'>0.0 %</td><td style='background:#c8c8c8' data-sort='0.0'>0</td></tr>
+<tr><td>Mauritius 🇲🇺</td><td data-sort='152.0'>152</td><td style='background:#c8c8c8' data-sort='0.0'>0.0 %</td><td style='background:#c8c8c8' data-sort='0.0'>0</td></tr>
+<tr><td>Mali 🇲🇱</td><td data-sort='1584.0'>1584</td><td style='background:#c8c8c8' data-sort='0.0'>0.0 %</td><td style='background:#c8c8c8' data-sort='0.0'>0</td></tr>
+<tr><td>Timor-Leste 🇹🇱</td><td data-sort='589.0'>589</td><td style='background:#c8c8c8' data-sort='0.0'>0.0 %</td><td style='background:#c8c8c8' data-sort='0.0'>0</td></tr>
+<tr><td>Seychelles 🇸🇨</td><td data-sort='4.0'>4</td><td style='background:#c8c8c8' data-sort='0.0'>0.0 %</td><td style='background:#c8c8c8' data-sort='0.0'>0</td></tr>
+<tr><td>Eswatini 🇸🇿</td><td data-sort='703.0'>703</td><td style='background:#c8c8c8' data-sort='0.0'>0.0 %</td><td style='background:#c8c8c8' data-sort='0.0'>0</td></tr>
+<tr><td>Somalia 🇸🇴</td><td data-sort='1.0'>1</td><td style='background:#c8c8c8' data-sort='0.0'>0.0 %</td><td style='background:#c8c8c8' data-sort='0.0'>0</td></tr>
+<tr><td>Papua New Guinea 🇵🇬</td><td data-sort='948.0'>948</td><td style='background:#c8c8c8' data-sort='0.0'>0.0 %</td><td style='background:#c8c8c8' data-sort='0.0'>0</td></tr>
+<tr><td>Panama 🇵🇦</td><td data-sort='2125.0'>2125</td><td style='background:#c8c8c8' data-sort='0.0'>0.0 %</td><td style='background:#c8c8c8' data-sort='0.0'>0</td></tr>
+<tr><td>Sudan 🇸🇩</td><td data-sort='6516.0'>6516</td><td style='background:#c8c8c8' data-sort='0.0'>0.0 %</td><td style='background:#c8c8c8' data-sort='0.0'>0</td></tr>
+<tr><td>Norway 🇳🇴</td><td data-sort='31941.0'>31941</td><td style='background:#c8c8c8' data-sort='-0.01252152136484583'>-0.0 %</td><td style='background:#c8c8c8' data-sort='-4.0'>-4</td></tr>
+<tr><td>Oman 🇴🇲</td><td data-sort='10175.0'>10175</td><td style='background:#c8c8c8' data-sort='-0.03929659102072895'>-0.0 %</td><td style='background:#c8c8c8' data-sort='-4.0'>-4</td></tr>
+<tr><td>South Korea 🇰🇷</td><td data-sort='13744.0'>13744</td><td style='background:#c8c8c8' data-sort='-0.06544026757798299'>-0.1 %</td><td style='background:#c8c8c8' data-sort='-9.0'>-9</td></tr>
+<tr><td>Belgium 🇧🇪</td><td data-sort='5986.0'>5986</td><td style='background:#c8c8c8' data-sort='-0.0667779632721202'>-0.1 %</td><td style='background:#c8c8c8' data-sort='-4.0'>-4</td></tr>
+<tr><td>Portugal 🇵🇹</td><td data-sort='17366.0'>17366</td><td style='background:#c8c8c8' data-sort='-0.06905282541143976'>-0.1 %</td><td style='background:#c8c8c8' data-sort='-12.0'>-12</td></tr>
+<tr><td>Kingdom of the Netherlands 🇳🇱</td><td data-sort='4181.0'>4181</td><td style='background:#c8c8c8' data-sort='-0.11944577161968467'>-0.1 %</td><td style='background:#c8c8c8' data-sort='-5.0'>-5</td></tr>
+<tr><td>Germany 🇩🇪</td><td data-sort='63034.0'>63034</td><td style='background:#c8c8c8' data-sort='-0.1821089803480657'>-0.2 %</td><td style='background:#c8c8c8' data-sort='-115.0'>-115</td></tr>
+<tr><td>Libya 🇱🇾</td><td data-sort='25729.0'>25729</td><td style='background:#c8c8c8' data-sort='-0.19395632103650257'>-0.2 %</td><td style='background:#c8c8c8' data-sort='-50.0'>-50</td></tr>
+<tr><td>Switzerland 🇨🇭</td><td data-sort='9596.0'>9596</td><td style='background:#c8c8c8' data-sort='-0.2702140927042195'>-0.3 %</td><td style='background:#c8c8c8' data-sort='-26.0'>-26</td></tr>
+<tr><td>New Zealand 🇳🇿</td><td data-sort='12512.0'>12512</td><td style='background:#c8c8c8' data-sort='-0.2868983104877271'>-0.3 %</td><td style='background:#c8c8c8' data-sort='-36.0'>-36</td></tr>
+<tr><td>France 🇫🇷</td><td data-sort='83526.0'>83526</td><td style='background:#c8c8c8' data-sort='-0.42440571278701034'>-0.4 %</td><td style='background:#c8c8c8' data-sort='-356.0'>-356</td></tr>
+<tr><td>Austria 🇦🇹</td><td data-sort='11532.0'>11532</td><td style='background:#c8c8c8' data-sort='-0.9363456747702087'>-0.9 %</td><td style='background:#c8c8c8' data-sort='-109.0'>-109</td></tr>
+<tr><td>Iceland 🇮🇸</td><td data-sort='3487.0'>3487</td><td style='background:#c8c8c8' data-sort='-1.106069200226886'>-1.1 %</td><td style='background:#c8c8c8' data-sort='-39.0'>-39</td></tr>
+<tr><td>Luxembourg 🇱🇺</td><td data-sort='645.0'>645</td><td style='background:#c8c8c8' data-sort='-1.2251148545176112'>-1.2 %</td><td style='background:#c8c8c8' data-sort='-8.0'>-8</td></tr>
+<tr><td>Latvia 🇱🇻</td><td data-sort='12236.0'>12236</td><td style='background:#c8c8c8' data-sort='-1.6161453726782988'>-1.6 %</td><td style='background:#c8c8c8' data-sort='-201.0'>-201</td></tr>
+<tr><td>United Kingdom 🇬🇧</td><td data-sort='28377.0'>28377</td><td style='background:#c8c8c8' data-sort='-2.0773663687497845'>-2.1 %</td><td style='background:#c8c8c8' data-sort='-602.0'>-602</td></tr>
+<tr><td>Poland 🇵🇱</td><td data-sort='45982.0'>45982</td><td style='background:#c8c8c8' data-sort='-5.784243417682614'>-5.8 %</td><td style='background:#c8c8c8' data-sort='-2823.0'>-2823</td></tr>
+<tr><td>Syria 🇸🇾</td><td data-sort='18820.0'>18820</td><td style='background:#c8c8c8' data-sort='-5.965823923253723'>-6.0 %</td><td style='background:#c8c8c8' data-sort='-1194.0'>-1194</td></tr>
+<tr><td>Lesotho 🇱🇸</td><td data-sort='638.0'>638</td><td style='background:#c8c8c8' data-sort='-16.81877444589309'>-16.8 %</td><td style='background:#c8c8c8' data-sort='-129.0'>-129</td></tr>
+
+</tbody>
+</table>
+</body>
+</html>

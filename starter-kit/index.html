@@ -1,0 +1,1536 @@
+<!DOCTYPE html><html lang="en" class="no-js"><head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="We empower individuals, communities and nations around the world to map the electrical grid.">
+      
+      
+      
+        <link rel="canonical" href="https://MapYourGrid.org/starter-kit/">
+      
+      
+        <link rel="prev" href="../impact/">
+      
+      
+        <link rel="next" href="../map-it/">
+      
+      
+      <link rel="icon" href="../images/logos/MapYourGrid-logo.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.20">
+    
+    
+      
+        <title>STARTER-KIT - MapYourGrid</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.e53b48f4.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../stylesheets/extra.css">
+    
+      <link rel="stylesheet" href="../stylesheets/mapit.css">
+    
+      <link rel="stylesheet" href="../stylesheets/landing.css">
+    
+      <link rel="stylesheet" href="../stylesheets/blog.css">
+    
+      <link rel="stylesheet" href="../stylesheets/awesome_list.css">
+    
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/featherlight@1.7.14/release/featherlight.min.css">
+    
+      <link rel="stylesheet" href="../stylesheets/gfl.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  
+  <meta property="og:title" content="MapYourGrid">
+  <meta property="og:description" content="We empower individuals, communities and nations around the world to map the electrical grid.">
+  <meta property="og:image" content="https://MapYourGrid.org/images/website/mapyourgrid-preview.jpg">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://MapYourGrid.org">
+  
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="MapYourGrid">
+  <meta name="twitter:description" content="We empower individuals, communities and nations around the world to map the electrical grid.">
+  <meta name="twitter:image" content="https://MapYourGrid.org/images/website/mapyourgrid-preview.jpg">
+
+  <link href="../assets/stylesheets/glightbox.min.css" rel="stylesheet"><script src="../assets/javascripts/glightbox.min.js"></script><style id="glightbox-style">
+            html.glightbox-open { overflow: initial; height: 100%; }
+            .gslide-title { margin-top: 0px; user-select: text; }
+            .gslide-desc { color: #666; user-select: text; }
+            .gslide-image img { background: white; }
+            .gscrollbar-fixer { padding-right: 15px; }
+            .gdesc-inner { font-size: 0.75rem; }
+            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color); }
+            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color); }
+            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color); }
+        </style></head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#id-starter-kit" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+        <aside class="md-banner">
+          <div class="md-banner__inner md-grid md-typeset">
+            
+            
+<a href="https://discord.gg/a5znpdFWfD">
+  <div style="display:inline-flex; align-items:center; color:#aad3c6">
+    <strong> Join our community chat </strong>
+    <img src="/icons/discord-white.png" alt="Discord logo" style="width:1em; height:0.75em; margin-left:0.5ch; vertical-align:middle;" class="twemoji">
+  </div>
+    <div style="display:inline-flex; align-items:center; color:#aad3c6">
+      <strong> and learn to map with us! 📍  </strong>
+    </div>
+  </a>
+
+          </div>
+          
+        </aside>
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="MapYourGrid" class="md-header__button md-logo" aria-label="MapYourGrid" data-md-component="logo">
+      
+  <img src="../images/logos/MapYourGrid-logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            MapYourGrid
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              STARTER-KIT
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="indigo" aria-label="Switch to dark mode" type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"></path></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo" aria-label="Switch to light mode" type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"></path></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+      <div class="md-header__option">
+  <div class="md-select">
+    
+    <button class="md-header__button md-icon" aria-label="Select language">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12.87 15.07-2.54-2.51.03-.03A17.5 17.5 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2zm-2.62 7 1.62-4.33L19.12 17z"></path></svg>
+    </button>
+    <div class="md-select__inner">
+      <ul class="md-select__list">
+        
+          <li class="md-select__item">
+            <a href="./" hreflang="en" class="md-select__link">
+              English
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="../es/starter-kit/" hreflang="es" class="md-select__link">
+              Español
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="../fr/starter-kit/" hreflang="fr" class="md-select__link">
+              Français
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</div>
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/open-energy-transition/MapYourGrid" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"></path></svg>
+  </div>
+  <div class="md-source__repository">
+    MapYourGrid
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href=".." class="md-tabs__link">
+        
+  
+  
+    
+  
+  INITIATIVE
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../impact/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  IMPACT
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    <li class="md-tabs__item md-tabs__item--active">
+      <a href="./" class="md-tabs__link">
+        
+  
+  
+    
+  
+  STARTER-KIT
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../map-it/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  MAP IT📍
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../gridinspector/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  GRID INSPECTOR
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../strategies/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  STRATEGIES
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../progress/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  PROGRESS
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../global-grid-data/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  DATA
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../faq/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  FAQ
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../about-us/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  ABOUT US
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="MapYourGrid" class="md-nav__button md-logo" aria-label="MapYourGrid" data-md-component="logo">
+      
+  <img src="../images/logos/MapYourGrid-logo.png" alt="logo">
+
+    </a>
+    MapYourGrid
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/open-energy-transition/MapYourGrid" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"></path></svg>
+  </div>
+  <div class="md-source__repository">
+    MapYourGrid
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    INITIATIVE
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../impact/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    IMPACT
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    STARTER-KIT
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    STARTER-KIT
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#id-starter-kit" class="md-nav__link">
+    <span class="md-ellipsis">
+      iD Starter-Kit
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="iD Starter-Kit">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#check-out-our-starter-kit-video-tutorial-for-id" class="md-nav__link">
+    <span class="md-ellipsis">
+      Check out our starter-kit video tutorial for iD
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#map-your-good-first-line-with-id" class="md-nav__link">
+    <span class="md-ellipsis">
+      Map your Good First Line with iD
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#josm-starter-kit" class="md-nav__link">
+    <span class="md-ellipsis">
+      JOSM Starter-Kit
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="JOSM Starter-Kit">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#check-out-our-starter-kit-video-tutorial-for-josm" class="md-nav__link">
+    <span class="md-ellipsis">
+      Check out our starter-kit video tutorial for JOSM
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1-install-and-configure-josm" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Install and Configure JOSM
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-setup-your-presets-and-quality-assurance-rules" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Setup your Presets and Quality Assurance Rules
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-add-visual-clarity-with-custom-map-styles" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Add Visual Clarity with Custom Map Styles
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-lets-map-choose-a-good-first-line" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Let's map! Choose a Good First Line
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-load-power-infrastructure-into-josm" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Load Power Infrastructure into JOSM
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6-map-your-first-line" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. Map your First Line
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#7-upload-your-edits-to-openstreetmap" class="md-nav__link">
+    <span class="md-ellipsis">
+      7. Upload your Edits to OpenStreetMap
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#8-mapping-guidelines" class="md-nav__link">
+    <span class="md-ellipsis">
+      8. Mapping Guidelines
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#9-avoid-these-common-mistakes" class="md-nav__link">
+    <span class="md-ellipsis">
+      9. Avoid these Common Mistakes
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#id-and-open-infrastructure-map-starter-kit" class="md-nav__link">
+    <span class="md-ellipsis">
+      iD and Open Infrastructure Map Starter-Kit
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="iD and Open Infrastructure Map Starter-Kit">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#power-towers-in-field-mapping" class="md-nav__link">
+    <span class="md-ellipsis">
+      Power Towers In-Field Mapping
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#substations-and-power-plants" class="md-nav__link">
+    <span class="md-ellipsis">
+      Substations and Power Plants
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#find-open-ended-transmission-lines-with-osmose" class="md-nav__link">
+    <span class="md-ellipsis">
+      Find open-ended transmission lines with Osmose
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#report-issues-in-the-grid" class="md-nav__link">
+    <span class="md-ellipsis">
+      Report Issues in the Grid
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mapcomplete-starter-kit" class="md-nav__link">
+    <span class="md-ellipsis">
+      MapComplete Starter-Kit
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#still-on-the-line-and-motivated-to-continue" class="md-nav__link">
+    <span class="md-ellipsis">
+      Still "On the Line" and Motivated to Continue?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#what-else-learn-the-grid-basics" class="md-nav__link">
+    <span class="md-ellipsis">
+      What else? Learn the Grid Basics
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../map-it/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    MAP IT📍
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gridinspector/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    GRID INSPECTOR
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../strategies/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    STRATEGIES
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../progress/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    PROGRESS
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../global-grid-data/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    DATA
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../faq/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    FAQ
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../about-us/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ABOUT US
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<div class="page-headers">
+<h1>Starter-Kit </h1>
+</div>
+
+<div style="float: right; margin: 5px 0 20px 20px; width: 450px; max-width: 100%">
+<a href="https://openinframap.org/#6.54/39.026/-7.548" target="_blank">
+<img src="/images/openinframap-portugal.jpg" class="img-border icon-svg off-glb" style="width: 100%;"></a> 
+<figcaption class="image-caption">
+<a href="https://openinframap.org/#6.54/39.026/-7.548" target="_blank">Open Infrastructure Map</a> showing the detailed transmission and distribution grid in Portugal. Click to enlarge.
+</figcaption>
+</div>
+
+<p>These starter kits empower you to map your first line of the electrical transmission grid and other power infrastructure you will find along the way. If you ever get stuck or would like to provide feedback, please contact us via our <a href="https://discord.gg/fBw7ARTUeR">community chat</a> or <a href="mailto:MapYourGrid@openenergytransition.org">via email</a>. A MapYourGrid community member will help you finish your first line and set up your environment.</p>
+<p>We recommend JOSM (Java OpenStreetMap) editor generally, particularly for large-scale grid mapping and to inspect the electrical grid. However, if you only want to make minor edits or leave notes without installing anything, the <a href="https://www.openstreetmap.org/edit">iD editor</a> provides a user-friendly mapping experience. iD and JOSM can both be combined with <a href="https://openinframap.org/">Open Infrastructure Map</a>. MapComplete provides an optimised workflow for mobile devices for mapping missing tags, such as voltages or capacities. These tools also offer enhanced usability for field mapping tasks and data validation. You can follow our tutorials on this website, or watch our video tutorial for JOSM!</p>
+<p><strong>Get started by clicking on one of the OpenStreetMap editors:</strong></p>
+<div class="starter-kit-buttons">
+  <a href="#id-starter-kit" class="btn btn-third">iD Starter‑Kit - Beginner Friendly Small‑Scale Mapping</a>
+  <a href="#josm-starter-kit" class="btn btn-primary">JOSM Starter‑Kit - Large‑Scale &amp; Technical Mapping</a> 
+  <a href="#id-and-open-infrastructure-map-starter-kit" class="btn btn-third">iD &amp; Open Infrastructure Map Starter-Kit - Advanced iD Mapping &amp; Field Mapping</a> 
+  <a href="#mapcomplete-starter-kit" class="btn btn-fourth">MapComplete Starter‑Kit - Missing Tags Field Mapping</a>
+</div>
+
+<h2 id="id-starter-kit"><div class="stradegy-header">iD Starter-Kit</div></h2>
+<p>Have you spotted some power towers, power plants, issue or substations near your place that are still missing and want to quickly map them yourself? This can be done on your mobile device or PC using the iD editor. In this way, you can also correct voltages, circuits, or other errors you see in Open Infrastructure Map.</p>
+<p>The native iD OpenStreetMap editor offers a simple, user-friendly interface that is perfect for beginners or those who want a quick overview of electrical grid mapping. Its simple user interface and web browser integration also make it possible to use this editor on mobile devices, enabling field mapping and validation tasks to be carried out on the ground.</p>
+<h3 id="check-out-our-starter-kit-video-tutorial-for-id"><strong><div class="tools-header">Check out our starter-kit video tutorial for iD</div></strong></h3>
+<iframe width="720" height="315" style="height: auto; aspect-ratio: 16/9;" src="https://www.youtube-nocookie.com/embed/gAPss8ZeVLs?si=aC-T0GK4Mv3Kcr9e" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+<hr>
+<h3 id="map-your-good-first-line-with-id"><div class="stradegy-header">Map your Good First Line with iD</div></h3>
+<p>For those who prefer iD to JOSM or are new to OpenStreetMap and electrical grid mapping, the following starter kit provides a quick introduction to mapping your first <code>Good First Line</code>. While it is possible to map transmission lines on a mobile device, this is best done on a PC with a mouse. </p>
+<div style="float: right; margin: 5px 0 20px 20px; width: 350px;">
+  <a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/starter-kit/id-start-your-line.jpg" data-desc-position="bottom"><img src="../images/starter-kit/id-start-your-line.jpg" class="img-border" style="width: 100%;"></a>
+  <figcaption class="image-caption">Copy the Good First Line coordinates into your editor. Click to enlarge.</figcaption>
+  <a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/starter-kit/id-map-line.jpg" data-desc-position="bottom"><img src="../images/starter-kit/id-map-line.jpg" class="img-border" style="width: 100%;"></a> 
+  <figcaption class="image-caption">Map your first power line, making all nodes power towers and the line itself a power line. Click to enlarge.</figcaption>
+  <a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/starter-kit/upload-data.jpg" data-desc-position="bottom"><img src="../images/starter-kit/upload-data.jpg" class="img-border" style="width: 100%;"></a>
+  <figcaption class="image-caption">Provide a small comment on your mapping success, including a #mapyourgrid hashtag and upload your data. Click to enlarge</figcaption>
+  <a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/starter-kit/power-tower-examples.jpg" data-desc-position="bottom"><img src="../images/starter-kit/power-tower-examples.jpg" class="img-border" style="width: 100%;"></a>
+  <figcaption class="image-caption">Depending on the angle of the sun, power towers casts a distinctive shadow. Take a look at the power towers that have already been mapped and bear in mind that most lines run straight with a similar distance between power towers. Click to enlarge.</figcaption>
+  <a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/starter-kit/map-single-tower-id.jpg" data-desc-position="bottom"><img src="../images/starter-kit/map-single-tower-id.jpg" class="img-border" style="width: 100%;"></a>
+  <figcaption class="image-caption">Not sure about the exact routing of a transmission line? Simply place the power towers and leave out the transmission lines. </figcaption>
+</div>
+
+<ol>
+<li><a href="https://www.openstreetmap.org/user/new?cookie_test=true&amp;referer=%2Fedit%3Feditor%3Did" target="_blank">Create an OpenStreetMap account</a> and log in.</li>
+<li>Select a <code>Good First Line</code> from the following list, then click on <code>id Editor</code>: <a class="md-button md-button--primary" href="../good-first-lines/" target="_blank">Good First Lines <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M536.4-26.3c9.8-3.5 20.6-1 28 6.3s9.8 18.2 6.3 28l-178 496.9c-5 13.9-18.1 23.1-32.8 23.1-14.2 0-27-8.6-32.3-21.7l-64.2-158c-4.5-11-2.5-23.6 5.2-32.6l94.5-112.4c5.1-6.1 4.7-15-.9-20.6s-14.6-6-20.6-.9l-112.4 94.3c-9.1 7.6-21.6 9.6-32.6 5.2L38.1 216.8c-13.1-5.3-21.7-18.1-21.7-32.3 0-14.7 9.2-27.8 23.1-32.8z"></path></svg></span></a></li>
+<li>This will open a tab within the edit mode of the iD editor, and move you to the location of the <code>Good First Line</code> you selected. You should now see a transmission line mapped with the open end at a power tower.  </li>
+<li>iD will show you all OpenStreetMap data and with <code>Bing</code> or <code>ESRI</code> satellite imagery underneath. Depending on your region, you might want to switch to different satellite imagery by pressing the <code>Background Setting</code> button in the right panel, in case the imagery doesn't show the Power Towers.</li>
+<li>To extend the power line, you can simply press on the last Power Tower and click <code>A</code> on your keyboard to extend the current line. If you don't want to extend the line and instead create a new line, you can also click on the <code>Line</code> button in the top panel and afterwards on the last power tower symbol next to the coordinates. </li>
+<li>Now, search for the next Power Towers. Looking at how the previous power towers looked will give you an idea of what the next one will look like. Most lines are straight and an equal distance apart. If you cannot see the previous power towers, you may need to switch to satellite view. Don't worry if you miss a power tower. Such issues are automatically detected, so another mapper may spot it.</li>
+<li>Place a new <code>node</code> at the base of all the power towers along the <code>way</code>, continuing as far as you can find new towers.</li>
+<li>Next, you need to tag the line and nodes correctly. To do this, first press <code>Esc</code> and then click on the way you have just drawn. In the left panel you can now edit the <code>Feature</code>. Press on the <code>Line</code> symbol and search for <code>Power Line</code>, if the line hasn't already been tagged has <code>Power Line</code>.</li>
+<li>With your new Power Line still selected pressing <code>CTRL + ↓</code> will select all the <code>nodes</code> along your <code>Power Line</code>.</li>
+<li>Now in the left panel, go back to the search field and search for <code>Power Tower</code> or <code>High-Voltage Tower</code>. </li>
+<li>Press on it, and all you nodes will become <code>Power Towers</code>. If you zoom in, you should now see the <code>Power Tower</code> now along the line.</li>
+<li>Once you finished your mapping session, resolve all warnings, issues and errors in your data by clicking on the ⚠️ symbol in the bottom right corner.</li>
+<li>Now press the <code>Save</code> button in the right upper corner. Provide a very short decription what you have done in the Changeset comment, including a <code>#MapYourGrid</code> hashtag.</li>
+<li>Finally press Press <code>Upload</code>. Congratulations! You have just mapped your very first transmission line.</li>
+</ol>
+<p>Sometimes, there are several possible options for line routing and it is unclear where the transmission lines actually go. In these cases, it is perfectly acceptable to simply place power towers. You can't go wrong by placing power towers. Another more experience mapper will see your towers and finish the line. </p>
+<ol>
+<li>Create a <code>Point</code> where you can see the power tower with the button in the top middle panel.</li>
+<li>Make it a <code>High-Voltage Tower</code> aka power tower with the feature panel on the left side. </li>
+<li>Copy the Power Tower with <code>CTRL+C</code> and place it where you see more power towers. </li>
+</ol>
+<p><strong>Where to go next?</strong> </p>
+<ul>
+<li>Do you want to find and map further open ending transmission lines in your country using iD? Check out our <a href="#find-open-ended-transmission-lines-with-osmose">find open-ended Transmission Lines with Osmose</a> in iD workflow.</li>
+<li>Would you like to learn how to map power plants or substations with iD? Or are you interested in finding out how to use iD for in-field mapping? Check out our further <a href="#id-and-open-infrastructure-map-starter-kit">iD and Open Infrastructure Map Starter Kit</a></li>
+</ul>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p><strong>In some countries, mapping power lines is restricted. Always verify local guidelines, connect with the OSM local community first, or check out the <a href="https://community.osm.be/">local communities</a> and <a href="https://wiki.openstreetmap.org/wiki/Power_networks#Local_projects">local projects</a>. If you can't find a local community, please send us an <a href="mailto:MapYourGrid@openenergytransition.org">email</a> and we will help you set up a local group.</strong></p>
+<p><strong>By following our <a href="../mapping-good-practices/">Good practices for mapping</a>, we collectively protect the integrity of the OSM platform, foster trust with communities, and unlock the power of open data for a more resilient and just energy future. Please be aware that the OpenStreetMap community and foundation does not technically limit the mapping in any place on the globe. Therefore, our Good practices for mapping cannot be enforced for volunteer community mappers either.</strong> </p>
+</div>
+<h2 id="josm-starter-kit"><div class="stradegy-header">JOSM Starter-Kit</div></h2>
+<h3 id="check-out-our-starter-kit-video-tutorial-for-josm"><strong><div class="tools-header">Check out our starter-kit video tutorial for JOSM</div></strong></h3>
+<iframe width="720" height="315" style="height: auto; aspect-ratio: 16/9;" src="https://www.youtube-nocookie.com/embed/SCOmFnW7uG8?si=hSxN_3SFm-cFFWuh" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+<div style="float: right; margin: 5px 0 20px 20px; width: 350px;">
+  <a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="/images/starter-kit/kenya-tanzania.jpg" data-desc-position="bottom"><img src="/images/starter-kit/kenya-tanzania.jpg" class="img-border" style="width: 100%;"></a> 
+  <figcaption class="image-caption">This is what your JOSM should look like after setting up the full Starter-Kit. Click to enlarge.</figcaption>
+  <a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="/images/preferences.jpg" data-desc-position="bottom"><img src="/images/preferences.jpg" class="img-border" style="width: 100%;"></a> 
+  <figcaption class="image-caption">Different preferences that need to be configured, including the Power Presets. Click to enlarge.</figcaption>
+  <a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="/images/starter-kit/imagery.jpg" data-desc-position="bottom"><img src="/images/starter-kit/imagery.jpg" class="img-border" style="width: 100%;"></a> 
+  <figcaption class="image-caption">For countries such as Japan, high-resolution imagery is available across the whole country in JOSM. Click to enlarge.</figcaption>
+</div>
+
+<h3 id="1-install-and-configure-josm"><strong><div class="tools-header">1. Install and Configure JOSM  <a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="/images/josm_logo.jpg" data-desc-position="bottom"><img src="/images/josm_logo.jpg" style="height: 1.2em; vertical-align: middle; margin-left: 10px;"></a></div></strong></h3>
+<ol>
+<li>Install JOSM using the <a href="../installation-instructions/" target="_blank"><strong>recommended instructions</strong></a> for your machine.</li>
+<li>Link your OSM account to JOSM. To do this, go to <code>Edit → Preferences → OSM Server</code> and select "Authorise". Login (or sign-up) with your OSM account. Your OSM account should now be linked. On macOS <code>Preferences</code> can be found under <code>JOSM → Settings</code></li>
+<li>Enable <code>Remote control</code> in <code>Edit → Preferences → Remote Control</code>. This allows for grid data to be loaded automatically from the browser into JOSM. Please note that Safari does not support remote control. You will need to use a different browser to make this work. </li>
+<li>Enable <code>Expert Mode</code> <code>View → Expert Mode</code> to enable search function that you will need. </li>
+<li>Understanding JOSM layers. JOSM works with stacked layers, similar to Photoshop or GIS tools:<ul>
+<li>You’ll typically have an OSM data layer, imagery layers, and optionally GeoJSON or task layers.</li>
+<li>You can switch between multiple satellite imagery sources (for instance, Esri, Mapbox) to use the clearest one for your area.</li>
+</ul>
+</li>
+<li>Load your Satellite Imagery via <code>Imagery</code> and select <code>Bing aerial imagery</code> and <code>Esri World Imagery</code>. In the <code>Layers</code> window on the right hand side you can now <code>Show/hide</code> the different imagery by clicking on the eye. This is also where you will load additional data layers. Changing the order of the data and imagery allows you to combine and overlap the different data sources. Some countries, such as Japan, South Africa and Germany, have their own high-resolution imagery in JOSM. If you are mapping local imagery will automatically be visible under <code>Imagery</code>.</li>
+</ol>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p><strong>In some countries, mapping power lines is restricted. Always verify local guidelines, connect with the OSM local community first, or check out the <a href="https://wiki.openstreetmap.org/wiki/Power_networks#Local_projects">local projects</a>. If you can't find a local community, please send us an <a href="mailto:MapYourGrid@openenergytransition.org">email</a> and we will help you set up a local group.</strong></p>
+<p><strong>By following our <a href="../mapping-good-practices/">Good practices for mapping</a>, we collectively protect the integrity of the OSM platform, foster trust with communities, and unlock the power of open data for a more resilient and just energy future. Please be aware that the OpenStreetMap community and foundation does not technically limit the mapping in any place on the globe. Therefore, our Good practices for mapping cannot be enforced for volunteer community mappers either.</strong> </p>
+</div>
+<h3 id="2-setup-your-presets-and-quality-assurance-rules"><strong><div class="tools-header">2. Setup your Presets and Quality Assurance Rules </div></strong></h3>
+<div style="float: right; margin: 10px 0 20px 20px; width: 350px;">
+  <a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="/images/josm-toolbar.png" data-desc-position="bottom"><img src="/images/josm-toolbar.png" class="img-border" style="width: 100%;"></a> 
+  <figcaption class="image-caption">Default MapYourGrid Presets in JOSM toolbar. Click to enlarge.</figcaption>
+  <a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="/images/presets-energy.jpg" data-desc-position="bottom"><img src="/images/presets-energy.jpg" class="img-border" style="width: 100%;"></a> 
+  <figcaption class="image-caption">The existing presets help you to map infrastructure fast and in a standardized way.</figcaption>
+</div>
+
+<ol>
+<li>For ease of mapping, customise your top toolbar with presets if you have not used the default preferences. Right click the toolbar and choose <code>Configure toolbar</code> (or also <code>Preferences → Toolbar</code>). Then on the right, select <code>Presets → Man Made → Man Made/Power</code> and add <code>Power Towers</code>, <code>Power Portal</code>, <code>Power Substation</code>, <code>Power Plants</code>, <code>Power Line</code> and <code>Power Generators</code>, by pressing the button in the middle to add these to your toolbar. These are the main objects you will need for transmission grid mapping. You can also remove the presets you won't use.</li>
+<li>Another important Preset your will need is <code>Add Node</code>. You will find it under <code>Tools</code> → <code>Add Node</code>. </li>
+<li>When you open a new layer later in the tutorial, the toolbar will stop being grey.</li>
+<li><strong>Optional</strong> - for more experienced mappers we recommend integrating our validation rules. Add MapYourGrid additional quality assurance rules: <code>Preferences → Data validator</code>, on the <code>Tag checker rules</code> tab, search for <code>Power QA</code>, click on the item in the list, and then on the arrow in the middle of the window to add it to your active rules. These validation rules will help you identify and correct any errors that may have been made. JOSM will run these checks before publishing your data and will display any points requiring verification. Please review them and try to fix them to ensure that the data we produce is usable. You can find <a href="https://wiki.openstreetmap.org/wiki/Power_networks/Quality_Assurance">more information and explanations about these rules on the wiki</a>.</li>
+</ol>
+<div style="float: right; margin: 5px 0 10px 20px; width: 350px;">
+  <a href="https://raw.githubusercontent.com/open-energy-transition/color-my-grid/refs/heads/main/legend/power-grid-legend.svg" target="_blank">
+  <img src="https://raw.githubusercontent.com/open-energy-transition/color-my-grid/refs/heads/main/legend/power-grid-legend.svg" class="img-border" style="width: 100%;"> </a>
+  <figcaption class="image-caption">OhmyGrid legend for transmission grid mapping. Click to enlarge.</figcaption>
+    <a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="/images/voltage-auto-filter.jpeg" data-desc-position="bottom"><img src="/images/voltage-auto-filter.jpeg" class="img-border" alt="JOSM PowerNetworkTools Plugin"></a>
+  <figcaption class="image-caption">The voltage autofilter enables you to quickly identify the voltages in use and filter by voltage. Click to enlarge</figcaption> 
+</div>
+
+<h3 id="3-add-visual-clarity-with-custom-map-styles"><strong><div class="tools-header">3. Add Visual Clarity with Custom Map Styles <img alt="🎨" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/1f3a8.svg" title=":art:"></div></strong></h3>
+<ol>
+<li>In JOSM, go to <code>Edit → Preferences → Map Paint Styles</code> and press the "+" in the top right.</li>
+<li>Paste this <a href="https://raw.githubusercontent.com/open-energy-transition/color-my-grid/refs/heads/main/ohmygrid-default.mapcss" target="_blank">URL</a>, or download the raw <a href="https://github.com/open-energy-transition/color-my-grid/blob/main/ohmygrid-default.mapcss" target="_blank">file</a> on your device, and add it.</li>
+<li>Make sure the style is active in the Map Paint Styles menu. You can check this with <code>Windows → Map Paint styles</code>.</li>
+</ol>
+<p><strong>Optional steps for an even better visual experience :</strong></p>
+<ul>
+<li>To quickly see which voltages are used in a region and to filter lines with specific voltages the auto filters in JOSM can be very helpful. Press <code>Edit</code> -&gt; <code>Preferences</code> -&gt; <code>OSM Data</code>. Go to 'Other Options', activate 'Use Auto Filters' and select 'Rule Voltage [5]' from the drop-down menu. You will now see multiple buttons in the top left corner showing the voltages in the view. Click on a voltage to filter by it.</li>
+<li>Not all grids are made the same. Use this MapCSS file for <a href="https://raw.githubusercontent.com/open-energy-transition/color-my-grid/refs/heads/main/ohmygrid-default.mapcss">low-density grids</a>, or this one for <a href="https://raw.githubusercontent.com/open-energy-transition/color-my-grid/refs/heads/main/ohmygrid-default-high-density.mapcss" target="_blank">high-density grids</a>. </li>
+<li>You can check <a href="https://github.com/open-energy-transition/color-my-grid" target="_blank">ColorMyGrid</a>, our MapCSS Generator tool, to easily adapt the MapCSS file to your needs. The raw data to edit the <a href="https://raw.githubusercontent.com/open-energy-transition/color-my-grid/refs/heads/main/legend/power-grid-legend.svg" target="_blank">map legend</a> is in the ColorMyGrid repo. </li>
+</ul>
+<div style="float: right; margin: 10px 0 20px 20px; width: 350px;">
+
+</div>
+
+<h3 id="4-lets-map-choose-a-good-first-line"><strong><div class="tools-header">4. Let's map! Choose a Good First Line </div></strong></h3>
+<p>Our community is constantly investigating transmission lines that are suitable for beginner friendly mapping experiences. Simply select a 'Good First Lines' from the following page, and tick it if you have started/attemped mapping it. For now, just keep in mind in which country (or region) your picked 'Good first line' is in, as the next step is to load that countries' grid! Select a <code>Good First Line</code> from the following page: </p>
+<div style="float: right; margin: 5px 0 10px 20px; width: 350px;">
+  <a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="/images/starter-kit/kenya-look-into-data.jpg" data-desc-position="bottom"><img src="/images/starter-kit/kenya-look-into-data.jpg" class="img-border" style="width: 100%;"></a> 
+  <figcaption class="image-caption">A substation of a hydroelectric power plant in Nigeria and the connection to the transmission grid.</figcaption>
+  <a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="/images/starter-kit/double-mapping-warning.jpg" data-desc-position="bottom"><img src="/images/starter-kit/double-mapping-warning.jpg" class="img-border" style="width: 100%;"></a>
+  <figcaption class="image-caption">The transmission lines do not end abruptly at the pink administrative borders. Therefore, the substation at the end of the interconnector may appear unmapped.</figcaption>
+</div>
+
+<p><a class="md-button md-button--primary" href="../good-first-lines/" target="_blank">Good First Lines <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M536.4-26.3c9.8-3.5 20.6-1 28 6.3s9.8 18.2 6.3 28l-178 496.9c-5 13.9-18.1 23.1-32.8 23.1-14.2 0-27-8.6-32.3-21.7l-64.2-158c-4.5-11-2.5-23.6 5.2-32.6l94.5-112.4c5.1-6.1 4.7-15-.9-20.6s-14.6-6-20.6-.9l-112.4 94.3c-9.1 7.6-21.6 9.6-32.6 5.2L38.1 216.8c-13.1-5.3-21.7-18.1-21.7-32.3 0-14.7 9.2-27.8 23.1-32.8z"></path></svg></span></a></p>
+<h3 id="5-load-power-infrastructure-into-josm"><strong><div class="tools-header">5. Load Power Infrastructure into JOSM <img alt="📥" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/1f4e5.svg" title=":inbox_tray:"></div></strong></h3>
+<ol>
+<li>Make sure remote control is enabled and ad-blocker disabled, and then go to the start mapping <a href="https://MapYourGrid.org/map-it/" target="_blank">page</a>, but come back to this page to read the instructions below! </li>
+<li>Here you can click on the country you want to map, and it will directly open JOSM and load the data of that country. The "Default Transmission (50 kV+)" data should already be selected when you open the page. Now press the country, region/state/province of the <code>Good First Line</code> you would like to map. To load data for regions/states/provinces, simply zoom in further until the border becomes visible (only works for certain countries for now!). </li>
+<li>The data should now automatically appear in JOSM. In the <code>Layer</code> window on the right handside you should see the <code>Data Layer</code>, which is automatically named with the country/region you pressed on. The ✅ on the left of the Data Layer should be visible, indicating that this is the active layer. All your edits in the main windows will now be part of this <code>Data Layer</code>. </li>
+<li>Familiarize yourself with the grid data, click on the lines and substation to inspect the tags and memberships in the window in the right side. </li>
+<li><strong>Bonus:</strong> You can download the data in the editor from the 'Data Layer' in the top right-hand corner. Simply right-click on the layer name and save it. You can then export the grid data in various formats, such as GeoJSON, to further process it on your machine.</li>
+</ol>
+<div class="admonition warning">
+<p class="admonition-title">Risk of Double Mapping and Conflicts</p>
+<p>Please bear in mind that you have only downloaded transmission grid data for the country, state or province that you selected. This includes power plants, generators, substations, power towers and transmission lines. Other OpenStreetMap objects, such as streets, will not be visible. <strong>Therefore, never use our tools to map objects other than those loaded via Overpass, as otherwise other mappers will have to clean up the duplicate data.</strong></p>
+<p>Some cross-border transmission lines will still be visible beyond the pink administrative boundaries. However, to edit these, you will need to load both countries. Never map beyond the pink administrative boundaries, as this will most likely result in infrastructure being mapped twice.</p>
+<p>Also keep in mind that some visible objects may be connected to other hidden features even not related to power domain. Deletion is a sensitive operation and JOSM will kindly warn you about risks, particularly about deleting some feature referenced by hidden objects. The safest way to prevent those risks is to select and download OpenStreetMap data, with the help of download button ⬇️ on top left corner, surrounding the feature to be deleted. You will then see the whole picture and won't break anything hidden.</p>
+</div>
+<h3 id="6-map-your-first-line"><strong><div class="tools-header">6. Map your First Line</div></strong></h3>
+<div style="float: right; margin: 5px 0 20px 20px; width: 350px;">
+  <a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="/images/starter-kit/josm_env.jpg" data-desc-position="bottom"><img src="/images/starter-kit/josm_env.jpg" class="img-border" style="width: 100%;"></a>
+  <figcaption class="image-caption">Key JOSM elements for continuing a transmission line. Click to enlarge.</figcaption>
+  <a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="/images/mapfast.png" data-desc-position="bottom"><img src="/images/mapfast.png" class="img-border" style="width: 100%;"></a> 
+  <figcaption class="image-caption">Selecting all the finished notes in a line enables you to quickly turn them into Power Towers.</figcaption>
+  <a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="/images/starter-kit/validation.jpg" data-desc-position="bottom"><img src="/images/starter-kit/validation.jpg" class="img-border" style="width: 100%;"></a>
+  <figcaption class="image-caption">Before uploading, JOSM will test your edits for known issues and various rule sets. Try to resolve as many validation results as possible. Click to enlarge.</figcaption>
+</div>
+
+<p>Mapping is an iterative process, so you will make mistakes and that is completely normal. Don't let it stop you; simply map what you can see in the imagery. If you are new to OSM mapping, avoid editing or deleting existing data at all costs. But don't worry, you cannot break anything by adding new data. Everything is constantly validated by our quality assurance tools. </p>
+<p>Now let's Start Mapping:</p>
+<ol>
+<li>Zoom in on the satellite imagery of the country you will map until you can see the houses and roads.</li>
+<li>Go to the <a href="../good-first-lines/" target="_blank"><strong>Good First Lines</strong></a> page again, and press on your chosen line. Then, press on JOSM which should open a white page with <code>OK</code> on it. Then go to JOSM, and you will see that you have been teleported to the location of that <code>Good First Line</code>. If you have the coordinates of a line and want to manually teleport to the location instead, press the <code>Add Node</code> <img src="../images/starter-kit/add-node.png" class="icon-svg off-glb" style="width: 30px; height: auto;"> presets button. Paste the coordinates here and press Ok. You should now see power towers that are not mapped at the end of a unfinished transmission line. </li>
+<li>⚠️ Important : If you used the <code>add node</code> technique, delete the node you added right away using <code>Undo Sequence</code>, to not upload a random node used to move around quickly. <img src="../images/starter-kit/deletenode.jpg" class="icon-svg off-glb" style="width: 30px; height: auto;">, Control+Z, or by selecting it and pressing Delete.</li>
+<li>To extend or create a line, press <code>Draw Line</code> <img src="../images/starter-kit/draw-nodes.png" class="icon-svg off-glb" style="width: 30px; height: auto;"> (left toolbar) or <code>A</code> on your keyboard, and click on the last tower symbol at the end of the unfinished power line. You should now be able to extend the line. </li>
+<li>Look for the next power tower you can find and click on its footprint. </li>
+<li>If you ever feel unsure about how the line runs, just place towers without the lines. By adding power towers you can do nothing wrong. Adding power towers is the easiest way to get started. To do this you can click on an existing tower and <code>CTRL+C</code> and then press on where an unmapped power tower is and <code>CTRL+V</code>. </li>
+<li>Continue the power line to the best of your ability. </li>
+<li>Once finished, select your line and press CTRL+Shift+N. This will select all of the nodes on the line. </li>
+<li>Then press CTRL+F to open the Search bar. </li>
+<li>In the Search string bar above, type<code>child selected type:node AND untagged</code>. </li>
+<li>⚠️ In the Results tab on the left, check <code>Find in selection</code>. ⚠️</li>
+<li>Press <code>Search</code>. All untagged nodes in your line will now be selected.</li>
+<li>Apply the <code>Power Tower</code> <img src="../images/starter-kit/power-towers.png" class="icon-svg off-glb" style="width: 30px; height: auto;"> preset from the toolbar, followed by <code>Apply Preset</code>. Now all the nodes you have placed are correctly tagged as <code>Power Tower</code>.</li>
+<li><strong>Bonus</strong>. Are you mapping with someone else, and/or does the data frequently change? Do you want to update your data in the Editor with the latest tags and extended lines added to OSM since you loaded your data, without loading everything again? By pressing <code>CTRL+U</code>, you can update existing geometries and update all the tags, but be aware that completely new geometries and objects that are not connected to existing geometries will not be updated.</li>
+</ol>
+<div class="admonition note">
+<p class="admonition-title">Pay attention to what you select and upload</p>
+<p><strong>⚠️ When applying presets, make sure you only select the untagged nodes of your line. If you accidentally select all untagged nodes in the country and tag them with <code>Power Tower</code>, you will upload incorrect data to OSM and will need to revert your changeset.</strong></p>
+</div>
+<h3 id="7-upload-your-edits-to-openstreetmap"><strong><div class="tools-header">7. Upload your Edits to OpenStreetMap <img alt="📤" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/1f4e4.svg" title=":outbox_tray:"> </div></strong></h3>
+<ol>
+<li>Whilst having the <code>Data Layer</code> activated, press the green arrow pointing upwards <img src="/images/starter-kit/upload.png" class="icon-svg off-glb" style="width: 30px; height: auto;">, which should open a new window. </li>
+<li>Another new window <code>Validation Results</code> will appear in the right panel showing all the issues identified. Right-clicking on an issue will allow you to zoom in on it. Avoid ignoring this validation results. The only acceptable warning when uploading data is <code>Possible missing line support node within power line</code>. </li>
+<li>In the upload window, please tick the <code>I would like someone to review my edits</code> tick box if your mapping has been strongly affected by uncertainties like low-quality satellite data, or if you are a beginner. Provide a brief comment such as <code>#mapyourgrid Unfinished transmission line</code>. Provide the imagery source layer you used by typing <code>Esri</code> or <code>Bing</code> for example. Once done and sure about your edits, <code>Upload Changes</code>.</li>
+<li>You just mapped your First Good Line. Feel free to close more First Good Lines, but make sure you leave some for the others. You can use the <a href="../strategies/">Strategies</a> we have provided to find your own unmapped line. To support our initiative, please use the #MapYourGrid hashtag in the comments when you upload a changeset.</li>
+</ol>
+<h3 id="8-mapping-guidelines"><strong><div class="tools-header"> 8. Mapping Guidelines</div></strong></h3>
+<p>OpenStreetMap provides detailed guidelines on mapping various types of power infrastructure, as well as on how to handle different edge cases. While you don't need to read all of these guidelines before you start mapping, you should be aware of their existence, as they will help you with complex mapping tasks involving power infrastructure and provide lots of examples.</p>
+<div style="float: right; margin: 5px 0 10px 20px; width: 350px;">
+  <a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="https://wiki.openstreetmap.org/w/images/e/e3/Waterway_hydropower.png" data-desc-position="bottom"><img src="https://wiki.openstreetmap.org/w/images/e/e3/Waterway_hydropower.png" class="img-border" style="width: 100%;"></a> 
+  <figcaption class="image-caption">The OpenStreetMap guidelines on hydropower provide detailed examples of how to map different types of installation.</figcaption>
+</div>
+
+<ul>
+<li><a href="https://wiki.openstreetmap.org/wiki/Power_networks">Power networks</a></li>
+<li><a href="https://wiki.openstreetmap.org/wiki/Power_networks/Guidelines">Power networks/Guidelines</a></li>
+<li><a href="https://wiki.openstreetmap.org/wiki/Power_networks/Guidelines/Power_lines">Power networks/Guidelines/Power lines</a></li>
+<li><a href="https://wiki.openstreetmap.org/wiki/Power_networks/Guidelines/Substations">Power networks/Guidelines/Substations</a></li>
+<li><a href="https://wiki.openstreetmap.org/wiki/Power_generation/Guidelines">Power generation/Guidelines</a></li>
+<li><a href="https://wiki.openstreetmap.org/wiki/Power_generation/Guidelines/Hydropower">Power generation/Guidelines/Hydropower</a></li>
+<li><a href="https://wiki.openstreetmap.org/wiki/Power_generation/Guidelines/Solar_plants">Power generation/Guidelines/Solar plants</a></li>
+<li><a href="https://wiki.openstreetmap.org/wiki/Power_generation/Guidelines/Geothermal_plants">Power generation/Guidelines/Geothermal plants</a></li>
+<li><a href="https://wiki.openstreetmap.org/wiki/Power_generation/Guidelines/Wind_farms">Power generation/Guidelines/Wind farms</a></li>
+<li><a href="https://wiki.openstreetmap.org/wiki/Power_generation/Guidelines/Thermal_plants">Power generation/Guidelines/Thermal plants</a></li>
+<li><a href="https://wiki.openstreetmap.org/wiki/Power_networks/Guidelines/Interconnector">Power networks/Guidelines/Interconnector</a></li>
+</ul>
+<h3 id="9-avoid-these-common-mistakes"><strong><div class="tools-header"> 9. Avoid these Common Mistakes <img alt="📛" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/1f4db.svg" title=":name_badge:"></div></strong></h3>
+<div style="float: right; margin: 5px 0 10px 20px; width: 350px;">
+  <a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="/images/starter-kit/power-towers-without-lines.jpg" data-desc-position="bottom"><img src="/images/starter-kit/power-towers-without-lines.jpg" class="img-border" style="width: 100%;"></a> 
+  <figcaption class="image-caption">In particular, in the dense urban areas that are widespread in Nigeria, it can be very difficult to determine the route of the lines in satellite images. Therefore, mappers simply place unconnected power towers that appear as blue squares at higher zoom levels.</figcaption>
+</div>
+
+<p>Mapping is an iterative process and mistakes happen. This should not stop you from mapping; simply map what you can verify based on your skillset. If a tower, lines or attributes are missing, our quality assurance tool Osmose will automatically detect this. <a href="../strategies/#quality-assurance-and-validation">Read more about our Quality Assurance and Validation</a> layers in OpenStreetMap, and how we build on top of them.</p>
+<ol>
+<li>Our tools focus on transmission grids, that’s why you might not see lines below 50 kV. To see already mapped lines below 50 kV or lines tagged with <code>power=minor_line</code>, download the whole area you’re working on with the green arrow pointing down ⬇️. Even better, you can download a country on Map It 📍 with the <code>Transmission+Distribution</code> layer activated.</li>
+<li>When mapping, make sure to not go across the border of the country you’re working on (visible dashed neon pink lines). Otherwise, you may find yourself mapping something that already exists, but hasn’t been downloaded in JOSM. One of the strategies we have can help with this.</li>
+<li>Don’t map beyond your expertise. If unsure, leave it for experienced mappers or locals, make a fixme tag, or ask the community! If you ever feel unsure about where to place the lines, just focus on adding power towers. You can't go wrong this way. Adding power towers is the easiest way to get started.</li>
+<li>Double-check your selection before applying presets, particularly when selecting a great amount of opbjects. This avoids uploading wrong data to OSM and saves you the trouble of going back to clean-up later.</li>
+<li>As you are contributing on a thematic selection of OpenStreetMap data, visible features may be connected to hidden ones. When deleting some features, always check it isn't connected to anything by downloading OpenStreetMap data surrouding the area, with the help of the download button ⬇️ on top left corner.</li>
+</ol>
+<p>For a safe mapping, we recommend you reading about <a href="https://wiki.openstreetmap.org/wiki/Good_practice" target="_blank">good practices</a>.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><strong>⚠️ In some countries, mapping power lines is restricted. Always verify local guidelines, connect with the OSM local community first, or check out the <a href="https://wiki.openstreetmap.org/wiki/Power_networks#Local_projects">local projects</a>. If you can't find a local community, please send us an <a href="mailto:MapYourGrid@openenergytransition.org">email</a> and we will help you set up a local group.</strong></p>
+<p><strong>⚠️ By following our <a href="../mapping-good-practices/">Good practices for mapping</a>, we collectively protect the integrity of the OSM platform, foster trust with communities, and unlock the power of open data for a more resilient and just energy future.</strong> </p>
+</div>
+<h2 id="id-and-open-infrastructure-map-starter-kit"><div class="stradegy-header">iD and Open Infrastructure Map Starter-Kit</div></h2>
+<p>On the road and spotted some some power towers, power plants, or substations near your place that are still missing and want to quickly map them yourself? This can be done on your mobile device or PC using the iD editor and Open Infrastructure Map. In this way, you can also correct voltages, circuits, or other errors you see in Open Infrastructure Map.</p>
+<div style="float: right; margin: 5px 0 10px 20px; width: 350px;">
+  <a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="/images/starter-kit/easy-edit.jpg" data-desc-position="bottom"><img src="/images/starter-kit/easy-edit.jpg" class="img-border" style="width: 100%;"></a>
+  <figcaption class="image-caption">To place a power tower, you first have to set a node and then add a tag (left). To save your edits on a mobile device using the iD Editor (right), you’ll need to close the inspector panel to reveal the `Save` button. Click to enlarge.</figcaption>
+</div>
+
+<h4 id="power-towers-in-field-mapping"><div class="stradegy-header">Power Towers In-Field Mapping</div></h4>
+<ol>
+<li>Go to the <a href="https://openinframap.org/#2/26/12" target="_blank">Open Infrastructure Map</a>.</li>
+<li>Click <strong>Find my location</strong> in the top-right corner or search for your city.</li>
+<li>Zoom in until you see the small <code>Edit</code> button in the lower right corner and press it.</li>
+<li><a href="https://www.openstreetmap.org/user/new?cookie_test=true&amp;referer=%2Fedit%3Feditor%3Did" target="_blank">Create an OpenStreetMap account</a>. Switch to the <code>Edit</code> mode by pressing the button on the top panel.</li>
+<li>You will now see all OpenStreetMap data with <code>Bing</code> or <code>ESRI</code> satellite imagery underneath. Depending on your region, you might want to switch to different satellite imagery by pressing the <code>Background Setting</code> button in the right panel.</li>
+<li>By pressing the <code>Point</code> symbol in the upper panel, you can now place a node. Now tag this node as a Power Tower using the <code>Edit Feature</code> that will appear on the left side. Although filling out the other fields is optional, you are welcome to provide additional information if you know more about the type of power tower.</li>
+<li>Use the shortcut <code>CTRL+C</code> to copy the tower, then place more power towers where you can see them.</li>
+<li>Upload your data by pressing <code>Save</code>. On mobile devices, you first have to hide the left window by toggling the <code>Inspect</code> button at the top.</li>
+<li>Add a <code>Changeset Comment</code> with a brief description of your mapping activity. If you find our efforts, documentation and tools helpful, please include the hashtag <code>#mapyourgrid</code> in the changeset comment to let us know.</li>
+</ol>
+<h4 id="substations-and-power-plants"><div class="stradegy-header">Substations and Power Plants</div></h4>
+<div style="float: right; margin: 5px 0 10px 20px; width: 350px;">
+  <a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/starter-kit/id-substation.jpg" data-desc-position="bottom"><img src="../images/starter-kit/id-substation.jpg" class="img-border" style="width: 100%;"></a>
+  <figcaption class="image-caption">We recommend using a mouse for mapping multiple substations in iD. If you are on the road, you can also use a touch screen for this. Click to enlarge.</figcaption>
+    <a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/starter-kit/solar-mapping-id.jpg" data-desc-position="bottom"><img src="../images/starter-kit/solar-mapping-id.jpg" class="img-border" style="width: 100%;"></a>
+  <figcaption class="image-caption">Power plants like solar park can be mapped similar to substations. Click to enlarge.</figcaption>
+</div>
+
+<p>Once you have finished your transmission line, you will most likely find a substation at the end, and sometimes a power plant will even be located next to it. Therefore, mapping the transmission grid is an effective way of identifying new power plants. Photovoltaic power plants, in particular, are increasing significantly around the world and can be easily identified in satellite imagery.</p>
+<ol>
+<li>Go to the <a href="https://openinframap.org/#2/26/12" target="_blank">Open Infrastructure Map</a>.</li>
+<li>Click <strong>Find my location</strong> in the top-right corner or search for your city.</li>
+<li>Zoom in until you see the small <code>Edit</code> button in the lower right corner and press it.</li>
+<li><a href="https://www.openstreetmap.org/user/new?cookie_test=true&amp;referer=%2Fedit%3Feditor%3Did" target="_blank">Create an OpenStreetMap account</a> and log in.</li>
+<li>By pressing the <code>Area</code> symbol in the upper panel, you can now mark the substation. Tag this area as a <code>Substation</code> using the <code>Edit Feature</code> that will appear on the left side. Add voltages, operators, or other fields if you have this information.</li>
+<li>Now upload this information by pressing <code>Save</code>.</li>
+<li>Add a <code>Changeset Comment</code> with a brief description of your mapping activity. If you find our efforts, documentation and tools helpful, please include the hashtag #mapyourgrid in the changeset comment to let us know.</li>
+<li><strong>Bonus:</strong> While grid mapping, you will also find many power plants located next to substations and transmission lines. These are mapped in a similar way to substations, using the <code>Area</code> symbol.</li>
+</ol>
+<p>If you want to try and find missing power plants in a country and map them, you can use the Global Energy Monitor or Wikidata tool in the <a href="https://mapyourgrid.org/map-it/" target="_blank">MAP IT📍</a> page. </p>
+<ol>
+<li>Select the Global Energy Monitor or Wikidata button, and press on a country. This will download a file with all powerplants from those datasets.</li>
+<li>You can then add this in iD by dragging and dropping the file, or adding it in <code>Custom Map Data</code>.</li>
+<li>You can then go through the different power plants and check if they are mapped in OpenStreetMap.</li>
+</ol>
+<h4 id="find-open-ended-transmission-lines-with-osmose"><div class="stradegy-header">Find open-ended transmission lines with Osmose</div></h4>
+<p>Have you finished your Good First Line and you want to find your own open-ended line in a country of your choice? With the help of osmose and our interactive <a href="https://mapyourgrid.org/map-it/" target="_blank">MAP IT📍</a>page you can find even more open ended lines.</p>
+<div style="float: right; margin: 5px 0 10px 20px; width: 350px;">
+  <a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/starter-kit/Kenya-unfinished-transmission-lines-iD.jpg" data-desc-position="bottom"><img src="../images/starter-kit/Kenya-unfinished-transmission-lines-iD.jpg" class="img-border" style="width: 100%;"></a>
+  <figcaption class="image-caption">iD support to load  .gpx, .kml, .geojson, .json files into the editor. Therefore, issues from to osmose, such as unfinished transmission lines in Kenya, can also be loaded into the editor from our interactive MAP IT📍 page. Click to enlarge.</figcaption>
+</div>
+
+<ol>
+<li>Go to the <a href="https://mapyourgrid.org/map-it/" target="_blank">MAP IT📍</a>page.</li>
+<li>Press on <code>iD Editor</code>, and then press on the Osmose hint layer button.</li>
+<li>Choose one of the Osmose issue types, and then press on a country. This will fetch up to 5000 Osmose issues for that country and issue type.</li>
+<li>A URL will appear which you can copy. </li>
+<li>Go to the <a href="https://www.openstreetmap.org/edit">iD Editor</a>, and then press on <code>Map Data</code> or <code>U</code> on your keyboard.</li>
+<li>Press on the three dots next to <code>Custom Map Data</code>, and paste the copied URL and press OK.</li>
+<li>You should now see all the issues (pink dots) at a high zoom level, and you can manually zoom in to each one to see if you can fix the issue. Unfortunately, iD does not allow these data to be processed systematically. To address these osmose issues and enable large-scale mapping across a country, we therefore recommend our JOSM workflow.</li>
+</ol>
+<h4 id="report-issues-in-the-grid"><div class="stradegy-header">Report Issues in the Grid</div></h4>
+<div style="float: right; margin: 5px 0 10px 20px; width: 350px;">
+  <a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/starter-kit/easy-notes.jpg" data-desc-position="bottom"><img src="../images/starter-kit/easy-notes.jpg" class="img-border" style="width: 100%;"></a>
+  <figcaption class="image-caption">Open Infrastructure Map (left) and the iD Editor (right) provide a mobile-ready, easy-to-use way to report issues. Click to enlarge.</figcaption>
+</div>
+
+<p>The fastest and easiest way to contribute to your electrical grid is by adding notes where you see missing or incorrect information in OpenStreetMap. You can do this fully anonymously with no login required.</p>
+<ol>
+<li>Go to the <a href="https://openinframap.org/#2/26/12" target="_blank">Open Infrastructure Map</a>.</li>
+<li>Click <strong>Find my location</strong> in the top-right corner or search for your city.</li>
+<li>Click on the substation, power tower, power line, or power plant where you'd like to report an issue.</li>
+<li>In the description window, click the <strong>OpenStreetMap</strong> logo.</li>
+<li>The <a href="https://www.openstreetmap.org/">OpenStreetMap.org</a> interface will now open at that location.</li>
+<li>Click the <strong>Add a note to the map</strong> button on the right-hand panel.</li>
+<li>Add a short description of the issue, and include the hashtag <code>#mapyourgrid</code> so we can find your note.</li>
+</ol>
+<p>Reporting such smaller issues will significantly improve the long-term quality of your local grid's data.</p>
+<h2 id="mapcomplete-starter-kit"><div class="tools-header">MapComplete Starter-Kit</div></h2>
+<div style="float: right; margin: 5px 0 10px 20px; width: 350px;">
+  <a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="/images/starter-kit/mapcomplete.jpg" data-desc-position="bottom"><img src="/images/starter-kit/mapcomplete.jpg" class="img-border" style="width: 100%;"></a>
+  <figcaption class="image-caption">MapComplete allows you to add missing information to objects like wind turbines (left). The platform allows you to upload images so that others can derive information like power output of the wind turbine. Click to enlarge.</figcaption>
+  <a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/starter-kit/mapcomplete-questions-form.jpg" data-desc-position="bottom"><img src="../images/starter-kit/mapcomplete-questions-form.jpg" class="img-border" style="width: 100%;"></a>
+  <figcaption class="image-caption">This is an example of the form you can use to edit key information about the power lines as well as upload pictures. it appears when you click on the blue lines on the map that represent power lines. Click to enlarge.</figcaption>
+</div>
+
+<p>The <a href="https://mapcomplete.org/" target="_blank">MapComplete</a> platform provides an easy way to identify missing tags of already mapped infrastructure where addtional information is missing. Like iD, the platform can be used from a PC but also from a mobile device. You can download the official <a href="https://play.google.com/store/apps/details?id=org.mapcomplete&amp;pli=1" target="_blank">MapComplete App</a> from the Google Play Store, or use the web app on other mobile devices. One of the key features of MapComplete is the ability to upload pictures taken on mobile phones. This enables inexperienced field mappers to take pictures of power towers, which experts can then use to derive information such as voltage and the number of circuits.</p>
+<ol>
+<li>
+<p><strong>Map of missing voltages of power lines</strong>: Voltages are essential for estimating the total power that can be transmitted by a power line. MapComplete supports the mapping of this missing tag by editing the data in the <a href="https://mapcomplete.org/theme.html?z=14.8&amp;lat=-15.420620800001004&amp;lon=28.31155200000046&amp;userlayout=https%3A%2F%2Fstudio.mapcomplete.org%2F11076630%2Flayers%2Fmap_your_grid_power_lines%2Fmap_your_grid_power_lines.json" target="_blank">Power Lines MapComplete Layer</a>. Once you click on the blue lines to make changes, in the right pane you notice that there is an option to upload an <strong>image of a power tower</strong>. You can still contribute by providing an image of the power tower. This will be uploaded to MapYourGrid, where other technical mappers can use the insulators to derive the voltages.</p>
+</li>
+<li>
+<p><strong>Wind Turbine Power Output</strong>: Similar to power lines, the power of wind turbine can be estimate using a single picture. Maybe you are aware of other resources and methods to derive the power output of wind turbines. The <a href="https://mapcomplete.org/openwindpowermap.html?z=13&amp;lat=39.55702450000146&amp;lon=9.226502599999435#node/5271617498" target="_blank">Wind Power Generators layer</a> enables you to map this missing tags. </p>
+</li>
+<li>
+<p>Open the <a href="https://mapcomplete.org/theme.html?z=14.8&amp;lat=-15.420620800001004&amp;lon=28.31155200000046&amp;userlayout=https%3A%2F%2Fstudio.mapcomplete.org%2F11076630%2Flayers%2Fmap_your_grid_power_lines%2Fmap_your_grid_power_lines.json" target="_blank">Power Lines MapComplete Layer</a> or <a href="https://mapcomplete.org/openwindpowermap.html?z=13&amp;lat=39.55702450000146&amp;lon=9.226502599999435#node/5271617498" target="_blank">Wind Turbine Power Output</a></p>
+</li>
+<li>Jump to your location using the crosshair symbol in the lower right corner.</li>
+<li>Search for wind turbines or power line in your region with missing information.</li>
+<li>Press on the wind turbine symbol or power line. You can now add the capacity or take a picture with your mobile device to let others derive the output power. <strong>Please be aware that we will need an image of a power tower to estimate the voltage.</strong></li>
+<li>Afterwards, press <code>Save</code>.</li>
+</ol>
+<h2 id="still-on-the-line-and-motivated-to-continue"><div class="tools-header">Still "On the Line" and Motivated to Continue?</div></h2>
+<p>Well done on making it this far! We are offering free, hands-on transmission grid mapping workshops to people who have tried the Starter-Kit. You are very welcome to join our <a href="https://discord.gg/a5znpdFWfD">community chat</a> called <em>📍-mapyourgrid</em> on the PyPSA-Earth discord channel. Here you can ask questions, and interact with the community. For mapping specific questions and to participate in our free personalized training, please join our <a href="https://discord.gg/fBw7ARTUeR" target="_blank">📍-mapyourgrid-support-and-training</a> channel. </p>
+<p>Check out our <a href="../strategies/">Strategies</a> to learn how to find your own new lines and become a grid mapping expert! The OpenStreetMap Wiki pages <a href="https://wiki.openstreetmap.org/wiki/Power_networks" target="_blank">The Power Network</a> and <a href="https://wiki.openstreetmap.org/wiki/Key:power" target="_blank">Key:Power</a> provide an overview of how to map different power infrastructure.</p>
+<p>You are also welcome to join our community calls to find out more about the mapping process and our initiative. Simply participate in one of the public events listed in this calendar.</p>
+<iframe src="https://calendar.google.com/calendar/embed?src=mapyourgrid%40gmail.com&amp;ctz=Europe%2FBerlin" style="border:solid 1px #777" width="800" height="600" frameborder="0" scrolling="no"></iframe>
+
+<h2 id="what-else-learn-the-grid-basics"><strong><div class="tools-header">What else? Learn the Grid Basics </div></strong></h2>
+<p>You don’t need to be a grid expert to start mapping, but a little knowledge helps!
+The following documents and materials will give you a basic understanding of how to map an electrical grid.</p>
+<p>The <a href="https://www.youtube.com/@TheLearningCurveBenila/videos" target="_blank">Learning Curve</a> is a YouTube channel that will help you understand the fundamental knowledge of the electrical grid. Here some video we recommend for grid mappers. </p>
+<ol>
+<li><a href="https://www.youtube.com/watch?v=AB1qYsiDm0M">Electrical Line Supports - Transmission Towers &amp; Poles</a></li>
+<li><a href="https://www.youtube.com/watch?v=A6fwq3yHRXQ">Components of Overhead Transmission Lines</a></li>
+<li><a href="https://www.youtube.com/watch?v=l9nHs8e0WUg">Comparison between HVAC and HVDC transmission system</a></li>
+</ol>
+<p>We recommend the following documents for a deeper dive into the construction of the electrical grid and how it is designed, including the relationship between distance and voltage based on IEC 60071-2. Please keep in mind that different standards may apply depending on the country.</p>
+<ol>
+<li><a href="https://go.ratedpower.com/hubfs/CS-Knowledge%20Base/Methodologies/Overhead%20Line%20Methodology.pdf">Overhead Line Methodology</a></li>
+<li><a href="https://webstore.ansi.org/preview-pages/bsi/preview_30365961.pdf">Overhead Electrical Lines Exceeding AC 1 kV</a></li>
+</ol>
+<p>The following image illustrates the fundamental design of the electrical grid:  <a href="https://iea.blob.core.windows.net/assets/ea2ff609-8180-4312-8de9-494bcf21696d/ElectricityGridsandSecureEnergyTransitions.pdf">Electricity Grids and Secure Energy Transitions</a> </p>
+<div style="float: left; margin: 5px 0 20px 20px; width: 100%;">
+  <a href="/images/grid-design.png" target="_blank">
+  <img src="/images/grid-design.png" class="img-border" style="width: 100%;"> </a>
+  <figcaption class="image-caption">Key technology components of electricity grids Source: IEA - CC BY 4.0 - <a href="https://iea.blob.core.windows.net/assets/ea2ff609-8180-4312-8de9-494bcf21696d/ElectricityGridsandSecureEnergyTransitions.pdf"> Electricity Grids and Secure Energy Transitions </a>.</figcaption>
+</div>
+
+<div style="float: left; margin: 5px 0 20px 20px; width: 100%;">
+  <a href="/images/nigeria-transmission-distribution.jpg" target="_blank">
+  <img src="/images/nigeria-transmission-distribution.jpg" class="img-border" style="width: 100%;"> </a>
+  <figcaption class="image-caption"> <a href="https://apps.nigeriase4all.gov.ng/power-sector?grid_buffer=4.5&amp;state=oyo"> Distribution Data: The Earth Institute - Columbia University - CC BY 4.0 </a>  <br>  The neon green lines show the distribution grid of a city in Nigeria. The city's energy system is connected to other cities and regions by the orange and purple transmission lines. The circles show distribution and transmission substations. .</figcaption>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"></path></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener noreferrer">
+  Creative Commons Attribution 4.0 International License</a>
+| Map data from <a href="https://openstreetmap.org/copyright">OpenStreetMap</a> | <a href="https://MapYourGrid.org/privacy-policy/"> Read our Privacy Policy</a> 
+
+    </div>
+  
+  
+</div>
+      
+        
+<div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/open-energy-transition/MapYourGrid" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"></path></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://discord.gg/a5znpdFWfD" target="_blank" rel="noopener" title="discord.gg" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M492.5 69.8c-.2-.3-.4-.6-.8-.7-38.1-17.5-78.4-30-119.7-37.1-.4-.1-.8 0-1.1.1s-.6.4-.8.8c-5.5 9.9-10.5 20.2-14.9 30.6-44.6-6.8-89.9-6.8-134.4 0-4.5-10.5-9.5-20.7-15.1-30.6-.2-.3-.5-.6-.8-.8s-.7-.2-1.1-.2C162.5 39 122.2 51.5 84.1 69c-.3.1-.6.4-.8.7C7.1 183.5-13.8 294.6-3.6 404.2c0 .3.1.5.2.8s.3.4.5.6c44.4 32.9 94 58 146.8 74.2.4.1.8.1 1.1 0s.7-.4.9-.7c11.3-15.4 21.4-31.8 30-48.8.1-.2.2-.5.2-.8s0-.5-.1-.8-.2-.5-.4-.6-.4-.3-.7-.4c-15.8-6.1-31.2-13.4-45.9-21.9-.3-.2-.5-.4-.7-.6s-.3-.6-.3-.9 0-.6.2-.9.3-.5.6-.7c3.1-2.3 6.2-4.7 9.1-7.1.3-.2.6-.4.9-.4s.7 0 1 .1c96.2 43.9 200.4 43.9 295.5 0 .3-.1.7-.2 1-.2s.7.2.9.4c2.9 2.4 6 4.9 9.1 7.2.2.2.4.4.6.7s.2.6.2.9-.1.6-.3.9-.4.5-.6.6c-14.7 8.6-30 15.9-45.9 21.8-.2.1-.5.2-.7.4s-.3.4-.4.7-.1.5-.1.8.1.5.2.8c8.8 17 18.8 33.3 30 48.8.2.3.6.6.9.7s.8.1 1.1 0c52.9-16.2 102.6-41.3 147.1-74.2.2-.2.4-.4.5-.6s.2-.5.2-.8c12.3-126.8-20.5-236.9-86.9-334.5zm-302 267.7c-29 0-52.8-26.6-52.8-59.2s23.4-59.2 52.8-59.2c29.7 0 53.3 26.8 52.8 59.2 0 32.7-23.4 59.2-52.8 59.2m195.4 0c-29 0-52.8-26.6-52.8-59.2s23.4-59.2 52.8-59.2c29.7 0 53.3 26.8 52.8 59.2 0 32.7-23.2 59.2-52.8 59.2"></path></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://www.youtube.com/@MapYourGrid" target="_blank" rel="noopener" title="www.youtube.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M549.7 124.1c-6.2-23.7-24.8-42.3-48.3-48.6C458.9 64 288.1 64 288.1 64S117.3 64 74.7 75.5c-23.5 6.3-42 24.9-48.3 48.6C15 167 15 256.4 15 256.4s0 89.4 11.4 132.3c6.3 23.6 24.8 41.5 48.3 47.8C117.3 448 288.1 448 288.1 448s170.8 0 213.4-11.5c23.5-6.3 42-24.2 48.3-47.8 11.4-42.9 11.4-132.3 11.4-132.3s0-89.4-11.4-132.3zM232.2 337.6V175.2l142.7 81.2z"></path></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://bsky.app/profile/mapyourgrid.bsky.social" target="_blank" rel="noopener" title="bsky.app" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M407.8 294.7c-3.3-.4-6.7-.8-10-1.3 3.4.4 6.7.9 10 1.3M288 227.1c-26.1-50.7-97.1-145.2-163.1-191.8C61.6-9.4 37.5-1.7 21.6 5.5 3.3 13.8 0 41.9 0 58.4S9.1 194 15 213.9c19.5 65.7 89.1 87.9 153.2 80.7 3.3-.5 6.6-.9 10-1.4-3.3.5-6.6 1-10 1.4-93.9 14-177.3 48.2-67.9 169.9C220.6 589.1 265.1 437.8 288 361.1c22.9 76.7 49.2 222.5 185.6 103.4 102.4-103.4 28.1-156-65.8-169.9-3.3-.4-6.7-.8-10-1.3 3.4.4 6.7.9 10 1.3 64.1 7.1 133.6-15.1 153.2-80.7C566.9 194 576 75 576 58.4s-3.3-44.7-21.6-52.9c-15.8-7.1-40-14.9-103.2 29.8C385.1 81.9 314.1 176.4 288 227.1"></path></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.expand", "navigation.indexes", "toc.integrate", "search.highlight", "search.suggest", "navigation.top", "navigation.sections", "content.image.zoom"], "search": "../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.f55a23d4.min.js"></script>
+      
+        <script src="../assets/javascripts/umami.js"></script>
+      
+        <script src="../assets/javascripts/gallery.js"></script>
+      
+        <script src="../assets/javascripts/awesome-filter-tags.js"></script>
+      
+    
+  
+<script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+document$.subscribe(()=>{ lightbox.reload(); });
+</script></body></html>
