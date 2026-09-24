@@ -1,0 +1,1487 @@
+<!DOCTYPE html><html lang="es" class="no-js"><head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="We empower individuals, communities and nations around the world to map the electrical grid.">
+      
+      
+      
+        <link rel="canonical" href="https://MapYourGrid.org/es/starter-kit/">
+      
+      
+        <link rel="prev" href="../impact/">
+      
+      
+        <link rel="next" href="../map-it/">
+      
+      
+      <link rel="icon" href="../../images/logos/MapYourGrid-logo.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.20">
+    
+    
+      
+        <title>TUTORIALES - MapYourGrid</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.e53b48f4.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+      <link rel="stylesheet" href="../../stylesheets/mapit.css">
+    
+      <link rel="stylesheet" href="../../stylesheets/landing.css">
+    
+      <link rel="stylesheet" href="../../stylesheets/blog.css">
+    
+      <link rel="stylesheet" href="../../stylesheets/awesome_list.css">
+    
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/featherlight@1.7.14/release/featherlight.min.css">
+    
+      <link rel="stylesheet" href="../../stylesheets/gfl.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  
+  <meta property="og:title" content="MapYourGrid">
+  <meta property="og:description" content="We empower individuals, communities and nations around the world to map the electrical grid.">
+  <meta property="og:image" content="https://MapYourGrid.org/images/website/mapyourgrid-preview.jpg">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://MapYourGrid.org">
+  
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="MapYourGrid">
+  <meta name="twitter:description" content="We empower individuals, communities and nations around the world to map the electrical grid.">
+  <meta name="twitter:image" content="https://MapYourGrid.org/images/website/mapyourgrid-preview.jpg">
+
+  <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"><script src="../../assets/javascripts/glightbox.min.js"></script><style id="glightbox-style">
+            html.glightbox-open { overflow: initial; height: 100%; }
+            .gslide-title { margin-top: 0px; user-select: text; }
+            .gslide-desc { color: #666; user-select: text; }
+            .gslide-image img { background: white; }
+            .gscrollbar-fixer { padding-right: 15px; }
+            .gdesc-inner { font-size: 0.75rem; }
+            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color); }
+            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color); }
+            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color); }
+        </style></head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#kit-de-inicio-id" class="md-skip">
+          Saltar a contenido
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+        <aside class="md-banner">
+          <div class="md-banner__inner md-grid md-typeset">
+            
+            
+<a href="https://discord.gg/a5znpdFWfD">
+  <div style="display:inline-flex; align-items:center; color:#aad3c6">
+    <strong> Join our community chat </strong>
+    <img src="/icons/discord-white.png" alt="Discord logo" style="width:1em; height:0.75em; margin-left:0.5ch; vertical-align:middle;" class="twemoji">
+  </div>
+    <div style="display:inline-flex; align-items:center; color:#aad3c6">
+      <strong> and learn to map with us! 📍  </strong>
+    </div>
+  </a>
+
+          </div>
+          
+        </aside>
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabecera">
+    <a href="../" title="MapYourGrid" class="md-header__button md-logo" aria-label="MapYourGrid" data-md-component="logo">
+      
+  <img src="../../images/logos/MapYourGrid-logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            MapYourGrid
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              TUTORIALES
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="indigo" aria-label="Switch to dark mode" type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"></path></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo" aria-label="Switch to light mode" type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"></path></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+      <div class="md-header__option">
+  <div class="md-select">
+    
+    <button class="md-header__button md-icon" aria-label="Seleccionar idioma">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12.87 15.07-2.54-2.51.03-.03A17.5 17.5 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2zm-2.62 7 1.62-4.33L19.12 17z"></path></svg>
+    </button>
+    <div class="md-select__inner">
+      <ul class="md-select__list">
+        
+          <li class="md-select__item">
+            <a href="../../starter-kit/" hreflang="en" class="md-select__link">
+              English
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="./" hreflang="es" class="md-select__link">
+              Español
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="../../fr/starter-kit/" hreflang="fr" class="md-select__link">
+              Français
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</div>
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Búsqueda" placeholder="Búsqueda" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Buscar">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpiar" aria-label="Limpiar" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando búsqueda
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/open-energy-transition/MapYourGrid" title="Ir al repositorio" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"></path></svg>
+  </div>
+  <div class="md-source__repository">
+    MapYourGrid
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Pestañas" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../" class="md-tabs__link">
+        
+  
+  
+    
+  
+  INICIATIVA
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../impact/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  IMPACTO
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    <li class="md-tabs__item md-tabs__item--active">
+      <a href="./" class="md-tabs__link">
+        
+  
+  
+    
+  
+  TUTORIALES
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../map-it/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  MAP IT📍
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../gridinspector/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  GRID INSPECTOR
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../strategies/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  ESTRATEGIAS
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../progress/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  PROGRESO
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../global-grid-data/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  DATA
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../faq/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  FAQ
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../about-us/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  EQUIPO
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navegación" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../" title="MapYourGrid" class="md-nav__button md-logo" aria-label="MapYourGrid" data-md-component="logo">
+      
+  <img src="../../images/logos/MapYourGrid-logo.png" alt="logo">
+
+    </a>
+    MapYourGrid
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/open-energy-transition/MapYourGrid" title="Ir al repositorio" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"></path></svg>
+  </div>
+  <div class="md-source__repository">
+    MapYourGrid
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    INICIATIVA
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../impact/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    IMPACTO
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    TUTORIALES
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    TUTORIALES
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#kit-de-inicio-id" class="md-nav__link">
+    <span class="md-ellipsis">
+      Kit de inicio iD
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Kit de inicio iD">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#nuestro-video-tutorial-del-kit-de-inicio-para-id" class="md-nav__link">
+    <span class="md-ellipsis">
+      Nuestro video tutorial del kit de inicio para iD
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mapea-tu-buena-primera-linea-con-id" class="md-nav__link">
+    <span class="md-ellipsis">
+      Mapea tu buena primera línea con iD
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#kit-de-inicio-josm" class="md-nav__link">
+    <span class="md-ellipsis">
+      Kit de inicio JOSM
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Kit de inicio JOSM">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#echa-un-vistazo-a-nuestro-tutorial-en-video-sobre-josm" class="md-nav__link">
+    <span class="md-ellipsis">
+      Echa un vistazo a nuestro tutorial en vídeo sobre JOSM
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1-instalar-y-configurar-josm" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Instalar y configurar JOSM
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-configure-sus-preajustes-y-reglas-de-validacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Configure sus preajustes y reglas de validación
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-anade-claridad-visual-con-estilos-de-mapa-personalizados" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Añade claridad visual con estilos de mapa personalizados
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-a-mapear-elija-una-buena-primera-linea" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. A mapear Elija una buena primera línea
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-cargue-la-infraestructura-de-energia-en-josm" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Cargue la infraestructura de energía en JOSM
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6-trace-su-primera-linea" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. Trace su primera línea
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#7-sube-tus-ediciones-a-openstreetmap" class="md-nav__link">
+    <span class="md-ellipsis">
+      7. Sube tus ediciones a OpenStreetMap
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#8-evite-estos-errores-comunes" class="md-nav__link">
+    <span class="md-ellipsis">
+      8. Evite estos errores comunes
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#kit-de-iniciacion-al-mapa-de-id-e-infraestructuras-abiertas" class="md-nav__link">
+    <span class="md-ellipsis">
+      Kit de iniciación al mapa de iD e infraestructuras abiertas
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Kit de iniciación al mapa de iD e infraestructuras abiertas">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cartografia-sobre-el-terreno-de-las-torres-de-alta-tension" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cartografía sobre el terreno de las torres de alta tensión
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#subestaciones-y-centrales-electricas" class="md-nav__link">
+    <span class="md-ellipsis">
+      Subestaciones y centrales eléctricas
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#encuentre-lineas-de-transmision-abiertas-con-osmose" class="md-nav__link">
+    <span class="md-ellipsis">
+      Encuentre líneas de transmisión abiertas con Osmose
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#informar-de-problemas-en-la-red" class="md-nav__link">
+    <span class="md-ellipsis">
+      Informar de problemas en la red
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#kit-de-inicio-mapcomplete" class="md-nav__link">
+    <span class="md-ellipsis">
+      Kit de inicio MapComplete
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#motivado-para-continuar" class="md-nav__link">
+    <span class="md-ellipsis">
+      ¿Motivado para continuar?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#que-mas-aprenda-los-conceptos-basicos-de-la-red" class="md-nav__link">
+    <span class="md-ellipsis">
+      ¿Qué más? Aprenda los conceptos básicos de la red
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../map-it/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    MAP IT📍
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gridinspector/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    GRID INSPECTOR
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../strategies/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ESTRATEGIAS
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../progress/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    PROGRESO
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../global-grid-data/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    DATA
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../faq/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    FAQ
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../about-us/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    EQUIPO
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<div class="page-headers">
+<h1>Kit de inicio </h1>
+</div>
+
+<div style="float: right; margin: 5px 0 20px 20px; width: 450px; max-width: 100%">
+<a href="https://openinframap.org/#6.54/39.026/-7.548" target="_blank">
+<img src="/images/openinframap-portugal.jpg" class="img-border icon-svg off-glb" style="width: 100%;"></a> 
+<figcaption class="image-caption">
+<a href="https://openinframap.org/#6.54/39.026/-7.548" target="_blank">Open Infrastructure Map</a> que muestra en detalle la red de transporte y distribución de Portugal. Haga clic para ampliar.
+</figcaption>
+</div>
+
+<p>Estos kits de iniciación te permiten aprender a cartografiar tu primera línea de la red de transporte eléctrico. Si alguna vez te quedas atascado con el Starter-Kit o quieres hacernos llegar tus comentarios, ponte en contacto con nosotros a través de nuestro <a href="https://discord.gg/fBw7ARTUeR">chat comunitario</a> o <a href="mailto:MapYourGrid@openenergytransition.org">por correo electrónico</a>. Un miembro de la comunidad MapYourGrid le ayudará a terminar su primera línea y a configurar su entorno.</p>
+<p>Recomendamos el editor JOSM (Java OpenStreetMap) en general, sobre todo para la cartografía profesional a gran escala y para inspeccionar la red eléctrica. Sin embargo, si sólo quieres hacer pequeñas ediciones o dejar notas sin instalar nada, el editor <a href="https://www.openstreetmap.org/edit">Editor iD</a> iD y JOSM pueden combinarse con el sistema de mapeo de la <a href="https://openinframap.org/">Open Infrastructure Map</a>. MapComplete ofrece un flujo de trabajo optimizado para dispositivos móviles que permite cartografiar las etiquetas que faltan, como tensiones o capacidades. Estas herramientas también ofrecen una mayor facilidad de uso para las tareas de cartografía sobre el terreno y la validación de datos. Puede seguir nuestros tutoriales en este sitio web o ver nuestro tutorial en vídeo para JOSM.</p>
+<p><strong>Para empezar, haz clic en uno de los editores de OpenStreetMap.</strong></p>
+<div class="starter-kit-buttons">
+ <a href="#kit-de-inicio-id" class="btn btn-third">iD Starter-Kit - Cartografía a pequeña escala para principiantes</a>
+ <a href="#kit-de-inicio-josm" class="btn btn-primary">JOSM Starter-Kit - Cartografía técnica y a gran escala</a>
+ <a href="#kit-de-iniciacion-al-mapa-de-id-e-infraestructuras-abiertas" class="btn btn-third">iD &amp; Open Infrastructure Map Starter-Kit - Cartografía avanzada de iD y cartografía de campo</a>
+ <a href="#kit-de-inicio-mapcomplete" class="btn btn-fourth">MapComplete Starter-Kit - Asignación de campos de etiquetas que faltan</a>
+</div>
+
+<h2 id="kit-de-inicio-id"><div class="stradegy-header">Kit de inicio iD</div></h2>
+<p>¿Ha visto algunas torres de alta tensión, centrales eléctricas, emisiones o subestaciones cerca de su casa que todavía no están y quiere cartografiarlas rápidamente usted mismo? Puede hacerlo en su dispositivo móvil o PC utilizando el editor iD. De este modo, también podrá corregir tensiones, circuitos u otros errores que vea en Open Infrastructure Map.</p>
+<p>El editor nativo iD OpenStreetMap ofrece una interfaz sencilla y fácil de usar, perfecta para principiantes o para quienes deseen una visión general rápida de la cartografía de redes eléctricas. Su sencilla interfaz de usuario y la integración con el navegador web también hacen posible utilizar este editor en dispositivos móviles, lo que permite realizar tareas de cartografía y validación sobre el terreno.</p>
+<h3 id="nuestro-video-tutorial-del-kit-de-inicio-para-id"><strong><div class="tools-header">Nuestro video tutorial del kit de inicio para iD</div></strong></h3>
+<iframe width="720" height="315" style="height: auto; aspect-ratio: 16/9;" src="https://www.youtube-nocookie.com/embed/K1Oo1_E_NC8?si=Lfj3SHGCEl3reqBp" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+<hr>
+<h3 id="mapea-tu-buena-primera-linea-con-id"><div class="stradegy-header">Mapea tu buena primera línea con iD</div></h3>
+<p>Para aquellos que prefieren iD a JOSM o son nuevos en OpenStreetMap y en la cartografía de redes eléctricas, el siguiente kit de iniciación proporciona una rápida introducción a la cartografía de su primera <code>Buena Primera Línea</code>. Aunque es posible cartografiar líneas de transmisión en un dispositivo móvil, es mejor hacerlo en un PC con ratón. </p>
+<div style="float: right; margin: 5px 0 20px 20px; width: 350px;">
+ <a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="/images/starter-kit/id-start-your-line.jpg" data-desc-position="bottom"><img src="/images/starter-kit/id-start-your-line.jpg" class="img-border" style="width: 100%;"></a>
+ <figcaption class="image-caption">Copie las coordenadas de Buena primera línea en su editor. Haga clic para ampliar.</figcaption>
+ <a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="/images/starter-kit/id-map-line.jpg" data-desc-position="bottom"><img src="/images/starter-kit/id-map-line.jpg" class="img-border" style="width: 100%;"></a> 
+ <figcaption class="image-caption">Traza tu primera línea eléctrica, convirtiendo todos los nodos en torres eléctricas y la propia línea en una línea eléctrica. Haz clic para ampliar.</figcaption>
+ <a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="/images/starter-kit/upload-data.jpg" data-desc-position="bottom"><img src="/images/starter-kit/upload-data.jpg" class="img-border" style="width: 100%;"></a>
+ <figcaption class="image-caption">Escribe un pequeño comentario sobre el éxito de tu cartografía, incluye el hashtag #mapyourgrid y sube tus datos. Haz clic para ampliar</figcaption>
+ <a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="/images/starter-kit/power-tower-examples.jpg" data-desc-position="bottom"><img src="/images/starter-kit/power-tower-examples.jpg" class="img-border" style="width: 100%;"></a>
+ <figcaption class="image-caption">Dependiendo del ángulo del sol, las torres de alta tensión proyectan una sombra característica. Echa un vistazo a las torres de alta tensión que ya han sido cartografiadas y ten en cuenta que la mayoría de las líneas discurren en línea recta con una distancia similar entre torres de alta tensión. Haga clic para ampliar.</figcaption>
+ <a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="/images/starter-kit/map-single-tower-id.jpg" data-desc-position="bottom"><img src="/images/starter-kit/map-single-tower-id.jpg" class="img-border" style="width: 100%;"></a>
+ <figcaption class="image-caption">¿No está seguro del trazado exacto de una línea de transmisión? Basta con colocar las torres de alta tensión y omitir las líneas de transmisión. </figcaption>
+</div>
+
+<ol>
+<li><a href="https://www.openstreetmap.org/user/new?cookie_test=true&amp;referer=%2Fedit%3Feditor%3Did" target="«_blank»">Crea una cuenta en OpenStreetMap</a> e inicia sesión.</li>
+<li>Seleccione una <code>Buena primera línea</code> de la siguiente lista y haga clic en <code>iD Editor</code>: <br> <a class="md-button md-button--primary" href="../good-first-lines/" target="`_blank»"><strong>Buenas primeras líneas</strong></a></li>
+<li>Se abrirá una pestaña en el modo de edición del editor iD y se le trasladará a la ubicación de la <code>Buena primera línea</code> que haya seleccionado. Ahora debería ver una línea de transmisión mapeada con el extremo abierto en una torre eléctrica.  </li>
+<li>iD le mostrará todos los datos de OpenStreetMap y, debajo, las imágenes satelitales de <code>Bing</code> o <code>ESRI</code>. Dependiendo de su región, es posible que desee cambiar a diferentes imágenes satelitales pulsando el botón <code>Configuración de fondo</code> en el panel derecho, en caso de que las imágenes no muestren las torres eléctricas.</li>
+<li>Para extender la línea eléctrica, simplemente pulse sobre la última torre eléctrica y haga clic en <code>A</code> en su teclado para extender la línea actual. Si no desea extender la línea y, en su lugar, desea crear una nueva línea, también puede hacer clic en el botón <code>Línea</code> en el panel superior y, a continuación, en el último símbolo de torre eléctrica junto a las coordenadas.</li>
+<li>Ahora, busque las siguientes torres eléctricas. Observar cómo eran las torres eléctricas anteriores le dará una idea de cómo será la siguiente. La mayoría de las líneas son rectas y están separadas por la misma distancia. Si no puede ver las torres eléctricas anteriores, es posible que tenga que cambiar a la vista de satélite. No se preocupe si se le pasa alguna torre eléctrica. Estos problemas se detectan automáticamente, por lo que otro cartógrafo podrá localizarla.</li>
+<li>Coloque un nuevo <code>nodo</code> en la base de todas las torres eléctricas a lo largo de la <code>via</code>, continuando hasta que encuentre nuevas torres.</li>
+<li>A continuación, debes etiquetar la línea y los nodos correctamente. Para ello, primero pulsa <code>Esc</code> y luego haz clic en la vía que acabas de dibujar. En el panel izquierdo ahora puedes editar el <code>Elemento</code>. Pulsa el símbolo <code>Línea</code> y busca <code>Línea eléctrica</code> o <code>Cable de alta tensión</code>, si la línea aún no ha sido etiquetada como <code>Cable de alta tensión</code>.</li>
+<li>Con tu nueva línea eléctrica aún seleccionada, pulsa <code>CTRL + ↓</code> para seleccionar todos los <code>nodos</code> a lo largo de tu <code>línea eléctrica</code>.</li>
+<li>Ahora, en el panel izquierdo, vuelve al campo de búsqueda y busca <code>Torre eléctrica</code> o <code>Torre de alta tensión</code>.</li>
+<li>Pulsa sobre ella y todos tus nodos se convertirán en <code>Torres eléctricas</code>. Si amplías la imagen, ahora deberías ver la <code>Torre eléctrica</code> a lo largo de la línea.</li>
+<li>Una vez que haya terminado su sesión de mapeo, resuelva todas las advertencias, problemas y errores en sus datos haciendo clic en el símbolo ⚠️ en la esquina inferior derecha.</li>
+<li>Ahora pulse el botón <code>Guardar</code> en la esquina superior derecha. Proporcione una breve descripción de lo que ha hecho en el comentario del conjunto de cambios, incluyendo la etiqueta <code>#MapYourGrid</code>.</li>
+<li>Por último, pulse <code>Subir</code>. ¡Enhorabuena! Acaba de mapear su primera línea de transmisión.</li>
+</ol>
+<p>A veces, hay varias opciones posibles para el trazado de las líneas y no está claro por dónde van realmente las líneas de transmisión. En estos casos, es perfectamente aceptable colocar simplemente torres de alta tensión. No puedes equivocarte colocando torres de alta tensión. Otro mapeador con más experiencia verá tus torres y terminará la línea. </p>
+<ol>
+<li>Crea un <code>Punto</code> donde puedas ver la torre de energía con el botón en el panel superior central.</li>
+<li>Conviértela en una torre de alto voltaje con el panel de características en el lado izquierdo. </li>
+<li>Copia la torre de energía con <code>CTRL+C</code> y colócala donde veas más torres de energía. </li>
+</ol>
+<p><strong>¿Dónde ir ahora?</strong> </p>
+<ul>
+<li>¿Desea cartografiar más líneas de transmisión de final abierto en su país utilizando iD? Consulte nuestro <a href="#encuentre-lineas-de-transmision-abiertas-con-osmose">encontrar líneas de transmisión abiertas con Osmose</a> en el flujo de trabajo de iD.</li>
+<li>¿Desea aprender a cartografiar centrales eléctricas o subestaciones con iD? ¿O está interesado en saber cómo utilizar iD para la cartografía sobre el terreno? Consulte nuestra <a href="#kit-de-iniciacion-al-mapa-de-id-e-infraestructuras-abiertas">Kit de inicio de mapas de iD e infraestructuras abiertas</a></li>
+</ul>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p><strong>En algunos países, el mapeo de líneas eléctricas está restringido. Siempre verifique las directrices locales, conéctese primero con la comunidad local de OSM, o consulte el <a href="https://community.osm.be/">comunidades locales</a> y <a href="https://wiki.openstreetmap.org/wiki/Power_networks#Local_projects">proyectos locales</a>. Si no encuentra una comunidad local, envíenos un <a href="mailto:MapYourGrid@openenergytransition.org">correo electrónico</a> y te ayudaremos a crear un grupo local.</strong></p>
+<p><strong>Siguiendo nuestro <a href="../mapping-good-practices/">Buenas prácticas de mapeo</a> Con el apoyo de la comunidad de OpenStreetMap, protegemos colectivamente la integridad de la plataforma OSM, fomentamos la confianza con las comunidades y liberamos el poder de los datos abiertos para un futuro energético más resiliente y justo. Por favor, ten en cuenta que la comunidad y la fundación OpenStreetMap no limitan técnicamente el mapeo en ningún lugar del globo. Por lo tanto, nuestro Buenas prácticas tampoco puede aplicarse a los mapeadores voluntarios de la comunidad.</strong> </p>
+</div>
+<h2 id="kit-de-inicio-josm"><div class="stradegy-header">Kit de inicio JOSM</div></h2>
+<h3 id="echa-un-vistazo-a-nuestro-tutorial-en-video-sobre-josm"><strong><div class="tools-header">Echa un vistazo a nuestro tutorial en vídeo sobre JOSM</div></strong></h3>
+<iframe width="720" height="315" style="height: auto; aspect-ratio: 16/9;" src="https://www.youtube-nocookie.com/embed/SCOmFnW7uG8?si=hSxN_3SFm-cFFWuh" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+<h3 id="1-instalar-y-configurar-josm"><strong><div class="tools-header">1. Instalar y configurar JOSM <a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="/images/josm_logo.jpg" data-desc-position="bottom"><img src="/images/josm_logo.jpg" style="height: 1.2em; vertical-align: middle; margin-left: 10px;"></a></div></strong></h3>
+<div style="float: right; margin: 5px 0 20px 20px; width: 350px;">
+ <a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="/images/starter-kit/kenya-tanzania.jpg" data-desc-position="bottom"><img src="/images/starter-kit/kenya-tanzania.jpg" class="img-border" style="width: 100%;"></a> 
+ <figcaption class="image-caption">Este es el aspecto que debería tener su JOSM después de configurar el kit de inicio completo. Haga clic para ampliar.</figcaption>
+ <a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="/images/preferences.jpg" data-desc-position="bottom"><img src="/images/preferences.jpg" class="img-border" style="width: 100%;"></a> 
+ <figcaption class="image-caption">Diferentes preferencias que necesitan ser configuradas, incluyendo las Preconfiguraciones de Potencia. Haga clic para ampliar.</figcaption>
+ <a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="/images/starter-kit/imagery.jpg" data-desc-position="bottom"><img src="/images/starter-kit/imagery.jpg" class="img-border" style="width: 100%;"></a> 
+ <figcaption class="image-caption">Para países como Japón, se dispone de imágenes de alta resolución de todo el país en JOSM. Haga clic para ampliar.</figcaption>
+</div>
+
+<ol>
+<li>Instale JOSM utilizando el <a href="../installation-instructions/" target="_blank"><strong>Instrucciones recomendadas</strong></a> para su máquina.</li>
+<li>Vincula tu cuenta OSM a JOSM. Para ello, ve a <code>Editar → Preferencias → Servidor OSM</code> y selecciona "Autorizar". 2. Inicia sesión (o regístrate) con tu cuenta OSM. Tu cuenta OSM debería estar ahora vinculada. En macOS <code>Preferencias</code> se puede encontrar en <code>JOSM → Configuración</code>.</li>
+<li>Active <code>Control remoto</code> en <code>Edición → Preferencias → Control remoto</code>. Esto permite que los datos de la cuadrícula se carguen automáticamente.</li>
+<li>Active el <code>Modo Experto</code> <code>Ver → Modo Experto</code> para activar la función de búsqueda que necesitará. </li>
+<li>Entender las capas de JOSM. JOSM trabaja con capas apiladas, de forma similar a Photoshop o herramientas SIG:</li>
+<li>Normalmente tendrá una capa de datos OSM, capas de imágenes y, opcionalmente, capas GeoJSON o de tareas.</li>
+<li>Puedes cambiar entre varias fuentes de imágenes por satélite (por ejemplo, Esri, Mapbox) para utilizar la más nítida para tu zona.</li>
+<li>Cargue sus imágenes de satélite a través de <code>Imagery</code> y seleccione <code>Bing aerial imagery</code> y <code>Esri World Imagery</code>. En la ventana "Capas", a la derecha, puede "mostrar/ocultar" las diferentes imágenes haciendo clic en el ojo. Aquí es también donde podrá cargar capas de datos adicionales. Cambiar el orden de los datos y las imágenes le permite combinar y solapar las distintas fuentes de datos. Algunos países, como Japón, Sudáfrica y Alemania, tienen sus propias imágenes de alta resolución en JOSM. Si está cartografiando imágenes locales, éstas aparecerán automáticamente en "Imágenes".</li>
+</ol>
+<div class="admonition advertencia">
+<p class="admonition-title">Advertencia</p>
+<p><strong>En algunos países, el mapeo de líneas eléctricas está restringido. Verifique siempre las directrices locales, conéctese primero con la comunidad local de OSM o consulte el <a href="https://wiki.openstreetmap.org/wiki/Power_networks#Local_projects">proyectos locales</a>. Si no encuentra una comunidad local, envíenos un <a href="mailto:MapYourGrid@openenergytransition.org">correo electrónico</a> y te ayudaremos a crear un grupo local.</strong></p>
+<p><strong>Siguiendo nuestro <a href="../mapping-good-practices/">Buenas prácticas de mapeo</a>Con el apoyo de la comunidad de OpenStreetMap, protegemos colectivamente la integridad de la plataforma OSM, fomentamos la confianza con las comunidades y liberamos el poder de los datos abiertos para un futuro energético más resiliente y justo. Por favor, ten en cuenta que la comunidad y la fundación OpenStreetMap no limitan técnicamente el mapeo en ningún lugar del globo. Por lo tanto, nuestro Buenas prácticas tampoco puede aplicarse a los mapeadores voluntarios de la comunidad.</strong> </p>
+</div>
+<h3 id="2-configure-sus-preajustes-y-reglas-de-validacion"><strong><div class="tools-header">2. Configure sus preajustes y reglas de validación </div></strong></h3>
+<div style="float: right; margin: 10px 0 20px 20px; width: 350px;">
+ <a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="/images/josm-toolbar.png" data-desc-position="bottom"><img src="/images/josm-toolbar.png" class="img-border" style="width: 100%;"></a> 
+ <figcaption class="image-caption">Preconfiguraciones predeterminadas de MapYourGrid en la barra de herramientas JOSM. Haga clic para ampliar.</figcaption>
+</div>
+
+<ol>
+<li>Para facilitar la asignación, personalice su barra de herramientas superior con preajustes si no ha utilizado las preferencias predeterminadas. Haga clic con el botón derecho en la barra de herramientas y seleccione <code>Configurar barra de herramientas</code> (o también <code>Preferencias → Barra de herramientas</code>). Después, a la derecha, seleccione <code>Presets → Man Made → Man Made/Power</code> y añada <code>Power Towers</code>, <code>Power Portal</code>, <code>Power Substation</code>, <code>Power Plants</code>, <code>Power Line</code> y <code>Power Generators</code>, pulsando el botón del centro para añadirlos a su barra de herramientas. Estos son los principales objetos que necesitará para la cartografía de la red de transporte. También puede eliminar los preajustes que no vaya a utilizar.</li>
+<li>Otro preajuste importante que necesitará es "Añadir nodo". Lo encontrarás en Herramientas → Añadir nodo. </li>
+<li>Cuando abra una nueva capa más adelante en el tutorial, la barra de herramientas dejará de ser gris.</li>
+<li>[Opcional: para los cartógrafos más experimentados, recomendamos integrar nuestras reglas de validación] Añada las reglas de validación del proyecto MapYourGrid: <code>Preferencias → Validador de datos</code>, en la pestaña <code>Reglas del Validator de etiquetas</code>, busque <code>Power QA</code>, haga clic en el elemento de la lista y, a continuación, haga clic en la flecha situada en el centro de la ventana para añadirlo a las reglas activas. JOSM realizará estas comprobaciones antes de publicar tus datos y mostrará cualquier punto que requiera verificación. Revísalos e intenta corregirlos para garantizar que los datos que producimos sean utilizables. Puedes encontrar <a href="https://wiki.openstreetmap.org/wiki/Power_networks/Quality_Assurance">más información y explicaciones sobre estas reglas en la wiki</a>.</li>
+</ol>
+<h3 id="3-anade-claridad-visual-con-estilos-de-mapa-personalizados"><strong><div class="tools-header">3. Añade claridad visual con estilos de mapa personalizados <img alt="🎨" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/1f3a8.svg" title=":art:"></div></strong></h3>
+<div style="float: right; margin: 5px 0 10px 20px; width: 350px;">
+ <a href="https://raw.githubusercontent.com/open-energy-transition/color-my-grid/refs/heads/main/legend/power-grid-legend.svg" target="_blank">
+ <img src="https://raw.githubusercontent.com/open-energy-transition/color-my-grid/refs/heads/main/legend/power-grid-legend.svg" class="img-border" style="width: 100%;"> </a>
+ <figcaption class="image-caption">Leyenda OhmyGrid para la cartografía de la red de transporte. Haga clic para ampliar.</figcaption>
+</div>
+
+<ol>
+<li>En JOSM, vaya a <code>Edición → Preferencias → Estilos de pintura del mapa</code> y pulse el "+" en la parte superior derecha.</li>
+<li>Pegue este <a href="https://raw.githubusercontent.com/open-energy-transition/color-my-grid/refs/heads/main/ohmygrid-default.mapcss" target="_blank">URL</a>, o descargar la versión en bruto <a href="https://github.com/open-energy-transition/color-my-grid/blob/main/ohmygrid-default.mapcss" target="_blank">archivo</a> en tu dispositivo, y añádelo.</li>
+<li>Asegúrese de que el estilo está activo en el menú Estilos de pintura de mapas. Puede comprobarlo con <code>Windows → Estilos de pintura de mapa</code>.</li>
+</ol>
+<p><strong>Pasos opcionales para una experiencia visual aún mejor :</strong></p>
+<ul>
+<li>No todas las cuadrículas se hacen igual. Utilice este archivo MapCSS para <a href="https://raw.githubusercontent.com/open-energy-transition/color-my-grid/refs/heads/main/ohmygrid-default.mapcss">rejillas de baja densidad</a>o éste para <a href="https://raw.githubusercontent.com/open-energy-transition/color-my-grid/refs/heads/main/ohmygrid-default-high-density.mapcss" target="_blank">rejillas de alta densidad</a>. </li>
+<li>Puede comprobar <a href="https://github.com/open-energy-transition/color-my-grid" target="_blank">ColorMyGrid</a>, nuestra herramienta generadora de MapCSS, para adaptar fácilmente el archivo MapCSS a sus necesidades. Los datos brutos para editar el archivo <a href="https://raw.githubusercontent.com/open-energy-transition/color-my-grid/refs/heads/main/legend/power-grid-legend.svg" target="_blank">leyenda del mapa</a> está en el repositorio ColorMyGrid. </li>
+</ul>
+<h3 id="4-a-mapear-elija-una-buena-primera-linea"><strong><div class="tools-header">4. A mapear Elija una buena primera línea </div></strong></h3>
+<p>Nuestra comunidad está constantemente investigando líneas de transmisión que sean adecuadas para experiencias cartográficas fáciles para principiantes. Sólo tienes que seleccionar una "Buena primera línea" de la siguiente hoja de cálculo y marcarla si ya has empezado a cartografiarla. Por ahora, recuerde en qué país (o región) se encuentra la "Buena primera línea" que ha elegido, ya que el siguiente paso es cargar la red de ese país. Seleccione una <code>Buena primera línea</code> de la siguiente hoja de cálculo. <a class="md-button md-button--primary" href="../good-first-lines/" target="_blank"><strong>Buenas primeras líneas</strong></a></p>
+<h3 id="5-cargue-la-infraestructura-de-energia-en-josm"><strong><div class="tools-header">5. Cargue la infraestructura de energía en JOSM <img alt="📥" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/1f4e5.svg" title=":inbox_tray:"></div></strong></h3>
+<div style="float: right; margin: 5px 0 10px 20px; width: 350px;">
+ <a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="/images/starter-kit/kenya-look-into-data.jpg" data-desc-position="bottom"><img src="/images/starter-kit/kenya-look-into-data.jpg" class="img-border" style="width: 100%;"></a> 
+ <figcaption class="image-caption">Subestación de una central hidroeléctrica en Nigeria y conexión a la red de transmisión.</figcaption>
+ <a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="/images/starter-kit/double-mapping-warning.jpg" data-desc-position="bottom"><img src="/images/starter-kit/double-mapping-warning.jpg" class="img-border" style="width: 100%;"></a>
+ <figcaption class="image-caption">Las líneas de transmisión no terminan abruptamente en las fronteras administrativas rosas. Por lo tanto, la subestación al final del interconector puede aparecer sin cartografiar. El mapa de la ventana de descarga muestra todos los datos de OpenStreetMap, lo que le permite comprobar rápidamente si se han cartografiado las subestaciones o las líneas. Para cartografiar más allá de las fronteras, se recomienda siempre cargar ambas zonas en el editor. Haga clic para ampliar.</figcaption>
+</div>
+
+<ol>
+<li>Asegúrese de que el control remoto está activado y el bloqueador de anuncios desactivado, y luego vaya a la cartografía de inicio <a href="https://MapYourGrid.org/map-it/" target="_blank">página</a>, pero vuelva a esta página para leer las instrucciones que figuran a continuación. }{target="_blank"</li>
+<li>Aquí puede hacer clic en el país que desee cartografiar, y se abrirá directamente JOSM y se cargarán los datos de ese país. Los datos de "Transmisión por defecto (50 kV+)" ya deberían estar seleccionados cuando abra la página. Ahora pulse el país, región/estado/provincia de la <code>Buena Primera Línea</code> que desea cartografiar. Para cargar los datos de las regiones/estados/provincias, sólo tiene que hacer zoom hasta que la frontera sea visible (por ahora sólo funciona para algunos países). </li>
+<li>Los datos deberían aparecer automáticamente en JOSM. En la ventana "Capa", a la derecha, debería ver la "Capa de datos", a la que se asigna automáticamente el nombre del país/región que ha pulsado. El símbolo ✅ situado a la izquierda de la capa de datos debería ser visible, indicando que se trata de la capa activa. Todas las ediciones que realice en las ventanas principales formarán parte de esta "capa de datos". </li>
+<li>Familiarícese con los datos de la red, haga clic en las líneas y en la subestación para inspeccionar las etiquetas y las afiliaciones en la ventana de la derecha. </li>
+</ol>
+<div class="admonition advertencia">
+<p class="admonition-title">Riesgo de doble mapeo y conflictos</p>
+<p>Tenga en cuenta que sólo ha descargado los datos de la red de transmisión del país, estado o provincia que ha seleccionado. Esto incluye centrales eléctricas, generadores, subestaciones, torres de alta tensión y líneas de transmisión. Otros objetos de OpenStreetMap, como las calles, no serán visibles. **Por lo tanto, no utilice nunca nuestras herramientas para cartografiar objetos distintos de los cargados a través de Overpass, ya que, de lo contrario, otros cartografiadores tendrán que limpiar los datos duplicados.</p>
+<p>Algunas líneas de transmisión transfronterizas seguirán siendo visibles más allá de los límites administrativos rosas. Sin embargo, para editarlas, deberá cargar ambos países. No mapee nunca más allá de los límites administrativos rosas, ya que lo más probable es que la infraestructura se mapee dos veces.</p>
+<p>Tenga en cuenta también que algunos objetos visibles pueden estar conectados a otras características ocultas incluso no relacionadas con el dominio de potencia. La eliminación es una operación delicada y JOSM le advertirá amablemente sobre los riesgos, en particular sobre la eliminación de alguna característica referenciada por objetos ocultos. La forma más segura de evitar estos riesgos es seleccionar y descargar los datos de OpenStreetMap, con la ayuda del botón de descarga ⬇️ en la esquina superior izquierda, alrededor de la característica que se va a eliminar. De este modo verá la imagen completa y no romperá nada oculto.</p>
+</div>
+<h3 id="6-trace-su-primera-linea"><strong><div class="tools-header">6. Trace su primera línea</div></strong></h3>
+<div style="float: right; margin: 5px 0 20px 20px; width: 350px;">
+ <a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="/images/starter-kit/josm_env.jpg" data-desc-position="bottom"><img src="/images/starter-kit/josm_env.jpg" class="img-border" style="width: 100%;"></a>
+ <figcaption class="image-caption">Elementos clave JOSM para continuar una línea de transmisión. Haga clic para ampliar.</figcaption>
+ <a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="/images/mapfast.png" data-desc-position="bottom"><img src="/images/mapfast.png" class="img-border" style="width: 100%;"></a> 
+ <figcaption class="image-caption">Seleccionar todas las notas acabadas de una línea le permite convertirlas rápidamente en Power Towers.</figcaption>
+ <a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="/images/starter-kit/validation.jpg" data-desc-position="bottom"><img src="/images/starter-kit/validation.jpg" class="img-border" style="width: 100%;"></a>
+ <figcaption class="image-caption">Antes de cargarlo, JOSM probará sus ediciones para detectar problemas conocidos y varios conjuntos de reglas. Intente resolver el mayor número posible de resultados de validación. Haga clic para ampliar.</figcaption>
+</div>
+
+<p>La cartografía es un proceso iterativo, por lo que cometerá errores, lo cual es completamente normal. No dejes que esto te detenga: simplemente mapea lo que puedas ver en las imágenes. Si eres nuevo en el mapeo OSM, evita a toda costa editar o borrar datos existentes. Pero no te preocupes, no puedes romper nada añadiendo nuevos datos. Todo está constantemente validado por nuestras herramientas de control de calidad. </p>
+<p>Ahora vamos a empezar a mapear:</p>
+<ol>
+<li>Amplíe las imágenes por satélite del país que va a cartografiar hasta que pueda ver las casas y las carreteras.</li>
+<li>Copia las coordenadas de tu <code>Buena Primera Línea</code>. 2. En JOSM, pulse el botón "Añadir nodo". <img src="/images/starter-kit/add-node.png" class="icon-svg off-glb" style="width: 30px; height: auto;"> preajustes. Pegue las coordenadas aquí y pulse Ok. Ahora debería ver torres de alta tensión que no están mapeadas al final de una línea de transmisión sin terminar. </li>
+<li>⚠️ Importante : El nodo que acaba de añadir puede no coincidir con la ubicación exacta de una torre. Elimínelo inmediatamente usando "Deshacer Secuencia". <img src="/images/starter-kit/deletenode.jpg" class="icon-svg off-glb" style="width: 30px; height: auto;">Control+Z, o seleccionándolo y pulsando Supr.</li>
+<li>Pulse `Dibujar línea <img src="/images/starter-kit/draw-nodes.png" class="icon-svg off-glb" style="width: 30px; height: auto;"> (barra de herramientas izquierda), y haga clic en el último símbolo de torre al final de la línea eléctrica inacabada. Ahora debería ser capaz de extender la línea. </li>
+<li>Busca la siguiente torre de energía que encuentres y haz clic en su huella. </li>
+<li>Si alguna vez no estás seguro de cómo va la línea, coloca torres sin las líneas. Añadiendo torres de energía no te equivocarás. Añadir torres de energía es la forma más fácil de empezar. Para ello puedes pulsar sobre una torre existente y <code>control+C</code> y luego pulsar sobre donde haya una torre de energía sin mapear y <code>control+V</code>. </li>
+<li>Continúe la línea eléctrica lo mejor que pueda. </li>
+<li>Una vez terminado, seleccione su línea y pulse CTRL+Mayús+N. Esto seleccionará todos los nodos de la línea. </li>
+<li>A continuación, pulsa CTRL+F para abrir la barra de búsqueda. </li>
+<li>En la barra de búsqueda, escriba <code>child selected type:node AND untagged</code>. </li>
+<li>⚠️ En la pestaña Resultados de la izquierda, marque <code>Buscar en la selección</code>. ⚠️</li>
+<li>Pulse <code>Buscar</code>. Se seleccionarán todos los nodos no etiquetados de la línea.</li>
+<li>Aplique la "Torre de energía". <img src="/images/starter-kit/power-towers.png" class="icon-svg off-glb" style="width: 30px; height: auto;"> de la barra de herramientas, seguido de "Aplicar preajuste". Ahora todos los nodos que ha colocado están correctamente etiquetados como "Torre de energía".</li>
+</ol>
+<div class="admonition nota">
+<p class="admonition-title">Presta atención a lo que seleccionas y subes</p>
+</div>
+<p><strong>⚠️ Cuando apliques preajustes, asegúrate de seleccionar sólo los nodos no etiquetados de tu línea. Si accidentalmente seleccionas todos los nodos no etiquetados en el país y los etiquetas con "Torre de energía", cargarás datos incorrectos a OSM y tendrás que revertir tus cambios.</strong></p>
+<h3 id="7-sube-tus-ediciones-a-openstreetmap"><strong><div class="tools-header">7. Sube tus ediciones a OpenStreetMap <img alt="📤" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/1f4e4.svg" title=":outbox_tray:"> </div></strong></h3>
+<ol>
+<li>Con la <code>Capa de datos</code> activada, pulse la flecha verde que apunta hacia arriba <img src="/images/starter-kit/upload.png" class="icon-svg off-glb" style="width: 30px; height: auto;">que debería abrir una nueva ventana. </li>
+<li>En el panel derecho aparecerá otra nueva ventana <code>Resultados de validación</code> en la que se mostrarán todos los problemas identificados. Si hace clic con el botón derecho en un problema, podrá ampliarlo. Evite ignorar estos resultados de validación. La única advertencia aceptable al cargar los datos es <code>Posible falta de nodo de soporte de línea dentro de la línea eléctrica</code>. </li>
+<li>En la ventana de carga, marque la casilla "Me gustaría que alguien revisara mis ediciones" si su cartografía se ha visto muy afectada por incertidumbres como datos de satélite de baja calidad, o si es usted principiante. Escriba un breve comentario como <code>#mapyourgrid Línea de transmisión inacabada</code>. Indique la capa de origen de las imágenes que ha utilizado escribiendo "Esri" o "Bing", por ejemplo. Una vez que hayas terminado y estés seguro de tus modificaciones, "Sube los cambios".</li>
+<li>Acaba de trazar su Primera Buena Línea. Siéntete libre de cerrar más Primeras Líneas Buenas, pero asegúrate de dejar alguna para los demás. Puede utilizar la función <a href="../strategies/">Estrategias</a> que hemos proporcionado para encontrar tu propia línea sin mapear. Para apoyar nuestra iniciativa, utiliza el hashtag #MapYourGrid en los comentarios cuando subas un changeset.</li>
+</ol>
+<h3 id="8-evite-estos-errores-comunes"><strong><div class="tools-header"> 8. Evite estos errores comunes <img alt="📛" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/1f4db.svg" title=":name_badge:"></div></strong></h3>
+<div style="float: right; margin: 5px 0 10px 20px; width: 350px;">
+ <a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="/images/starter-kit/power-towers-without-lines.jpg" data-desc-position="bottom"><img src="/images/starter-kit/power-towers-without-lines.jpg" class="img-border" style="width: 100%;"></a> 
+ <figcaption class="image-caption">En particular, en las densas zonas urbanas muy extendidas en Nigeria, puede resultar muy difícil determinar el trazado de las líneas en las imágenes de satélite. Por ello, los cartógrafos se limitan a colocar torres de alta tensión desconectadas que aparecen como cuadrados azules en los niveles de zoom superiores.</figcaption>
+</div>
+
+<p>El mapeo es un proceso iterativo y los errores ocurren. Esto no debería impedirle cartografiar; limítese a cartografiar lo que pueda verificar en función de sus conocimientos. Si falta una torre, líneas o atributos, nuestra herramienta de control de calidad Osmose lo detectará automáticamente. <a href="../strategies/#garantia-de-calidad-y-validacion">Más información sobre garantía de calidad y validación</a> capas de OpenStreetMap y cómo construimos sobre ellas.</p>
+<ol>
+<li>Nuestras herramientas se centran en redes de transmisión, por eso es posible que no veas líneas por debajo de 50 kV. Para ver las líneas ya mapeadas por debajo de 50 kV o las líneas etiquetadas con <code>power=minor_line</code>, descarga toda la zona en la que estás trabajando con la flecha verde apuntando hacia abajo ⬇️. Aún mejor, puedes descargar un país en Map It 📍 con la capa <code>Transmisión+Distribución</code> activada.</li>
+<li>Al cartografiar, asegúrate de no cruzar la frontera del país en el que estás trabajando (líneas de color rosa neón visibles). De lo contrario, puedes encontrarte mapeando algo que ya existe, pero que no ha sido descargado en JOSM. Una de las estrategias que tenemos puede ayudar con esto.</li>
+<li>No hagas mapas que superen tus conocimientos. Si no estás seguro, déjalo para los mappers experimentados o los locales, haz una etiqueta fixme o pregunta a la comunidad. Si alguna vez no estás seguro de dónde colocar las líneas, céntrate en añadir torres de energía. Así no te equivocarás. Añadir torres de energía es la forma más fácil de empezar.</li>
+<li>Comprueba dos veces tu selección antes de aplicar los preajustes, especialmente cuando selecciones una gran cantidad de opbjetos. Esto evita subir datos erróneos a OSM y te ahorra la molestia de volver a limpiar más tarde.</li>
+<li>Como estás contribuyendo a una selección temática de datos de OpenStreetMap, los elementos visibles pueden estar conectados a otros ocultos. Cuando elimines algún elemento, comprueba siempre que no está conectado a nada descargando los datos de OpenStreetMap que rodean el área, con la ayuda del botón de descarga ⬇️ en la esquina superior izquierda.</li>
+</ol>
+<p>Para una cartografía segura, le recomendamos que lea sobre <a href="https://wiki.openstreetmap.org/wiki/Good_practice" target="_blank">buenas prácticas</a>.</p>
+<div class="admonition nota">
+<p class="admonition-title">Nota</p>
+<p><strong>⚠️ En algunos países, el mapeo de líneas eléctricas está restringido. Siempre verifique las directrices locales, conéctese primero con la comunidad local de OSM, o consulte el <a href="https://wiki.openstreetmap.org/wiki/Power_networks#Local_projects">proyectos locales</a>. Si no encuentra una comunidad local, envíenos un <a href="mailto:MapYourGrid@openenergytransition.org">correo electrónico</a> y te ayudaremos a crear un grupo local.</strong></p>
+<p><strong>⚠️ Siguiendo nuestro <a href="../mapping-good-practices/">Buenas prácticas de mapeo</a>En OSM, protegemos colectivamente la integridad de la plataforma OSM, fomentamos la confianza con las comunidades y liberamos el poder de los datos abiertos para un futuro energético más resiliente y justo.</strong> </p>
+</div>
+<h2 id="kit-de-iniciacion-al-mapa-de-id-e-infraestructuras-abiertas"><div class="stradegy-header">Kit de iniciación al mapa de iD e infraestructuras abiertas</div></h2>
+<p>¿Estás de viaje y has visto algunas torres de alta tensión, centrales eléctricas o subestaciones cerca de tu casa que aún no están y quieres cartografiarlas rápidamente? Puede hacerlo en su dispositivo móvil o PC utilizando el editor iD y Open Infrastructure Map. De este modo, también puede corregir tensiones, circuitos u otros errores que vea en Open Infrastructure Map.</p>
+<div style="float: right; margin: 5px 0 10px 20px; width: 350px;">
+ <a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="/images/starter-kit/easy-edit.jpg" data-desc-position="bottom"><img src="/images/starter-kit/easy-edit.jpg" class="img-border" style="width: 100%;"></a>
+ <figcaption class="image-caption">Para colocar una torre de energía, primero tienes que establecer un nodo y luego añadir una etiqueta (izquierda). Para guardar las modificaciones en un dispositivo móvil mediante el Editor iD (derecha), tendrás que cerrar el panel del inspector para que aparezca el botón `Guardar`. Haz clic para ampliar.</figcaption>
+</div>
+
+<h4 id="cartografia-sobre-el-terreno-de-las-torres-de-alta-tension"><div class="stradegy-header">Cartografía sobre el terreno de las torres de alta tensión</div></h4>
+<ol>
+<li>Ir a la página <a href="https://openinframap.org/#2/26/12" target="_blank">Mapa de infraestructuras abiertas</a>.</li>
+<li>Haz clic en <strong>Encontrar mi ubicación</strong> en la esquina superior derecha o busca tu ciudad.</li>
+<li>Acerque el zoom hasta que vea el pequeño botón "Editar" en la esquina inferior derecha y púlselo.</li>
+<li><a href="https://www.openstreetmap.org/user/new?cookie_test=true&amp;referer=%2Fedit%3Feditor%3Did" target="_blank">Crear una cuenta OpenStreetMap</a>. Cambia al modo <code>Editar</code> pulsando el botón del panel superior.</li>
+<li>Ahora verás todos los datos de OpenStreetMap con imágenes de satélite "Bing" o "ESRI" debajo. Dependiendo de su región, es posible que desee cambiar a diferentes imágenes de satélite pulsando el botón "Configuración de fondo" en el panel derecho.</li>
+<li>Pulsando el símbolo "Punto" en el panel superior, puede colocar un nodo. 2. Ahora etiquete este nodo como Torre de energía utilizando la opción <code>Editar característica</code> que aparecerá en la parte izquierda. Aunque rellenar los demás campos es opcional, le invitamos a proporcionar información adicional si sabe más sobre el tipo de torre de energía.</li>
+<li>Usa el atajo de teclado <code>CTRL+C</code> para copiar la torre, luego coloca más torres de energía donde puedas verlas.</li>
+<li>Cargue sus datos pulsando <code>Guardar</code>. En los dispositivos móviles, primero tienes que ocultar la ventana de la izquierda pulsando el botón <code>Inspect</code> de la parte superior.</li>
+<li>Añade un <code>Comentario de cambios</code> con una breve descripción de tu actividad de mapeo. Si nuestros esfuerzos, documentación y herramientas le resultan útiles, incluya el hashtag <code>#mapyourgrid</code> en el comentario del conjunto de cambios para hacérnoslo saber.</li>
+</ol>
+<h4 id="subestaciones-y-centrales-electricas"><div class="stradegy-header">Subestaciones y centrales eléctricas</div></h4>
+<div style="float: right; margin: 5px 0 10px 20px; width: 350px;">
+ <a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="/images/starter-kit/id-substation.jpg" data-desc-position="bottom"><img src="/images/starter-kit/id-substation.jpg" class="img-border" style="width: 100%;"></a>
+ <figcaption class="image-caption">Recomendamos utilizar un ratón para mapear múltiples subestaciones en iD. Si está de viaje, también puede utilizar una pantalla táctil para ello. Haga clic para ampliar.</figcaption>
+ <a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="/images/starter-kit/solar-mapping-id.jpg" data-desc-position="bottom"><img src="/images/starter-kit/solar-mapping-id.jpg" class="img-border" style="width: 100%;"></a>
+ <figcaption class="image-caption">Las centrales eléctricas, como el parque solar, pueden trazarse de forma similar a las subestaciones. Haga clic para ampliar.</figcaption>
+</div>
+
+<p>Una vez terminada la línea de transmisión, lo más probable es que al final se encuentre una subestación y, a veces, incluso una central eléctrica. Por lo tanto, cartografiar la red de transmisión es una forma eficaz de identificar nuevas centrales eléctricas. Las centrales fotovoltaicas, en particular, están aumentando considerablemente en todo el mundo y pueden identificarse fácilmente en las imágenes por satélite.</p>
+<ol>
+<li>Ir a la página <a href="https://openinframap.org/#2/26/12" target="_blank">Mapa de infraestructuras abiertas</a>.</li>
+<li>Haz clic en <strong>Encontrar mi ubicación</strong> en la esquina superior derecha o busca tu ciudad.</li>
+<li>Acerque el zoom hasta que vea el pequeño botón "Editar" en la esquina inferior derecha y púlselo.</li>
+<li><a href="https://www.openstreetmap.org/user/new?cookie_test=true&amp;referer=%2Fedit%3Feditor%3Did" target="_blank">Crear una cuenta OpenStreetMap</a> e inicia sesión.</li>
+<li>Pulsando el símbolo <code>Área</code> del panel superior, podrá marcar la subestación. Marque esta área como <code>Subestación</code> utilizando la <code>Función de edición</code> que aparecerá en el lado izquierdo. Añada tensiones, operadores u otros campos si dispone de esta información.</li>
+<li>Ahora cargue esta información pulsando <code>Guardar</code>.</li>
+<li>Añade un <code>Changeset Comment</code> con una breve descripción de tu actividad de mapeo. Si nuestros esfuerzos, documentación y herramientas le resultan útiles, incluya el hashtag #mapyourgrid en el comentario del conjunto de cambios para hacérnoslo saber.</li>
+<li><strong>Bonus:</strong> Al mapear la red, también encontrarás muchas centrales eléctricas situadas junto a subestaciones y líneas de transmisión. Éstas se mapean de forma similar a las subestaciones, utilizando el símbolo <code>Área</code>.</li>
+</ol>
+<p>Si quieres intentar encontrar las centrales eléctricas que faltan en un país y cartografiarlas, puedes utilizar la herramienta Global Energy Monitor o Wikidata en la página <a href="https://mapyourgrid.org/map-it/" target="«_blank»">MAP IT📍</a>. </p>
+<ol>
+<li>Seleccione el botón Global Energy Monitor o Wikidata y pulse sobre un país. Se descargará un archivo con todas las centrales eléctricas de esos conjuntos de datos.</li>
+<li>A continuación, puede añadirlo a iD arrastrando y soltando el archivo, o añadiéndolo en <code>Datos del mapa</code>.</li>
+<li>A continuación, puede revisar las diferentes centrales eléctricas y comprobar si están cartografiadas en OpenStreetMap.</li>
+</ol>
+<h4 id="encuentre-lineas-de-transmision-abiertas-con-osmose"><div class="stradegy-header">Encuentre líneas de transmisión abiertas con Osmose</div></h4>
+<p>¿Has terminado tu Buena Primera Línea y quieres encontrar tu propia línea abierta en un país de tu elección? Con la ayuda de osmose y nuestro sistema interactivo <a href="https://mapyourgrid.org/map-it/" target="_blank">MAPA IT📍</a> puedes encontrar aún más líneas abiertas.</p>
+<div style="float: right; margin: 5px 0 10px 20px; width: 350px;">
+ <a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="/images/starter-kit/Kenya-unfinished-transmission-lines-iD.jpg" data-desc-position="bottom"><img src="/images/starter-kit/Kenya-unfinished-transmission-lines-iD.jpg" class="img-border" style="width: 100%;"></a>
+ <figcaption class="image-caption">Soporte iD para cargar archivos .gpx, .kml, .geojson, .json en el editor. Por lo tanto, los temas de to osmose, como las líneas de transmisión inacabadas en Kenia, también pueden cargarse en el editor desde nuestra página interactiva MAP IT📍. Haga clic para ampliar.</figcaption>
+</div>
+
+<ol>
+<li>Ve a la página <a href="https://mapyourgrid.org/map-it/">MAP IT📍</a>.</li>
+<li>Pulsa en «iD Editor» y, a continuación, pulsa en el botón de la capa de sugerencias de Osmose.</li>
+<li>Elige uno de los tipos de incidencia de Osmose y, a continuación, pulsa en un país. Esto recuperará hasta 5000 incidencias de Osmose para ese país y tipo de incidencia.</li>
+<li>Aparecerá una URL que puedes copiar. </li>
+<li>Ve al <a href="https://www.openstreetmap.org/edit">iD Editor</a> y pulsa en «Map Data» o «U» en tu teclado.</li>
+<li>Pulsa en los tres puntos junto a <code>Datos del mapa</code>, pega la URL copiada y pulsa «OK».</li>
+<li>Ahora debería ver todos los problemas (puntos rosas) con un alto nivel de zoom, y puede ampliar manualmente cada uno de ellos para ver si puede solucionar el problema. Desgraciadamente, iD no permite que estos datos se procesen de forma sistemática. Para abordar estos problemas de Osmose y permitir la cartografía a gran escala en todo un país, recomendamos nuestro flujo de trabajo JOSM.</li>
+</ol>
+<h4 id="informar-de-problemas-en-la-red"><div class="stradegy-header">Informar de problemas en la red</div></h4>
+<div style="float: right; margin: 5px 0 10px 20px; width: 350px;">
+ <a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="/images/starter-kit/easy-notes.jpg" data-desc-position="bottom"><img src="/images/starter-kit/easy-notes.jpg" class="img-border" style="width: 100%;"></a>
+ <figcaption class="image-caption">Open Infrastructure Map (izquierda) y el Editor iD (derecha) ofrecen una forma fácil de usar y preparada para dispositivos móviles de notificar problemas. Haga clic para ampliar.</figcaption>
+</div>
+
+<p>La forma más rápida y sencilla de contribuir a la red eléctrica es añadir notas donde veas que falta información o que ésta es incorrecta en OpenStreetMap. Puedes hacerlo de forma totalmente anónima sin necesidad de iniciar sesión.</p>
+<ol>
+<li>Ir a la página <a href="https://openinframap.org/#2/26/12" target="_blank">Open Infrastructure Map</a>.</li>
+<li>Haz clic en <strong>Encontrar mi ubicación</strong> en la esquina superior derecha o busca tu ciudad.</li>
+<li>Haga clic en la subestación, torre de alta tensión, línea eléctrica o central eléctrica en la que desee notificar un problema.</li>
+<li>En la ventana de descripción, haga clic en el logotipo <strong>OpenStreetMap</strong>.</li>
+<li>El <a href="https://www.openstreetmap.org/">OpenStreetMap.org</a> interfaz se abrirá ahora en ese lugar.</li>
+<li>Haga clic en el botón <strong>Añadir una nota al mapa</strong> del panel derecho.</li>
+<li>Añade una breve descripción del problema e incluye el hashtag <code>#mapyourgrid</code> para que podamos encontrar tu nota.</li>
+</ol>
+<p>Informar de estos pequeños problemas mejorará significativamente la calidad a largo plazo de los datos de su red local.</p>
+<h2 id="kit-de-inicio-mapcomplete"><div class="tools-header">Kit de inicio MapComplete</div></h2>
+<div style="float: right; margin: 5px 0 10px 20px; width: 350px;">
+ <a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="/images/starter-kit/mapcomplete.jpg" data-desc-position="bottom"><img src="/images/starter-kit/mapcomplete.jpg" class="img-border" style="width: 100%;"></a>
+ <figcaption class="image-caption">MapComplete permite añadir la información que falta a objetos como los aerogeneradores (izquierda). La plataforma permite subir imágenes para que otros puedan obtener información como la potencia del aerogenerador. Haz clic para ampliar.</figcaption>
+ <a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="/images/starter-kit/mapcomplete-questions-form.jpg" data-desc-position="bottom"><img src="/images/starter-kit/mapcomplete-questions-form.jpg" class="img-border" style="width: 100%;"></a>
+ <figcaption class="image-caption">Este es un ejemplo del formulario que puede utilizar para editar información clave sobre las líneas eléctricas, así como para cargar imágenes. Aparece al hacer clic en las líneas azules del mapa que representan líneas eléctricas. Haga clic para ampliar.</figcaption>
+</div>
+
+<p>En <a href="https://mapcomplete.org/" target="_blank">MapComplete</a> proporciona una forma sencilla de identificar las etiquetas que faltan en infraestructuras ya cartografiadas en las que falta información adicional. Al igual que iD, la plataforma puede utilizarse desde un PC, pero también desde un dispositivo móvil. Puede descargar la aplicación oficial <a href="https://play.google.com/store/apps/details?id=org.mapcomplete&amp;pli=1" target="_blank">Aplicación MapComplete</a> de Google Play Store, o utilice la aplicación web en otros dispositivos móviles. Una de las principales características de MapComplete es la posibilidad de cargar fotografías tomadas con teléfonos móviles. Esto permite a los cartógrafos inexpertos hacer fotos de las torres de alta tensión, que los expertos pueden utilizar para obtener información como el voltaje y el número de circuitos.</p>
+<ol>
+<li>
+<p><strong>Mapa de tensiones faltantes de las líneas eléctricas</strong>: Las tensiones son esenciales para estimar la potencia total que puede transmitir una línea eléctrica. MapComplete admite la asignación de esta etiqueta faltante mediante la edición de los datos en la etiqueta <a href="https://mapcomplete.org/theme.html?z=14.8&amp;lat=-15.420620800001004&amp;lon=28.31155200000046&amp;userlayout=https%3A%2F%2Fstudio.mapcomplete.org%2F11076630%2Flayers%2Fmap_your_grid_power_lines%2Fmap_your_grid_power_lines.json" target="_blank">Capa MapComplete de Líneas Eléctricas</a>. Una vez que haga clic en las líneas azules para realizar cambios, en el panel derecho observará que hay una opción para subir una <strong>imagen de una torre de energía</strong>. Puedes contribuir proporcionando una imagen de la torre de alta tensión. Ésta se subirá a MapYourGrid, donde otros cartógrafos técnicos podrán utilizar los aisladores para derivar las tensiones.</p>
+</li>
+<li>
+<p><strong>Potencia de salida de los aerogeneradores</strong>: Al igual que ocurre con las líneas eléctricas, la potencia de un aerogenerador puede calcularse con una sola imagen. Quizá conozcas otros recursos y métodos para obtener la potencia de salida de los aerogeneradores. En <a href="https://mapcomplete.org/openwindpowermap.html?z=13&amp;lat=39.55702450000146&amp;lon=9.226502599999435#node/5271617498" target="_blank">Capa de aerogeneradores</a> permite asignar las etiquetas que faltan. </p>
+</li>
+<li>
+<p>Abra el <a href="https://mapcomplete.org/theme.html?z=14.8&amp;lat=-15.420620800001004&amp;lon=28.31155200000046&amp;userlayout=https%3A%2F%2Fstudio.mapcomplete.org%2F11076630%2Flayers%2Fmap_your_grid_power_lines%2Fmap_your_grid_power_lines.json" target="_blank">Capa MapComplete de Líneas Eléctricas</a> o <a href="https://mapcomplete.org/openwindpowermap.html?z=13&amp;lat=39.55702450000146&amp;lon=9.226502599999435#node/5271617498" target="_blank">Potencia del aerogenerador</a></p>
+</li>
+<li>Salta a tu ubicación utilizando el símbolo de la cruz en la esquina inferior derecha.</li>
+<li>Busca aerogeneradores o líneas eléctricas en tu región con la información que falta.</li>
+<li>Pulsa sobre el símbolo del aerogenerador o la línea eléctrica. Ahora puedes añadir la capacidad o hacer una foto con tu dispositivo móvil para que otros puedan deducir la potencia de salida. <strong>Por favor, ten en cuenta que necesitaremos una imagen de una torre de alta tensión para estimar la tensión.</strong></li>
+<li>A continuación, pulse <code>Guardar</code>.</li>
+</ol>
+<h2 id="motivado-para-continuar"><div class="tools-header">¿Motivado para continuar?</div></h2>
+<p>¡Enhorabuena por haber llegado hasta aquí! Ofrecemos talleres prácticos gratuitos de cartografía de la red de transmisión a quienes hayan probado el kit de inicio. Le invitamos a unirse a nuestro <a href="https://discord.gg/a5znpdFWfD">chat comunitario</a> llamado <em>📍-mapyourgrid</em> en el canal de discordia de PyPSA-Earth. Aquí puedes hacer preguntas, e interactuar con la comunidad. Para preguntas específicas sobre mapeo y para participar en nuestro entrenamiento personalizado gratuito, por favor únete a nuestra <a href="https://discord.gg/fBw7ARTUeR" target="_blank">📍-mapyourgrid-apoyo-y-formación</a> canal. </p>
+<p>Consulte <a href="../strategies/">Estrategias</a> para aprender a encontrar tus propias líneas nuevas y convertirte en un experto en cartografía cuadriculada. Las páginas Wiki de OpenStreetMap <a href="https://wiki.openstreetmap.org/wiki/Power_networks" target="_blank">La red eléctrica</a> y <a href="https://wiki.openstreetmap.org/wiki/Key:power" target="_blank">Clave:Potencia</a> ofrecen una visión general de cómo cartografiar distintas infraestructuras de energía.</p>
+<p>También le invitamos a participar en nuestras convocatorias comunitarias para saber más sobre el proceso cartográfico y nuestra iniciativa. Solo tiene que participar en uno de los actos públicos que figuran en este calendario.</p>
+<iframe src="https://calendar.google.com/calendar/embed?src=mapyourgrid%40gmail.com&amp;ctz=Europe%2FBerlin" style="border:solid 1px #777" width="800" height="600" frameborder="0" scrolling="no"></iframe>
+
+<h2 id="que-mas-aprenda-los-conceptos-basicos-de-la-red"><strong><div class="tools-header">¿Qué más? Aprenda los conceptos básicos de la red </div></strong></h2>
+<p>No hace falta ser un experto en cuadrículas para empezar a mapear, pero un poco de conocimiento ayuda.
+Los siguientes documentos y materiales le proporcionarán una comprensión básica de cómo cartografiar una red eléctrica.</p>
+<p>En <a href="https://www.youtube.com/@TheLearningCurveBenila/videos" target="_blank">Curva de aprendizaje</a> es un canal de YouTube que te ayudará a comprender los conocimientos fundamentales de la red eléctrica. Aquí algunos videos que recomendamos para los mapeadores de red. </p>
+<ol>
+<li><a href="https://www.youtube.com/watch?v=AB1qYsiDm0M">Soportes de líneas eléctricas - Torres y postes de transmisión</a></li>
+<li><a href="https://www.youtube.com/watch?v=A6fwq3yHRXQ">Componentes de las líneas aéreas de transmisión</a></li>
+<li><a href="https://www.youtube.com/watch?v=l9nHs8e0WUg">Comparación entre los sistemas de transmisión HVAC y HVDC</a></li>
+</ol>
+<p>Recomendamos los siguientes documentos para profundizar en la construcción de la red eléctrica y su diseño, incluida la relación entre distancia y tensión basada en la norma IEC 60071-2. Ten en cuenta que pueden aplicarse normas diferentes según el país.</p>
+<ol>
+<li><a href="https://go.ratedpower.com/hubfs/CS-Knowledge%20Base/Methodologies/Overhead%20Line%20Methodology.pdf">Metodología de la línea aérea</a></li>
+<li><a href="https://webstore.ansi.org/preview-pages/bsi/preview_30365961.pdf">Líneas eléctricas aéreas de más de 1 kV de CA</a></li>
+</ol>
+<p>La siguiente imagen ilustra el diseño fundamental de la red eléctrica: <a href="https://iea.blob.core.windows.net/assets/ea2ff609-8180-4312-8de9-494bcf21696d/ElectricityGridsandSecureEnergyTransitions.pdf">Redes eléctricas y transiciones energéticas seguras</a> </p>
+<div style="float: left; margin: 5px 0 20px 20px; width: 100%;">
+ <a href="/images/grid-design.png" target="_blank">
+ <img src="/images/grid-design.png" class="img-border" style="width: 100%;"> </a>
+ <figcaption class="image-caption">Componentes tecnológicos clave de las redes eléctricas Fuente: IEA - CC BY 4.0 - <a href="https://iea.blob.core.windows.net/assets/ea2ff609-8180-4312-8de9-494bcf21696d/ElectricityGridsandSecureEnergyTransitions.pdf"> Redes eléctricas y transiciones energéticas seguras </a></figcaption>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"></path></svg>
+  Volver al principio
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener noreferrer">
+  Creative Commons Attribution 4.0 International License</a>
+| Map data from <a href="https://openstreetmap.org/copyright">OpenStreetMap</a> | <a href="https://MapYourGrid.org/privacy-policy/"> Read our Privacy Policy</a> 
+
+    </div>
+  
+  
+</div>
+      
+        
+<div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/open-energy-transition/MapYourGrid" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"></path></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://discord.gg/a5znpdFWfD" target="_blank" rel="noopener" title="discord.gg" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M492.5 69.8c-.2-.3-.4-.6-.8-.7-38.1-17.5-78.4-30-119.7-37.1-.4-.1-.8 0-1.1.1s-.6.4-.8.8c-5.5 9.9-10.5 20.2-14.9 30.6-44.6-6.8-89.9-6.8-134.4 0-4.5-10.5-9.5-20.7-15.1-30.6-.2-.3-.5-.6-.8-.8s-.7-.2-1.1-.2C162.5 39 122.2 51.5 84.1 69c-.3.1-.6.4-.8.7C7.1 183.5-13.8 294.6-3.6 404.2c0 .3.1.5.2.8s.3.4.5.6c44.4 32.9 94 58 146.8 74.2.4.1.8.1 1.1 0s.7-.4.9-.7c11.3-15.4 21.4-31.8 30-48.8.1-.2.2-.5.2-.8s0-.5-.1-.8-.2-.5-.4-.6-.4-.3-.7-.4c-15.8-6.1-31.2-13.4-45.9-21.9-.3-.2-.5-.4-.7-.6s-.3-.6-.3-.9 0-.6.2-.9.3-.5.6-.7c3.1-2.3 6.2-4.7 9.1-7.1.3-.2.6-.4.9-.4s.7 0 1 .1c96.2 43.9 200.4 43.9 295.5 0 .3-.1.7-.2 1-.2s.7.2.9.4c2.9 2.4 6 4.9 9.1 7.2.2.2.4.4.6.7s.2.6.2.9-.1.6-.3.9-.4.5-.6.6c-14.7 8.6-30 15.9-45.9 21.8-.2.1-.5.2-.7.4s-.3.4-.4.7-.1.5-.1.8.1.5.2.8c8.8 17 18.8 33.3 30 48.8.2.3.6.6.9.7s.8.1 1.1 0c52.9-16.2 102.6-41.3 147.1-74.2.2-.2.4-.4.5-.6s.2-.5.2-.8c12.3-126.8-20.5-236.9-86.9-334.5zm-302 267.7c-29 0-52.8-26.6-52.8-59.2s23.4-59.2 52.8-59.2c29.7 0 53.3 26.8 52.8 59.2 0 32.7-23.4 59.2-52.8 59.2m195.4 0c-29 0-52.8-26.6-52.8-59.2s23.4-59.2 52.8-59.2c29.7 0 53.3 26.8 52.8 59.2 0 32.7-23.2 59.2-52.8 59.2"></path></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://www.youtube.com/@MapYourGrid" target="_blank" rel="noopener" title="www.youtube.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M549.7 124.1c-6.2-23.7-24.8-42.3-48.3-48.6C458.9 64 288.1 64 288.1 64S117.3 64 74.7 75.5c-23.5 6.3-42 24.9-48.3 48.6C15 167 15 256.4 15 256.4s0 89.4 11.4 132.3c6.3 23.6 24.8 41.5 48.3 47.8C117.3 448 288.1 448 288.1 448s170.8 0 213.4-11.5c23.5-6.3 42-24.2 48.3-47.8 11.4-42.9 11.4-132.3 11.4-132.3s0-89.4-11.4-132.3zM232.2 337.6V175.2l142.7 81.2z"></path></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://bsky.app/profile/mapyourgrid.bsky.social" target="_blank" rel="noopener" title="bsky.app" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M407.8 294.7c-3.3-.4-6.7-.8-10-1.3 3.4.4 6.7.9 10 1.3M288 227.1c-26.1-50.7-97.1-145.2-163.1-191.8C61.6-9.4 37.5-1.7 21.6 5.5 3.3 13.8 0 41.9 0 58.4S9.1 194 15 213.9c19.5 65.7 89.1 87.9 153.2 80.7 3.3-.5 6.6-.9 10-1.4-3.3.5-6.6 1-10 1.4-93.9 14-177.3 48.2-67.9 169.9C220.6 589.1 265.1 437.8 288 361.1c22.9 76.7 49.2 222.5 185.6 103.4 102.4-103.4 28.1-156-65.8-169.9-3.3-.4-6.7-.8-10-1.3 3.4.4 6.7.9 10 1.3 64.1 7.1 133.6-15.1 153.2-80.7C566.9 194 576 75 576 58.4s-3.3-44.7-21.6-52.9c-15.8-7.1-40-14.9-103.2 29.8C385.1 81.9 314.1 176.4 288 227.1"></path></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.expand", "navigation.indexes", "toc.integrate", "search.highlight", "search.suggest", "navigation.top", "navigation.sections", "content.image.zoom"], "search": "../../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.f55a23d4.min.js"></script>
+      
+        <script src="../../assets/javascripts/umami.js"></script>
+      
+        <script src="../../assets/javascripts/gallery.js"></script>
+      
+        <script src="../../assets/javascripts/awesome-filter-tags.js"></script>
+      
+    
+  
+<script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+document$.subscribe(()=>{ lightbox.reload(); });
+</script></body></html>

@@ -1,0 +1,321 @@
+/* Good First Lines Styles */
+
+.gfl-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 1rem;
+    margin-top: 2rem;
+  }
+  
+  .gfl-card {
+    background: var(--md-default-bg-color);
+    border-radius: 8px;
+    box-shadow: var(--md-shadow-z1);
+    transition: all 0.3s ease;
+    overflow: hidden;
+    border: 3px solid #6eb82a;
+    padding: 0px;
+  }
+  
+  .gfl-card:hover {
+    box-shadow: var(--md-shadow-z2);
+    transform: translateY(-2px);
+  }
+  
+  .gfl-header {
+    padding: 1rem;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    position: relative;
+  }
+  
+  .gfl-header:hover {
+    background: var(--md-default-fg-color--lightest);
+  }
+  
+  .country-flag {
+    width: 32px;
+    height: 24px;
+    object-fit: cover;
+    border-radius: 2px;
+  }
+  
+  .gfl-header h3 {
+    margin: 0;
+    font-size: 1.1rem;
+    font-weight: 600;
+  }
+  
+  .coordinates {
+    font-family: monospace;
+    font-size: 0.9rem;
+    color: var(--md-default-fg-color--light);
+  }
+  
+  .attempted-badge {
+    background: #ff9800;
+    color: white;
+    padding: 0.2rem 0.5rem;
+    border-radius: 4px;
+    font-size: 0.75rem;
+    font-weight: 600;
+  }
+  
+  .dropdown-arrow {
+    position: absolute;
+    right: 1rem;
+    top: 1rem;
+    font-size: 0.9rem;
+    color: var(--md-default-fg-color--light);
+  }
+  
+  .gfl-dropdown {
+    display: none;
+    padding: 1rem;
+    border-top: 1px solid var(--md-default-fg-color--lightest);
+    background: var(--md-code-bg-color);
+  }
+  
+  .editor-buttons {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1rem;
+  }
+  
+  .editor-btn {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 0.75rem;
+    border-radius: 6px;
+    text-decoration: none !important;
+    font-weight: bold;
+    transition: all 0.2s ease;
+    border: 2px solid transparent;
+    font-family: sans-serif;
+  }
+  
+  .josm-btn {
+    background: #ffc820;
+    color: black !important;
+  }
+  
+  .josm-btn:hover {
+    background: #6fa85e;
+    border-color: #5d8c4e;
+    transform: scale(1.02);
+  }
+  
+  .id-btn {
+    background: #8bc970;
+    color: black !important;
+  }
+  
+  .id-btn:hover {
+    background: #6fa85e;
+    border-color: #5d8c4e;
+    transform: scale(1.02);
+  }
+  
+  .editor-logo {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+  }
+  
+  .status-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+  
+  .checkbox-label {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    cursor: pointer;
+    font-size: 0.90rem;
+  }
+  
+  .checkbox-label input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
+  }
+  
+  .complete-btn {
+    width: 100%;
+    padding: 0.75rem;
+    background: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+  
+  .complete-btn:hover {
+    background: #45a049;
+    transform: scale(1.02);
+  }
+  
+  /* Add form styles */
+  #add-gfl-form {
+    background: #FFFFF0;
+    padding: 1rem;
+    border-radius: 8px;
+    margin: 1rem 0;
+    max-width: 600px;
+    border: 3px solid #FFC43D;
+  }
+
+  [data-md-color-scheme="slate"] #add-gfl-form {
+    background: #2a2a2a;
+    border-color: #a07020;
+    color: var(--md-default-fg-color);
+  }
+  
+  .form-group {
+    margin-bottom: 1.5rem;
+  }
+  
+  .form-group label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+  }
+  
+  .form-group input {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid var(--md-default-fg-color--lightest);
+    border-radius: 6px;
+    background: var(--md-default-bg-color);
+    color: var(--md-default-fg-color);
+    font-size: 1rem;
+    box-sizing: border-box;
+  }
+  
+  .form-group input:focus {
+    outline: none;
+    border-color: #7ebc6f;
+  }
+  
+  .form-group small {
+    display: block;
+    margin-top: 0.25rem;
+    font-size: 0.85rem;
+    color: var(--md-default-fg-color--light);
+  }
+  
+  .submit-btn {
+    width: 100%;
+    padding: 0.875rem;
+    background: #036d7a;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+  
+  .submit-btn:hover {
+    background: #1976d2;
+    transform: scale(1.02);
+  }
+  
+  #form-message {
+    margin-top: 1rem;
+    padding: 0.75rem;
+    border-radius: 6px;
+    text-align: center;
+    font-weight: 500;
+  }
+  
+  #form-message .success {
+    color: #4caf50;
+  }
+  
+  #form-message .error {
+    color: #f44336;
+  }
+  
+  /* Archive styles */
+  .archive-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+  
+  .archive-card {
+    background: var(--md-code-bg-color);
+    padding: 1rem;
+    border-radius: 6px;
+    text-align: center;
+    border-left: 4px solid #4caf50;
+  }
+  
+  .archive-card .country-flag {
+    width: 28px;
+    height: 21px;
+    margin-bottom: 0.5rem;
+  }
+  
+  .archive-card strong {
+    display: block;
+    margin-bottom: 0.25rem;
+  }
+  
+  .archive-card .coordinates {
+    font-size: 0.85rem;
+    margin-bottom: 0.25rem;
+  }
+  
+  .archive-card .region-details {
+    font-size: 0.8rem;
+    margin: 0.5rem 0;
+  }
+  
+  .archived-date {
+    font-size: 0.75rem;
+    color: var(--md-default-fg-color--light);
+    margin-top: 0.5rem;
+  }
+  
+  /* Loading and error states */
+  #loading, #archive-loading {
+    text-align: center;
+    padding: 2rem;
+    color: var(--md-default-fg-color--light);
+  }
+  
+  .error {
+    color: #f44336;
+    text-align: center;
+    padding: 1rem;
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    .gfl-grid {
+      grid-template-columns: 1fr;
+    }
+    
+    .editor-buttons {
+      flex-direction: column;
+    }
+    
+    #add-gfl-form {
+      padding: 1rem;
+    }
+  }

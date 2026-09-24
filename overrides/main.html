@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+
+{% block announce %}
+<a href="https://discord.gg/a5znpdFWfD">
+  <div style="display:inline-flex; align-items:center; color:#aad3c6">
+    <strong> Join our community chat </strong>
+    <img 
+      src="/icons/discord-white.png" 
+      alt="Discord logo" 
+      style="width:1em; height:0.75em; margin-left:0.5ch; vertical-align:middle;"
+      class="twemoji"
+      
+    />
+  </div>
+    <div style="display:inline-flex; align-items:center; color:#aad3c6">
+      <strong> and learn to map with us! 📍 </strong>
+    </div>
+  </a>
+{% endblock %}
+
+{% block extrahead %}
+  {{ super() }}
+  <meta property="og:title" content="MapYourGrid">
+  <meta property="og:description" content="We empower individuals, communities and nations around the world to map the electrical grid.">
+  <meta property="og:image" content="https://MapYourGrid.org/images/website/mapyourgrid-preview.jpg">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://MapYourGrid.org">
+  
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="MapYourGrid">
+  <meta name="twitter:description" content="We empower individuals, communities and nations around the world to map the electrical grid.">
+  <meta name="twitter:image" content="https://MapYourGrid.org/images/website/mapyourgrid-preview.jpg">
+{% endblock %}
