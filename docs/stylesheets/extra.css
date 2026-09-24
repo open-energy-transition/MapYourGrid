@@ -494,7 +494,7 @@ aside.md-banner a>div {
 }
 
 .section-title {
-  color: #2a6d3c; /* or match your h2 color */
+  color: var(--lp-green-dark, #2a6d3c); /* or match your h2 color */
   font-weight: bold;
   font-size: 3.5rem;
   margin-bottom: 0.75rem;

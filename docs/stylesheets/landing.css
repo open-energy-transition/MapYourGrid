@@ -1,3 +1,26 @@
+/* ==== THEME COLORS (light default, dark overrides for Material's slate scheme) ==== */
+:root {
+  --lp-hero-bg: #e9f5e9;
+  --lp-alt-bg: #f8f9fa;
+  --lp-card-bg: #ffffff;
+  --lp-border: #dddddd;
+  --lp-text: #4a5568;
+  --lp-text-muted: #555555;
+  --lp-green-dark: #2a6d3c;
+  --lp-stat-sub: #25382a;
+}
+
+[data-md-color-scheme="slate"] {
+  --lp-hero-bg: #1f2b24;
+  --lp-alt-bg: var(--md-default-bg-color);
+  --lp-card-bg: #2b2f3a;
+  --lp-border: #3d4250;
+  --lp-text: #c9ced6;
+  --lp-text-muted: #aab0ba;
+  --lp-green-dark: #7cc48f;
+  --lp-stat-sub: #a8d5b3;
+}
+
 /* ==== GENERAL/BODY  ==== */
 body {
     font-family: sans-serif; 
@@ -6,7 +29,7 @@ body {
 /* ==== HERO SECTION ==== */
 .hero-section {
   min-height: 60vh;
-  background-color: #e9f5e9; /* This color determines the header background */
+  background-color: var(--lp-hero-bg); /* This color determines the header background */
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -53,7 +76,7 @@ body {
 
 .mission-statement {
   font-size: 1.2rem;
-  color: #555555;
+  color: var(--lp-text-muted);
   max-width: 100%;
   margin: 0 auto 2rem;
   line-height: 1.4;
@@ -93,15 +116,15 @@ body {
 }
 
 .btn-secondary {
-  color: #2a6d3c !important;
-  background: white;
-  border: 1px solid #ddd;
+  color: var(--lp-green-dark) !important;
+  background: var(--lp-card-bg);
+  border: 1px solid var(--lp-border);
 }
 
 .btn-fourth {
   color: #ffffff !important;
   background: #727016;
-  border: 1px solid #ddd;
+  border: 1px solid var(--lp-border);
 }
 
 
@@ -121,8 +144,8 @@ body {
 }
 
 .btn-secondary:hover {
-  background: #f8f9fa;
-  border-color: #ccc;
+  background: var(--lp-alt-bg);
+  border-color: var(--lp-border);
 }
 
 .btn-third:hover {
@@ -132,7 +155,7 @@ body {
 /* ==== Why it matters SECTION ==== */
 .initiative-section {
   padding: 1rem 1rem;
-  background-color: #f8f9fa;
+  background-color: var(--lp-alt-bg);
 
 }
 
@@ -150,7 +173,7 @@ body {
 }
 
 .initiative-content p {
-  color: #4a5568;
+  color: var(--lp-text);
   line-height: 1.7;
   margin-bottom: 1.5rem;
   font-size: 1.1rem;
@@ -162,9 +185,9 @@ body {
   margin: 1.0rem auto;
   padding-left: 1.0rem;
   font-size: 1.1rem;
-  border-left: 4px solid #2a6d3c;
+  border-left: 4px solid var(--lp-green-dark);
   font-style: italic;
-  color: #555;
+  color: var(--lp-text-muted);
   text-align: left;
 }
 
@@ -173,7 +196,7 @@ body {
   margin-top: 0.5rem;
   margin-bottom: 1.5rem;
   font-size: 0.9rem;
-  color: #777;
+  color: var(--lp-text-muted);
   text-align: center;
   font-style: italic;
 }
@@ -181,7 +204,7 @@ body {
 /* ==== GET INVOLVED SECTION ==== */
 .get-involved-section {
   padding: 1rem 2rem;
-  background-color: #e9f5e9;
+  background-color: var(--lp-hero-bg);
   text-align: center;
 }
 
@@ -203,7 +226,7 @@ body {
 
 .get-involved-card {
   padding: 2rem;
-  background-color: #fff;
+  background-color: var(--lp-card-bg);
   border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0,0,0,0.1);
   transition: transform 0.3s, box-shadow 0.3s;
@@ -223,7 +246,7 @@ body {
 
 .get-involved-card h3 {
   text-align: center;
-  color: #2a6d3c;
+  color: var(--lp-green-dark);
   margin-bottom: 1rem;
   font-size: 1.5rem;
   font-weight: 600;
@@ -231,7 +254,7 @@ body {
 
 .get-involved-card p {
   text-align: center;
-  color: #4a5568;
+  color: var(--lp-text);
   line-height: 1.6;
   font-weight: 400;
   flex-grow: 1;
@@ -256,7 +279,7 @@ body {
 /* ==== OUR MAPPING SECTION ============================================================================== */
 .our-mapping-section {
   padding: 2rem 2rem 4rem 2rem;
-  background-color: #f8f9fa; /* Light grey background */
+  background-color: var(--lp-alt-bg); /* Light grey background */
   text-align: center;
 }
 .our-mapping-section h2 {
@@ -276,8 +299,8 @@ body {
 }
 
 .stat-card {
-  background-color: #ffffff;
-  border: 1px solid #e2e8f0;
+  background-color: var(--lp-card-bg);
+  border: 1px solid var(--lp-border);
   border-radius: 12px;
   padding: 1.5rem;
   display: flex;
@@ -296,13 +319,13 @@ body {
 
 
 .stat-number {
-  color: #2a6d3c; /* Dark green text color */
+  color: var(--lp-green-dark); /* Dark green text color */
   font-size: 2.2rem;
   font-weight: 700;
 }
 
 .stat-label {
-  color: #4a5568;
+  color: var(--lp-text);
   font-size: 0.9rem;
   font-weight: 500;
 }
@@ -321,7 +344,7 @@ body {
 .stat-subtext {
   font-size: 0.75rem;
   font-weight: 500;
-  color: #25382a; /* A slightly lighter green */
+  color: var(--lp-stat-sub); /* A slightly lighter green */
   display: block; /* Ensure it takes its own line */
   margin-top: 4px;
 }
@@ -340,7 +363,7 @@ body {
 /* ==== WHO WE ARE SECTION ==== */
 .who-we-are-section {
   padding: 0.5rem 2rem; /* Increased top/bottom padding */
-  background-color: #f8f9fa; /* Grey background to alternate */
+  background-color: var(--lp-alt-bg); /* Grey background to alternate */
   text-align: center;
 }
 
@@ -354,7 +377,7 @@ body {
 .who-we-are-section .lead-statement {
   max-width: 800px;
   margin: 0 auto 2.5rem auto; /* Center align and add bottom margin */
-  color: #4a5568; /* Match paragraph text color */
+  color: var(--lp-text); /* Match paragraph text color */
   line-height: 1.7;
   font-size: 1rem;
   font-weight: 440;
@@ -419,7 +442,7 @@ body {
 
 .who-we-are-section-services-card {
   padding: 2rem;
-  background-color: #fff;
+  background-color: var(--lp-card-bg);
   border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0,0,0,0.1);
   transition: transform 0.3s, box-shadow 0.3s;
@@ -438,7 +461,7 @@ body {
 
 .who-we-are-section-services-card h3 {
   text-align: center;
-  color: #2a6d3c;
+  color: var(--lp-green-dark);
   margin-bottom: 1rem;
   font-size: 1.5rem;
   font-weight: 600;
@@ -446,7 +469,7 @@ body {
 
 .who-we-are-section-services-card p {
   text-align: center;
-  color: #4a5568;
+  color: var(--lp-text);
   line-height: 1.6;
   font-weight: 400;
   flex-grow: 1;
@@ -568,7 +591,7 @@ body {
   }
    /* Mobile Specificity for Header Background */
    body.landing-page header.md-header {
-     background-color: #e9f5e9; /* Apply on mobile too */
+     background-color: var(--lp-hero-bg); /* Apply on mobile too */
      box-shadow: none;
    }
 }
@@ -605,7 +628,7 @@ body {
 }
 
 .fig-label {
-  color: #4a5568;
+  color: var(--lp-text);
   font-size: 1rem;
   font-weight: 500;
 }
