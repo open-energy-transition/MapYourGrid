@@ -1,0 +1,421 @@
+:root {
+    --awesome-sticky-top: calc(var(--md-header-height, 3.2rem)
+    + var(--md-tabs-height, 3rem));
+
+    --color-tag-dataset: #246d7a;
+    --color-tag-capacitydata:#539789;
+    --color-tag-map:#9da55c;
+    --color-tag-report:#2a6d3c;
+}
+
+
+/* Tabs */
+.md-content .md-typeset .tabbed-set .tabbed-labels { border-bottom: none !important; }
+.md-content .md-typeset .tabbed-set .tabbed-labels > label {
+    border-bottom: 0;
+    box-shadow: none;
+}
+.md-content .md-typeset .tabbed-set .tabbed-labels > label::after { content: none !important; }
+
+/* Inactive tabs */
+.md-content .md-typeset .tabbed-set > label,
+.md-content .md-typeset .tabbed-set .tabbed-labels > label {
+    color: #539789;
+    font-size: .9rem;
+    font-weight: 500;
+    border-bottom:2px solid #2A6D3C;
+}
+
+/* Active tab */
+.md-typeset .tabbed-set > input:nth-of-type(1):checked ~ .tabbed-labels > label:nth-of-type(1),
+.md-typeset .tabbed-set > input:nth-of-type(2):checked ~ .tabbed-labels > label:nth-of-type(2),
+.md-typeset .tabbed-set > input:nth-of-type(3):checked ~ .tabbed-labels > label:nth-of-type(3),
+.md-typeset .tabbed-set > input:nth-of-type(4):checked ~ .tabbed-labels > label:nth-of-type(4) {
+    border: 2px solid #246d7a ;
+    color: #246d7a;
+    font-weight: 700;
+    border-bottom: 2px #fff;
+    border-radius: .99rem .99rem 0 0;
+    background: #fff;
+    position: relative;
+    z-index: 2;
+}
+.md-main:has(.no-toc) [data-md-component="toc"] {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    /* All tabs : stack vertically */
+    .md-typeset .tabbed-set .tabbed-labels,
+    .md-typeset .tabbed-set > label {
+        color: #539789;
+        font-size: .9rem;
+        font-weight: 500;
+        display: flex;
+        flex-direction: column;
+        gap: .2rem;
+    }
+
+    /* Smaller tab buttons */
+    .md-content .md-typeset .tabbed-set .tabbed-labels > label,
+    .md-content .md-typeset .tabbed-set > label {
+        display: inline-block;
+        width: auto;
+        font-size: .7rem;
+        line-height: 1.3;
+        border-color: #539789;
+        border-radius: .99rem .99rem;
+    }
+
+    /* Active tab */
+    .md-typeset .tabbed-set > input:nth-of-type(1):checked ~ .tabbed-labels > label:nth-of-type(1),
+    .md-typeset .tabbed-set > input:nth-of-type(2):checked ~ .tabbed-labels > label:nth-of-type(2),
+    .md-typeset .tabbed-set > input:nth-of-type(3):checked ~ .tabbed-labels > label:nth-of-type(3),
+    .md-typeset .tabbed-set > input:nth-of-type(4):checked ~ .tabbed-labels > label:nth-of-type(4) {
+        border: 2px solid #246d7a ;
+        color: #246d7a;
+        font-weight: 700;
+        border-radius: .99rem .99rem;
+        background: #fff;
+        position: relative;
+        z-index: 2;
+    }
+}
+
+/* ---- Filter bar ---- */
+.tag-filter__bar {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin: 0.75rem 0 1rem 0;
+    margin-right:15px;
+}
+
+/* Base style for all pills */
+.tag-filter__pill {
+    display: inline-block;
+    background: transparent;
+    vertical-align: middle;
+    border: 1.5px solid var(--md-default-fg-color--light, #ccc);
+    padding: 0.1rem 0.5rem;
+    line-height: 2.0;
+    border-radius: 999px;
+    font-size: 0.85rem;
+    cursor: pointer;
+    transition: all 0.15s ease;
+    font-weight: 600;
+}
+
+@media (max-width: 768px) {
+    #tag-filters {
+        display: flex;
+        flex-direction: row;
+        gap: 0.25rem;
+        overflow-y: auto;
+        justify-content: center;
+        margin-right: 0.25rem;
+    }
+
+    .tag-filter__pill {
+        font-size: 0.7rem;
+        padding: 0.25rem 0.35rem;
+        line-height: 1.2;
+        flex: 0 0 auto;
+        scroll-snap-align: start;
+    }
+
+    .tag-filter__bar {
+        margin: 0;
+        display: block;
+    }
+}
+
+/* ---- Active button style ---- */
+.tag-filter__bar.is-active .tag-filter__pill {
+    border-color: var(--md-default-fg-color--light, #ccc);
+    font-weight: 800;
+    border: 2px solid
+}
+
+#filter-button-dataset .tag-filter__pill{
+    border-color:var(--color-tag-dataset);
+    color: var(--color-tag-dataset);
+}
+
+#filter-button-capacitydata .tag-filter__pill{
+    border-color:var(--color-tag-capacitydata);
+    color: var(--color-tag-capacitydata);
+}
+
+#filter-button-map .tag-filter__pill{
+    border-color:var(--color-tag-map);
+    color: var(--color-tag-map);
+}
+
+#filter-button-report .tag-filter__pill{
+    border-color:var(--color-tag-report);
+    color: var(--color-tag-report);
+}
+
+
+/*.tag-filter__pill:not([data-tag]) {
+    border-color: var(--md-default-fg-color--light, #ccc);
+    margin-left: 15px;
+    border-color: #d4a131;
+    color: #d4a131;
+}*/
+
+
+/* ---- Badges in list items : tags + year + license ---- */
+.tag-badge,
+.meta-badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    vertical-align: middle;
+    padding: 0.15rem 0.25rem;
+    line-height: 0.8;
+    font-size: 0.68rem;
+    border-radius: 999px;
+    border: 1.8px solid #ccc;
+    background: transparent;
+    margin-left: 0.35rem;
+    margin-right: 0.35rem;
+}
+
+.meta-date {
+    border-color: #975367;
+    color: #975367;
+}
+
+.meta-license {
+    border-color: #d4a131;
+    color: #d4a131;
+}
+
+.meta-license[href] {
+    text-decoration: none;
+    color: #d4a131;
+    transition: color 0.15s ease;
+}
+.meta-license[href]:hover,
+.meta-license[href]:focus-visible {
+    color: var(--md-accent-fg-color, #d4a131);
+    border-color: var(--md-accent-fg-color, #0969da);
+    text-decoration: underline;
+}
+
+.meta-report {
+    border-color:var(--color-tag-report);
+    color: var(--color-tag-report);
+}
+
+.meta-map {
+    border-color:var(--color-tag-map);
+    color: var(--color-tag-map);
+}
+
+.meta-capacitydata {
+    border-color:var(--color-tag-capacitydata);
+    color: var(--color-tag-capacitydata);
+}
+
+.meta-dataset{
+    border-color:var(--color-tag-dataset);
+    color: var(--color-tag-dataset);
+}
+
+.resources-header {
+    background-color: #f7fdf8;
+    color:#246d7a;
+    padding: 8px 15px;
+    border-left: 4px solid #246d7a;
+    display: inline-block;
+    margin-top: 0.9rem;
+    font-weight: bold;
+    font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+    .resources-header {
+        background-color: #f7fdf8;
+        color:#246d7a;
+        padding: 8px 8px;
+        border-left: 4px solid #246d7a;
+        display: inline-block;
+        margin-top: 0.9rem;
+        font-weight: bold;
+        font-size: 0.7rem;
+    }
+}
+
+
+.awesome-github-btn {
+position: static;
+font-size: 0.78rem;
+background: #fff;
+padding: 0.4rem 0.6rem;
+display: inline-block;
+border: 1px solid #246d7a;
+border-radius: 999px;
+box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.awesome-github-btn a {
+color: #246d7a;
+text-decoration: none;
+display: flex;
+align-items: center;
+gap: 0.5rem;
+}
+
+.awesome-github-btn a:hover {
+color: #9da55c;
+border-color: #9da55c;
+}
+
+.awesome-tabs-scope + .tabbed-set .tabbed-labels {
+    position: sticky;
+    top: 5.8rem;
+    z-index: 3;
+    background: var(--md-default-bg-color, #fff);
+    padding-top: var(--tabs-gap);
+    border-top: 2rem solid white;
+}
+
+/*.tabbed-labels.tabbed-labels--linked {
+ *    position: sticky;
+ *    top: 80px;      /* hauteur de ton header (à ajuster) *
+ *    z-index: 1000;  /* pour passer au-dessus du contenu *
+ *    background: #fff; /* pour éviter que le contenu en-dessous transparaisse *
+ * }*/
+
+ .tabbed-labels {
+     height: 4.8rem;
+ }
+
+ #tag-filters {
+ position: sticky;
+ top: 10.55rem;     /* = hauteur du header + hauteur du bloc au-dessus */
+ z-index: 3;
+ background: #fff;
+ }
+
+
+@media (max-width: 768px) {
+    .awesome-github-btn {
+        position: static;
+        padding: 0.25rem 0.25rem;
+        font-size: 0.78rem;
+        background: #fff;
+        border: 1px solid #246d7a;
+        border-radius: 999px;
+        box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        display: inline-block;
+        width: auto;
+    }
+
+    .awesome-github-btn a {
+        color: #246d7a;
+        text-decoration: none;
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+    }
+
+    #tag-filters {
+        position: static;
+    }
+
+    .awesome-tabs-scope + .tabbed-set .tabbed-labels {
+        position: static;
+        height: fit-content;
+    }
+
+    .md-typeset .tabbed-labels {
+        overflow: inherit;
+    }
+}
+
+
+/*
+#tag-filters .tabbed-labels {
+    --page-header-offset: 7rem;
+    --tabs-gap: 1.2rem;
+    position: sticky;
+    top: 4.5rem;
+    z-index: 100;
+    background: #fff;
+    padding: 0.5rem 0;
+
+}
+*/
+
+/*
+.awesome-sticky-header {
+position: sticky;
+top: 4.5rem;
+z-index: 100;
+background: #fff;
+padding: 0.5rem 0;
+}
+
+.awesome-tabs-scope {
+    --page-header-offset: 7rem;
+    --tabs-gap: 1.2rem;
+}
+
+
+
+.awesome-tabs-scope + .tabbed-set > label {
+    position: sticky;
+    top: var(--awesome-sticky-top);
+    z-index: 10;
+    background: var(--md-default-bg-color, #fff);
+    padding-top: var(--tabs-gap);
+}
+
+
+/* Sticky filter bar */
+/*
+.awesome-tabs-scope + .tabbed-set #tag-filters,
+.awesome-tabs-scope + .tabbed-set .tag-filter__bar {
+    position: sticky;
+    top: calc(var(--awesome-sticky-top) + 2.8rem);
+    z-index: 9;
+    background: var(--md-default-bg-color, #fff);
+    padding: 0.25rem 0;
+    margin-top: 0;
+}
+
+*/
+
+/* Avoid overlap under sticky elements
+.awesome-tabs-scope + .tabbed-set .tabbed-content {
+    padding-top: 0.5rem;
+}
+*/
+/*
+@media (max-width: 768px) {
+    /* turn off all sticky positions */
+/*
+    .awesome-sticky-header,
+    .awesome-tabs-scope + .tabbed-set .tabbed-labels,
+    .awesome-tabs-scope + .tabbed-set > label,
+    .awesome-tabs-scope + .tabbed-set #tag-filters,
+    .awesome-tabs-scope + .tabbed-set .tag-filter__bar {
+        position: sticky;
+        top: auto;
+    }
+
+    .awesome-tabs-scope + .tabbed-set .tabbed-labels,
+    .awesome-tabs-scope + .tabbed-set > label {
+        padding-top: 0;
+    }
+
+    .awesome-tabs-scope + .tabbed-set .tabbed-content {
+        padding-top: 0.25rem;
+    }
+}
+
+*/
