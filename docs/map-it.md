@@ -1006,7 +1006,7 @@ function buildSuccessHtml() {
   return `<div class="popup-success">
     <p>Check <a href="https://josm.openstreetmap.de/" target="_blank">JOSM</a> — large countries may take 60s or more.</p>
     <ol>
-      <li>Overpass may be busy — try clicking again.</li>
+      <li>Overpass may be busy (Response Error 504) — try clicking again.</li>
       <li>Ensure Remote Control is enabled in JOSM Preferences.</li>
       <li>Hint layers need a national-level click.</li>
       <li>See the <a href="/starter-kit/">Starter Kit</a> for help.</li>
